@@ -10,9 +10,12 @@ div.cover{
     display:flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    z-index: 99999,
+    z-index: 99999;
 }
-div.cover > img{
+div.cover > a > img{
+    width: 100%;
+}
+div.cover a{
     width: 7%;
 }
 
@@ -96,7 +99,7 @@ div.searchbox > input:focus{
     width:100%;
 }
 .brands img:hover{
-    transform: scale(1.1);
+    transform: scale(0.9);
 }
 .frame-products{
     background-color: #ffffff;
@@ -122,9 +125,9 @@ div.item{
     margin: 2%;
     padding: 10px;
 }
-div.item:hover{
-    transform: scale(1.1);
-}
+
+
+
 div.item > a{
     text-decoration: none;
 }
@@ -157,4 +160,64 @@ a#go-to-top img{
 }
 .first{
     margin-top: 8%;
+}
+#footer{
+    margin-top:2%;
+    background-color: #937C69;
+    width: 100%;
+    display: flex;
+    padding: 2%;
+}
+#footer h2{
+    color:#FFFFFF;
+    font-size:30px;
+}
+
+div#contactframe{
+    width: 50%;
+    border-right: 2px solid #FFFFFF;
+}
+div#contactframe h2{
+    text-align: center;
+    margin-bottom: 5%;
+}
+div#contactframe h3{
+    color: #000000;
+    font-size: 25px;
+    font-family:Huhu;
+    padding: 1%;
+}
+div#contactframe a{
+    text-decoration: none;
+    color: #000000;
+}
+div#contactframe a:hover{
+    color:#FFFFFF;
+}
+div#followus{
+    width:50%;
+    text-align: center;
+}
+
+div.followicons{
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+}
+a.followicon{
+    font-size: 35px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    text-decoration:none;
+    border-style: solid;
+    border-color:#000000;
+    border-width: 2px;
+    border-radius:100%;
+    color: #000000;
+    margin: 2%;
+}
+a.followicon:hover{
+    color: #FFFFFF;
+    border-color: #FFFFFF;
 }

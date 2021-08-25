@@ -3,6 +3,19 @@
     padding: 0px;
     box-sizing: border-box;
 }
+a#go-to-top{
+    display:block;
+    text-align: center;
+    width: 5%;
+    position: fixed;
+    bottom:5%;
+    right: 2.5%;
+    text-decoration: none;
+    padding:2px;
+}
+a#go-to-top img{
+    width: 100%;;
+}
 .body{
     display: flex;
     flex-wrap: wrap;
@@ -59,8 +72,8 @@ ul.menu > li > input{
 ul.menu > li > button{
     background-color: #7C3618;
     color:#FFFFFF;
-    padding-left: 2%;
-    padding-right: 2%;
+    width: 30px;
+    height: 30px;
     outline: none;
     border-radius: 100%;
     border-style: none;
@@ -172,12 +185,6 @@ div.document > p{
 div.youmayknow img{
     width: 25%;
 }
-
-/*.notice{
-    width:19%;
-    background-color: #937C69;
-    margin-right: 1%;
-}*/
 .title > div.imgframe{
     display: flex;
     flex-wrap:wrap;
@@ -188,7 +195,7 @@ div.youmayknow img{
 }
 #footer{
     margin-top:2%;
-    background-color: #7C3618;
+    background-color: #937C69;
     width: 100%;
     display: flex;
     padding: 2%;
@@ -199,26 +206,50 @@ div.youmayknow img{
 }
 
 div#contactframe{
-    margin-right: auto;
-    margin-top:auto;
-    margin-bottom:auto;
-    width: 30%;
+    width: 50%;
+    border-right: 2px solid #FFFFFF;
 }
-div#contactframe > h3{
+div#contactframe h2{
+    text-align: center;
+    margin-bottom: 5%;
+}
+div#contactframe h3{
     color: #000000;
     font-size: 25px;
+    font-family:Huhu;
+    padding: 1%;
 }
-div#contactframe > h3 > a{
+div#contactframe a{
     text-decoration: none;
     color: #000000;
 }
-div.mapframe{
-    width:35%;
+div#contactframe a:hover{
+    color:#FFFFFF;
 }
-div.mapframe h2{
+div#followus{
+    width:50%;
     text-align: center;
 }
-#map{
-    width: 200px;
-    height: 200px;
+
+div.followicons{
+    margin-top: 2%;
+    display: flex;
+    justify-content: center;
+}
+a.followicon{
+    font-size: 35px;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    text-decoration:none;
+    border-style: solid;
+    border-color:#000000;
+    border-width: 2px;
+    border-radius:100%;
+    color: #000000;
+    margin: 2%;
+}
+a.followicon:hover{
+    color: #FFFFFF;
+    border-color: #FFFFFF;
 }

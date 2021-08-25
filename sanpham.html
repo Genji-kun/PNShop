@@ -14,7 +14,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="js/js.js"></script>
+        <script src="js/script2.js"></script>
         <style>
             @font-face{
                 font-family: Hehe;
@@ -27,18 +27,22 @@
             body{
                 background-image:url("images/background.png");
                 font-family: Hehe;
+                cursor: url(cursors/cursor1.cur),pointer;
+            }
+            a,button{
+                cursor:url(cursors/cursor2.cur),auto;
             }
         </style>
     </head>
     <body>
         <div>
-            <a href="javascript:;" id="go-to-top" title="go to top">
+            <a href="javascript:;" id="go-to-top" title="Go to top">
                 <img src="images/gototop.png"/>
             </a>
         </div>
         <section>
             <div class="cover">
-                <img src="images/logo.png"/>
+                <a href ="index.html"><img src="images/logo.png"/></a> 
                 <div class="searchbox">
                     <input type="text" placeholder="Tìm kiếm...">
                     <button type="submit"><i class="fas fa-search"></i></button>
@@ -57,16 +61,16 @@
             <div class="bg first">
                 <h1>Các nhãn hàng</h1>
                 <div class="brands">
-                    <a><img src="images/brand1.jpg" /></a>
-                    <a><img src="images/brand2.jpg" /></a>
-                    <a><img src="images/brand3.jpg" /></a>
-                    <a><img src="images/brand4.jpg" /></a>
-                    <a><img src="images/brand5.jpg" /></a>
-                    <a><img src="images/brand6.jpg" /></a>
-                    <a><img src="images/brand7.jpg" /></a>
-                    <a><img src="images/brand8.jpg" /></a>
-                    <a><img src="images/brand9.jpg" /></a>
-                    <a><img src="images/brand10.jpg" /></a>
+                    <a ><img src="images/brand1.jpg" alt = "brand1" title ="Ganador" /></a>
+                    <a ><img src="images/brand2.jpg" alt = "brand2" title ="Pedigree"/></a>
+                    <a ><img src="images/brand3.jpg" alt = "brand3" title ="Whiskas"/></a>
+                    <a ><img src="images/brand4.jpg" alt = "brand4" title ="Royal Canin"/></a>
+                    <a ><img src="images/brand5.jpg" alt = "brand5" title ="Blue Buffalo"/></a>
+                    <a ><img src="images/brand6.jpg" alt = "brand6" title ="MKB"/></a>
+                    <a ><img src="images/brand7.jpg" alt = "brand7" title ="Catsrang"/></a>
+                    <a ><img src="images/brand8.jpg" alt = "brand8" title ="Chappi"/></a>
+                    <a ><img src="images/brand9.jpg" alt = "brand9" title ="Me-O"/></a>
+                    <a ><img src="images/brand10.jpg" alt = "brand10" title ="Blisk"/></a>
                 </div>
             </div>
         </section>
@@ -251,6 +255,24 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+        <section>
+            <div id="footer">
+                <div id="contactframe">
+                    <h2>Liên hệ với chúng tôi:</h2>
+                    <h3><b><i class="fas fa-phone"></i> : 0909052307</b></h3>
+                    <h3><b><a href="mailto:pnshop2307@gmail.com"><i class="far fa-envelope"></i> : pnshop2307</a></b></h3>
+                    <h3><b><a href="https://www.google.com/maps/place/371+Nguy%E1%BB%85n+Ki%E1%BB%87m,+Ph%C6%B0%E1%BB%9Dng+3,+G%C3%B2+V%E1%BA%A5p,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh" target="blank"><i class="fas fa-map-marker-alt"></i> : 371 Nguyễn Kiệm, P.3, Q.Gò Vấp, TP.HCM</a></b></h3>
+                </div>
+                <div id="followus">
+                    <h2>Theo dõi chúng tôi tại:</h2>
+                    <div class="followicons">
+                        <a class ="followicon" href="https://www.facebook.com/PN-Shop-110697547988617" target="blank"><div><i class="fab fa-facebook-f"></i></div></a>
+                        <a class ="followicon" href="https://www.instagram.com/pn._.petshop/" target="blank"><div><i class="fab fa-instagram"></i></div></a>
+                        <a class ="followicon" href="https://twitter.com/PNshop2307" target="blank"><div><i class="fab fa-twitter"></i></div></a>
+                    </div>
+                </div>    
             </div>
         </section>
     </body>
