@@ -12,9 +12,10 @@ a#go-to-top{
     right: 2.5%;
     text-decoration: none;
     padding:2px;
+    opacity: 0;
 }
 a#go-to-top img{
-    width: 100%;;
+    width: 100%;
 }
 .body{
     display: flex;
@@ -259,7 +260,7 @@ a.followicon:hover{
     height: 100%;
     z-index: 99;
     background-color: #000000;
-    opacity: 0.6;
+    opacity: 0;
 }
 .exit{
     position: absolute;
@@ -285,31 +286,75 @@ a.followicon:hover{
     border-color: #937C69;
     border-width: 5px;
     border-radius: 20px;
-    
+    opacity: 0;
 }
 .info h1{
     margin-top: 10%;
     font-size: 25px;
+    font-family: Huhu;
+    color:#937C69;
+    font-weight: bolder;
 }
 .info h3{
     font-family: Huhu;
     font-size: 20px;
 }
+.info p {
+    font-family: Huhu;
+    font-size: 15px;
+}
 .left{
     width: 50%;
+    padding-right: 5%;
+
+    margin-top: auto;
+    margin-bottom: auto;
 }
 
 .right{
     width: 50%;
+    border-left: 2px solid #937C69;
+    padding-left: 3%;
+    position: relative;
 }
 div.left img {
     width: 100%;
-    margin-top: 10%
+}
+div.thumb{
+    margin-top: 5%;
+    display: flex;
 }
 div.thumb > div {
     width: 20%;
 }
+#firstthumb{
+    border: 2px solid #937C69;
+}
 .hide{
     display:none;
     width: 50%;
+}
+.cart{
+    position: absolute;
+    background-color: #937C69;
+    color:#FFFFFF;
+    font-family: Huhu;
+    width: 45%;
+    text-align: center;
+    padding: 5%;
+    bottom: 5%;
+}
+.buy{
+    position: absolute;
+    background-color: #937C69;
+    color:#FFFFFF;
+    font-family: Huhu;
+    width: 45%;
+    text-align: center;
+    bottom: 5%;
+    padding: 5%;
+    right: 0%;
+}
+.buy a{
+    display: block;
 }
