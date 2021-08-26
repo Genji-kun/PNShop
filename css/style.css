@@ -253,3 +253,63 @@ a.followicon:hover{
     color: #FFFFFF;
     border-color: #FFFFFF;
 }
+#text{
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 99;
+    background-color: #000000;
+    opacity: 0.6;
+}
+.exit{
+    position: absolute;
+    color: #7C3618;
+    font-size: 30px;
+    top: 0;
+    right: 0;
+    z-index:1000;
+    padding: 5px 20px;
+}
+.info{
+    background-color: #FFFFFF;
+    position:fixed;
+    left: 25%;
+    top: 10%;
+    z-index:999;
+    width: 50%;
+    height: 80%;
+    display:flex;
+    flex-wrap:wrap;
+    padding: 20px;
+    border-style:solid;
+    border-color: #937C69;
+    border-width: 5px;
+    border-radius: 20px;
+    
+}
+.info h1{
+    margin-top: 10%;
+    font-size: 25px;
+}
+.info h3{
+    font-family: Huhu;
+    font-size: 20px;
+}
+.left{
+    width: 50%;
+}
+
+.right{
+    width: 50%;
+}
+div.left img {
+    width: 100%;
+    margin-top: 10%
+}
+div.thumb > div {
+    width: 20%;
+}
+.hide{
+    display:none;
+    width: 50%;
+}
