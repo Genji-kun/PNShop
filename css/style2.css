@@ -76,6 +76,14 @@ div.searchbox > button:focus{
 div.searchbox > input:focus{
     outline: none;
 }
+div.empty{
+    width: 100%;
+    z-index: -1;
+    opacity: 0;
+}
+div.empty img{
+    width: 7%;
+}
 .bg{
     width: 80%;
     margin-top: 30px;
@@ -125,9 +133,6 @@ div.item{
     margin: 2%;
     padding: 10px;
 }
-
-
-
 div.item > a{
     text-decoration: none;
 }
@@ -158,9 +163,7 @@ a#go-to-top{
 a#go-to-top img{
     width: 100%;;
 }
-.first{
-    margin-top: 8%;
-}
+
 #footer{
     margin-top:2%;
     background-color: #937C69;

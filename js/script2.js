@@ -9,6 +9,7 @@ $(document).ready(function() {
 
     $(".item").click(function() {
         $(".cover").hide()
+        
         $(".info .mainimage").attr("src",$(this).children('a').children('img').attr('src'))
         $(".info h1").text($(this).children('a').children('h2').text()) 
         $(".info h3").text($(this).children('a').children('h3').text())
