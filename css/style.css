@@ -104,14 +104,6 @@ ul.menu > li > input:focus{
 .title{
     margin-top: 2%;
 }
-div.empty{
-    width: 100%;
-    z-index: -1;
-    opacity: 0;
-}
-div.empty img{
-    width: 7%;
-}
 .title:first-child{
     margin-top: 0%;
 }
