@@ -10,7 +10,7 @@ div.cover{
     display:flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    z-index: 99999;
+    z-index: 50;
 }
 div.cover > a > img{
     width: 100%;
@@ -220,4 +220,113 @@ a.followicon{
 a.followicon:hover{
     color: #FFFFFF;
     border-color: #FFFFFF;
+}
+#text{
+    position:fixed;
+    width: 10000000000000000px;
+    height: 10000000000000000px;
+    z-index: 99;
+    background-color: #000000;
+    opacity: 0;
+}
+.exit{
+    position: absolute;
+    color: #7C3618;
+    font-size: 30px;
+    top: 0;
+    right: 0;
+    z-index:1000;
+    padding: 5px 20px;
+}
+.info{
+    background-color: #FFFFFF;
+    position:fixed;
+    left: 25%;
+    top: 10%;
+    z-index:999;
+    width: 50%;
+    height: 80%;
+    display:flex;
+    flex-wrap:wrap;
+    padding: 20px;
+    border-style:solid;
+    border-color: #937C69;
+    border-width: 5px;
+    border-radius: 20px;
+    opacity: 0;
+}
+.info h1{
+    margin-top: 10%;
+    font-size: 25px;
+    font-family: Huhu;
+    color:#937C69;
+    font-weight: bolder;
+}
+.info h3{
+    font-family: Huhu;
+    font-size: 20px;
+}
+.info p {
+    font-family: Huhu;
+    font-size: 15px;
+}
+.left{
+    width: 50%;
+    padding-right: 5%;
+
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.right{
+    width: 50%;
+    border-left: 2px solid #937C69;
+    padding-left: 3%;
+    position: relative;
+}
+div.left img {
+    width: 100%;
+}
+div.thumb{
+    margin-top: 5%;
+    display: flex;
+}
+div.thumb > div {
+    width: 20%;
+}
+#firstthumb{
+    border: 2px solid #937C69;
+}
+.hide{
+    display:none;
+    width: 50%;
+}
+.textOverFlow{
+    width: 280px;
+    height: 200px;
+    overflow: auto;
+}
+.cart{
+    position: absolute;
+    background-color: #937C69;
+    color:#FFFFFF;
+    font-family: Huhu;
+    width: 45%;
+    text-align: center;
+    padding: 5%;
+    bottom: 5%;
+}
+.buy{
+    position: absolute;
+    background-color: #937C69;
+    color:#FFFFFF;
+    font-family: Huhu;
+    width: 45%;
+    text-align: center;
+    bottom: 5%;
+    padding: 5%;
+    right: 0%;
+}
+.buy a{
+    display: block;
 }

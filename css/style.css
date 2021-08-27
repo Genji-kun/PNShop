@@ -261,6 +261,7 @@ a.followicon:hover{
     z-index: 99;
     background-color: #000000;
     opacity: 0;
+    margin-top: 0;
 }
 .exit{
     position: absolute;
@@ -333,6 +334,11 @@ div.thumb > div {
 .hide{
     display:none;
     width: 50%;
+}
+.textOverFlow{
+    width: 280px;
+    height: 200px;
+    overflow: auto;
 }
 .cart{
     position: absolute;
