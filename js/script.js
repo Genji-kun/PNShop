@@ -45,4 +45,9 @@ $(document).ready(function() {
             scrollTop:0
         }, 1000);
     })
+    $("#contact").click(function(){
+        $("html, body").animate({
+            scrollTop: 2500
+        },2000);
+    })
 })
