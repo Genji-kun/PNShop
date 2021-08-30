@@ -115,10 +115,6 @@ div.empty img{
     display:flex;
     flex-wrap: wrap;
 }
-.sort{
-    width: 20%;
-    background-color: #666565;
-}
 .items{
     width: 80%;
     display: flex;
@@ -139,8 +135,8 @@ div.item > a{
 div.item h2{
     font-family: Huhu;
     font-size: 20px;
+    height: 70px;
     color:#000000;
-    height: 25%;
 }
 div.item h3{
     font-family: Huhu;
@@ -305,6 +301,9 @@ div.thumb > div {
     display:none;
     width: 50%;
 }
+.active{
+    display: block;
+}
 .textOverFlow{
     width: 280px;
     height: 200px;
@@ -333,4 +332,50 @@ div.thumb > div {
 }
 .buy a{
     display: block;
+}
+.listpage{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.listpage li a{
+    font-family: Huhu;
+    display:block;
+    width: 100%;
+    padding: 0px 10px;
+    text-decoration: none;
+    color:#000000;
+}
+.listpage li{
+    background-color: #e9e9e9;
+    height: fit-content;
+    margin: 3px;
+    text-align: center;
+    border: 2px solid #937C69;
+}
+.listpage li:first-child{
+    border: 2px solid #7C3618;
+}
+.sort{
+    width: 20%;
+    background-color: #937C69;
+    padding: 1%;
+    font-family: Huhu;
+    font-size: 20px;
+    color: #292929
+}
+.sort h3{
+    margin-top: 10%;
+    padding-bottom: 10%;
+    font-size: 30px;
+    color:#FFFFFF;
+    text-align: center;
+    border-bottom: 2px solid #FFFFFF;
+    font-weight: bold;
+}
+.sort h4{
+    margin-top: 5%;
+    font-size: 25px;
+    color: #000000;
 }
