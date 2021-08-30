@@ -124,6 +124,7 @@ div.empty img{
 }
 div.item{
     width: 28%;
+    height: fit-content;
     background-color: rgba(147, 124, 105, 0.5);
     border-radius: 20px 20px 20px 20px;
     margin: 2%;

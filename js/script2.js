@@ -9,6 +9,7 @@ $(document).ready(function() {
 
     var sp = document.getElementsByClassName("item")
     $(sp).hide()
+    $(".age").hide()
     for (var i = 0; i < 12; i++)
         {
             $(sp[i]).show()
@@ -30,6 +31,7 @@ $(document).ready(function() {
     $(".sortDT").click(function() {
         if (this.id == "all")
         {
+            $(".age").hide()
             var listpageNumber = $(".listpage li")
             $(listpageNumber).show()
 
@@ -54,6 +56,9 @@ $(document).ready(function() {
         }
         else if (this.id == "dog")
         {
+            $(".age").show()
+            $(".catlist").hide()
+            $(".doglist").show()
             sp = document.getElementsByClassName("item")
             $(sp).hide()
             sp = document.getElementsByClassName("dog")
@@ -80,9 +85,68 @@ $(document).ready(function() {
                 for (var i = 12*(pagenumber - 1); i < 12*(pagenumber - 1) + 12; i++)
                     $(sp[i]).show()
             })
+            $(".age input").click(function() {
+                if(this.id == "kid")
+                {
+                    $(sp).hide()
+                    sp = document.querySelectorAll(".dog.kid")
+                    var maxPage = Math.ceil(sp.length/12)
+                    var listpageNumber = $(".listpage li")
+                    $(listpageNumber).show()
+                    for (var i = listpageNumber.length; i >= maxPage; i--)
+                        $(listpageNumber[i]).hide()
+
+                    for (var i = 0; i < 12; i++)
+                    {
+                        $(sp[i]).show()
+                    }
+                    $(".listpage li").click(function() {
+                        $(".listpage li").css({
+                            "border-color": "#937C69"
+                        })
+                        $(this).css({
+                            "border-color": "#7C3618"
+                        })
+                        $(sp).hide()
+                        var pagenumber = $(this).children('a').attr('rel')
+                        for (var i = 12*(pagenumber - 1); i < 12*(pagenumber - 1) + 12; i++)
+                            $(sp[i]).show()
+                    })
+                }
+                else
+                {
+                    $(sp).hide()
+                    sp = document.querySelectorAll(".dog.adult")
+                    var maxPage = Math.ceil(sp.length/12)
+                    var listpageNumber = $(".listpage li")
+                    $(listpageNumber).show()
+                    for (var i = listpageNumber.length; i >= maxPage; i--)
+                        $(listpageNumber[i]).hide()
+
+                    for (var i = 0; i < 12; i++)
+                    {
+                        $(sp[i]).show()
+                    }
+                    $(".listpage li").click(function() {
+                        $(".listpage li").css({
+                            "border-color": "#937C69"
+                        })
+                        $(this).css({
+                            "border-color": "#7C3618"
+                        })
+                        $(sp).hide()
+                        var pagenumber = $(this).children('a').attr('rel')
+                        for (var i = 12*(pagenumber - 1); i < 12*(pagenumber - 1) + 12; i++)
+                            $(sp[i]).show()
+                    })
+                }
+            })
         }
         else
         {
+            $(".age").show()
+            $(".doglist").hide()
+            $(".catlist").show()
             sp = document.getElementsByClassName("item")
             $(sp).hide()
             sp = document.getElementsByClassName("cat")
@@ -92,7 +156,7 @@ $(document).ready(function() {
             $(listpageNumber).show()
             for (var i = listpageNumber.length; i >= maxPage; i--)
                 $(listpageNumber[i]).hide()
-                
+
             for (var i = 0; i < 12; i++)
             {
                 $(sp[i]).show()
@@ -108,6 +172,62 @@ $(document).ready(function() {
                 var pagenumber = $(this).children('a').attr('rel')
                 for (var i = 12*(pagenumber - 1); i < 12*(pagenumber - 1) + 12; i++)
                     $(sp[i]).show()
+            })
+            $(".age input").click(function() {
+                if(this.id == "kid")
+                {
+                    $(sp).hide()
+                    sp = document.querySelectorAll(".cat.kid")
+                    var maxPage = Math.ceil(sp.length/12)
+                    var listpageNumber = $(".listpage li")
+                    $(listpageNumber).show()
+                    for (var i = listpageNumber.length; i >= maxPage; i--)
+                        $(listpageNumber[i]).hide()
+
+                    for (var i = 0; i < 12; i++)
+                    {
+                        $(sp[i]).show()
+                    }
+                    $(".listpage li").click(function() {
+                        $(".listpage li").css({
+                            "border-color": "#937C69"
+                        })
+                        $(this).css({
+                            "border-color": "#7C3618"
+                        })
+                        $(sp).hide()
+                        var pagenumber = $(this).children('a').attr('rel')
+                        for (var i = 12*(pagenumber - 1); i < 12*(pagenumber - 1) + 12; i++)
+                            $(sp[i]).show()
+                    })
+                }
+                else
+                {
+                    $(sp).hide()
+                    sp = document.querySelectorAll(".cat.adult")
+                    var maxPage = Math.ceil(sp.length/12)
+                    var listpageNumber = $(".listpage li")
+                    $(listpageNumber).show()
+                    for (var i = listpageNumber.length; i >= maxPage; i--)
+                        $(listpageNumber[i]).hide()
+
+                    for (var i = 0; i < 12; i++)
+                    {
+                        $(sp[i]).show()
+                    }
+                    $(".listpage li").click(function() {
+                        $(".listpage li").css({
+                            "border-color": "#937C69"
+                        })
+                        $(this).css({
+                            "border-color": "#7C3618"
+                        })
+                        $(sp).hide()
+                        var pagenumber = $(this).children('a').attr('rel')
+                        for (var i = 12*(pagenumber - 1); i < 12*(pagenumber - 1) + 12; i++)
+                            $(sp[i]).show()
+                    })
+                }
             })
         }
     })
