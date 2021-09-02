@@ -5,7 +5,8 @@ $(document).ready(function() {
     
     $("#go-to-top").css({"opacity": 1})
     $(".info").css({"opacity": 1})
-    $("#text").css({"opacity": 0.6})       
+    $("#text").css({"opacity": 0.6}) 
+    var flag = false
 
     var sp = document.getElementsByClassName("item")
     $(sp).hide()
@@ -14,92 +15,103 @@ $(document).ready(function() {
         {
             $(sp[i]).show()
         }
-        $(".sortTH input").change(function(){
-            var arrChecked = []
-            var flag = false
-            $(sp).hide()
-            for (var i = 0; i < $(".sortTH input").length; i++)
-            {   
-                var tam =  $(".sortTH input")[i]
-                if (tam.checked == true)
-                {
-                    flag = true
-                    arrChecked.push(tam)
-                }
-            }
-            if (flag == false)
+    $(".sortTH input").change(function(){
+        $(".listpage li").css({
+            "border-color" : "#937C69"
+        })
+        $(".listpage li:first-child").css({
+            "border-color" : "#7C3618"
+        })
+        var arrChecked = []
+        flag = false
+        $(sp).hide()
+        for (var i = 0; i < $(".sortTH input").length; i++)
+        {   
+            var tam =  $(".sortTH input")[i]
+            if (tam.checked == true)
             {
-                var maxPage = Math.ceil(sp.length/12)
-                var listpageNumber = $(".listpage li")
-                $(listpageNumber).show()
-                for (var i = listpageNumber.length; i >= maxPage; i--)
-                    $(listpageNumber[i]).hide()
+                flag = true
+                arrChecked.push(tam)
+            }
+        }
+        if (flag == false)
+        {
+            var maxPage = Math.ceil(sp.length/12)
+            var listpageNumber = $(".listpage li")
+            $(listpageNumber).show()
+            for (var i = listpageNumber.length; i >= maxPage; i--)
+                $(listpageNumber[i]).hide()
     
-                for (var i = 0; i < 12; i++)
-                {
-                    $(sp[i]).show()
-                }
-                $(".sortTH input").change(function() {
-                    $(".listpage li").css({
-                        "border-color" : "#937C69"
-                    })
-                    $(".listpage li:first-child").css({
-                        "border-color" : "#7C3618"
-                    })
-                })
-            }
-            else
+            for (var i = 0; i < 12; i++)
             {
-                var arrSp =[]
-                for(var i = 0; i < sp.length; i++)
+                $(sp[i]).show()
+            }
+            $(".sortTH input").change(function() {
+                $(".listpage li").css({
+                    "border-color" : "#937C69"
+                })
+                $(".listpage li:first-child").css({
+                    "border-color" : "#7C3618"
+                })
+            })
+        }
+        else
+        {
+            var arrSp = []
+            for(var i = 0; i < sp.length; i++)
+            {
+                for (var j = 0; j < arrChecked.length; j++)
                 {
-                    for (var j = 0; j < arrChecked.length; j++)
+                    if (sp[i].className.slice(5,sp[i].className.slice(5,1000).search(" ") + 5) == arrChecked[j].id)
                     {
-                        if (sp[i].className.slice(5,sp[i].className.slice(5,1000).search(" ") + 5) == arrChecked[j].id)
-                        {
-                            arrSp.push(sp[i])
-                        }
+                        arrSp.push(sp[i])
                     }
                 }
-                var maxPage = Math.ceil(arrSp.length/12)
-                var listpageNumber = $(".listpage li")
-                $(listpageNumber).show()
-                for (var i = listpageNumber.length; i >= maxPage; i--)
+            }
+
+            var maxPage = Math.ceil(arrSp.length/12)
+            var listpageNumber = $(".listpage li")
+            $(listpageNumber).show()
+            for (var i = listpageNumber.length; i >= maxPage; i--)
+            {
+                $(listpageNumber[i]).hide()
+            }
+            for (var i = 0; i < 12; i++)
+            {
+                $(arrSp[i]).show()
+            }
+            
+            $(".listpage li").click(function() {
+                if (flag == true)
                 {
-                    $(listpageNumber[i]).hide()
-                }
-                for (var i = 0; i < 12; i++)
-                {
-                    $(arrSp[i]).show()
-                }
-                $(".listpage li").click(function() {
+                    $(".item").hide()
                     $(".listpage li").css({
                         "border-color": "#937C69"
                     })
                     $(this).css({
                         "border-color": "#7C3618"
                     })
-                    $(arrSp).hide()
                     var pagenumber = $(this).children('a').attr('rel')
                     for (var i = 12*(pagenumber - 1); i < 12*(pagenumber - 1) + 12; i++)
-                        $(arrSp[i]).show()
-                    $("html, body").animate({
-                        scrollTop:0
-                    })   
-                })
-            }
-        })    
+                        $(arrSp[i]).show()  
+                }
+            })    
+        }
+    })    
     $(".listpage li").click(function() {
-        $(".listpage li").css({
-            "border-color": "#937C69"
-        })
-        $(this).css({
-            "border-color": "#7C3618"
-        })
-        $(sp).hide()
-        var pagenumber = $(this).children('a').attr('rel')
-        for (var i = 12*(pagenumber - 1); i < 12*(pagenumber - 1) + 12; i++)
-            $(sp[i]).show()  
+        if (flag == false)
+        {
+            $(".listpage li").css({
+                "border-color": "#937C69"
+            })
+            $(this).css({
+                "border-color": "#7C3618"
+            })
+            $(sp).hide()
+            var pagenumber = $(this).children('a').attr('rel')
+            for (var i = 12*(pagenumber - 1); i < 12*(pagenumber - 1) + 12; i++)
+                $(sp[i]).show()  
+        }
     })    
     
     $(".sortDT").change(function() {
@@ -208,6 +220,7 @@ $(document).ready(function() {
                 {
                     $(sp[i]).show()
                 }
+                sptam = sp
                 $(".age input").change(function() {
                     $(".listpage li").css({
                         "border-color" : "#937C69"
@@ -230,6 +243,7 @@ $(document).ready(function() {
                             {
                                 $(sp[i]).show()
                             }
+                            sptam = sp
                         }
                         else
                         {
@@ -245,12 +259,67 @@ $(document).ready(function() {
                             {
                                 $(sp[i]).show()
                             }
+                            sptam = sp
                         }
                     }
                 })
             }
         }
     })
+    var numberClick = 0
+    var brandTam
+    $(".brands img").click(function() {
+        var sortTH = document.querySelectorAll(".sortTH input")
+        for (var i = 0; i < sortTH.length; i++)
+            sortTH[i].checked = false
+        
+        if (brandTam != this)
+            numberClick = 0
+        brandTam = this
+        numberClick++
+        
+        if (numberClick % 2 == 0)
+        {
+            $(".item").hide()
+            var maxPage = Math.ceil(sp.length/12)
+            var listpageNumber = $(".listpage li")
+            $(listpageNumber).show()
+            for (var i = listpageNumber.length; i >= maxPage; i--)
+                $(listpageNumber[i]).hide()
+    
+            for (var i = 0; i < 12; i++)
+            {
+                $(sp[i]).show()
+            }
+        }
+        else
+        {
+            $(".item").hide()
+            $(".listpage li").css({
+                "border-color" : "#937C69"
+            })
+            $(".listpage li:first-child").css({
+                "border-color" : "#7C3618"
+            })
+            var brandName = document.getElementById(this.title) 
+            brandName.checked = true
+            var spBrand = []
+            for (var i = 0; i < sp.length; i++)
+            {
+                if (sp[i].className.slice(5,sp[i].className.slice(5,1000).search(" ") + 5) == brandName.id)
+                    spBrand.push(sp[i])
+            }
+            var maxPage = Math.ceil(spBrand.length/12)
+                var listpageNumber = $(".listpage li")
+                $(listpageNumber).show()
+                for (var i = listpageNumber.length; i >= maxPage; i--)
+                {
+                    $(listpageNumber[i]).hide()
+                }
+            $(spBrand).show()
+        }
+    })
+
     //-------------------------------//
        
     $(".item").click(function() {
