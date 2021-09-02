@@ -14,6 +14,81 @@ $(document).ready(function() {
         {
             $(sp[i]).show()
         }
+        $(".sortTH input").change(function(){
+            var arrChecked = []
+            var flag = false
+            $(sp).hide()
+            for (var i = 0; i < $(".sortTH input").length; i++)
+            {   
+                var tam =  $(".sortTH input")[i]
+                if (tam.checked == true)
+                {
+                    flag = true
+                    arrChecked.push(tam)
+                }
+            }
+            if (flag == false)
+            {
+                var maxPage = Math.ceil(sp.length/12)
+                var listpageNumber = $(".listpage li")
+                $(listpageNumber).show()
+                for (var i = listpageNumber.length; i >= maxPage; i--)
+                    $(listpageNumber[i]).hide()
+    
+                for (var i = 0; i < 12; i++)
+                {
+                    $(sp[i]).show()
+                }
+                $(".sortTH input").change(function() {
+                    $(".listpage li").css({
+                        "border-color" : "#937C69"
+                    })
+                    $(".listpage li:first-child").css({
+                        "border-color" : "#7C3618"
+                    })
+                })
+            }
+            else
+            {
+                var arrSp =[]
+                for(var i = 0; i < sp.length; i++)
+                {
+                    for (var j = 0; j < arrChecked.length; j++)
+                    {
+                        if (sp[i].className.slice(5,sp[i].className.slice(5,1000).search(" ") + 5) == arrChecked[j].id)
+                        {
+                            arrSp.push(sp[i])
+                        }
+                    }
+                }
+                var maxPage = Math.ceil(arrSp.length/12)
+                var listpageNumber = $(".listpage li")
+                $(listpageNumber).show()
+                for (var i = listpageNumber.length; i >= maxPage; i--)
+                {
+                    $(listpageNumber[i]).hide()
+                }
+                for (var i = 0; i < 12; i++)
+                {
+                    $(arrSp[i]).show()
+                }
+                $(".listpage li").click(function() {
+                    $(".listpage li").css({
+                        "border-color": "#937C69"
+                    })
+                    $(this).css({
+                        "border-color": "#7C3618"
+                    })
+                    $(arrSp).hide()
+                    var pagenumber = $(this).children('a').attr('rel')
+                    for (var i = 12*(pagenumber - 1); i < 12*(pagenumber - 1) + 12; i++)
+                        $(arrSp[i]).show()
+                    $("html, body").animate({
+                        scrollTop:0
+                    })   
+                })
+            }
+        })    
     $(".listpage li").click(function() {
         $(".listpage li").css({
             "border-color": "#937C69"
@@ -24,9 +99,21 @@ $(document).ready(function() {
         $(sp).hide()
         var pagenumber = $(this).children('a').attr('rel')
         for (var i = 12*(pagenumber - 1); i < 12*(pagenumber - 1) + 12; i++)
-            $(sp[i]).show()
-    })
+            $(sp[i]).show()  
+    })    
+    
     $(".sortDT").change(function() {
+        $(".listpage li").css({
+            "border-color" : "#937C69"
+        })
+        $(".listpage li:first-child").css({
+            "border-color" : "#7C3618"
+        })
+        var age = document.getElementsByName("age")
+        for (var i = 0; i < age.length; i++)
+        {
+            age[i].checked = false
+        } 
         if (this.checked)
         {
             if (this.id == "all")
@@ -61,35 +148,43 @@ $(document).ready(function() {
                 {
                     $(sp[i]).show()
                 }
-                $(".age input").click(function() {
-                    if(this.id == "kid")
-                    {
-                        $(sp).hide()
-                        sp = document.querySelectorAll(".dog.kid")
-                        var maxPage = Math.ceil(sp.length/12)
-                        var listpageNumber = $(".listpage li")
-                        $(listpageNumber).show()
-                        for (var i = listpageNumber.length; i >= maxPage; i--)
-                            $(listpageNumber[i]).hide()
-    
-                        for (var i = 0; i < 12; i++)
+                $(".age input").change(function() {
+                    $(".listpage li").css({
+                        "border-color" : "#937C69"
+                    })
+                    $(".listpage li:first-child").css({
+                        "border-color" : "#7C3618"
+                    })
+                    if(this.checked == true){
+                        if(this.id == "kid")
                         {
-                            $(sp[i]).show()
+                            $(sp).hide()
+                            sp = document.querySelectorAll(".dog.kid")
+                            var maxPage = Math.ceil(sp.length/12)
+                            var listpageNumber = $(".listpage li")
+                            $(listpageNumber).show()
+                            for (var i = listpageNumber.length; i >= maxPage; i--)
+                                $(listpageNumber[i]).hide()
+        
+                            for (var i = 0; i < 12; i++)
+                            {
+                                $(sp[i]).show()
+                            }
                         }
-                    }
-                    else
-                    {
-                        $(sp).hide()
-                        sp = document.querySelectorAll(".dog.adult")
-                        var maxPage = Math.ceil(sp.length/12)
-                        var listpageNumber = $(".listpage li")
-                        $(listpageNumber).show()
-                        for (var i = listpageNumber.length; i >= maxPage; i--)
-                            $(listpageNumber[i]).hide()
-    
-                        for (var i = 0; i < 12; i++)
+                        else
                         {
-                            $(sp[i]).show()
+                            $(sp).hide()
+                            sp = document.querySelectorAll(".dog.adult")
+                            var maxPage = Math.ceil(sp.length/12)
+                            var listpageNumber = $(".listpage li")
+                            $(listpageNumber).show()
+                            for (var i = listpageNumber.length; i >= maxPage; i--)
+                                $(listpageNumber[i]).hide()
+        
+                            for (var i = 0; i < 12; i++)
+                            {
+                                $(sp[i]).show()
+                            }
                         }
                     }
                 })
@@ -113,35 +208,43 @@ $(document).ready(function() {
                 {
                     $(sp[i]).show()
                 }
-                $(".age input").click(function() {
-                    if(this.id == "kid")
-                    {
-                        $(sp).hide()
-                        sp = document.querySelectorAll(".cat.kid")
-                        var maxPage = Math.ceil(sp.length/12)
-                        var listpageNumber = $(".listpage li")
-                        $(listpageNumber).show()
-                        for (var i = listpageNumber.length; i >= maxPage; i--)
-                            $(listpageNumber[i]).hide()
-    
-                        for (var i = 0; i < 12; i++)
+                $(".age input").change(function() {
+                    $(".listpage li").css({
+                        "border-color" : "#937C69"
+                    })
+                    $(".listpage li:first-child").css({
+                        "border-color" : "#7C3618"
+                    })
+                    if(this.checked == true){
+                        if(this.id == "kid")
                         {
-                            $(sp[i]).show()
+                            $(sp).hide()
+                            sp = document.querySelectorAll(".cat.kid")
+                            var maxPage = Math.ceil(sp.length/12)
+                            var listpageNumber = $(".listpage li")
+                            $(listpageNumber).show()
+                            for (var i = listpageNumber.length; i >= maxPage; i--)
+                                $(listpageNumber[i]).hide()
+        
+                            for (var i = 0; i < 12; i++)
+                            {
+                                $(sp[i]).show()
+                            }
                         }
-                    }
-                    else
-                    {
-                        $(sp).hide()
-                        sp = document.querySelectorAll(".cat.adult")
-                        var maxPage = Math.ceil(sp.length/12)
-                        var listpageNumber = $(".listpage li")
-                        $(listpageNumber).show()
-                        for (var i = listpageNumber.length; i >= maxPage; i--)
-                            $(listpageNumber[i]).hide()
-    
-                        for (var i = 0; i < 12; i++)
+                        else
                         {
-                            $(sp[i]).show()
+                            $(sp).hide()
+                            sp = document.querySelectorAll(".cat.adult")
+                            var maxPage = Math.ceil(sp.length/12)
+                            var listpageNumber = $(".listpage li")
+                            $(listpageNumber).show()
+                            for (var i = listpageNumber.length; i >= maxPage; i--)
+                                $(listpageNumber[i]).hide()
+        
+                            for (var i = 0; i < 12; i++)
+                            {
+                                $(sp[i]).show()
+                            }
                         }
                     }
                 })
