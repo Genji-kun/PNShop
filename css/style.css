@@ -17,9 +17,8 @@ a#go-to-top{
 a#go-to-top img{
     width: 100%;
 }
-.body{
-    display: flex;
-    flex-wrap: wrap;
+.showMenu{
+    display: none;
 }
 .cover{
     background-color: #937C69;
@@ -40,25 +39,23 @@ ul.menu{
     padding: 0px;
     margin: 0px;
     justify-content: center;
+    
 }
 ul.menu > li{
     width: 15%;
     text-align: center;
+    border-right: 1px solid #FFFFFF;
 }
 ul.menu > li > a{
     text-decoration: none;
     display: block;
     padding-top: 10px;
     padding-bottom: 10px;
-    border-right: 1px solid #FFFFFF;
     color: #FFFFFF;
 }
 ul.menu > li:last-child{
     background-color: #FFFFFF;
-    border-style: solid;
-    border-spacing: 1px;
-    border-color: #937C69;
-    border-radius: 50px 50px 50px 50px;
+    border-radius: 100px;
     margin-top:auto;
     margin-bottom:auto;
     margin-left:2%;
@@ -66,9 +63,12 @@ ul.menu > li:last-child{
     max-width: 100%;
     padding: 1px 3px;
     overflow: hidden;
+    display: flex;
+    justify-content: space-between;
 }
 ul.menu > li > input{
-    width: 80%;
+    width: 75%;
+    margin-left:10px;
     border-style: none;
 }
 ul.menu > li > button{
@@ -103,8 +103,8 @@ ul.carousel-indicators > li {
 .page{
     width:70%;
     background-color: #FFFFFF;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: auto;
+    margin-right: auto;
     padding: 1%;
 }
 .title{
@@ -119,11 +119,11 @@ ul.carousel-indicators > li {
     justify-content:flex-start;
 }
 .title ul > li {
-    font-size :30px;
+    font-size :2.5vw;
     color:#7C3618;
 }
 .title ul > li:last-child > a{
-    font-size :30px;
+    font-size :2.5vw;
     color: #979b9b;
     text-decoration: none;
 }

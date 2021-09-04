@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
     $("#go-to-top").hide()
     $(".info").hide()
     $("#text").hide()
@@ -6,6 +7,24 @@ $(document).ready(function() {
     $("#go-to-top").css({"opacity": 1})
     $(".info").css({"opacity": 1})
     $("#text").css({"opacity": 0.6})
+
+    var clickNumber = 0
+    $(".showMenu").click(function() {
+        clickNumber++
+        if (clickNumber % 2 != 0)
+            $(".hiddenMenu").slideDown(1000)
+        else
+            $(".hiddenMenu").slideUp(1000)
+    })
+
+    $(window).resize(function() {
+        if (window.innerWidth > 1024)
+        {
+            $(".hiddenMenu").show()
+        }
+        else
+            $(".hiddenMenu").hide()
+    })
 
     $(".item").click(function() {
         $(".info .mainimage").attr("src",$(this).children('a').children('img').attr('src'))

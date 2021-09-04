@@ -1,6 +1,7 @@
 *{
     margin:0;
     padding:0;
+    box-sizing: border-box;
 }
 div.cover{
     position: fixed;
@@ -53,7 +54,10 @@ div.searchbox{
     padding:0.5%;
     background-color: #ffffff;
     margin: auto;
-    border-radius: 50px;
+    border-radius: 100px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
 }
 div.searchbox > input{
     width: 88%;
