@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 a#go-to-top{
-    display:block;
     text-align: center;
     width: 5%;
     position: fixed;
@@ -119,23 +118,25 @@ ul.carousel-indicators > li {
     justify-content:flex-start;
 }
 .title ul > li {
-    font-size :2.5vw;
+    font-size: 30px;
     color:#7C3618;
 }
-.title ul > li:last-child > a{
-    font-size :2.5vw;
+.title ul > li:not(:first-child) > a{
+    font-size: 30px;
     color: #979b9b;
     text-decoration: none;
 }
-.title ul > li:last-child{
+.title ul > li:not(:first-child){
+    width: fit-content;
     margin-left: auto;
+}
+.itemHidden{
+    display: none;
 }
 div.item{
     width: 30%;
     background-color: rgba(147, 124, 105, 0.5);
     border-radius: 20px 20px 20px 20px;
-    margin-left: auto;
-    margin-right: auto;
     padding: 10px;
 }
 div.item:hover{
@@ -147,8 +148,9 @@ div.item > a{
 div.item h2{
     font-family: Huhu;
     font-size: 20px;
+    margin-top: 10px;
+    height: 60px;
     color:#000000;
-
 }
 div.item h3{
     font-family: Huhu;
@@ -158,7 +160,7 @@ div.item h3{
 div.items{
     display:flex;
     flex-wrap: wrap;
-    
+    justify-content: space-evenly;
 }
 div.item img{
     width: 100%;
@@ -169,10 +171,10 @@ div.youmayknow{
     width: 96%;
     margin-left: auto;
     margin-right: auto;
-    padding: 18px;
+    padding: 3%;
     display: flex;
     flex-wrap: wrap;
-    margin-top:2%;   
+    margin-top:2%;
 }
 div.document{
     width: 75%;
@@ -184,7 +186,7 @@ div.document > h2{
 }
 div.document > p{
     font-family: Huhu;
-    font-size: 15px;
+    font-size: 18px;
     color: #000000;
     width: 90%;
     margin-left: 2%;
@@ -201,7 +203,7 @@ div.youmayknow img{
     width: 30%;
 }
 #footer{
-    margin-top:2%;
+    margin-top:30px;
     background-color: #937C69;
     width: 100%;
     display: flex;
@@ -296,19 +298,18 @@ a.followicon:hover{
 }
 .info h1{
     margin-top: 10%;
-    font-size: 25px;
+    font-size: 2vw;
     font-family: Huhu;
     color:#937C69;
     font-weight: bolder;
 }
 .info h3{
     font-family: Huhu;
-    font-size: 20px;
+    font-size: 1.75vw;
 }
 .info p {
     font-family: Huhu;
-    font-size: 15px;
-    margin-bottom: 5%;
+    font-size: 1.5vw;
 }
 .left{
     width: 50%;
@@ -319,11 +320,15 @@ a.followicon:hover{
 
 .right{
     width: 50%;
+    height: 100%;
     border-left: 2px solid #937C69;
     padding-left: 3%;
     position: relative;
 }
-div.left img {
+.mainimage {
+    width: 100%;
+}
+.thumb img{
     width: 100%;
 }
 div.thumb{
@@ -342,12 +347,14 @@ div.thumb > div {
 }
 .textOverFlow{
     width: 100%;
-    height: 200px;
+    height: 50%;
     overflow: auto;
 }
 .btns{
     display: flex;
     justify-content: space-evenly;
+    margin-top: 30px;
+    font-size: 1.25vw;
 }
 .cart{
     background-color: #937C69;
@@ -365,6 +372,27 @@ div.thumb > div {
     text-align: center;
     padding: 5%;
 }
-.buy a{
+.buy a, .cart a{
     display: block;
+    width: 100%;
+    height: 100%;
 }
+/*width*/
+.textOverFlow::-webkit-scrollbar {
+    width: 7px;
+}
+/*chỉnh cái màu nền*/
+.textOverFlow::-webkit-scrollbar-track {
+    background-color: #e0d7d0;
+    border-radius: 10px;
+}
+/*cái cục*/
+.textOverFlow::-webkit-scrollbar-thumb {
+    background:#937C69; 
+    border-radius: 10px;
+}
+/*cái cục khi hover*/
+.textOverFlow::-webkit-scrollbar-thumb:hover {
+    background: #75614f; 
+}
+

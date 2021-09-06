@@ -1,0 +1,13 @@
+div.youmayknow{
+    width: 80%;
+}
+div.item{
+    width: 80%;
+}
+.title > div.imgframe{
+    justify-content: center;
+}
+.title > div.imgframe img{
+    width: 80%;
+    margin-bottom: 5%
+}

@@ -140,7 +140,8 @@ div.item > a{
 div.item h2{
     font-family: Huhu;
     font-size: 20px;
-    height: 70px;
+    margin-top: 10px;
+    height: 60px;
     color:#000000;
 }
 div.item h3{

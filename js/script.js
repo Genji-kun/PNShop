@@ -16,7 +16,15 @@ $(document).ready(function() {
         else
             $(".hiddenMenu").slideUp(1000)
     })
+    var prevWidth = window.innerWidth
+    var infoWidth = 50
+    var infoLeft = 25
 
+    if(window.innerWidth <= 780)
+    {
+        $(".title ul > li:last-child").hide()
+        $(".hiddenMore").show()
+    }
     $(window).resize(function() {
         if (window.innerWidth > 1024)
         {
@@ -24,8 +32,18 @@ $(document).ready(function() {
         }
         else
             $(".hiddenMenu").hide()
-    })
 
+        if(window.innerWidth <= 780)
+        {
+            $(".title ul > li:last-child").hide()
+            $(".hiddenMore").show()
+        }
+        else
+        {
+            $(".title ul > li:last-child").show()
+            $(".hiddenMore").hide()
+        }
+    })
     $(".item").click(function() {
         $(".info .mainimage").attr("src",$(this).children('a').children('img').attr('src'))
         $(".info h1").text($(this).children('a').children('h2').text()) 
