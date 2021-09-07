@@ -4,6 +4,7 @@ $(document).ready(function() {
     $(".infoCart").hide()
     $("#text").hide()
     
+    $(".infoCart").css({"opacity": 1})
     $("#go-to-top").css({"opacity": 1})
     $(".info").css({"opacity": 1})
     $("#text").css({"opacity": 0.6}) 

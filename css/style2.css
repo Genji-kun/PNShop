@@ -257,6 +257,7 @@ a.followicon:hover{
     border-color: #937C69;
     border-width: 5px;
     border-radius: 20px;
+    opacity: 0;
 }
 .infoCart h1{
     font-size: 35px;
