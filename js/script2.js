@@ -1,6 +1,7 @@
 $(document).ready(function() {
     $("#go-to-top").hide()
     $(".info").hide()
+    $(".infoCart").hide()
     $("#text").hide()
     
     $("#go-to-top").css({"opacity": 1})
@@ -130,6 +131,9 @@ $(document).ready(function() {
         {
             if (this.id == "all")
             {
+                var sortTH = document.querySelectorAll(".sortTH input")
+                for (var i = 0; i < sortTH.length; i++)
+                    sortTH[i].checked = false
                 $(".age").hide()
                 var listpageNumber = $(".listpage li")
                 $(listpageNumber).show()
@@ -320,11 +324,29 @@ $(document).ready(function() {
         }
     })
 
+    //-------------------------------// Thêm số lượng giỏ hàng
+    $(".cart").click(function(){
+        var count = $(".menu span").text()
+        count++
+        $(".menu span").text(count)
+        alert("Đã thêm thành công, vui lòng kiểm tra giỏ hàng !!!")
+    })
+    
+    //-------------------------------// Phần info giỏ hàng
+    /$(".menu li:last-child").click(function(){
+        $(".cover").hide()
+        $(".exit").show()
+        $(".infoCart").fadeIn(500)
+        $("#text").fadeIn()
+    })
+    $(".exit").click(function(){
+        $(".cover").show()
+        $(".infoCart").fadeOut(500)
+        $("#text").fadeOut()
+    })
     //-------------------------------//
-       
     $(".item").click(function() {
         $(".cover").hide()
-        
         $(".info .mainimage").attr("src",$(this).children('a').children('img').attr('src'))
         $(".info h1").text($(this).children('a').children('h2').text()) 
         $(".info h3").text($(this).children('a').children('h3').text())

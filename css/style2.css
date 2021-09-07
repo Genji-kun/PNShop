@@ -244,6 +244,90 @@ a.followicon:hover{
     z-index:1000;
     padding: 5px 20px;
 }
+.infoCart{
+    background-color: #FFFFFF;
+    position:fixed;
+    left: 10%;
+    top: 5%;
+    z-index:999;
+    width: 80%;
+    height: 90%;
+    padding: 20px;
+    border-style:solid;
+    border-color: #937C69;
+    border-width: 5px;
+    border-radius: 20px;
+}
+.infoCart h1{
+    font-size: 35px;
+    font-family: Huhu;
+    color:#7C3618;
+    font-weight: bolder;
+}
+.selectedItems{
+    width: 100%;
+    height: 78%;
+    overflow: auto;
+}
+.selectedItem img{
+    width: 10%;
+}
+.selectedItem{
+    margin: 10px;
+    padding: 10px;
+    border-top: 2px solid #937C69;
+    display: flex;
+    flex-wrap: wrap;
+}
+.selectedItem:last-child{
+    border-bottom: 2px solid #937C69;
+}
+.header{
+    margin-top: 2%;
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+}
+.infoCart h2{
+    font-family: Huhu;
+    font-size: 25px;
+    font-weight: bolder;
+    color:#937C69;
+    text-align: center;
+    width: 16%;
+}
+.infoCart h2:first-child{
+    width: 42%;
+}
+.selectedItem h3{
+    font-family: Huhu;
+    width: 32%;
+    font-size: 20px;
+    padding: 1%;
+}
+.selectedItem h4{
+    font-family: Huhu;
+    width: 16%;
+    font-size: 20px;
+    text-align:center;
+}
+.selectedItems::-webkit-scrollbar {
+    width: 7px;
+}
+/*chỉnh cái màu nền*/
+.selectedItems::-webkit-scrollbar-track {
+    background-color: #e0d7d0;
+    border-radius: 10px;
+}
+/*cái cục*/
+.selectedItems::-webkit-scrollbar-thumb {
+    background:#937C69; 
+    border-radius: 10px;
+}
+/*cái cục khi hover*/
+.selectedItems::-webkit-scrollbar-thumb:hover {
+    background: #75614f; 
+}
 .info{
     background-color: #FFFFFF;
     position:fixed;
@@ -283,7 +367,6 @@ a.followicon:hover{
     margin-top: auto;
     margin-bottom: auto;
 }
-
 .right{
     width: 50%;
     border-left: 2px solid #937C69;
@@ -306,9 +389,6 @@ div.thumb > div {
 .hide{
     display:none;
     width: 50%;
-}
-.active{
-    display: block;
 }
 .textOverFlow{
     width: 280px;
@@ -338,6 +418,23 @@ div.thumb > div {
 }
 .buy a{
     display: block;
+}
+.textOverFlow::-webkit-scrollbar {
+    width: 7px;
+}
+/*chỉnh cái màu nền*/
+.textOverFlow::-webkit-scrollbar-track {
+    background-color: #e0d7d0;
+    border-radius: 10px;
+}
+/*cái cục*/
+.textOverFlow::-webkit-scrollbar-thumb {
+    background:#937C69; 
+    border-radius: 10px;
+}
+/*cái cục khi hover*/
+.textOverFlow::-webkit-scrollbar-thumb:hover {
+    background: #75614f; 
 }
 .listpage{
     list-style-type: none;
