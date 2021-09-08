@@ -3,14 +3,22 @@ $(document).ready(function() {
     $(".info").hide()
     $(".infoCart").hide()
     $("#text").hide()
-    
+    $(".selectedItem").hide()
     $(".infoCart").css({"opacity": 1})
     $("#go-to-top").css({"opacity": 1})
     $(".info").css({"opacity": 1})
     $("#text").css({"opacity": 0.6}) 
     var flag = false
-
+    
     var sp = document.getElementsByClassName("item")
+    for(var i = 0; i < $(".selectedItem").length; i++)
+    {
+        var a = $(".selectedItem")[i]
+        var b = $(".item")[i]
+        $(a).children('img').attr('src', $(b).children('a').children('img').attr('src'))
+        $(a).children('h3').text($(b).children('a').children('h2').text())
+        $(a).children('h4').text($(b).children('a').children('h3').text())
+    }
     $(sp).hide()
     $(".age").hide()
     for (var i = 0; i < 12; i++)
@@ -331,8 +339,16 @@ $(document).ready(function() {
         count++
         $(".menu span").text(count)
         alert("Đã thêm thành công, vui lòng kiểm tra giỏ hàng !!!")
+        for(var i = 0; i < $(".selectedItem").length; i++)
+        {
+            var slItem = $(".selectedItem")[i]
+            if( $(slItem).children('img').attr('src') == $("#firstthumb").attr('src'))
+            {
+                $(slItem).show()
+                break
+            }
+        }
     })
-    
     //-------------------------------// Phần info giỏ hàng
     /$(".menu li:last-child").click(function(){
         $(".cover").hide()

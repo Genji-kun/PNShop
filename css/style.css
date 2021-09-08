@@ -149,7 +149,11 @@ div.item h2{
     font-family: Huhu;
     font-size: 20px;
     margin-top: 10px;
-    height: 60px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;  
     color:#000000;
 }
 div.item h3{
