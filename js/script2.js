@@ -18,6 +18,7 @@ $(document).ready(function() {
         $(a).children('img').attr('src', $(b).children('a').children('img').attr('src'))
         $(a).children('h3').text($(b).children('a').children('h2').text())
         $(a).children('h4').text($(b).children('a').children('h3').text())
+        $(a).children('h5').text($(b).children('a').children('h3').text())
     }
     $(sp).hide()
     $(".age").hide()
@@ -348,6 +349,7 @@ $(document).ready(function() {
                 var sl = $(slItem).children('div').children('span').text()
                 sl++
                 $(slItem).children('div').children('span').text(sl)
+                $(slItem).children('h5').text(thanhTien($(slItem).children('h4').text(), sl))
                 break
             }
         }
@@ -358,6 +360,18 @@ $(document).ready(function() {
         $(".exit").show()
         $(".infoCart").fadeIn(500)
         $("#text").fadeIn()
+        $(".infoCart > img").hide()
+        if($(".menu span").text() == 0)
+        {
+            $(".infoCart > img").show()
+            $(".infoCart").children('h1').hide()
+            $(".header").hide()
+        }
+        else{
+            $(".infoCart > img").hide()
+            $(".infoCart").children('h1').show()
+            $(".header").show()
+        }
     })
     $(".exit").click(function(){
         $(".cover").show()
@@ -376,6 +390,7 @@ $(document).ready(function() {
         {
             $(this).parent('div').parent('div').hide()
         }
+        $(this).parent('div').siblings('h5').text(thanhTien($(this).parent('div').siblings('h4').text(), sl))
     })
     $(".plus").click(function(){
         var sl = $(this).siblings('span').text()
@@ -384,10 +399,30 @@ $(document).ready(function() {
         cong = $(".menu span").text()
         cong++
         $(".menu span").text(cong)
+        $(this).parent('div').siblings('h5').text(thanhTien($(this).parent('div').siblings('h4').text(), sl))
     })
-    //-------------------------------//
-
-    //-------------------------------//
+    //-------------------------------// Hàm tính tổng số tiền 
+    function thanhTien(a,soLuong)
+    {
+        var chuoiBoCham =a.replaceAll('.','')
+        chuoiBoCham = chuoiBoCham.replace('đ','')
+        chuoiBoCham *= soLuong
+        var tt = chuoiBoCham
+        var dem = 0
+        tt = String(tt)
+        for (var i = tt.length - 1; i >= 1; i--)
+        {
+            dem++
+            if(dem == 3 )
+                {
+                    tt = tt.slice(0,i) + "." +tt.slice(i)
+                    dem = 0
+                }
+        }
+        var VND = " đ"
+        return tt + VND
+    }
+    //-------------------------------// Hủy đơn hàng 
     $(".item").click(function() {
         $(".cover").hide()
         $(".info .mainimage").attr("src",$(this).children('a').children('img').attr('src'))

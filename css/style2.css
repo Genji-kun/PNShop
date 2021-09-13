@@ -1,5 +1,5 @@
 *{
-    margin:0;
+    margin:0 ;
     padding:0;
     box-sizing: border-box;
 }
@@ -268,6 +268,7 @@ a.followicon:hover{
     font-family: Huhu;
     color:#7C3618;
     font-weight: bolder;
+    text-align: center;
 }
 .selectedItems{
     width: 100%;
@@ -283,6 +284,7 @@ a.followicon:hover{
     border-top: 2px solid #937C69;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 .selectedItem:last-child{
     border-bottom: 2px solid #937C69;
@@ -301,6 +303,9 @@ a.followicon:hover{
     text-align: center;
     width: 16%;
 }
+.infoCart h2:last-child{
+    width: 18%;
+}
 .infoCart h2:first-child{
     width: 42%;
 }
@@ -309,6 +314,7 @@ a.followicon:hover{
     width: 32%;
     font-size: 20px;
     padding: 1%;
+    margin: 0px;
 }
 .selectedItem h4{
     font-family: Huhu;
@@ -316,24 +322,50 @@ a.followicon:hover{
     font-size: 20px;
     text-align:center;
     padding: 1%;
+    height:fit-content;
+    margin: 0px;
 }
 .selectedItem h5{
     font-family: Huhu;
-    width: 16%;
+    width: 18%;
     font-size: 20px;
     text-align:center;
     padding: 1%;
+    margin: 0px;
+    height: fit-content;
+    font-weight: bolder;
+}
+.selectedItem > a{
+    text-decoration: none;
+    width: 8%;
+    font-size : 20px;
+    height: fit-content;
+    text-align: center;
+}
+.selectedItem > a:hover i{
+    color:#7C3618;
+}
+.selectedItem > a > i{
+    color:#937C69;
 }
 .sl {
     width: 16%;
+    font-size: 20px;
     text-align: center;
+    align-items: center;
+    padding: 1%;
 }
 .sl a{
     color:#937C69;
+    text-decoration: none;
     font-family: Huhu;
     text-align: center;
     font-size: 20px;
-    padding: 1%;
+    padding: 3%;
+    align-items: center;
+}
+.sl a:hover{
+    color: #7C3618;
 }
 .selectedItem span{
     font-family: Huhu;
