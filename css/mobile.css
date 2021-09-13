@@ -12,6 +12,9 @@ div.document{
     height: fit-content;
     margin-top: 5%;
 }
+.cover img{
+    width: 50%;
+}
 div.document > p{
     display:none;
 }
