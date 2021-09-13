@@ -262,6 +262,11 @@ a.followicon:hover{
     border-width: 5px;
     border-radius: 20px;
     opacity: 0;
+    text-align: center;
+}
+.infoCart > img{
+    width: 80%;
+    margin-top: 2%;
 }
 .infoCart h1{
     font-size: 35px;

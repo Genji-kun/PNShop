@@ -353,6 +353,7 @@ $(document).ready(function() {
                 break
             }
         }
+        GioTrong()
     })
     //-------------------------------// Phần info giỏ hàng
     /$(".menu li:last-child").click(function(){
@@ -361,17 +362,7 @@ $(document).ready(function() {
         $(".infoCart").fadeIn(500)
         $("#text").fadeIn()
         $(".infoCart > img").hide()
-        if($(".menu span").text() == 0)
-        {
-            $(".infoCart > img").show()
-            $(".infoCart").children('h1').hide()
-            $(".header").hide()
-        }
-        else{
-            $(".infoCart > img").hide()
-            $(".infoCart").children('h1').show()
-            $(".header").show()
-        }
+        GioTrong()
     })
     $(".exit").click(function(){
         $(".cover").show()
@@ -391,6 +382,7 @@ $(document).ready(function() {
             $(this).parent('div').parent('div').hide()
         }
         $(this).parent('div').siblings('h5').text(thanhTien($(this).parent('div').siblings('h4').text(), sl))
+        GioTrong()
     })
     $(".plus").click(function(){
         var sl = $(this).siblings('span').text()
@@ -413,7 +405,7 @@ $(document).ready(function() {
         for (var i = tt.length - 1; i >= 1; i--)
         {
             dem++
-            if(dem == 3 )
+            if(dem == 3)
                 {
                     tt = tt.slice(0,i) + "." +tt.slice(i)
                     dem = 0
@@ -422,7 +414,30 @@ $(document).ready(function() {
         var VND = " đ"
         return tt + VND
     }
-    //-------------------------------// Hủy đơn hàng 
+    //-------------------------------// Hủy đơn hàng
+    $(".cancel").click(function(){
+        var sl = $(this).siblings('div').children('span').text()
+        $(".menu span").text($(".menu span").text() - sl) 
+        $(this).siblings('div').children('span').text(0)
+        $(this).parent().hide()
+        GioTrong()
+    })
+    //-------------------------------// Hàm giỏ trống
+    function GioTrong()
+    {
+        if($(".menu span").text() == 0)
+        {
+            $(".infoCart > img").show()
+            $(".infoCart h1").hide()
+            $(".header").hide()
+        }
+        else{
+            $(".infoCart > img").hide()
+            $(".infoCart h1").show()
+            $(".header").show()
+        }
+    }
+    //-------------------------------//
     $(".item").click(function() {
         $(".cover").hide()
         $(".info .mainimage").attr("src",$(this).children('a').children('img').attr('src'))
