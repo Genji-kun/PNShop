@@ -341,10 +341,13 @@ $(document).ready(function() {
         alert("Đã thêm thành công, vui lòng kiểm tra giỏ hàng !!!")
         for(var i = 0; i < $(".selectedItem").length; i++)
         {
-            var slItem = $(".selectedItem")[i]
+            var slItem = $(".selectedItem")[i]           
             if( $(slItem).children('img').attr('src') == $("#firstthumb").attr('src'))
             {
                 $(slItem).show()
+                var sl = $(slItem).children('div').children('span').text()
+                sl++
+                $(slItem).children('div').children('span').text(sl)
                 break
             }
         }
@@ -361,6 +364,29 @@ $(document).ready(function() {
         $(".infoCart").fadeOut(500)
         $("#text").fadeOut()
     })
+    //-------------------------------// Thêm bớt số lượng giỏ hàng
+    $(".minus").click(function(){
+        var sl = $(this).siblings('span').text()
+        sl--
+        $(this).siblings('span').text(sl)
+        var tru = $(".menu span").text()
+        tru--
+        $(".menu span").text(tru)
+        if(sl == 0)
+        {
+            $(this).parent('div').parent('div').hide()
+        }
+    })
+    $(".plus").click(function(){
+        var sl = $(this).siblings('span').text()
+        sl++
+        $(this).siblings('span').text(sl) 
+        cong = $(".menu span").text()
+        cong++
+        $(".menu span").text(cong)
+    })
+    //-------------------------------//
+
     //-------------------------------//
     $(".item").click(function() {
         $(".cover").hide()
@@ -413,5 +439,4 @@ $(document).ready(function() {
             scrollTop:0
         }, 1000);
     })
-
 })

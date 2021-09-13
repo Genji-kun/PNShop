@@ -317,13 +317,27 @@ a.followicon:hover{
     text-align:center;
     padding: 1%;
 }
-.selectedItem .sl{
-    width: 16%;
-    color:#937C69;
-    text-align: center;
+.selectedItem h5{
     font-family: Huhu;
+    width: 16%;
+    font-size: 20px;
+    text-align:center;
+    padding: 1%;
+}
+.sl {
+    width: 16%;
+    text-align: center;
+}
+.sl a{
+    color:#937C69;
+    font-family: Huhu;
+    text-align: center;
     font-size: 20px;
     padding: 1%;
+}
+.selectedItem span{
+    font-family: Huhu;
+    color: #000000;
 }
 .selectedItems::-webkit-scrollbar {
     width: 7px;
