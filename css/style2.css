@@ -45,8 +45,14 @@ div.cover > nav > ul.menu > li > a{
     font-family: huhu;
     text-decoration: none;
     font-size: 20px;
-    vertical-align: middle;
+    font-weight: bolder;
     color: #ffffff;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+div.cover > nav > ul.menu > li > a:hover{
+    text-shadow: 2px 2px #7C3618;
 }
 div.searchbox{
     width: 30%;
@@ -133,6 +139,9 @@ div.item{
     border-radius: 20px 20px 20px 20px;
     margin: 2%;
     padding: 10px;
+}
+div.item:hover{
+    transform: scale(0.95);
 }
 div.item > a{
     text-decoration: none;

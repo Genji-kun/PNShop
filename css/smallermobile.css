@@ -2,10 +2,16 @@ div.youmayknow{
     width: 80%;
 }
 .cover img{
-    width: 70%;
+    width: 80%;
 }
 div.item{
     width: 80%;
+}
+.showMenu a{
+    font-size: 8vw;
+}
+.showMenu{
+    margin-right: 3%;
 }
 .title > div.imgframe{
     justify-content: center;

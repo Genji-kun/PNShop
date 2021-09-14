@@ -106,6 +106,9 @@ $(document).ready(function() {
                     for (var i = 12*(pagenumber - 1); i < 12*(pagenumber - 1) + 12; i++)
                         $(arrSp[i]).show()  
                 }
+                $("html, body").animate({
+                    scrollTop:402
+                }, 1000);
             })    
         }
     })    
@@ -123,6 +126,9 @@ $(document).ready(function() {
             for (var i = 12*(pagenumber - 1); i < 12*(pagenumber - 1) + 12; i++)
                 $(sp[i]).show()  
         }
+        $("html, body").animate({
+            scrollTop:402
+        }, 1000);
     })    
     
     $(".sortDT").change(function() {
@@ -139,11 +145,11 @@ $(document).ready(function() {
         } 
         if (this.checked)
         {
+            var sortTH = document.querySelectorAll(".sortTH input")
+            for (var i = 0; i < sortTH.length; i++)
+                sortTH[i].checked = false
             if (this.id == "all")
             {
-                var sortTH = document.querySelectorAll(".sortTH input")
-                for (var i = 0; i < sortTH.length; i++)
-                    sortTH[i].checked = false
                 $(".age").hide()
                 var listpageNumber = $(".listpage li")
                 $(listpageNumber).show()
@@ -163,7 +169,6 @@ $(document).ready(function() {
                 sp = document.getElementsByClassName("item")
                 $(sp).hide()
                 sp = document.getElementsByClassName("dog")
-    
                 var maxPage = Math.ceil(sp.length/12)
                 var listpageNumber = $(".listpage li")
                 $(listpageNumber).show()
@@ -182,6 +187,9 @@ $(document).ready(function() {
                         "border-color" : "#7C3618"
                     })
                     if(this.checked == true){
+                        var sortTH = document.querySelectorAll(".sortTH input")
+                        for (var i = 0; i < sortTH.length; i++)
+                            sortTH[i].checked = false
                         if(this.id == "kid")
                         {
                             $(sp).hide()
@@ -243,6 +251,9 @@ $(document).ready(function() {
                         "border-color" : "#7C3618"
                     })
                     if(this.checked == true){
+                        var sortTH = document.querySelectorAll(".sortTH input")
+                        for (var i = 0; i < sortTH.length; i++)
+                            sortTH[i].checked = false
                         if(this.id == "kid")
                         {
                             $(sp).hide()
