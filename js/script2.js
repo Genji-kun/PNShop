@@ -132,6 +132,7 @@ $(document).ready(function() {
     // Xử lý sự kiện khi chọn lọc đối tượng (chó,mèo,tất cả)
     $(".sortDT").change(function() {
         checkedFirstPage()
+        $("#keyword").val("")
         var age = document.getElementsByName("age")
         for (var i = 0; i < age.length; i++)
             age[i].checked = false
@@ -199,11 +200,13 @@ $(document).ready(function() {
                 })
             }
         }
+        noProduct(sp.length)
     })
 
     // Xử lý sự kiện khi chọn lọc thương hiệu
     $(".sortTH input").change(function(){
         checkedFirstPage()
+        $("#keyword").val("")
         var arrChecked = []
         flag = false
         $(".item").hide()
@@ -241,6 +244,7 @@ $(document).ready(function() {
     var numberClick = 0
     var brandTam
     $(".brands img").click(function() {
+        $("#keyword").val("")
         var sortTH = $(".sortTH input")
         for (var i = 0; i < sortTH.length; i++)
             sortTH[i].checked = false
@@ -344,6 +348,8 @@ $(document).ready(function() {
     // Tìm kiếm sản phẩm 
     $("#searchBtn").click(function(){
         $(".item").hide()
+        var sortDT = $("#all")
+        sortDT.checked = true
         var kw = $("#keyword").val()
         var dem = 0
         if(kw != "")

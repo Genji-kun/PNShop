@@ -45,6 +45,9 @@ ul.menu > li{
     text-align: center;
     border-right: 1px solid #FFFFFF;
 }
+ul.menu > li:hover {
+    background-color: #a74116;
+}
 ul.menu > li > a{
     text-decoration: none;
     display: block;
