@@ -165,6 +165,7 @@ $(document).ready(function() {
                         showListPage(sp)
                         show12Product(sp)
                     }
+                    noProduct(sp)
                 })
             }
             else
@@ -190,6 +191,7 @@ $(document).ready(function() {
                         showListPage(sp)
                         show12Product(sp)
                     }
+                    noProduct(sp)
                 })
             }
         }
