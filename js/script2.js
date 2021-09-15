@@ -9,7 +9,6 @@ $(document).ready(function() {
     $(".info").css({"opacity": 1})
     $("#text").css({"opacity": 0.6}) 
     var flag = false
-    
     //--------------------- Các function --------------------- //
     // Tính số trang và hiển thị tương ứng
     function showListPage(sanPham)
@@ -117,12 +116,6 @@ $(document).ready(function() {
             var pagenumber = $(this).children('a').attr('rel')
             for (var i = 12*(pagenumber - 1); i < 12*(pagenumber - 1) + 12; i++)
                 $(sp[i]).show()  
-        }
-        else
-        {
-            var pagenumber = $(this).children('a').attr('rel')
-                    for (var i = 12*(pagenumber - 1); i < 12*(pagenumber - 1) + 12; i++)
-                        $(arrSp[i]).show()  
         }
         $("html, body").animate({
             scrollTop:402
@@ -233,6 +226,15 @@ $(document).ready(function() {
                         arrSp.push(sp[i])
             showListPage(arrSp)
             show12Product(arrSp)
+            $(".listpage li").click(function() {
+                if(flag == true)
+                {
+                    $(arrSp).hide()
+                    var pagenumber = $(this).children('a').attr('rel')
+                            for (var i = 12*(pagenumber - 1); i < 12*(pagenumber - 1) + 12; i++)
+                                $(arrSp[i]).show()  
+                }
+            })
             noProduct(arrSp.length)
         }
     }) 
