@@ -9,7 +9,6 @@ div.cover{
     background-color: #937C69;
     display:flex;
     flex-wrap: wrap;
-    justify-content: space-between;
     z-index: 50;
 }
 div.cover > a > img{
@@ -33,20 +32,26 @@ div.cover > nav > ul.menu{
     margin: 0px;
 }
 div.cover > nav ul.menu li{
-    width: 25%;
+    width: 33%;
     text-align: center;
     border-right: 2px solid #ffffff;
 }
 div.cover > nav ul.menu li:last-child{
     border-right: none;
-    width: 50%;
 }
 div.cover > nav > ul.menu > li > a{
+    align-items: center;
     font-family: huhu;
     text-decoration: none;
     font-size: 20px;
-    vertical-align: middle;
+    font-weight: bolder;
     color: #ffffff;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+div.cover > nav > ul.menu > li > a:hover{
+    text-shadow: 2px 2px #7C3618;
 }
 div.searchbox{
     width: 30%;
@@ -54,12 +59,17 @@ div.searchbox{
     padding:0.5%;
     background-color: #ffffff;
     margin: auto;
-    border-radius: 50px;
+    border-radius: 100px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
 }
 div.searchbox > input{
     width: 88%;
     border-style: none;
     margin-left:2%;
+    font-family: Huhu;
+    align-items: center;
 }
 div.searchbox > button{
     background-color: #7C3618;
