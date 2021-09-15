@@ -130,7 +130,7 @@ div.empty img{
 .page {
     width: 80%;
 }
-.page > img{
+.page > #noProduct > img{
     width: 100%;
     display: none;
 }

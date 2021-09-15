@@ -10,7 +10,45 @@ $(document).ready(function() {
     $("#text").css({"opacity": 0.6}) 
     var flag = false
     
-    var sp = document.getElementsByClassName("item")
+    // vv function vv //
+    function showListPage(sanPham)
+    {
+        var maxPage = Math.ceil(sanPham.length/12)
+            var listpageNumber = $(".listpage li")
+            $(listpageNumber).show()
+            for (var i = listpageNumber.length; i >= maxPage; i--)
+                $(listpageNumber[i]).hide()
+    }
+    function show12Product(sanPham)
+    {
+        for (var i = 0; i < 12; i++)
+                $(sanPham[i]).show()
+    }
+
+    function changePage(sanPham)
+    {
+        $(".item").hide()
+        $(".listpage li").css({
+            "border-color": "#937C69"
+        })
+        $(this).css({
+            "border-color": "#7C3618"
+        })
+        var pagenumber = $(this).children('a').attr('rel')
+        for (var i = 12*(pagenumber - 1); i < 12*(pagenumber - 1) + 12; i++)
+            $(sanPham[i]).show()  
+    }
+    function checkedFirstPage()
+    {
+        $(".listpage li").css({
+            "border-color" : "#937C69"
+        })
+        $(".listpage li:first-child").css({
+            "border-color" : "#7C3618"
+        })
+    }
+    // ^^ function ^^ //
+    var sp = $(".item")
     for(var i = 0; i < $(".selectedItem").length; i++)
     {
         var a = $(".selectedItem")[i]
@@ -27,19 +65,14 @@ $(document).ready(function() {
             $(sp[i]).show()
         }
     $(".sortTH input").change(function(){
-        $(".listpage li").css({
-            "border-color" : "#937C69"
-        })
-        $(".listpage li:first-child").css({
-            "border-color" : "#7C3618"
-        })
+        checkedFirstPage()
         var arrChecked = []
         flag = false
-        $(sp).hide()
+        $(".item").hide()
         for (var i = 0; i < $(".sortTH input").length; i++)
         {   
             var tam =  $(".sortTH input")[i]
-            if (tam.checked == true)
+            if (tam.checked)
             {
                 flag = true
                 arrChecked.push(tam)
@@ -47,176 +80,88 @@ $(document).ready(function() {
         }
         if (flag == false)
         {
-            var maxPage = Math.ceil(sp.length/12)
-            var listpageNumber = $(".listpage li")
-            $(listpageNumber).show()
-            for (var i = listpageNumber.length; i >= maxPage; i--)
-                $(listpageNumber[i]).hide()
-    
-            for (var i = 0; i < 12; i++)
-            {
-                $(sp[i]).show()
-            }
-            $(".sortTH input").change(function() {
-                $(".listpage li").css({
-                    "border-color" : "#937C69"
-                })
-                $(".listpage li:first-child").css({
-                    "border-color" : "#7C3618"
-                })
-            })
+            showListPage(sp)
+            show12Product(sp)
+            checkedFirstPage()
         }
         else
         {
             var arrSp = []
+            //Duyệt các sản phẩm đang được hiển thị, so sánh với các thương hiệu được click, nếu trùng khớp thì được thêm vào mảng
             for(var i = 0; i < sp.length; i++)
-            {
                 for (var j = 0; j < arrChecked.length; j++)
-                {
                     if (sp[i].className.slice(5,sp[i].className.slice(5,1000).search(" ") + 5) == arrChecked[j].id)
-                    {
                         arrSp.push(sp[i])
-                    }
-                }
-            }
-
-            var maxPage = Math.ceil(arrSp.length/12)
-            var listpageNumber = $(".listpage li")
-            $(listpageNumber).show()
-            for (var i = listpageNumber.length; i >= maxPage; i--)
-            {
-                $(listpageNumber[i]).hide()
-            }
-            for (var i = 0; i < 12; i++)
-            {
-                $(arrSp[i]).show()
-            }
-            
-            $(".listpage li").click(function() {
-                if (flag == true)
-                {
-                    $(".item").hide()
-                    $(".listpage li").css({
-                        "border-color": "#937C69"
-                    })
-                    $(this).css({
-                        "border-color": "#7C3618"
-                    })
-                    var pagenumber = $(this).children('a').attr('rel')
-                    for (var i = 12*(pagenumber - 1); i < 12*(pagenumber - 1) + 12; i++)
-                        $(arrSp[i]).show()  
-                }
-            })    
+            showListPage(arrSp)
+            show12Product(arrSp)
+            noProduct(arrSp.length)
         }
     })    
     $(".listpage li").click(function() {
+        $(".listpage li").css({
+            "border-color": "#937C69"
+        })
+        $(this).css({
+            "border-color": "#7C3618"
+        })
         if (flag == false)
         {
-            $(".listpage li").css({
-                "border-color": "#937C69"
-            })
-            $(this).css({
-                "border-color": "#7C3618"
-            })
             $(sp).hide()
             var pagenumber = $(this).children('a').attr('rel')
             for (var i = 12*(pagenumber - 1); i < 12*(pagenumber - 1) + 12; i++)
                 $(sp[i]).show()  
         }
+        else
+        {
+            var pagenumber = $(this).children('a').attr('rel')
+                    for (var i = 12*(pagenumber - 1); i < 12*(pagenumber - 1) + 12; i++)
+                        $(arrSp[i]).show()  
+        }
         $("html, body").animate({
             scrollTop:402
         }, 1000);
-    })    
+    })
     
     $(".sortDT").change(function() {
-        $(".listpage li").css({
-            "border-color" : "#937C69"
-        })
-        $(".listpage li:first-child").css({
-            "border-color" : "#7C3618"
-        })
+        checkedFirstPage()
         var age = document.getElementsByName("age")
         for (var i = 0; i < age.length; i++)
-        {
             age[i].checked = false
-        } 
         if (this.checked)
         {
-            var sortTH = document.querySelectorAll(".sortTH input")
+            var sortTH = $(".sortTH input")
             for (var i = 0; i < sortTH.length; i++)
                 sortTH[i].checked = false
             if (this.id == "all")
             {
+                sp = $(".item")
                 $(".age").hide()
-                var listpageNumber = $(".listpage li")
-                $(listpageNumber).show()
-    
-                sp = document.getElementsByClassName("item")
+                showListPage(sp)
                 $(sp).hide()
-                for (var i = 0; i < 12; i++)
-                {
-                    $(sp[i]).show()
-                }
+                show12Product(sp)
             }
             else if (this.id == "dog")
             {
                 $(".age").show()
                 $(".catlist").hide()
                 $(".doglist").show()
-                sp = document.getElementsByClassName("item")
-                $(sp).hide()
-                sp = document.getElementsByClassName("dog")
-                var maxPage = Math.ceil(sp.length/12)
-                var listpageNumber = $(".listpage li")
-                $(listpageNumber).show()
-                for (var i = listpageNumber.length; i >= maxPage; i--)
-                    $(listpageNumber[i]).hide()
-    
-                for (var i = 0; i < 12; i++)
-                {
-                    $(sp[i]).show()
-                }
+                $(".item").hide()
+                sp = $(".dog")
+                showListPage(sp)
+                show12Product(sp)
                 $(".age input").change(function() {
-                    $(".listpage li").css({
-                        "border-color" : "#937C69"
-                    })
-                    $(".listpage li:first-child").css({
-                        "border-color" : "#7C3618"
-                    })
-                    if(this.checked == true){
-                        var sortTH = document.querySelectorAll(".sortTH input")
+                    checkedFirstPage()
+                    if(this.checked){
+                        var sortTH = $(".sortTH input")
                         for (var i = 0; i < sortTH.length; i++)
                             sortTH[i].checked = false
+                        $(sp).hide()
                         if(this.id == "kid")
-                        {
-                            $(sp).hide()
-                            sp = document.querySelectorAll(".dog.kid")
-                            var maxPage = Math.ceil(sp.length/12)
-                            var listpageNumber = $(".listpage li")
-                            $(listpageNumber).show()
-                            for (var i = listpageNumber.length; i >= maxPage; i--)
-                                $(listpageNumber[i]).hide()
-        
-                            for (var i = 0; i < 12; i++)
-                            {
-                                $(sp[i]).show()
-                            }
-                        }
+                            sp = $(".dog.kid")
                         else
-                        {
-                            $(sp).hide()
-                            sp = document.querySelectorAll(".dog.adult")
-                            var maxPage = Math.ceil(sp.length/12)
-                            var listpageNumber = $(".listpage li")
-                            $(listpageNumber).show()
-                            for (var i = listpageNumber.length; i >= maxPage; i--)
-                                $(listpageNumber[i]).hide()
-        
-                            for (var i = 0; i < 12; i++)
-                            {
-                                $(sp[i]).show()
-                            }
-                        }
+                            sp = $(".dog.adult")
+                        showListPage(sp)
+                        show12Product(sp)
                     }
                 })
             }
@@ -225,64 +170,23 @@ $(document).ready(function() {
                 $(".age").show()
                 $(".doglist").hide()
                 $(".catlist").show()
-                sp = document.getElementsByClassName("item")
-                $(sp).hide()
-                sp = document.getElementsByClassName("cat")
-    
-                var maxPage = Math.ceil(sp.length/12)
-                var listpageNumber = $(".listpage li")
-                $(listpageNumber).show()
-                for (var i = listpageNumber.length; i >= maxPage; i--)
-                    $(listpageNumber[i]).hide()
-    
-                for (var i = 0; i < 12; i++)
-                {
-                    $(sp[i]).show()
-                }
-                sptam = sp
+                $(".item").hide()
+                sp = $(".cat")
+                showListPage(sp)
+                show12Product(sp)
                 $(".age input").change(function() {
-                    $(".listpage li").css({
-                        "border-color" : "#937C69"
-                    })
-                    $(".listpage li:first-child").css({
-                        "border-color" : "#7C3618"
-                    })
-                    if(this.checked == true){
-                        var sortTH = document.querySelectorAll(".sortTH input")
+                    checkedFirstPage()
+                    if(this.checked){
+                        var sortTH = $(".sortTH input")
                         for (var i = 0; i < sortTH.length; i++)
                             sortTH[i].checked = false
+                        $(sp).hide()
                         if(this.id == "kid")
-                        {
-                            $(sp).hide()
-                            sp = document.querySelectorAll(".cat.kid")
-                            var maxPage = Math.ceil(sp.length/12)
-                            var listpageNumber = $(".listpage li")
-                            $(listpageNumber).show()
-                            for (var i = listpageNumber.length; i >= maxPage; i--)
-                                $(listpageNumber[i]).hide()
-        
-                            for (var i = 0; i < 12; i++)
-                            {
-                                $(sp[i]).show()
-                            }
-                            sptam = sp
-                        }
+                            sp = $(".cat.kid")
                         else
-                        {
-                            $(sp).hide()
-                            sp = document.querySelectorAll(".cat.adult")
-                            var maxPage = Math.ceil(sp.length/12)
-                            var listpageNumber = $(".listpage li")
-                            $(listpageNumber).show()
-                            for (var i = listpageNumber.length; i >= maxPage; i--)
-                                $(listpageNumber[i]).hide()
-        
-                            for (var i = 0; i < 12; i++)
-                            {
-                                $(sp[i]).show()
-                            }
-                            sptam = sp
-                        }
+                            sp = $(".cat.adult")
+                        showListPage(sp)
+                        show12Product(sp)
                     }
                 })
             }
@@ -291,7 +195,7 @@ $(document).ready(function() {
     var numberClick = 0
     var brandTam
     $(".brands img").click(function() {
-        var sortTH = document.querySelectorAll(".sortTH input")
+        var sortTH = $(".sortTH input")
         for (var i = 0; i < sortTH.length; i++)
             sortTH[i].checked = false
         
@@ -303,26 +207,13 @@ $(document).ready(function() {
         if (numberClick % 2 == 0)
         {
             $(".item").hide()
-            var maxPage = Math.ceil(sp.length/12)
-            var listpageNumber = $(".listpage li")
-            $(listpageNumber).show()
-            for (var i = listpageNumber.length; i >= maxPage; i--)
-                $(listpageNumber[i]).hide()
-    
-            for (var i = 0; i < 12; i++)
-            {
-                $(sp[i]).show()
-            }
+            showListPage(sp)
+            show12Product(sp)
         }
         else
         {
             $(".item").hide()
-            $(".listpage li").css({
-                "border-color" : "#937C69"
-            })
-            $(".listpage li:first-child").css({
-                "border-color" : "#7C3618"
-            })
+            checkedFirstPage()
             var brandName = document.getElementById(this.title) 
             brandName.checked = true
             var spBrand = []
@@ -332,13 +223,14 @@ $(document).ready(function() {
                     spBrand.push(sp[i])
             }
             var maxPage = Math.ceil(spBrand.length/12)
-                var listpageNumber = $(".listpage li")
-                $(listpageNumber).show()
-                for (var i = listpageNumber.length; i >= maxPage; i--)
-                {
-                    $(listpageNumber[i]).hide()
-                }
+            var listpageNumber = $(".listpage li")
+            $(listpageNumber).show()
+            for (var i = listpageNumber.length; i >= maxPage; i--)
+            {
+                $(listpageNumber[i]).hide()
+            }
             $(spBrand).show()
+            noProduct(spBrand.length)
         }
     })
 
@@ -445,13 +337,13 @@ $(document).ready(function() {
             $(".header").show()
         }
     }
-    //-------------------------------//  Hàm ẩn hiện số lượng sản phẩm 
+    //-------------------------------//  Hàm ẩn hiện giao diện khi không sản phẩm 
     function noProduct(dem)
     {
         if(dem == 0)
-            $(".page > img").css({"display":"block"})
+            $(".page > #noProduct > img").css({"display":"block"})
         else
-            $(".page > img").css({"display":"none"})
+            $(".page > #noProduct > img").css({"display":"none"})
     }
     //-------------------------------// Tìm kiếm sản phẩm 
     $("#searchBtn").click(function(){
