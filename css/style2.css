@@ -69,6 +69,8 @@ div.searchbox > input{
     width: 88%;
     border-style: none;
     margin-left:2%;
+    font-family: Huhu;
+    align-items: center;
 }
 div.searchbox > button{
     background-color: #7C3618;
@@ -124,6 +126,13 @@ div.empty img{
     width: 100%;
     display:flex;
     flex-wrap: wrap;
+}
+.page {
+    width: 80%;
+}
+.page > img{
+    width: 100%;
+    display: none;
 }
 .items{
     width: 80%;

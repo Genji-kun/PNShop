@@ -106,9 +106,6 @@ $(document).ready(function() {
                     for (var i = 12*(pagenumber - 1); i < 12*(pagenumber - 1) + 12; i++)
                         $(arrSp[i]).show()  
                 }
-                $("html, body").animate({
-                    scrollTop:402
-                }, 1000);
             })    
         }
     })    
@@ -448,6 +445,33 @@ $(document).ready(function() {
             $(".header").show()
         }
     }
+    //-------------------------------//  Hàm ẩn hiện số lượng sản phẩm 
+    function noProduct(dem)
+    {
+        if(dem == 0)
+            $(".page > img").css({"display":"block"})
+        else
+            $(".page > img").css({"display":"none"})
+    }
+    //-------------------------------// Tìm kiếm sản phẩm 
+    $("#searchBtn").click(function(){
+        $(".item").hide()
+        var kw = $("#keyword").val()
+        var dem = 0
+        if(kw != "")
+        {
+            $(".page > img").hide()
+            var items = $("div.item h2")
+            for (var i = 0; i < items.length; i++)
+                if($(items[i]).text().indexOf(kw) >= 0)    
+                {
+                    $(items[i]).parent().parent().show()
+                    dem++
+                }
+        }
+        $(".listpage").hide()
+        noProduct(dem)
+    })
     //-------------------------------//
     $(".item").click(function() {
         $(".cover").hide()
@@ -491,9 +515,9 @@ $(document).ready(function() {
             })
         }
         if ($(this).scrollTop() >= 435)
-            $("#go-to-top").show("slow")
+            $("#go-to-top").show("fast")
         else
-            $("#go-to-top").hide("slow")
+            $("#go-to-top").hide("fast")
     })
     $("#go-to-top").click(function() {
         $("html, body").animate({
