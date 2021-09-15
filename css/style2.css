@@ -127,6 +127,9 @@ div.empty img{
     display:flex;
     flex-wrap: wrap;
 }
+.age{
+    display: none;
+}
 .page {
     width: 80%;
 }
