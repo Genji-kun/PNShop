@@ -42,11 +42,9 @@ $(document).ready(function() {
         kq = kq.replace('đ','')
         return kq*1
     }
-    // Hàm tính thành tiền và hiển thị 
-    function thanhTien(a, soLuong)
+    // Định dạng chuỗi số
+    function chuoiTien(a)
     {
-        a = chuoiBoCham(a)
-        a *= soLuong
         var dem = 0
         tt = String(a)
         for (var i = tt.length - 1; i >= 1; i--)
@@ -60,12 +58,28 @@ $(document).ready(function() {
         }
         return tt + " đ"
     }
+    // Hàm tính thành tiền và hiển thị 
+    function thanhTien(a, soLuong)
+    {
+        a = chuoiBoCham(a)
+        a *= soLuong
+        return chuoiTien(a)
+    }
+    // Hàm tính và hiển thị tổng tiền
+    var total = 0;
+    function tinhTongTien()
+    {
+        $(".total > h4").text(chuoiTien(total))
+    }
+    //--------------------- Các sự kiện --------------------- //
     // Hủy đơn hàng
     $(".cancel").click(function(){
         var sl = $(this).siblings('div').children('span').text()
         $(".menu span").text($(".menu span").text() - sl) 
         $(this).siblings('div').children('span').text(0)
         $(this).parent().hide()
+        total -= chuoiBoCham($(this).siblings('h5').text())
+        tinhTongTien()
         GioTrong()
     })
     // Hàm xử lý giao diện khi giỏ trống hoặc không
@@ -76,11 +90,14 @@ $(document).ready(function() {
             $(".infoCart > img").show()
             $(".infoCart h1").hide()
             $(".header").hide()
+            $(".total").hide()
         }
         else{
             $(".infoCart > img").hide()
             $(".infoCart h1").show()
             $(".header").show()
+            $(".total").show()
+           
         }
     }
     // Hàm ẩn hiện giao diện khi không sản phẩm hoặc có
@@ -91,6 +108,7 @@ $(document).ready(function() {
         else
             $(".page > #noProduct > img").css({"display":"none"})
     }
+
 
     var sp = $(".item")
     $(sp).hide()
@@ -294,7 +312,6 @@ $(document).ready(function() {
             noProduct(spBrand.length)
         }
     })
-
     // Thêm số lượng giỏ hàng
     $(".cart").click(function(){
         var count = $(".menu span").text()
@@ -311,6 +328,7 @@ $(document).ready(function() {
                 sl++
                 $(slItem).children('div').children('span').text(sl)
                 $(slItem).children('h5').text(thanhTien($(slItem).children('h4').text(), sl))
+                total += chuoiBoCham( $(slItem).children('h4').text())
                 break
             }
         }
@@ -324,6 +342,7 @@ $(document).ready(function() {
         $("#text").fadeIn()
         $(".infoCart > img").hide()
         GioTrong()
+        tinhTongTien()
     })
     $(".exit").click(function(){
         $(".cover").show()
@@ -337,6 +356,8 @@ $(document).ready(function() {
         $(this).siblings('span').text(sl)
         var tru = $(".menu span").text()
         tru--
+        total -= chuoiBoCham($(this).parent('div').siblings('h4').text())
+        tinhTongTien()
         $(".menu span").text(tru)
         if(sl == 0)
         {
@@ -351,6 +372,8 @@ $(document).ready(function() {
         $(this).siblings('span').text(sl) 
         cong = $(".menu span").text()
         cong++
+        total += chuoiBoCham($(this).parent('div').siblings('h4').text())
+        tinhTongTien()
         $(".menu span").text(cong)
         $(this).parent('div').siblings('h5').text(thanhTien($(this).parent('div').siblings('h4').text(), sl))
     })
@@ -358,8 +381,13 @@ $(document).ready(function() {
     // Tìm kiếm sản phẩm 
     $("#searchBtn").click(function(){
         $(".item").hide()
+        // trả về đối tượng all
         var sortDT = $(".sortDT")[0]
         sortDT.checked = true
+        // bỏ lọc thương hiệu
+        var sortTH = $(".sortTH input")
+        for (var i = 0; i < sortTH.length; i++)
+            sortTH[i].checked = false
         var kw = $("#keyword").val()
         var dem = 0
         if(kw != "")

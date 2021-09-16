@@ -285,9 +285,14 @@ a.followicon:hover{
     opacity: 0;
     text-align: center;
 }
-.infoCart > img{
+.infoCart > .notice {
+    height: 100%;
+    display:flex;
+    align-items: center;
+}
+.infoCart > .notice > img{
     width: 80%;
-    margin-top: 2%;
+    margin: auto;
 }
 .infoCart h1{
     font-size: 35px;
@@ -487,23 +492,15 @@ div.thumb > div {
     margin-top: 30px;
     font-size: 1.25vw;
 }
-.cart{
+.button{
     background-color: #937C69;
     color:#FFFFFF;
     font-family: Huhu;
     width: 45%;
     text-align: center;
-    padding: 5%;
 }
-.buy{
-    background-color: #937C69;
-    color:#FFFFFF;
-    font-family: Huhu;
-    width: 45%;
-    text-align: center;
-    padding: 5%;
-}
-.buy a, .cart a{
+.button a{
+    padding: 10%;
     display: block;
     width: 100%;
     height: 100%;
@@ -570,4 +567,32 @@ div.thumb > div {
     margin-top: 5%;
     font-size: 25px;
     color: #000000;
+}
+.total{
+    display:flex;
+    align-items: center;
+    font-family: Huhu;
+    justify-content: space-between;
+}
+.total > h3{
+    width: fit-content;
+    font-weight: bolder;
+    color:#7C3618;
+    font-size: 25px;
+    text-align: start;
+}
+.total > h4{
+    width: fit-content;
+    font-size: 20px;
+    text-align:center;
+    margin: 0px;
+    height: fit-content;
+    font-weight: bolder;
+}
+.order{
+    width: 15%;
+}
+.order a{
+    font-size: 20px;
+    padding: 5%;
 }
