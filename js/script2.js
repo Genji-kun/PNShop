@@ -35,15 +35,20 @@ $(document).ready(function() {
             "border-color" : "#7C3618"
         })
     }
-    // Hàm tính thành tiền và hiển thị 
-    function thanhTien(a,soLuong)
+    // Chuyển giá tiền dạng chuỗi về giá tiền dạng số
+    function chuoiBoCham(a)
     {
-        var chuoiBoCham =a.replaceAll('.','')
-        chuoiBoCham = chuoiBoCham.replace('đ','')
-        chuoiBoCham *= soLuong
-        var tt = chuoiBoCham
+        var kq =a.replaceAll('.','')
+        kq = kq.replace('đ','')
+        return kq*1
+    }
+    // Hàm tính thành tiền và hiển thị 
+    function thanhTien(a, soLuong)
+    {
+        a = chuoiBoCham(a)
+        a *= soLuong
         var dem = 0
-        tt = String(tt)
+        tt = String(a)
         for (var i = tt.length - 1; i >= 1; i--)
         {
             dem++
@@ -53,8 +58,7 @@ $(document).ready(function() {
                     dem = 0
                 }
         }
-        var VND = " đ"
-        return tt + VND
+        return tt + " đ"
     }
     // Hủy đơn hàng
     $(".cancel").click(function(){
@@ -153,6 +157,7 @@ $(document).ready(function() {
                 show12Product(sp)
                 $(".age input").change(function() {
                     checkedFirstPage()
+                    $("#keyword").val("")
                     if(this.checked){
                         var sortTH = $(".sortTH input")
                         for (var i = 0; i < sortTH.length; i++)
@@ -179,6 +184,7 @@ $(document).ready(function() {
                 show12Product(sp)
                 $(".age input").change(function() {
                     checkedFirstPage()
+                    $("#keyword").val("")
                     if(this.checked){
                         var sortTH = $(".sortTH input")
                         for (var i = 0; i < sortTH.length; i++)
@@ -352,7 +358,7 @@ $(document).ready(function() {
     // Tìm kiếm sản phẩm 
     $("#searchBtn").click(function(){
         $(".item").hide()
-        var sortDT = $("#all")
+        var sortDT = $(".sortDT")[0]
         sortDT.checked = true
         var kw = $("#keyword").val()
         var dem = 0
@@ -370,7 +376,7 @@ $(document).ready(function() {
         $(".listpage").hide()
         noProduct(dem)
     })
-    //-------------------------------//
+    // Xử lý sự kiện chọn vào sản phẩm
     $(".item").click(function() {
         $(".cover").hide()
         $(".info .mainimage").attr("src",$(this).children('a').children('img').attr('src'))
@@ -387,12 +393,13 @@ $(document).ready(function() {
         $(".info").fadeIn(500)
         $("#text").fadeIn()
     })
+    // Xử lý sự kiện chọn vào thumb
     $(".thumb div img").click(function(){
         $(".thumb div img").css({"border-width": 0})
         $(".info .mainimage").attr("src",$(this).attr("src"))
         $(this).css({"border": "2px solid #937C69"})
     })
-
+    // Nút thoát màn hình thông tin sản phẩm
     $(".exit").click(function() {
         $(".cover").show()
         $(".thumb div img").css({"border-width": 0})
@@ -400,6 +407,7 @@ $(document).ready(function() {
         $(".info").fadeOut(500)
         $("#text").fadeOut()
     })
+    // Sự kiện scroll
     $(window).scroll(function() {
         if($(this).scrollTop() > 10) {
             $(".cover").css({
@@ -417,6 +425,7 @@ $(document).ready(function() {
         else
             $("#go-to-top").hide("fast")
     })
+    // Nút go to top
     $("#go-to-top").click(function() {
         $("html, body").animate({
             scrollTop:0
