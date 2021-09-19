@@ -87,13 +87,21 @@ $(document).ready(function() {
     {
         if($(".menu span").text() == 0)
         {
+<<<<<<< HEAD
             $(".infoCart > .notice").show()
+=======
+            $(".infoCart > .notice > img").show()
+>>>>>>> 6200e0871595f35747cf2c502a155330869bf6f6
             $(".infoCart h1").hide()
             $(".header").hide()
             $(".total").hide()
         }
         else{
+<<<<<<< HEAD
             $(".infoCart > .notice").hide()
+=======
+            $(".infoCart > .notice > img").hide()
+>>>>>>> 6200e0871595f35747cf2c502a155330869bf6f6
             $(".infoCart h1").show()
             $(".header").show()
             $(".total").show()
