@@ -87,13 +87,13 @@ $(document).ready(function() {
     {
         if($(".menu span").text() == 0)
         {
-            $(".infoCart > img").show()
+            $(".infoCart > .notice > img").show()
             $(".infoCart h1").hide()
             $(".header").hide()
             $(".total").hide()
         }
         else{
-            $(".infoCart > img").hide()
+            $(".infoCart > .notice > img").hide()
             $(".infoCart h1").show()
             $(".header").show()
             $(".total").show()
