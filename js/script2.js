@@ -10,6 +10,30 @@ $(document).ready(function() {
     $("#text").css({"opacity": 0.6}) 
     var flag = false
     //--------------------- Các function --------------------- //
+ 
+    // Thêm phần tử HTML selectedItem
+    var imgSelectedItem = []
+    function addSelectedItem(){
+        var img = $("#firstthumb").attr('src')
+        imgSelectedItem.push(img)
+        var productName = $(".info .right > h1").text()
+        var price = $(".info .right h3").text()
+        $(".selectedItems").prepend(`
+            <div class="selectedItem">
+                        <img src="${img}">
+                        <h3>${productName}</h3>
+                        <h4>${price}</h4>
+                        <div class="sl" >
+                            <a class = "minus" href ="javascript:;"><i class="fas fa-minus-square"></i></a>
+                            <span>0</span>
+                            <a class = "plus" href ="javascript:;" ><i class="fas fa-plus-square"></i></a>
+                        </div>
+                        <h5></h5>
+                        <a href="javascript:;" class="cancel"><i class="fas fa-times-square"></i></a>
+                    </div>
+
+        `)
+    }
     // Tính số trang và hiển thị tương ứng
     function showListPage(sanPham)
     {
@@ -73,7 +97,7 @@ $(document).ready(function() {
     }
     //--------------------- Các sự kiện --------------------- //
     // Hủy đơn hàng
-    $(".cancel").click(function(){
+    $(".selectedItems").on('click', '.selectedItem .cancel', function(){
         var sl = $(this).siblings('div').children('span').text()
         $(".menu span").text($(".menu span").text() - sl) 
         $(this).siblings('div').children('span').text(0)
@@ -112,17 +136,7 @@ $(document).ready(function() {
     var sp = $(".item")
     $(sp).hide()
     show12Product(sp)
-    //Gán các thông tin của item lên selectedItem
-    for(var i = 0; i < $(".selectedItem").length; i++)
-    {
-        var a = $(".selectedItem")[i]
-        var b = $(".item")[i]
-        $(a).children('img').attr('src', $(b).children('a').children('img').attr('src'))
-        $(a).children('h3').text($(b).children('a').children('h2').text())
-        $(a).children('h4').text($(b).children('a').children('h3').text())
-        $(a).children('h5').text($(b).children('a').children('h3').text())
-    }
-
+    
     // Xử lý sự kiện chuyển trang
     $(".listpage li").click(function() {
         $(".listpage li").css({
@@ -312,16 +326,27 @@ $(document).ready(function() {
         }
     })
     // Thêm số lượng giỏ hàng
+  
     $(".cart").click(function(){
         var count = $(".menu span").text()
         count++
         $(".menu span").text(count)
         alert("Đã thêm thành công, vui lòng kiểm tra giỏ hàng !!!")
-        for(var i = 0; i < $(".selectedItem").length; i++)
+        var isExist = false
+        for (var i = 0; i < imgSelectedItem.length; i++)
         {
-            var slItem = $(".selectedItem")[i]
-            if( $(slItem).children('img').attr('src') == $("#firstthumb").attr('src'))
+            if ($("#firstthumb").attr("src") == imgSelectedItem[i])
+                isExist = true
+        }
+        if (isExist == false)
+            addSelectedItem()
+        var a = $(".selectedItems").on()
+        var b = $(a).children(".selectedItem")
+        for (var i = 0; i < b.length; i++)
+        {
+            if ($(b[i]).children('img').attr('src') == $("#firstthumb").attr("src"))
             {
+                var slItem = $(b[i])
                 $(slItem).show()
                 var sl = $(slItem).children('div').children('span').text()
                 sl++
@@ -333,6 +358,7 @@ $(document).ready(function() {
         }
         GioTrong()
     })
+
     // Phần info giỏ hàng
     /$(".menu li:last-child").click(function(){
         $(".cover").hide()
@@ -349,7 +375,7 @@ $(document).ready(function() {
         $("#text").fadeOut()
     })
     // Thêm bớt số lượng giỏ hàng
-    $(".minus").click(function(){
+    $(".selectedItems").on('click', '.selectedItem .minus', function(){
         var sl = $(this).siblings('span').text()
         sl--
         $(this).siblings('span').text(sl)
@@ -365,7 +391,7 @@ $(document).ready(function() {
         $(this).parent('div').siblings('h5').text(thanhTien($(this).parent('div').siblings('h4').text(), sl))
         GioTrong()
     })
-    $(".plus").click(function(){
+    $(".selectedItems").on('click', '.selectedItem .plus', function(){
         var sl = $(this).siblings('span').text()
         sl++
         $(this).siblings('span').text(sl) 

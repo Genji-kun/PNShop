@@ -3,6 +3,22 @@
     padding:0;
     box-sizing: border-box;
 }
+@font-face{
+    font-family: Hehe;
+    src: url(../fonts/fontHehe.otf);
+}
+@font-face{
+    font-family: Huhu;
+    src: url(../fonts/fontHuhu.otf);
+}
+body{
+    background-image:url(../images/background.png);
+    font-family: Hehe !important;
+    cursor: url(../cursors/cursor1.cur),pointer;
+}
+a, #searchBtn{
+    cursor:url(../cursors/cursor2.cur),auto;
+}
 div.cover{
     position: fixed;
     top: 0;
