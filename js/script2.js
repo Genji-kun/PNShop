@@ -87,17 +87,16 @@ $(document).ready(function() {
     {
         if($(".menu span").text() == 0)
         {
-            $(".infoCart > img").show()
+            $(".infoCart > .notice").show()
             $(".infoCart h1").hide()
             $(".header").hide()
             $(".total").hide()
         }
         else{
-            $(".infoCart > img").hide()
+            $(".infoCart > .notice").hide()
             $(".infoCart h1").show()
             $(".header").show()
             $(".total").show()
-           
         }
     }
     // Hàm ẩn hiện giao diện khi không sản phẩm hoặc có
@@ -320,7 +319,7 @@ $(document).ready(function() {
         alert("Đã thêm thành công, vui lòng kiểm tra giỏ hàng !!!")
         for(var i = 0; i < $(".selectedItem").length; i++)
         {
-            var slItem = $(".selectedItem")[i]           
+            var slItem = $(".selectedItem")[i]
             if( $(slItem).children('img').attr('src') == $("#firstthumb").attr('src'))
             {
                 $(slItem).show()

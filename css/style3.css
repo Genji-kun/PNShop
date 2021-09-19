@@ -179,13 +179,11 @@ a.followicon:hover{
     background-color: #ffffff;
     padding:10px;
     width: 100%;
-    margin-left:auto;
-    margin-right:auto;
+    justify-content: space-between;
     display:flex;
-    flex-wrap: wrap;
 }
-.photo img{
-    width: 25%;
-    height: 10%;
-
+.photo > div{
+    width: 33%;
+    margin: 2%;
+    overflow: hidden;
 }
