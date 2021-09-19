@@ -380,6 +380,7 @@ $(document).ready(function() {
     // Tìm kiếm sản phẩm 
     $("#searchBtn").click(function(){
         $(".item").hide()
+        $(".age").hide()
         // trả về đối tượng all
         var sortDT = $(".sortDT")[0]
         sortDT.checked = true
