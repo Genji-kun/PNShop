@@ -1,6 +1,6 @@
 $(document).ready(function() {
     $("#go-to-top").hide()
-
+    
     $(window).scroll(function() {
         if($(this).scrollTop() > 10) {
             $(".cover").css({

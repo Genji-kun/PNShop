@@ -2,9 +2,11 @@ $(document).ready(function() {
     $("#go-to-top").hide()
     $(".info").hide()
     $(".infoCart").hide()
+    $(".infoBill").hide()
     $("#text").hide()
     $(".selectedItem").hide()
     $(".infoCart").css({"opacity": 1})
+    $(".infoBill").css({"opacity": 1})
     $("#go-to-top").css({"opacity": 1})
     $(".info").css({"opacity": 1})
     $("#text").css({"opacity": 0.6}) 
@@ -131,12 +133,29 @@ $(document).ready(function() {
         else
             $(".page > #noProduct > img").css({"display":"none"})
     }
-
+    function showBill(price) 
+    {
+        $("#priceProducts").text(chuoiTien(price))
+        $(".infoBill").show()
+        $("#totalPrice").text(chuoiTien(chuoiBoCham($("#priceProducts").text()) + chuoiBoCham($("#priceShip").text())))
+    }
 
     var sp = $(".item")
     $(sp).hide()
     show12Product(sp)
     
+    $(".shipType").change(function() {
+        if(this.checked)
+        {
+            if(this.id == "superFast")
+                $("#priceShip").text("50.000 đ")
+            else if (this.id == "fast")
+                $("#priceShip").text("30.000 đ")
+            else
+                $("#priceShip").text("20.000 đ")
+        }
+        $("#totalPrice").text(chuoiTien(chuoiBoCham($("#priceProducts").text()) + chuoiBoCham($("#priceShip").text())))
+    })
     // Xử lý sự kiện chuyển trang
     $(".listpage li").click(function() {
         $(".listpage li").css({
@@ -430,6 +449,11 @@ $(document).ready(function() {
         $(".listpage").hide()
         noProduct(dem)
     })
+    //Xử lý sự kiện mua ngay
+    $(".buy").click(function(){
+        $(".info").hide()
+        showBill( chuoiBoCham($(".right").children('i').text()) )
+    })
     // Xử lý sự kiện chọn vào sản phẩm
     $(".item").click(function() {
         $(".cover").hide()
@@ -458,7 +482,7 @@ $(document).ready(function() {
         $(".cover").show()
         $(".thumb div img").css({"border-width": 0})
         $("#firstthumb").css({"border-width" : 2})
-        $(".info").fadeOut(500)
+        $(this).parent().parent().fadeOut(500)
         $("#text").fadeOut()
     })
     // Sự kiện scroll

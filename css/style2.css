@@ -612,3 +612,84 @@ div.thumb > div {
     font-size: 20px;
     padding: 5%;
 }
+.infoBill{
+    background-color: #FFFFFF;
+    position:fixed;
+    left: 10%;
+    top: 5%;
+    z-index:999;
+    width: 80%;
+    height: 90%;
+    padding: 20px;
+    border-style:solid;
+    border-color: #937C69;
+    border-width: 5px;
+    border-radius: 20px;
+    opacity: 0;
+    font-family: Huhu;
+    text-align: center;
+}
+.infoBill > form{
+    width: 70%;
+    margin: 0 auto;
+    font-size: 25px;
+}
+.infoBill > form > table{
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+.userInfo{
+    width: 20%;
+    color: #937C69;
+    font-weight: bolder;
+    text-align: left;
+}
+.infoBill input{
+    width: 100%;
+    font-style:italic;
+    font-size: 20px;
+    border: none;
+    border-bottom: 1px solid #bdaa9b;
+    padding:0;
+    margin-bottom: 10px;
+}
+.infoBill input:focus{
+    outline: none;
+    font-style:normal;
+    border-bottom: 2px solid #7C3618;
+}
+.infoBill h1{
+    font-size: 35px;
+    font-family: Huhu;
+    color:#7C3618;
+    font-weight: bolder;
+    text-align: center;
+}
+.infoBill h1 span{
+    color: #000000;
+    font-weight: normal;
+}
+.selectShip{
+    display: flex;
+}
+.selectShip > div{
+    width: fit-content;
+    padding: 10px;
+}
+.selectShip > div > input{
+    width: fit-content !important;
+}
+.confirm{
+    position: absolute;
+    width: 70%;
+    bottom: 20px;
+    left: 15%;
+}
+.confirm a{
+    padding: 10px;
+    font-size: 30px;
+}
+.confirm:hover{
+    background-color: #7C3618;
+}
