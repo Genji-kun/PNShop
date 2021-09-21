@@ -1,0 +1,138 @@
+.showMenu{
+    display: block;
+    width: 10%;
+}
+.showMenu a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 5vw;
+}
+div.cover > nav{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 25%;
+    margin-top: 15px;
+}
+div.cover > nav::after{
+    content: "";
+    position: absolute;
+    border-width: 15px 10px;
+    border-style: solid;
+    border-color: transparent transparent #7C3618 transparent;
+    bottom: 100%;
+    left: 80%;
+}
+div.cover > nav > ul.menu{
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #7C3618;
+}
+div.cover > nav > ul.menu li{
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #FFFFFF;
+}
+div.cover > nav > ul.menu li:last-child{
+    border-bottom: 0px;
+}
+div.cover > nav > ul.menu > li > a{
+    padding: 5px;
+} 
+div.cover > nav > ul.menu > li > a:hover{
+    background-color: #937C69;
+    text-shadow: 2px 2px #7C3618;
+}
+div.searchbox{
+    width: 70%;
+    margin: auto 2.5%;
+}
+div.cover > a{
+    width: 10%;
+}
+div.empty{
+    width: 100%;
+    z-index: -1;
+    opacity: 0;
+}
+div.empty img{
+    width: 10%;
+}
+.bg{
+    width: 90%;
+}
+#footer{
+    flex-direction: column;
+}
+#footer div{
+    width: 100%;
+    padding: 3%;
+}
+div#contactframe{
+    border-right: none;
+    border-bottom: 2px solid #FFFFFF;
+}
+.info{
+    display:block;
+    width: 100%;
+    left:0%;
+    height: 100%;
+    top: 0%;
+    overflow:scroll;
+    padding: 5%;
+}
+.exit{
+    font-size: 50px;
+}
+.left{
+    border-bottom: 2px solid #937C69;
+    padding-right: 0%;
+    width: 100%;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    text-align: center;
+    padding: 5%;
+}
+.mainimage{
+    width: 50%;
+}
+div.thumb{
+    width: 50%;
+    margin: 0 auto;
+}
+div.thumb > div{
+    padding: 1%;
+}
+.right{
+    padding: 5%;
+    border-left: 0px;
+    width: 100%;
+}
+.info{
+    border-radius: 0;
+}
+.info h1{
+    font-size: 5vw;
+    margin-top: 0%;
+}
+.info h3{
+    font-size: 4vw;
+}
+.info p{
+    font-size: 3vw;
+}
+.textOverFlow{
+    height: fit-content;
+}
+.cart{
+    font-size: 3vw;
+}
+.buy{
+    font-size: 3vw;
+}
+a#go-to-top img{
+    display:none;
+}

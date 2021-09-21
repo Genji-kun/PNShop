@@ -6,7 +6,7 @@
         <meta charset="utf-8">
         <meta name="author" content="Võ Phú Phát,Nguyễn Kim Bảo Ngân">
         <meta name="keywords" content="Chó,mèo,dog,cat,thức ăn cho thú cưng,P&N shop,pet food">
-        <meta name="description" content="P&N shop là cửa hàng chuyên bán thức ăn và đồ dùng cho chó mèo, website đặt hàng và mua hàng trực tuyến với những ưu đãi cho người dùng mới và khách hàng thân thiết">
+        <meta name="description" content="P&N shop là cửa hàng chuyên bán thức ăn cho chó mèo, website đặt hàng và mua hàng trực tuyến">
         <meta http-equiv="REFRESH" content="2000">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/style.css" rel="stylesheet"/>
@@ -22,73 +22,32 @@
         <script src="js/script.js"></script>    
     </head>
     <body>
-        <div>
-            <a href="javascript:;" id="go-to-top" title="Go to top">
-                <img src="images/gototop.png"/>
-            </a>
-        </div>
-        <div class="info">
-            <a href ="javascript:;" title="Thoát"><div class="exit"><i class="fas fa-times"></i></div></a>
-            <div class="left">
-                <img class ="mainimage" src="images/sp1.png" alt="product"/>
-                <div class ="thumb">
-                    <div><img id ="firstthumb" src ="images/sp1_thumb1.jpg" alt ="hinh1"/></div>
-                    <div><img src ="images/sp1_thumb2.jpg" alt ="hinh2"/></div>
-                    <div><img src ="images/sp1_thumb3.jpg" alt ="hinh3"/></div>
-                    <div><img src ="images/sp1_thumb4.jpg" alt ="hinh4"/></div>
-                    <div><img src ="images/sp1_thumb5.jpg" alt ="hinh5"/></div>
+        <header>
+            <div class="cover">
+                <div class="logo">
+                    <img src="images/logo&name.png" alt="P&N shop"/>
+                </div>
+                <div class="showMenu">
+                    <a href="javascript:;">
+                        <i class="fas fa-bars"></i>
+                    </a>
                 </div>
             </div>
-            <div class="right">
-                <h1><strong>Thức ăn cho mèo con gói Me-O 1,1kg</strong></h1>
-                <i><h3>125.000<sup> đ</sup></h3></i>
-                <div class ="textOverFlow">
-                    <p>
-                        thông tin sản phẩm
-                    </p>
+            <nav>
+                <div>
+                    <ul class="menu">
+                        <li class="hiddenMenu"><a href="index.html"><i class="fas fa-home"></i> TRANG CHỦ</a></li>
+                        <li class="hiddenMenu"><a href="sanpham.html"><i class="fas fa-fish"></i> SẢN PHẨM</a></li>
+                        <li class="hiddenMenu"><a href="#"><i class="fas fa-book"></i> BẠN CÓ BIẾT</a></li>
+                        <li class="hiddenMenu"><a href="image&video.html"><i class="fas fa-camera-retro"></i> ẢNH & VIDEO</a></li>
+                        <li class="hiddenMenu"><a href="javascript:;" id = "contact"><i class="fas fa-phone"></i> LIÊN HỆ</a></li>
+                        <li>
+                            <input type="text" placeholder="Tìm kiếm..."><button id="searchBtn"><i class="fas fa-search"></i></button>
+                        </li>
+                    </ul>
                 </div>
-                <div class = "btns">
-                    <div class = "cart">
-                        <a>
-                            Thêm vào túi
-                        </a>
-                    </div>
-                    <div class = "buy">
-                        <a>
-                            Mua ngay
-                        </a>   
-                    </div> 
-                </div>
-            </div>
-        </div>
-        <div id="text"></div>
-        <section>
-        <div class="cover">
-            <div class="logo">
-                <img src="images/logo&name.png" alt="P&N shop"/>
-            </div>
-            <div class="showMenu">
-                <a href="javascript:;">
-                    <i class="fas fa-bars"></i>
-                </a>
-            </div>
-            
-        </div>
-        <nav>
-            <div>
-                <ul class="menu">
-                    <li class="hiddenMenu"><a href="index.html"><i class="fas fa-home"></i> TRANG CHỦ</a></li>
-                    <li class="hiddenMenu"><a href="sanpham.html"><i class="fas fa-fish"></i> SẢN PHẨM</a></li>
-                    <li class="hiddenMenu"><a href="#"><i class="fas fa-book"></i> BẠN CÓ BIẾT</a></li>
-                    <li class="hiddenMenu"><a href="image&video.html"><i class="fas fa-camera-retro"></i> ẢNH & VIDEO</a></li>
-                    <li class="hiddenMenu"><a href="javascript:;" id = "contact"><i class="fas fa-phone"></i> LIÊN HỆ</a></li>
-                    <li>
-                        <input type="text" placeholder="Tìm kiếm..."><button id="searchBtn"><i class="fas fa-search"></i></button>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-        </section>
+            </nav>
+        </header>
         <section>
             <div>
                 <div id="demo" class="carousel slide content" data-ride="carousel">
@@ -255,6 +214,48 @@
                     </div>
                 </div>    
             </div>
+        </section>
+        <section>
+        <div>
+            <a href="javascript:;" id="go-to-top" title="Go to top">
+                <img src="images/gototop.png"/>
+            </a>
+        </div>
+            <div class="info">
+                <a href ="javascript:;" title="Thoát"><div class="exit"><i class="fas fa-times"></i></div></a>
+                <div class="left">
+                    <img class ="mainimage" src="images/sp1.png" alt="product"/>
+                    <div class ="thumb">
+                        <div><img id ="firstthumb" src ="images/sp1_thumb1.jpg" alt ="hinh1"/></div>
+                        <div><img src ="images/sp1_thumb2.jpg" alt ="hinh2"/></div>
+                        <div><img src ="images/sp1_thumb3.jpg" alt ="hinh3"/></div>
+                        <div><img src ="images/sp1_thumb4.jpg" alt ="hinh4"/></div>
+                        <div><img src ="images/sp1_thumb5.jpg" alt ="hinh5"/></div>
+                    </div>
+                </div>
+                <div class="right">
+                    <h1><strong>Thức ăn cho mèo con gói Me-O 1,1kg</strong></h1>
+                    <i><h3>125.000<sup> đ</sup></h3></i>
+                    <div class ="textOverFlow">
+                        <p>
+                            thông tin sản phẩm
+                        </p>
+                    </div>
+                    <div class = "btns">
+                        <div class = "cart">
+                            <a>
+                                Thêm vào túi
+                            </a>
+                        </div>
+                        <div class = "buy">
+                            <a>
+                                Mua ngay
+                            </a>   
+                        </div> 
+                    </div>
+                </div>
+            </div>
+            <div id="text"></div>
         </section>
     </body>
 </html>

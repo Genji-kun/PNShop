@@ -693,3 +693,6 @@ div.thumb > div {
 .confirm:hover{
     background-color: #7C3618;
 }
+.showMenu{
+    display:none;
+}
