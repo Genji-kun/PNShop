@@ -32,7 +32,7 @@ div.cover{
 div.cover > a > img{
     width: 100%;
 }
-div.cover a{
+div.cover > a{
     width: 7%;
 }
 

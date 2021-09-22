@@ -1,6 +1,10 @@
+.cover{
+    align-items: center;
+}
 .showMenu{
     display: block;
     width: 10%;
+    text-align: center;
 }
 .showMenu a{
     display: block;
@@ -9,11 +13,12 @@
     text-decoration: none;
     color: #ffffff;
     font-size: 5vw;
+    margin: auto;
 }
 div.cover > nav{
     position: absolute;
     top: 100%;
-    right: 0;
+    right: 10px;
     width: 25%;
     margin-top: 15px;
 }
@@ -22,29 +27,42 @@ div.cover > nav::after{
     position: absolute;
     border-width: 15px 10px;
     border-style: solid;
-    border-color: transparent transparent #7C3618 transparent;
+    border-color: transparent transparent #fff9f5 transparent;
     bottom: 100%;
     left: 80%;
+}
+div.cover > nav::before{
+    content: "";
+    position: absolute;
+    border-width: 15px 10px;
+    border-style: solid;
+    border-color: transparent transparent #7C3618 transparent;
+    bottom: 98%;
+    z-index: -1;
+    left: 82%;
 }
 div.cover > nav > ul.menu{
     overflow: hidden;
     border-radius: 10px;
-    background-color: #7C3618;
+    background-color: #FFFFFF;
+    box-shadow: 5px 5px #7C3618;
 }
 div.cover > nav > ul.menu li{
     width: 100%;
     border-right: none;
-    border-bottom: 1px solid #FFFFFF;
+    border-bottom: 1px solid #7C3618;
 }
 div.cover > nav > ul.menu li:last-child{
     border-bottom: 0px;
 }
 div.cover > nav > ul.menu > li > a{
     padding: 5px;
+    color: #7C3618;
 } 
 div.cover > nav > ul.menu > li > a:hover{
     background-color: #937C69;
     text-shadow: 2px 2px #7C3618;
+    color: #ffffff;
 }
 div.searchbox{
     width: 70%;
