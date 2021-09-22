@@ -381,7 +381,7 @@ $(document).ready(function() {
     // Phần info giỏ hàng
     /$(".menu li:last-child").click(function(){
         $(".cover").hide()
-        $(".exit").show()
+        $(".off").show()
         $(".infoCart").fadeIn(500)
         $("#text").fadeIn()
         $(".infoCart > img").hide()
@@ -390,8 +390,8 @@ $(document).ready(function() {
     })
     $(".exit").click(function(){
         $(".cover").show()
-        $(".infoCart").fadeOut(500)
         $("#text").fadeOut()
+        $(this).parent().parent().fadeOut(500)
     })
     // Thêm bớt số lượng giỏ hàng
     $(".selectedItems").on('click', '.selectedItem .minus', function(){
@@ -454,6 +454,11 @@ $(document).ready(function() {
         $(".info").hide()
         showBill( chuoiBoCham($(".right").children('i').text()) )
     })
+    //Xử lý sự kiện đặt hàng
+    $(".order").click(function() {
+        $(".infoCart").hide()
+        showBill(total)
+    })
     // Xử lý sự kiện chọn vào sản phẩm
     $(".item").click(function() {
         $(".cover").hide()
@@ -478,12 +483,9 @@ $(document).ready(function() {
         $(this).css({"border": "2px solid #937C69"})
     })
     // Nút thoát màn hình thông tin sản phẩm
-    $(".exit").click(function() {
-        $(".cover").show()
+    $(".off").click(function() {
         $(".thumb div img").css({"border-width": 0})
         $("#firstthumb").css({"border-width" : 2})
-        $(this).parent().parent().fadeOut(500)
-        $("#text").fadeOut()
     })
     // Sự kiện scroll
     $(window).scroll(function() {
@@ -508,5 +510,10 @@ $(document).ready(function() {
         $("html, body").animate({
             scrollTop:0
         }, 1000);
+    })
+
+    //--------------------------------THIẾT BỊ KHÁC--------------------------------//
+    $(".showMenu").click(function() {
+        $("div.cover > nav").toggle();
     })
 })
