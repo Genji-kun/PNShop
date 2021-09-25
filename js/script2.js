@@ -15,6 +15,14 @@ $(document).ready(function() {
  
     // Thêm phần tử HTML selectedItem
     var imgSelectedItem = []
+    function isEmptyInfo(ip1, ip2, ip3){
+        var init = false
+        if($(ip1).val() == "" || $(ip2).val() == "" || $(ip3).val() == "")
+            $(".hiddenNotice").show()
+        else
+            init = true
+        return init
+    }
     function addSelectedItem(){
         var img = $("#firstthumb").attr('src')
         imgSelectedItem.push(img)
@@ -392,6 +400,7 @@ $(document).ready(function() {
         $(".cover").show()
         $("#text").fadeOut()
         $(this).parent().parent().fadeOut(500)
+        $(".hiddenNotice").hide()
     })
     // Thêm bớt số lượng giỏ hàng
     $(".selectedItems").on('click', '.selectedItem .minus', function(){
@@ -461,18 +470,19 @@ $(document).ready(function() {
     })
     //Xử lý sự kiện xác nhận đặt hàng
     $(".confirm").click(function() {
-        if( $("input[type=text]#name").val() == "" )
-            $("input[type=text]#name").css("border-bottom","1px solid red")
-        if ( $("input[type=text]#tel").val() == "" )
-            $("input[type=text]#tel").css("border-bottom","1px solid red")
-        if ( $("input[type=text]#address").val() == "" )
-            $("input[type=text]#address").css("border-bottom","1px solid red")
-        if( $("input[type=text]#name").val() != "" && $("input[type=text]#tel").val() != "" && $("input[type=text]#address").val() != "")
+        if(isEmptyInfo($("input[type=text]#name"), $("input[type=text]#tel"), $("input[type=text]#address") ))
         {
+            var slitems = $(".selectedItems").on()
+            var slitem = $(slitems).children(".selectedItem")
+            $(slitem).children(".sl").children("span").text("0")
+            $(slitem).hide()
+            total = 0
+            tinhTongTien()
+            $(".menu span").text("0")
+            GioTrong()
             alert("Đặt hàng thành công!")
-            $(".infoBill input").css("border-bottom","1px solid #937C69")
-            $(".infoBill input:focus").css("border-bottom","2px solid #7C3618")
             $("form input[type=text]").val("")
+            $(".hiddenNotice").hide()
         }
     })
     // Xử lý sự kiện chọn vào sản phẩm

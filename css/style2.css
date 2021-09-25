@@ -645,6 +645,9 @@ div.thumb > div {
     font-weight: bolder;
     text-align: left;
 }
+.userInfo span{
+    color: #a80000;
+}
 .infoBill input{
     width: 100%;
     font-style:italic;
@@ -695,4 +698,11 @@ div.thumb > div {
 }
 .showMenu{
     display:none;
+}
+.hiddenNotice{
+    display: none;
+    font-size: 30px;
+    color: #a80000;
+    font-style: italic;
+    font-weight: bolder;
 }
