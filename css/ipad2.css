@@ -6,6 +6,9 @@
     width: 10%;
     text-align: center;
 }
+.showMenu:hover a{
+    text-shadow: 3px 3px #7C3618;
+}
 .showMenu a{
     display: block;
     width: 100%;
@@ -17,7 +20,8 @@
 }
 div.cover > nav{
     position: absolute;
-    top: 100%;
+    display:none;
+    top: 90%;
     right: 10px;
     width: 25%;
     margin-top: 15px;
