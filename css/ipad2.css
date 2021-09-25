@@ -159,18 +159,23 @@ a#go-to-top img{
 }
 .sort{
     position: absolute;
-    top: 0%;
-    right: 0%;
-    width: 25%;
+    top: 82px;
+    left: 50%;
+    width: 50%;
+    z-index: 10;
+    display: none;
+    padding: 20px 50px;
+    font-size: 20px;
 }
-.sort div{  
+.sort > h3{  
     display: none;
 }
-.sort h3{
-    padding : 2px;
-    margin: 0px;
-    border-bottom: none;
-    font-size: 20px;
+#rightSide > div{
+    display: block;
+}
+.rightTitle{
+    border-radius: 0px 10px 10px 0px !important;
+    border-left: 2px solid #FFFFFF;
 }
 .bg{
     position: relative;

@@ -118,6 +118,33 @@ div.empty img{
     margin-left:auto;
     margin-right:auto;
 }
+.bg > div > h1{
+    color: #FFFFFF;
+    text-shadow: 3px 3px #7C3618;
+    background-color: #937C69;
+    width: 40%;
+    font-size: 35px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+#rightSide{
+    display: flex;
+}
+#rightSide > div{
+    display: none;
+    width: 10%;
+    background-color: #937C69;
+    color: #FFFFFF;
+    padding: 10px;
+    font-size: 35px;
+    text-align: center;
+    text-shadow: 3px 3px #7C3618;
+    margin-left: auto;
+    margin-bottom: 10px;
+    border-radius: 10px 0px 0px 10px;
+}
 .brands{
     background-color: #ffffff;
     padding:10px;
@@ -701,8 +728,9 @@ div.thumb > div {
 }
 .hiddenNotice{
     display: none;
-    font-size: 30px;
+    font-size: 20px;
     color: #a80000;
     font-style: italic;
     font-weight: bolder;
+    
 }

@@ -351,6 +351,7 @@ $(document).ready(function() {
             $(spBrand).show()
             noProduct(spBrand.length)
         }
+        
     })
     // Thêm số lượng giỏ hàng
   
@@ -547,4 +548,9 @@ $(document).ready(function() {
     $(".showMenu").click(function() {
         $("div.cover > nav").toggle()
     })
+    //----------------------------------------// Tat mo loc nhanh
+    $("#rightSide > div").click(function(){
+        $(".sort").toggle()
+    })
+    //----------------------------------------//
 })
