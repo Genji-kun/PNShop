@@ -459,6 +459,22 @@ $(document).ready(function() {
         $(".infoCart").hide()
         showBill(total)
     })
+    //Xử lý sự kiện xác nhận đặt hàng
+    $(".confirm").click(function() {
+        if( $("input[type=text]#name").val() == "" )
+            $("input[type=text]#name").css("border-bottom","1px solid red")
+        if ( $("input[type=text]#tel").val() == "" )
+            $("input[type=text]#tel").css("border-bottom","1px solid red")
+        if ( $("input[type=text]#address").val() == "" )
+            $("input[type=text]#address").css("border-bottom","1px solid red")
+        if( $("input[type=text]#name").val() != "" && $("input[type=text]#tel").val() != "" && $("input[type=text]#address").val() != "")
+        {
+            alert("Đặt hàng thành công!")
+            $(".infoBill input").css("border-bottom","1px solid #937C69")
+            $(".infoBill input:focus").css("border-bottom","2px solid #7C3618")
+            $("form input[type=text]").val("")
+        }
+    })
     // Xử lý sự kiện chọn vào sản phẩm
     $(".item").click(function() {
         $(".cover").hide()
