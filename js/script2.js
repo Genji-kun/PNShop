@@ -511,7 +511,6 @@ $(document).ready(function() {
             scrollTop:0
         }, 1000);
     })
-<<<<<<< HEAD
     //-----------------------------------------------// Thiet bi khac
     $(window).resize(function(){
         if((window).innerWidth() > 1024)
@@ -523,11 +522,3 @@ $(document).ready(function() {
         $("div.cover > nav").toggle()
     })
 })
-=======
-
-    //--------------------------------THIẾT BỊ KHÁC--------------------------------//
-    $(".showMenu").click(function() {
-        $("div.cover > nav").toggle();
-    })
-})
->>>>>>> 73c13dbdd70bb88d276686d8b6ec5196bbe901b2
