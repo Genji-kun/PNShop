@@ -286,6 +286,7 @@ a.followicon:hover{
     border-color: #FFFFFF;
 }
 #text{
+    top : 0;
     position:fixed;
     width: 100%;
     height: 100%;
@@ -386,6 +387,16 @@ div.thumb > div {
     width: 45%;
     text-align: center;
     padding: 5%;
+}
+.btns a{
+    text-decoration: none;
+    color: #FFFFFF;   
+}
+.btns a:hover{      
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bolder;
+    text-shadow: 1px 1px #7C3618;
 }
 .buy{
     background-color: #937C69;

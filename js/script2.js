@@ -499,14 +499,24 @@ $(document).ready(function() {
             })
         }
         if ($(this).scrollTop() >= 435)
-            $("#go-to-top").show("fast")
+            $("#go-to-top").show("slow")
         else
-            $("#go-to-top").hide("fast")
+            $("#go-to-top").hide("slow")
     })
     // Nút go to top
     $("#go-to-top").click(function() {
         $("html, body").animate({
             scrollTop:0
         }, 1000);
+    })
+    //-----------------------------------------------// Thiet bi khac
+    $(window).resize(function(){
+        if((window).innerWidth() > 1024)
+        {
+            $("div.cover > nav").show()
+        }
+    })
+    $(".showMenu").click(function() {
+        $("div.cover > nav").toggle()
     })
 })
