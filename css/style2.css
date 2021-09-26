@@ -141,8 +141,8 @@ div.empty img{
     font-size: 35px;
     text-align: center;
     text-shadow: 3px 3px #7C3618;
-    margin-left: auto;
     margin-bottom: 10px;
+    margin-left: auto;
     border-radius: 10px 0px 0px 10px;
 }
 .rightTitle{
@@ -238,16 +238,17 @@ a#go-to-top img{
     width: 100%;;
 }
 
-#footer{
+footer > div{
     margin-top:2%;
     background-color: #937C69;
     width: 100%;
     display: flex;
     padding: 2%;
 }
-#footer h2{
+footer > div h2{
     color:#FFFFFF;
     font-size:30px;
+    text-shadow: 3px 3px #7C3618;
 }
 
 div#contactframe{
@@ -581,16 +582,21 @@ div.thumb > div {
     padding: 0px 10px;
     text-decoration: none;
     color:#000000;
+    font-weight: bolder;
+    font-size: 20px;
 }
 .listpage li{
     background-color: #e9e9e9;
     height: fit-content;
     margin: 3px;
     text-align: center;
-    border: 2px solid #937C69;
+    border: 3px solid #937C69;
+    border-radius: 10px;
+    width: 35px;
+    height: 35px;
 }
 .listpage li:first-child{
-    border: 2px solid #7C3618;
+    border: 3px solid #7C3618;
 }
 .sort{
     width: 20%;
@@ -613,6 +619,7 @@ div.thumb > div {
     margin-top: 5%;
     font-size: 25px;
     color: #000000;
+    font-weight: bolder;
 }
 .total{
     display:flex;
