@@ -145,6 +145,9 @@ div.empty img{
     margin-bottom: 10px;
     border-radius: 10px 0px 0px 10px;
 }
+.rightTitle{
+    margin-left: auto;
+}
 .brands{
     background-color: #ffffff;
     padding:10px;
