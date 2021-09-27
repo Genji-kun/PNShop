@@ -250,7 +250,6 @@ footer > div h2{
     font-size:30px;
     text-shadow: 3px 3px #7C3618;
 }
-
 div#contactframe{
     width: 50%;
     border-right: 2px solid #FFFFFF;
@@ -426,7 +425,7 @@ a.followicon:hover{
 .selectedItem > a > i{
     color:#937C69;
 }
-.sl {
+.sl{
     width: 16%;
     font-size: 20px;
     text-align: center;
@@ -447,6 +446,7 @@ a.followicon:hover{
 }
 .selectedItem span{
     font-family: Huhu;
+    font-weight: bolder;
     color: #000000;
 }
 .selectedItems::-webkit-scrollbar {
@@ -626,6 +626,7 @@ div.thumb > div {
     align-items: center;
     font-family: Huhu;
     justify-content: space-between;
+    padding: 1%;
 }
 .total > h3{
     width: fit-content;

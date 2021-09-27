@@ -111,6 +111,48 @@ div#followus{
     padding: 5%;
     border-radius: 0;
 }
+.selectedItems{
+    max-height: 90%;
+}
+.selectedItem img{
+    width: 20%;
+}
+.selectedItem{
+    flex-wrap: wrap;   
+}
+.selectedItem h3{
+    width: 50%;
+    font-size: 35px;
+}
+.selectedItem h4{
+    width: 30%;
+    font-size: 30px;
+}
+.sl{
+    width: 20%;
+}
+.sl a{
+    font-size: 30px;
+}
+.selectedItem span{
+    font-size: 30px;
+    padding: 0px 10px;
+}
+.selectedItem h5{
+    width: 50%;
+    font-size: 35px;
+    font-weight: bolder;
+}
+.selectedItem > a{
+    width: 30%;
+    font-size: 35px;
+}
+.infoCart h2{
+    display: none;
+}
+.selectedItem:first-child{
+    border-top: none;
+}
 .exit{
     font-size: 50px;
 }
@@ -196,4 +238,8 @@ a#go-to-top img{
     top: 0%;
     padding: 5px;
     border-radius: 0;
+}
+.infoCart h1{
+    font-size: 50px;
+    margin-top: 10px;
 }

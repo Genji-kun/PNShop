@@ -225,18 +225,18 @@ div.youmayknow img{
 .title > div.imgframe img{
     width: 30%;
 }
-#footer{
-    margin-top:30px;
+footer > div{
+    margin-top:2%;
     background-color: #937C69;
     width: 100%;
     display: flex;
     padding: 2%;
 }
-#footer h2{
+footer > div h2{
     color:#FFFFFF;
     font-size:30px;
+    text-shadow: 3px 3px #7C3618;
 }
-
 div#contactframe{
     width: 50%;
     border-right: 2px solid #FFFFFF;

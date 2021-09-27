@@ -53,16 +53,19 @@ ul.menu li:last-child button{
 .page{
     width: 90%;
 }
-#footer{
+footer > div{
     flex-direction: column;
 }
-#footer div{
-    width: 100%;
-    padding: 3%;
-}
+
 div#contactframe{
     border-right: none;
     border-bottom: 2px solid #FFFFFF;
+    width: 100%;
+    padding: 3%;
+}
+div#followus{
+    width: 100%;
+    padding: 3%;
 }
 .info{
     display:block;

@@ -192,15 +192,3 @@ a.followicon:hover{
     margin-left:auto;
     margin-right:auto;
 }
-.photos{
-    background-color: #ffffff;
-    padding:10px;
-    width: 100%;
-    justify-content: space-between;
-    display:flex;
-}
-.photos > .photo{
-    width: 33%;
-    margin: 2%;
-    overflow: hidden;
-}

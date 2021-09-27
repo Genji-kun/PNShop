@@ -33,7 +33,7 @@ $(document).ready(function() {
                         <img src="${img}">
                         <h3>${productName}</h3>
                         <h4>${price}</h4>
-                        <div class="sl" >
+                        <div class="sl">
                             <a class = "minus" href ="javascript:;"><i class="fas fa-minus-square"></i></a>
                             <span>0</span>
                             <a class = "plus" href ="javascript:;" ><i class="fas fa-plus-square"></i></a>

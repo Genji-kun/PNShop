@@ -29,9 +29,9 @@ div.document > p{
 .page{
     width: 100%;
 }
-#footer h2{
+footer div h2{
     font-size:25px;
 }
 div#contactframe h3{
-    font-size: 20px;
+    font-size: 15px;
 }
