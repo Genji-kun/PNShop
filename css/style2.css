@@ -600,6 +600,7 @@ div.thumb > div {
 }
 .sort{
     width: 20%;
+    display: block;
     background-color: #937C69;
     padding: 1%;
     font-family: Huhu;

@@ -538,9 +538,10 @@ $(document).ready(function() {
             scrollTop:0
         }, 1000);
     })
+    
     //-----------------------------------------------// Thiet bi khac
     $(window).resize(function(){
-        if((window).innerWidth() > 1024)
+        if($(window).innerWidth() > 1024)
         {
             $("div.cover > nav").show()
             $(".sort").show()
