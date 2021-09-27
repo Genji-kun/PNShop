@@ -543,6 +543,7 @@ $(document).ready(function() {
         if((window).innerWidth() > 1024)
         {
             $("div.cover > nav").show()
+            $(".sort").show()
         }
     })
     $(".showMenu").click(function() {
