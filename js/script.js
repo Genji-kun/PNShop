@@ -8,23 +8,15 @@ $(document).ready(function() {
     $(".info").css({"opacity": 1})
     $("#text").css({"opacity": 0.6})
 
-    var clickNumber = 0
     $(".showMenu").click(function() {
-        clickNumber++
-        if (clickNumber % 2 != 0)
-            $(".hiddenMenu").slideDown(1000)
-        else
-            $(".hiddenMenu").slideUp(1000)
+        $(".hiddenMenu").slideToggle(1000)
     })
-    var prevWidth = window.innerWidth
-    var infoWidth = 50
-    var infoLeft = 25
 
-    if(window.innerWidth <= 780)
-    {
+    if(window.innerWidth <= 770)
         $(".title ul > li:last-child").hide()
-        $(".hiddenMore").show()
-    }
+    else
+        $(".title ul > li:last-child").show()
+        
     $(window).resize(function() {
         if (window.innerWidth > 1024)
         {
@@ -33,17 +25,12 @@ $(document).ready(function() {
         else
             $(".hiddenMenu").hide()
 
-        if(window.innerWidth <= 780)
-        {
+        if(window.innerWidth <= 770)
             $(".title ul > li:last-child").hide()
-            $(".hiddenMore").show()
-        }
         else
-        {
             $(".title ul > li:last-child").show()
-            $(".hiddenMore").hide()
-        }
     })
+
     $(".item").click(function() {
         $(".info .mainimage").attr("src",$(this).children('a').children('img').attr('src'))
         $(".info h1").text($(this).children('a').children('h2').text()) 

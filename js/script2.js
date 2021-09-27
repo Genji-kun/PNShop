@@ -541,11 +541,19 @@ $(document).ready(function() {
     
     //-----------------------------------------------// Thiet bi khac
     $(window).resize(function(){
-        if($(window).innerWidth() > 1024)
+        if(window.innerWidth > 1024)
         {
             $("div.cover > nav").show()
             $(".sort").show()
         }
+        else{
+            $("div.cover > nav").hide()
+            $(".sort").hide()
+        }
+        if(window.innerWidth > 590)
+            $(".hiddenBrand img").show()
+        else
+            $(".hiddenBrand img").hide()
     })
     $(".showMenu").click(function() {
         $("div.cover > nav").toggle()
@@ -553,6 +561,9 @@ $(document).ready(function() {
     //----------------------------------------// Tat mo loc nhanh
     $("#rightSide > div").click(function(){
         $(".sort").toggle()
+    })
+    $("#leftSide > div").click(function(){
+        $(".hiddenBrand img").toggle()
     })
     //----------------------------------------//
 })

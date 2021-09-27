@@ -129,11 +129,12 @@ div.empty img{
     border-radius: 10px;
     margin-bottom: 10px;
 }
-#rightSide{
+.side{
     display: flex;
 }
-#rightSide > div{
+.side > div{
     display: none;
+    cursor: url(../cursors/cursor2.cur),auto;
     width: 10%;
     background-color: #937C69;
     color: #FFFFFF;
@@ -142,8 +143,14 @@ div.empty img{
     text-align: center;
     text-shadow: 3px 3px #7C3618;
     margin-bottom: 10px;
+}
+#rightSide > div{
     margin-left: auto;
     border-radius: 10px 0px 0px 10px;
+}
+#leftSide > div{
+    margin-right: auto;
+    border-radius: 0px 10px 10px 0px;
 }
 .rightTitle{
     margin-left: auto;

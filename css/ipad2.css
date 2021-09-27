@@ -204,7 +204,7 @@ a#go-to-top img{
 }
 .sort{
     position: absolute;
-    top: 82px;
+    top: 72px;
     left: 50%;
     width: 50%;
     z-index: 10;
@@ -215,8 +215,15 @@ a#go-to-top img{
 .sort > h3{  
     display: none;
 }
+
 #rightSide > div{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.side > div > i{
     display: block;
+    width: 100%;
 }
 .rightTitle{
     border-radius: 0px 10px 10px 0px !important;

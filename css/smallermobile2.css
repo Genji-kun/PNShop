@@ -1,0 +1,55 @@
+/* Cái này chỉnh width của chữ sản phẩm với chữ các nhãn hàng nè */ 
+.bg > div > h1 {
+    width: 100%;
+    font-size: 30px;
+}
+.leftTitle{
+    width: 85% !important;
+}
+.rightTitle{
+    width: 85% !important;
+}
+.side > div{
+    width: 15%;
+}
+.sort{
+    width: 100%;
+    top: 67px;
+    left: 0%;
+}
+.brands a{
+    width:50%;
+}
+.hiddenBrand img{
+    display:none;
+}
+#leftSide > div{
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.leftTitle{
+    border-radius: 10px 0px 0px 10px !important;
+    border-right: 2px solid #FFFFFF;
+    margin-right: 0%;
+}
+div.item{
+    width: 46%;
+}
+div.cover > nav{
+    width: 45%;
+}
+div.cover > a{
+    width: 20%;
+}
+div.empty img{
+    width: 20%;
+}
+div.searchbox{
+    padding: 1%;
+    width: 63%;
+    margin: auto 0% auto 2%;
+}
+.showMenu a{
+    font-size: 40px;
+}

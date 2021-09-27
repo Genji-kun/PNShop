@@ -35,3 +35,9 @@ footer div h2{
 div#contactframe h3{
     font-size: 15px;
 }
+.hiddenMore{
+    display: block;
+}
+.title ul > li:last-child{
+    display: none;
+}
