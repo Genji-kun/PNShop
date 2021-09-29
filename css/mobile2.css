@@ -33,3 +33,19 @@ div.searchbox{
 .showMenu a{
     font-size: 50px;
 }
+.confirm{
+    width: 90%;
+    left: 5%;
+}
+.infoBill > form{
+    width: 100%;
+}
+.userInfo{
+    font-size: 20px;
+}
+.infoBill h1{
+    font-size: 25px;
+}
+.selectShip > div{
+    font-size: 20px;
+}

@@ -540,6 +540,10 @@ $(document).ready(function() {
     })
     
     //-----------------------------------------------// Thiet bi khac
+    if (window.innerWidth <= 590)
+    {
+        $(".infoCart > h1").text("Giỏ hàng")
+    }
     $(window).resize(function(){
         if(window.innerWidth > 1024)
         {
@@ -551,9 +555,15 @@ $(document).ready(function() {
             $(".sort").hide()
         }
         if(window.innerWidth > 590)
+        {
             $(".hiddenBrand img").show()
+            $(".infoCart > h1").text("Giỏ hàng của bạn")
+        }
         else
+        {
             $(".hiddenBrand img").hide()
+            $(".infoCart > h1").text("Giỏ hàng")
+        }
     })
     $(".showMenu").click(function() {
         $("div.cover > nav").toggle()

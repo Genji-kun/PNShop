@@ -12,11 +12,6 @@ $(document).ready(function() {
         $(".hiddenMenu").slideToggle(1000)
     })
 
-    if(window.innerWidth <= 770)
-        $(".title ul > li:last-child").hide()
-    else
-        $(".title ul > li:last-child").show()
-        
     $(window).resize(function() {
         if (window.innerWidth > 1024)
         {

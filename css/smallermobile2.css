@@ -53,3 +53,64 @@ div.searchbox{
 .showMenu a{
     font-size: 40px;
 }
+.infoCart h1{
+    font-size: 30px;
+}
+.selectedItem{
+    padding: 10px 5px;
+}
+.selectedItem h3{
+    font-size:15px;
+    padding:0 1%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+.total{
+    flex-wrap: wrap;
+}
+.order{
+    width: 100%;
+}
+.exit{
+    font-size: 30px;
+}
+.selectedItem h4{
+    font-size:15px;
+}
+.selectedItem h5{
+    font-size:15px;
+}
+.selectedItem span{
+    font-size: 15px;
+}
+.selectedItem a{
+    font-size: 15px;
+}
+.sl{
+    padding: 0;
+}
+.sl a{
+    font-size: 15px;
+    padding: 0;
+}
+.userInfo{
+    width: 30%;
+    font-size: 15px;
+}
+.infoBill input{
+    width: 100%;
+    font-size: 15px;
+}
+.infoBill h1{
+    font-size: 20px;
+}
+.selectShip > div{
+    font-size: 15px;
+    padding: 3px;
+}
+.selectShip > div > input{
+    width: 100% !important;
+}
