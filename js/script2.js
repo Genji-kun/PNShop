@@ -179,9 +179,30 @@ $(document).ready(function() {
             for (var i = 12*(pagenumber - 1); i < 12*(pagenumber - 1) + 12; i++)
                 $(sp[i]).show()  
         }
-        $("html, body").animate({
-            scrollTop:402
-        }, 1000);
+        if (window.innerWidth > 1024)
+        {
+            $("html, body").animate({
+                scrollTop: 402
+            }, 1000)  
+        }
+        else if(window.innerWidth > 770)
+        {
+            $("html, body").animate({
+                scrollTop: 442
+            }, 1000)
+        }
+        else if(window.innerWidth > 590)
+        {
+            $("html, body").animate({
+                scrollTop: 373
+            }, 1000)
+        }
+        else
+        {
+            $("html, body").animate({
+                scrollTop: 330
+            }, 1000)
+        }
     })
     
     // Xử lý sự kiện khi chọn lọc đối tượng (chó,mèo,tất cả)
