@@ -189,7 +189,7 @@ div.item img{
     width: 100%;
     border-radius: 20px 20px 0px 0px;
 }
-div.youmayknow{
+div.youmayknow a{
     background-color: rgba(147, 124, 105, 0.5);
     width: 96%;
     margin-left: auto;
@@ -198,6 +198,14 @@ div.youmayknow{
     display: flex;
     flex-wrap: wrap;
     margin-top:2%;
+    text-decoration: none;
+}
+.youmayknow a:hover{
+    background: linear-gradient(#d8bda6,#a3876e);
+}
+.youmayknow a:hover h2 {
+    color: #FFFFFF;
+    text-shadow: 2px 2px #7C3618;
 }
 div.document{
     width: 75%;
@@ -285,8 +293,9 @@ a.followicon:hover{
     color: #FFFFFF;
     border-color: #FFFFFF;
 }
-#text{
+#black-space{
     top : 0;
+    left: 0;
     position:fixed;
     width: 100%;
     height: 100%;
@@ -374,42 +383,28 @@ div.thumb > div {
     height: 50%;
     overflow: auto;
 }
-.btns{
-    display: flex;
-    justify-content: space-evenly;
+.btn{
     margin-top: 30px;
     font-size: 1.25vw;
+    width: 100%;
 }
-.cart{
-    background-color: #937C69;
-    color:#FFFFFF;
-    font-family: Huhu;
-    width: 45%;
-    text-align: center;
-    padding: 5%;
-}
-.btns a{
-    text-decoration: none;
-    color: #FFFFFF;   
-}
-.btns a:hover{      
+.buy a:hover{      
     text-decoration: none;
     color: #FFFFFF;
     font-weight: bolder;
-    text-shadow: 1px 1px #7C3618;
+    background-color: #7C3618;
 }
 .buy{
     background-color: #937C69;
     color:#FFFFFF;
     font-family: Huhu;
-    width: 45%;
     text-align: center;
-    padding: 5%;
 }
-.buy a, .cart a{
+.buy a{
     display: block;
     width: 100%;
     height: 100%;
+    padding: 5%;
 }
 /*width*/
 .textOverFlow::-webkit-scrollbar {
@@ -429,4 +424,72 @@ div.thumb > div {
 .textOverFlow::-webkit-scrollbar-thumb:hover {
     background: #75614f; 
 }
-
+.YMK-info{
+    background-color: #FFFFFF;
+    position:fixed;
+    left: 10%;
+    top: 5%;
+    z-index:999;
+    width: 80%;
+    height: 90%;
+    padding: 20px;
+    border-style:solid;
+    border-color: #937C69;
+    border-width: 5px;
+    border-radius: 20px;
+    opacity: 0;
+} 
+.YMK-info h1{
+    font-family: Huhu;
+    color: #937C69;
+    font-size: 35px;
+}
+.YMK-detail{
+    display: flex;
+}
+.exampleImg > p{  
+    font-family: Huhu;
+    text-align: center;
+    font-size: 15px;
+    font-style: italic;
+    margin-top: 10px;
+}
+.exampleImg{
+    width: 30%;
+}
+.exampleImg img{
+    width: 100%;
+    border: 5px solid #937C69;
+    border-radius: 10px;
+}
+.information{
+    position: relative;
+}
+.dislike{
+    font-size: 20px;
+    font-family: Huhu;
+    width: 45%;
+    background: linear-gradient(#db2b2b,#FF0000);
+}
+.like{
+    font-size: 20px;
+    font-family: Huhu;
+    width: 45%;
+    background: linear-gradient(#7CC6AA,#54B091);
+}
+.btn a{
+    padding : 10px;
+    display: block;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.like > a:hover{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bolder;
+}
+.dislike > a:hover{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bolder;
+}

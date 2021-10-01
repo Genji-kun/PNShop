@@ -2,11 +2,12 @@ $(document).ready(function() {
 
     $("#go-to-top").hide()
     $(".info").hide()
-    $("#text").hide()
-    
+    $(".YMK-info").hide()
+    $("#black-space").hide()
     $("#go-to-top").css({"opacity": 1})
     $(".info").css({"opacity": 1})
-    $("#text").css({"opacity": 0.6})
+    $(".YMK-info").css({"opacity": 1})
+    $("#black-space").css({"opacity": 0.6})
 
     $(".showMenu").click(function() {
         $(".hiddenMenu").slideToggle(1000)
@@ -39,19 +40,23 @@ $(document).ready(function() {
             images[i].src = `images/sp${number}_thumb${thutu}.jpg`
         }
         $(".info").fadeIn(500)
-        $("#text").fadeIn()
+        $("#black-space").fadeIn()
     })
     $(".thumb div img").click(function(){
         $(".thumb div img").css({"border-width": 0})
         $(".info .mainimage").attr("src",$(this).attr("src"))
         $(this).css({"border": "2px solid #937C69"})
     })
-
+    $(".youmayknow").click(function(){
+        $(".YMK-info").fadeIn(500)
+        $("#black-space").fadeIn()
+    })
     $(".exit").click(function() {
         $(".thumb div img").css({"border-width": 0})
         $("#firstthumb").css({"border-width" : 2})
         $(".info").fadeOut(500)
-        $("#text").fadeOut()
+        $(".YMK-info").fadeOut(500)
+        $("#black-space").fadeOut()
     })
     $(window).scroll(function() {
         if ($(this).scrollTop() >= 435)
