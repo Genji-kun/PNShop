@@ -310,6 +310,7 @@ a.followicon{
 a.followicon:hover{
     color: #FFFFFF;
     border-color: #FFFFFF;
+    text-decoration: none;
 }
 #black-space{
     position:fixed;
