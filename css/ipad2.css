@@ -59,7 +59,6 @@ div.cover > nav > ul.menu li{
 }
 div.cover > nav > ul.menu li:last-child{
     border-bottom: 0px;
-    font-family: Huhu;
 }
 div.cover > nav > ul.menu > li > a{
     padding: 5px;
