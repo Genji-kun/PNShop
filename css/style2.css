@@ -91,6 +91,9 @@ div.searchbox > input{
 div.searchbox > button{
     background-color: #7C3618;
     color:#FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size:15px;
     width:30px;
     height: 30px;
