@@ -85,6 +85,7 @@ ul.menu > li:last-child{
     justify-content: space-between;
 }
 ul.menu > li > input{
+    font-family: Huhu;
     width: 75%;
     margin-left:10px;
     border-style: none;
@@ -277,10 +278,12 @@ div.followicons{
     justify-content: center;
 }
 a.followicon{
-    font-family: Huhu;
     font-size: 35px;
     width: 60px;
     height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     text-align: center;
     text-decoration:none;
     border-style: solid;
