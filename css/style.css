@@ -93,6 +93,9 @@ ul.menu > li > input{
 ul.menu > li > button{
     background-color: #7C3618;
     color:#FFFFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 30px;
     height: 30px;
     outline: none;
