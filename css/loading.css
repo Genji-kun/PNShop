@@ -1,0 +1,56 @@
+.main{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    position: fixed;
+    background-image: url(../images/background.png) ;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    z-index: 99999999999;
+}
+.main > img{
+    width: 70%;
+}
+.line{
+    width: 600px;
+    display: flex;
+    height: 50px;
+    padding: 5px;
+    border : 5px solid #75614F;
+    background-color: #FFFFFF;
+    border-radius: 100px;
+}
+.line:before{
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #937C69, #75614f );
+    border-radius: 100px;
+    animation: loading 3s;
+}
+@keyframes loading{
+    0%{
+        width: 0%;
+    }
+    20%{
+        width: 5%;
+    }
+    40%{
+        width: 25%;
+    }
+    60%
+    {
+        width: 35%;
+    }
+    100%
+    {
+        width: 100%;
+    }
+}
+.main p{
+    font-family: Huhu;
+    font-size:  3rem;
+    font-weight: bolder;
+    color: #75614F;
+}

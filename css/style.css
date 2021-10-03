@@ -383,10 +383,16 @@ div.thumb > div {
     height: 50%;
     overflow: auto;
 }
-.btn{
+.button{
     margin-top: 30px;
     font-size: 1.25vw;
     width: 100%;
+}
+.button a{
+    padding : 10px;
+    display: block;
+    text-decoration: none;
+    color: #FFFFFF;
 }
 .buy a:hover{      
     text-decoration: none;
@@ -459,11 +465,14 @@ div.thumb > div {
 }
 .exampleImg img{
     width: 100%;
-    border: 5px solid #937C69;
     border-radius: 10px;
+    box-shadow: 10px 10px #937C69;
 }
 .information{
     position: relative;
+    width: 70%;
+    margin-left: 5%;
+    border-left: 3px solid #937C69 ;
 }
 .dislike{
     font-size: 20px;
@@ -477,7 +486,11 @@ div.thumb > div {
     width: 45%;
     background: linear-gradient(#7CC6AA,#54B091);
 }
-.btn a{
+.btns{
+    display: flex;
+    justify-content: space-evenly;
+}
+.btns a{
     padding : 10px;
     display: block;
     text-decoration: none;

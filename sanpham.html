@@ -10,6 +10,8 @@
         <meta http-equiv="REFRESH" content="2000">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/style2.css" rel="stylesheet"/>
+        <link href="css/loading.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">        
         <link href="css/ipad2.css" rel="stylesheet" media="screen and (max-width: 1024px)"/>
         <link href="css/mobile2.css" rel="stylesheet" media="screen and (max-width: 770px)"/>
@@ -20,9 +22,14 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="js/script2.js"></script>
+        <script src="js/loading.js"></script> 
     </head>
     <body>
-    </div>
+        <div class = "main" id ="main">
+            <img class="animate__animated animate__bounce" src ="images/logo&name.png"/>      
+            <div class ="line" id ="line"></div>
+            <p class ="text" id ="text">0%</p>
+        </div>
         <header>
             <div class="cover">
                 <a href ="index.html"><img src="images/logo.png"/></a> 
@@ -83,7 +90,7 @@
                 </div>
             </div>
         </div>
-        <div id="text"></div>
+        <div id="black-space"></div>
         <section>
             <div class="empty">
                 <a><img src="images/logo.png"/></a> 

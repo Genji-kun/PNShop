@@ -3,13 +3,13 @@ $(document).ready(function() {
     $(".info").hide()
     $(".infoCart").hide()
     $(".infoBill").hide()
-    $("#text").hide()
+    $("#black-space").hide()
     $(".selectedItem").hide()
     $(".infoCart").css({"opacity": 1})
     $(".infoBill").css({"opacity": 1})
     $("#go-to-top").css({"opacity": 1})
     $(".info").css({"opacity": 1})
-    $("#text").css({"opacity": 0.6}) 
+    $("#black-space").css({"opacity": 0.6}) 
     var flag = false
     //--------------------- Các function --------------------- //
  
@@ -413,14 +413,14 @@ $(document).ready(function() {
         $(".cover").hide()
         $(".off").show()
         $(".infoCart").fadeIn(500)
-        $("#text").fadeIn()
+        $("#black-space").fadeIn()
         $(".infoCart > img").hide()
         GioTrong()
         tinhTongTien()
     })
     $(".exit").click(function(){
         $(".cover").show()
-        $("#text").fadeOut()
+        $("#black-space").fadeOut()
         $(this).parent().parent().fadeOut(500)
         $(".hiddenNotice").hide()
     })
@@ -522,7 +522,7 @@ $(document).ready(function() {
             images[i].src = `images/sp${number}_thumb${thutu}.jpg`
         }
         $(".info").fadeIn(500)
-        $("#text").fadeIn()
+        $("#black-space").fadeIn()
     })
     // Xử lý sự kiện chọn vào thumb
     $(".thumb div img").click(function(){
