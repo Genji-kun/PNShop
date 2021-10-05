@@ -16,6 +16,9 @@ body{
     font-family: Hehe !important;
     cursor: url(../cursors/cursor1.cur),pointer;
 }
+.website{
+    display: none;
+}
 a, #searchBtn{
     cursor:url(../cursors/cursor2.cur),auto;
 }
