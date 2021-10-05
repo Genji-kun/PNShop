@@ -477,7 +477,6 @@ div.thumb > div {
 .exampleImg img{
     width: 100%;
     border-radius: 10px;
-    box-shadow: 10px 10px #937C69;
 }
 .information{
     position: relative;
