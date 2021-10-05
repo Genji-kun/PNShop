@@ -46,6 +46,10 @@ $(document).ready(function() {
         $(this).css({"border": "2px solid #937C69"})
     })
     $(".youmayknow").click(function(){
+        $(".informationText").html($(this).children("a").children(".hiddenInformation").html())
+        $(".exampleImg img").attr("src",$(this).children("a").children("img").attr("src"))
+        $(".YMK-info h1").text($(this).children("a").children(".document").children("h2").text())
+        $(".exampleImg > p").text($(this).children("a").children("p").text())
         $(".YMK-info").fadeIn(500)
         $("#black-space").fadeIn()
     })

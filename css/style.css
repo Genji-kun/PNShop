@@ -458,7 +458,8 @@ div.thumb > div {
 } 
 .YMK-info h1{
     color: #75614f;
-    font-size: 35px;
+    font-size: 30px;
+    font-weight: bolder;
 }
 .YMK-detail{
     display: flex;
@@ -487,6 +488,8 @@ div.thumb > div {
     padding: 2% 3%;
 }
 .information > p{
+    margin-top: 10px;
+    margin-bottom: 5px;
     color:#75614f;
     font-weight: bolder;
     font-size: 25px;
@@ -517,32 +520,43 @@ div.thumb > div {
     font-size: 20px;
     font-family: Huhu;
     width: 45%;
-    background: linear-gradient(#db2b2b,#FF0000);
+    background: linear-gradient(#f37171,#e73b3b);
 }
 .like{
     font-size: 20px;
     font-family: Huhu;
     width: 45%;
-    background: linear-gradient(#7CC6AA,#54B091);
+    background: linear-gradient(#7cc680,#54b070);
 }
 .btns{
     display: flex;
     justify-content: space-evenly;
-    margin-top: 15px;
 }
 .btns a{
     padding : 10px;
     display: block;
     text-decoration: none;
     color: #FFFFFF;
+    text-align: center;
+}
+.btns a > i{
+    padding-left: 3px;
 }
 .like > a:hover{
     text-decoration: none;
     color: #FFFFFF;
     font-weight: bolder;
+    background: linear-gradient(#40db47,#25e71e);
 }
 .dislike > a:hover{
     text-decoration: none;
     color: #FFFFFF;
     font-weight: bolder;
+    background: linear-gradient(#f14747,#f00e0e);
+}
+.hiddenInformation{
+    display: none;
+}
+.hiddenTitle{
+    display: none;
 }
