@@ -17,7 +17,7 @@ body{
     cursor: url(../cursors/cursor1.cur),pointer;
 }
 .website{
-    display: none;
+    opacity: 0;
 }
 a, #searchBtn{
     cursor:url(../cursors/cursor2.cur),auto;
