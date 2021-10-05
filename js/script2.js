@@ -41,7 +41,6 @@ $(document).ready(function() {
                         <h5></h5>
                         <a href="javascript:;" class="cancel"><i class="fas fa-times-square"></i></a>
                     </div>
-
         `)
     }
     // Tính số trang và hiển thị tương ứng

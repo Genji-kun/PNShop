@@ -361,7 +361,6 @@ a.followicon:hover{
     margin-top: auto;
     margin-bottom: auto;
 }
-
 .right{
     width: 50%;
     height: 100%;
@@ -442,6 +441,7 @@ div.thumb > div {
     background: #75614f; 
 }
 .YMK-info{
+    font-family: Huhu;
     background-color: #FFFFFF;
     position:fixed;
     left: 10%;
@@ -457,12 +457,12 @@ div.thumb > div {
     opacity: 0;
 } 
 .YMK-info h1{
-    font-family: Huhu;
-    color: #937C69;
+    color: #75614f;
     font-size: 35px;
 }
 .YMK-detail{
     display: flex;
+    height: 100%;
 }
 .exampleImg > p{  
     font-family: Huhu;
@@ -481,8 +481,37 @@ div.thumb > div {
 .information{
     position: relative;
     width: 70%;
+    height: 80%;
     margin-left: 5%;
     border-left: 3px solid #937C69 ;
+    padding: 2% 3%;
+}
+.information > p{
+    color:#75614f;
+    font-weight: bolder;
+    font-size: 25px;
+    text-align: center;
+}
+.informationText{
+    padding: 0% 2%;
+    font-size: 18px;
+    width: 100%;
+    height: 90%;
+    overflow: auto;
+}
+.informationText::-webkit-scrollbar {
+    width: 7px;
+}
+.informationText::-webkit-scrollbar-track {
+    background-color: #e0d7d0;
+    border-radius: 10px;
+}
+.informationText::-webkit-scrollbar-thumb {
+    background:#937C69; 
+    border-radius: 10px;
+}
+.informationText::-webkit-scrollbar-thumb:hover {
+    background: #75614f; 
 }
 .dislike{
     font-size: 20px;
@@ -499,6 +528,7 @@ div.thumb > div {
 .btns{
     display: flex;
     justify-content: space-evenly;
+    margin-top: 15px;
 }
 .btns a{
     padding : 10px;

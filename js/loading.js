@@ -12,11 +12,11 @@ function loadingNum(){
     console.log(a)
     if(a == 100)
     {
-        clearInterval(load)
         main.classList.add("animate__animated")
         main.classList.add("animate__fadeOut")
     }
 }
 setTimeout (function(){
     document.getElementById("main").style.display = "none"
+    clearInterval(load)
 },3500)
