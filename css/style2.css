@@ -762,5 +762,7 @@ div.thumb > div {
     color: #a80000;
     font-style: italic;
     font-weight: bolder;
-    
+}
+.website{
+    display: none;
 }

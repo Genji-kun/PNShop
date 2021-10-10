@@ -7,7 +7,9 @@ $(document).ready(function() {
     $(".info").css({"opacity": 1})
     $(".YMK-info").css({"opacity": 1})
     $("#black-space").css({"opacity": 0.6})
-    $(".website").css( "opacity",1)
+    setTimeout (function(){
+        $(".website").css( "opacity",1)
+    },2000)
     $(".showMenu").click(function() {
         $(".hiddenMenu").slideToggle(1000)
     })

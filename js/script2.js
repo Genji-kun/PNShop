@@ -9,7 +9,25 @@ $(document).ready(function() {
     $(".infoBill").css({"opacity": 1})
     $("#go-to-top").css({"opacity": 1})
     $(".info").css({"opacity": 1})
+    setTimeout (function(){
+        $(".website").css( "display","block")
+    },3000)
+    $(".website").addClass("animate__fadeIn  animate__animated")
+    setTimeout (function(){
+        $(".website").removeClass("animate__fadeIn  animate__animated")
+    },4000)
     $("#black-space").css({"opacity": 0.6}) 
+    $("div.item").addClass("wow animate__fadeInUp animate__animated")
+    wow = new WOW(
+        {
+        boxClass:     'wow',      // default
+        animateClass: 'animate_animated', // default
+        offset:       0,          // default
+        mobile:       true,       // default
+        live:         true        // default
+      }
+      )
+    wow.init();
     var flag = false
     //--------------------- Các function --------------------- //
  
@@ -208,11 +226,12 @@ $(document).ready(function() {
     $(".sortDT").change(function() {
         checkedFirstPage()
         $("#keyword").val("")
+        $(".listpage").show()
         var age = document.getElementsByName("age")
         for (var i = 0; i < age.length; i++)
             age[i].checked = false
         if (this.checked)
-        {
+        {   
             var sortTH = $(".sortTH input")
             for (var i = 0; i < sortTH.length; i++)
                 sortTH[i].checked = false

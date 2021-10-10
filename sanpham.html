@@ -11,16 +11,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/style2.css" rel="stylesheet"/>
         <link href="css/loading.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="css/animate.css">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">        
         <link href="css/ipad2.css" rel="stylesheet" media="screen and (max-width: 1024px)"/>
         <link href="css/mobile2.css" rel="stylesheet" media="screen and (max-width: 770px)"/>
         <link href="css/smallermobile2.css" rel="stylesheet" media="screen and (max-width: 590px)"/>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+        <script src="js/wow.min.js"></script>
         <script src="js/script2.js"></script>
         <script src="js/loading.js"></script> 
     </head>
@@ -30,7 +33,7 @@
             <div class ="line" id ="line"></div>
             <p class ="text" id ="text">0%</p>
         </div>
-        <header>
+        <header class ="website">
             <div class="cover">
                 <a href ="index.html"><img src="images/logo.png"/></a> 
                 <div class="searchbox">
@@ -52,7 +55,7 @@
                 </nav>
             </div>
         </header>
-        <div>
+        <div class = "website">
             <a href="javascript:;" id="go-to-top" title="Go to top">
                 <img src="images/gototop.png"/>
             </a>
@@ -91,7 +94,7 @@
             </div>
         </div>
         <div id="black-space"></div>
-        <section>
+        <section class = "website">
             <div class="empty">
                 <a><img src="images/logo.png"/></a> 
             </div>
@@ -114,7 +117,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class = "website">
             <div class="bg">
                 <div id = "rightSide" class="side">
                     <div><i class="fas fa-angle-down"></i></div>
@@ -188,7 +191,7 @@
                         <div id="noProduct">
                             <img src ="images/notice2.png" alt ="NoProduct"/>
                         </div>
-                        <div class="item Me-O cat kid">
+                        <div class="item Me-O cat kid ">
                             <a href ="javascript:;" rel ="1">
                                 <img src="images/sp1_thumb1.jpg" alt="product1"/>
                                 <h2><strong>Thức ăn cho mèo con Me-O vị cá biển 1.1kg</strong></h2>
@@ -218,7 +221,7 @@
                                 </p>
                             </a> 
                         </div>
-                        <div class="item Me-O cat adult">
+                        <div class="item Me-O cat adult ">
                             <a href="javascript:;" rel ="4">
                                 <img src="images/sp4_thumb1.jpg" alt="product4"/>
                                 <h2><strong>Me-O thức ăn cho mèo vị cá ngừ 3kg</strong></h2>
@@ -238,7 +241,7 @@
                                 </p>
                             </a> 
                         </div>
-                        <div class="item Me-O cat adult">
+                        <div class="item Me-O cat adult ">
                             <a href="javascript:;" rel ="6">
                                 <img src="images/sp6_thumb1.jpg" alt="product6"/>
                                 <h2><strong>Me-O thức ăn cho mèo vị hải sản 0.3kg</strong></h2>
@@ -248,7 +251,7 @@
                                 </p>
                             </a> 
                         </div>
-                        <div class="item BlueBuffalo cat kid">
+                        <div class="item BlueBuffalo cat kid ">
                             <a href="javascript:;" rel ="7">
                                 <img src="images/sp7_thumb1.jpg" alt="product7"/>
                                 <h2><strong>Baby Blue Crunchies cho mèo con vị cá hồi mặn 48gam</strong></h2>
@@ -258,7 +261,7 @@
                                 </p>
                             </a> 
                         </div>
-                        <div class="item BlueBuffalo dog adult">
+                        <div class="item BlueBuffalo dog adult ">
                             <a href="javascript:;" rel ="8">
                                 <img src="images/sp8_thumb1.jpg" alt="product8"/>
                                 <h2><strong>True Solutions dành cho giống chó nhỏ 1.8kg</strong></h2>
@@ -268,7 +271,7 @@
                                 </p>
                             </a> 
                         </div>
-                        <div class="item BlueBuffalo cat kid">
+                        <div class="item BlueBuffalo cat kid ">
                             <a href="javascript:;" rel ="9">
                                 <img src="images/sp9_thumb1.jpg" alt="product9"/>
                                 <h2><strong>Baby Blue thức ăn cho mèo con vị gà và gạo lứt 1.8kg</strong></h2>
@@ -308,7 +311,7 @@
                                 </p>
                             </a> 
                         </div>
-                        <div class="item BlueBuffalo cat adult">
+                        <div class="item BlueBuffalo cat adult ">
                             <a href ="javascript:;" rel ="13">
                                 <img src="images/sp13_thumb1.jpg" alt="product13"/>
                                 <h2><strong>Thức ăn True Solutions dưỡng da và lông cho mèo 1.8kg</strong></h2>
@@ -639,7 +642,7 @@
                                 </p>
                             </a> 
                         </div>
-                        <div class="item RoyalCanin dog kid">
+                        <div class="item RoyalCanin dog kid ">
                             <a href="javascript:;" rel ="43">
                                 <img src="images/sp43_thumb1.jpg" alt="product43"/>
                                 <h2><strong>Royal Canin Mini Puppy thức ăn cho chó con cỡ nhỏ 800gr</strong></h2>
@@ -669,7 +672,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class = "website">
             <div class="infoCart">
                 <a href ="javascript:;" title="Thoát"><div class="exit"><i class="fas fa-times"></i></div></a>
                 <h1>Giỏ hàng của bạn</h1>
@@ -746,7 +749,7 @@
                 </div>
             </div>
         </section>
-        <footer>
+        <footer class = "website">
             <div>
                 <div id="contactframe">
                     <h2>Liên hệ với chúng tôi:</h2>
