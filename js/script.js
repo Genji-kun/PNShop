@@ -49,16 +49,17 @@ $(document).ready(function() {
         $(".informationText").html($(this).children("a").children(".hiddenInformation").html())
         $(".exampleImg img").attr("src",$(this).children("a").children("img").attr("src"))
         $(".YMK-info h1").text($(this).children("a").children(".document").children("h2").text())
-        $(".exampleImg > p").text($(this).children("a").children("p").text())
+        $(".exampleImg p").text($(this).children("a").children("p").text())
         $(".YMK-info").fadeIn(500)
         $("#black-space").fadeIn()
     })
     $(".exit").click(function() {
+        $(this).parent().parent().fadeOut(500)
+        $("#black-space").fadeOut()
+    })
+    $(".off").click(function() {
         $(".thumb div img").css({"border-width": 0})
         $("#firstthumb").css({"border-width" : 2})
-        $(".info").fadeOut(500)
-        $(".YMK-info").fadeOut(500)
-        $("#black-space").fadeOut()
     })
     $(window).scroll(function() {
         if ($(this).scrollTop() >= 435)

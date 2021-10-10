@@ -465,7 +465,7 @@ div.thumb > div {
     display: flex;
     height: 100%;
 }
-.exampleImg > p{  
+.exampleImg p{  
     font-family: Huhu;
     text-align: center;
     font-size: 15px;
@@ -474,6 +474,9 @@ div.thumb > div {
 }
 .exampleImg{
     width: 30%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 .exampleImg img{
     width: 100%;
@@ -482,7 +485,7 @@ div.thumb > div {
 .information{
     position: relative;
     width: 70%;
-    height: 80%;
+    height: 100%;
     margin-left: 5%;
     border-left: 3px solid #937C69 ;
     padding: 2% 3%;
@@ -499,7 +502,7 @@ div.thumb > div {
     padding: 0% 2%;
     font-size: 18px;
     width: 100%;
-    height: 90%;
+    height: 80%;
     overflow: auto;
 }
 .informationText::-webkit-scrollbar {
@@ -518,15 +521,13 @@ div.thumb > div {
 }
 .dislike{
     font-size: 20px;
-    font-family: Huhu;
     width: 45%;
-    background: linear-gradient(#f37171,#e73b3b);
+    background: linear-gradient(#f7a18b,#e26959);
 }
 .like{
     font-size: 20px;
-    font-family: Huhu;
     width: 45%;
-    background: linear-gradient(#7cc680,#54b070);
+    background: linear-gradient(#93d39f,#63a878);
 }
 .btns{
     display: flex;
@@ -546,13 +547,13 @@ div.thumb > div {
     text-decoration: none;
     color: #FFFFFF;
     font-weight: bolder;
-    background: linear-gradient(#40db47,#25e71e);
+    background: linear-gradient(#65c474,#30b463);
 }
 .dislike > a:hover{
     text-decoration: none;
     color: #FFFFFF;
     font-weight: bolder;
-    background: linear-gradient(#f14747,#f00e0e);
+    background: linear-gradient(#e26f5b,#c74239);
 }
 .hiddenInformation{
     display: none;
