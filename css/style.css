@@ -17,7 +17,7 @@ body{
     cursor: url(../cursors/cursor1.cur),pointer;
 }
 .website{
-    opacity: 0;
+    display: none;
 }
 a, #searchBtn{
     cursor:url(../cursors/cursor2.cur),auto;
@@ -57,10 +57,11 @@ ul.menu{
     padding: 0px;
     margin: 0px;
     justify-content: center;
-    
+    overflow: hidden;
+    font-size: 20px;
 }
 ul.menu > li{
-    width: 15%;
+    width: 20%;
     text-align: center;
     border-right: 1px solid #FFFFFF;
 }
@@ -75,41 +76,7 @@ ul.menu > li > a{
     color: #FFFFFF;
 }
 ul.menu > li:last-child{
-    background-color: #FFFFFF;
-    border-radius: 100px;
-    margin-top:auto;
-    margin-bottom:auto;
-    margin-left:2%;
-    height: 80%;
-    max-width: 100%;
-    padding: 1px 3px;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-between;
-}
-ul.menu > li > input{
-    font-family: Huhu;
-    width: 75%;
-    margin-left:10px;
-    border-style: none;
-}
-ul.menu > li > button{
-    background-color: #7C3618;
-    color:#FFFFFF;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 30px;
-    height: 30px;
-    outline: none;
-    border-radius: 100%;
-    border-style: none;
-}
-ul.menu > li > button:focus{
-    outline: none;
-}
-ul.menu > li > input:focus{
-    outline: none;
+    border-right: none;
 }
 .content
 {
@@ -463,7 +430,7 @@ div.thumb > div {
 }
 .YMK-detail{
     display: flex;
-    height: 100%;
+    height: 90%;
 }
 .exampleImg p{  
     font-family: Huhu;

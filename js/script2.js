@@ -17,7 +17,7 @@ $(document).ready(function() {
         $(".website").removeClass("animate__fadeIn  animate__animated")
     },4000)
     $("#black-space").css({"opacity": 0.6}) 
-    $("div.item").addClass("wow animate__fadeInUp animate__animated")
+    $("div.item").addClass("wow animate__fadeIn animate__animated")
     wow = new WOW(
         {
         boxClass:     'wow',      // default
@@ -370,6 +370,7 @@ $(document).ready(function() {
         }
         else
         {
+            $(".listpage li").hide()
             $(".item").hide()
             checkedFirstPage()
             var brandName = document.getElementById(this.title) 
@@ -382,18 +383,16 @@ $(document).ready(function() {
             }
             var maxPage = Math.ceil(spBrand.length/12)
             var listpageNumber = $(".listpage li")
-            $(listpageNumber).show()
-            for (var i = listpageNumber.length; i >= maxPage; i--)
-            {
-                $(listpageNumber[i]).hide()
-            }
             $(spBrand).show()
             noProduct(spBrand.length)
         }
         
     })
+    $(".sort input").change(function(){
+        numberClick = 0
+    })
     // Thêm số lượng giỏ hàng
-  
+    
     $(".cart").click(function(){
         var count = $(".menu span").text()
         count++

@@ -8,8 +8,12 @@ $(document).ready(function() {
     $(".YMK-info").css({"opacity": 1})
     $("#black-space").css({"opacity": 0.6})
     setTimeout (function(){
-        $(".website").css( "opacity",1)
-    },2000)
+        $(".website").css( "display","block")
+    },3000)
+    $(".website").addClass("animate__fadeIn  animate__animated")
+    setTimeout (function(){
+        $(".website").removeClass("animate__fadeIn  animate__animated")
+    },4000)
     $(".showMenu").click(function() {
         $(".hiddenMenu").slideToggle(1000)
     })
@@ -78,5 +82,10 @@ $(document).ready(function() {
         $("html, body").animate({
             scrollTop: 2500
         },2000);
+    })
+    $(".like").click(function(){
+        var likeColor = $(this).css("background")
+        alert(likeColor)
+
     })
 })

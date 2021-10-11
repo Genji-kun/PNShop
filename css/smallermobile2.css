@@ -114,3 +114,13 @@ div.searchbox{
 .selectShip > div > input{
     width: 100% !important;
 }
+.line{
+    width: 300px;
+    height: 40px;
+}
+.main > img{
+    width: 350px;
+}
+.main > p{
+    font-size: 30px;
+}

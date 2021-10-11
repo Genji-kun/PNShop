@@ -38,11 +38,7 @@ ul.menu li{
     border-bottom: 1px solid #FFFFFF;
 }
 ul.menu li:last-child{
-    width: 80%;
-    margin: 10px auto;
-}
-ul.menu li:last-child button{
-    margin-left: auto;
+    border-bottom: none;
 }
 #demo{
     width: 90%;
