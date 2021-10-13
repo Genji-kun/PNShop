@@ -489,15 +489,25 @@ div.thumb > div {
 .dislike{
     font-size: 20px;
     width: 45%;
+    transition: width 0.5s;
     background: linear-gradient(#f7a18b,#e26959);
 }
 .like{
     font-size: 20px;
     width: 45%;
+    transition: width 0.5s;
     background: linear-gradient(#93d39f,#63a878);
 }
+.like > a:hover{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bolder;
+    background: linear-gradient(#65c474,#30b463);
+}
 .btns{
+    position: relative;
     display: flex;
+    overflow: hidden;
     justify-content: space-evenly;
 }
 .btns a{
@@ -510,12 +520,6 @@ div.thumb > div {
 .btns a > i{
     padding-left: 3px;
 }
-.like > a:hover{
-    text-decoration: none;
-    color: #FFFFFF;
-    font-weight: bolder;
-    background: linear-gradient(#65c474,#30b463);
-}
 .dislike > a:hover{
     text-decoration: none;
     color: #FFFFFF;
@@ -527,4 +531,12 @@ div.thumb > div {
 }
 .hiddenTitle{
     display: none;
+}
+.rateLike{
+    width: 70%;
+    background: linear-gradient(#65c474,#30b463);
+}
+.rateDislike{
+    width: 100%;
+    background: linear-gradient(#e26f5b,#c74239);
 }
