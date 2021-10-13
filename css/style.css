@@ -489,13 +489,13 @@ div.thumb > div {
 .dislike{
     font-size: 20px;
     width: 45%;
-    transition: width 0.5s;
+    transition: width 1s;
     background: linear-gradient(#f7a18b,#e26959);
 }
 .like{
     font-size: 20px;
     width: 45%;
-    transition: width 0.5s;
+    transition: width 1s;
     background: linear-gradient(#93d39f,#63a878);
 }
 .like > a:hover{
@@ -537,6 +537,6 @@ div.thumb > div {
     background: linear-gradient(#65c474,#30b463);
 }
 .rateDislike{
-    width: 100%;
+    width: 70%;
     background: linear-gradient(#e26f5b,#c74239);
 }

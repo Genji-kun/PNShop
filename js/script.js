@@ -58,15 +58,19 @@ $(document).ready(function() {
         $(".exampleImg p").text($(this).children("a").children("p").text())
         $(".YMK-info").fadeIn(500)
         $("#black-space").fadeIn()
+        $(".like").removeClass("animate__fadeOutLeft animate__animated")
+        $(".dislike").removeClass("animate__fadeOutRight animate__animated")
         if(likeNum[$(this).children("a").attr("rel")] == true)
         {
             $(".like").addClass("rateLike")
+            $(".like").show()
             $(".dislike").hide()
             $(".like").children("a").text("Cảm ơn đánh giá của bạn!!")
         }
         else if(dislikeNum[$(this).children("a").attr("rel")] == true)
         {
             $(".dislike").addClass("rateDislike")
+            $(".dislike").show()
             $(".like").hide()
             $(".dislike").children("a").text("Cảm ơn đánh giá của bạn!!")
         }
@@ -128,18 +132,18 @@ $(document).ready(function() {
                     likeNum[i] = true
                     $(".dislike").addClass("animate__fadeOutRight animate__animated")
                     $(".like").addClass("rateLike animate__slideInLeft animate__animated")
-                    setTimeout(function(){
-                        $(".dislike").hide()
-                    }, 250)
-                    $(this).children("a").text("Cảm ơn đánh giá của bạn!!")
+                    $(".dislike").fadeOut(200)
+                    $(".like a").text("Cảm ơn đánh giá của bạn!!")
                 }
                 else
                 {   
                     likeNum[i] = false
-                    $(this).removeClass("rateLike")
-                    $(".dislike").show(500)
-                    $(this).children("a").text("Hữu ích ")
-                    $(this).children("a").append(`<i class="far fa-thumbs-up"></i>`)
+                    $(".like").removeClass("rateLike animate__slideInLeft animate__animated")
+                    $(".dislike").addClass("animate__fadeInLeft animate__animated")
+                    $(".dislike").show()
+                    $(".dislike").removeClass("animate__fadeOutRight animate__animated")
+                    $(".like a").text("Hữu ích")
+                    $(".like a").append(`<i class="far fa-thumbs-up"></i>`)
                 }
             }
         }
@@ -154,17 +158,20 @@ $(document).ready(function() {
                 if(dislikeNum[i] == false)
                 {
                     dislikeNum[i] = true
-                    $(this).addClass("rateDislike")
-                    $(".like").hide()
-                    $(this).children("a").text("Cảm ơn đánh giá của bạn!!")
+                    $(".like").addClass("animate__fadeOutLeft animate__animated")
+                    $(".dislike").addClass("rateDislike animate__slideInRight animate__animated")
+                    $(".like").fadeOut(200)
+                    $(".dislike a").text("Cảm ơn đánh giá của bạn!!")
                 }
                 else
                 {   
                     dislikeNum[i] = false
-                    $(this).removeClass("rateDislike")
-                    $(".like").show(500)
-                    $(this).children("a").text("Không hữu ích ")
-                    $(this).children("a").append(`<i class="far fa-thumbs-down"></i>`)
+                    $(".dislike").removeClass("rateDislike animate__slideInRight animate__animated")
+                    $(".like").addClass("animate__fadeInRight animate__animated")
+                    $(".like").show()
+                    $(".like").removeClass("animate__fadeOutLeft animate__animated")
+                    $(".dislike a").text("Không hữu ích")
+                    $(".dislike a").append(`<i class="far fa-thumbs-down"></i>`)
                 }
             }
         }
