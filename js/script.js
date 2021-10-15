@@ -144,7 +144,14 @@ $(document).ready(function() {
                     $(".dislike").removeClass("animate__fadeOutRight animate__animated")
                     $(".like a").text("Hữu ích")
                     $(".like a").append(`<i class="far fa-thumbs-up"></i>`)
+                    $(".dislike").removeClass("rateDislike animate__slideInRight animate__animated")
+                    $(".like").addClass("animate__fadeInRight animate__animated")
+                    $(".like").show()
+                    $(".like").removeClass("animate__fadeOutLeft animate__animated")
+                    $(".dislike a").text("Không hữu ích")
+                    $(".dislike a").append(`<i class="far fa-thumbs-down"></i>`)
                 }
+                break
             }
         }
     })
@@ -172,7 +179,15 @@ $(document).ready(function() {
                     $(".like").removeClass("animate__fadeOutLeft animate__animated")
                     $(".dislike a").text("Không hữu ích")
                     $(".dislike a").append(`<i class="far fa-thumbs-down"></i>`)
+                    $(".like").removeClass("rateLike animate__slideInLeft animate__animated")
+                    $(".dislike").addClass("animate__fadeInLeft animate__animated")
+                    $(".dislike").show()
+                    $(".dislike").removeClass("animate__fadeOutRight animate__animated")
+                    $(".like a").text("Hữu ích")
+                    $(".like a").append(`<i class="far fa-thumbs-up"></i>`)
+
                 }
+                break
             }
         }
     })

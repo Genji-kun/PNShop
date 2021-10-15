@@ -191,7 +191,7 @@ $(document).ready(function() {
         })
         if (flag == false)
         {
-            $(sp).hide()
+            $(".item").hide()
             var pagenumber = $(this).children('a').attr('rel')
             for (var i = 12*(pagenumber - 1); i < 12*(pagenumber - 1) + 12; i++)
                 $(sp[i]).show()  
@@ -331,13 +331,13 @@ $(document).ready(function() {
             for(var i = 0; i < sp.length; i++)
                 for (var j = 0; j < arrChecked.length; j++)
                     if (sp[i].className.slice(5,sp[i].className.slice(5,1000).search(" ") + 5) == arrChecked[j].id)
-                        arrSp.push(sp[i])
+                        arrSp.push(sp[i])                  
             showListPage(arrSp)
             show12Product(arrSp)
             $(".listpage li").click(function() {
                 if(flag == true)
                 {
-                    $(arrSp).hide()
+                    $(".item").hide()
                     var pagenumber = $(this).children('a').attr('rel')
                             for (var i = 12*(pagenumber - 1); i < 12*(pagenumber - 1) + 12; i++)
                                 $(arrSp[i]).show()  
