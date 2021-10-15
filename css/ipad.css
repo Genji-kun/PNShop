@@ -12,6 +12,7 @@
     text-decoration: none;
     color: #ffffff;
     font-size: 5vw;
+    align-items: center;
 }
 .hiddenMenu{
     display:none;
@@ -52,7 +53,6 @@ ul.menu li:last-child{
 footer > div{
     flex-direction: column;
 }
-
 div#contactframe{
     border-right: none;
     border-bottom: 2px solid #FFFFFF;
@@ -133,4 +133,47 @@ div.item{
 }
 a#go-to-top img{
     display:none;
+}
+.YMK-info{
+    display:block;
+    width: 100%;
+    left:0%;
+    height: 100%;
+    top: 0%;
+    overflow:scroll;
+    padding: 5%;
+    border-radius: unset;
+}
+.YMK-info > h1{
+    font-size: 35px;
+}
+.YMK-detail{
+    flex-direction: column;
+}
+.exampleImg{
+    width: 100%;
+    border-bottom: 2px solid #937C69;
+}
+.exampleImg > div{
+    width: 100%;
+    text-align: center;
+}
+.exampleImg img{
+    width: 50%;
+}
+.information{
+    margin-top: 5%;
+    width: 100%;
+    border-left: none;
+    margin-left: 0;
+    padding: 0;
+}
+.informationText{
+    width: 100%;
+}
+.btns a{
+    height: 60px;
+}
+.dislike, .like{
+    font-size: 30px;
 }

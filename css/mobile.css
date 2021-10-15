@@ -6,6 +6,9 @@ div.youmayknow{
     flex-direction: column;
     margin: 5px;
 }
+div.youmayknow a{
+    height: 420px;
+}
 div.youmayknow img{
     width: 100%;
 }
@@ -40,4 +43,9 @@ div#contactframe h3{
 }
 .title ul > li:last-child{
     display: none;
+}
+.title > div.imgframe div{
+    width: 90%;
+    text-align: center;
+    margin: 10px auto;
 }
