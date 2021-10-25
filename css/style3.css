@@ -202,9 +202,10 @@ a.followicon:hover{
     width: 100%;
     justify-content: space-between;
     display:flex;
+    flex-wrap: wrap;
 }
 .photos > .photo{
-    width: 33%;
+    width: 28%;
     margin: 2%;
     overflow: hidden;
 }

@@ -33,10 +33,11 @@ $(document).ready(function() {
             }
         }
     }
+    
     setTimeout(function(){
         squareDiv()
         positionImg()
-    }, 500)
+    }, 1000)
     
     $(window).scroll(function() {
         if($(this).scrollTop() > 10) {
