@@ -9,6 +9,8 @@ $(document).ready(function() {
     $(".infoBill").css({"opacity": 1})
     $("#go-to-top").css({"opacity": 1})
     $(".info").css({"opacity": 1})
+    $(".addAlert").hide()
+    $(".submitAlert").hide()
     setTimeout (function(){
         $(".website").css( "display","block")
     },3000)
@@ -396,8 +398,14 @@ $(document).ready(function() {
     $(".cart").click(function(){
         var count = $(".menu span").text()
         count++
+        $(".addAlert").show()
+        $(".addAlert").removeClass("animate__fadeOutUp animate__animated")
+        $(".addAlert").addClass("animate__fadeInDown animate__animated")
+        setTimeout(function(){
+            $(".addAlert").removeClass("animate__fadeInDown animate__animated")
+            $(".addAlert").addClass("animate__fadeOutUp animate__animated")
+        },2000)
         $(".menu span").text(count)
-        alert("Đã thêm thành công, vui lòng kiểm tra giỏ hàng !!!")
         var isExist = false
         for (var i = 0; i < imgSelectedItem.length; i++)
         {
@@ -440,6 +448,8 @@ $(document).ready(function() {
         $("#black-space").fadeOut()
         $(this).parent().parent().fadeOut(500)
         $(".hiddenNotice").hide()
+        $(".addAlert").hide()
+        $(".submitAlert").hide()
     })
     // Thêm bớt số lượng giỏ hàng
     $(".selectedItems").on('click', '.selectedItem .minus', function(){
@@ -519,7 +529,13 @@ $(document).ready(function() {
             tinhTongTien()
             $(".menu span").text("0")
             GioTrong()
-            alert("Đặt hàng thành công!")
+            $(".submitAlert").show()
+            $(".submitAlert").removeClass("animate__fadeOutUp animate__animated")
+            $(".submitAlert").addClass("animate__fadeInDown animate__animated")
+            setTimeout(function(){
+                $(".submitAlert").removeClass("animate__fadeInDown animate__animated")
+                $(".submitAlert").addClass("animate__fadeOutUp animate__animated")
+            },2000)
             $("form input[type=text]").val("")
             $(".hiddenNotice").hide()
         }

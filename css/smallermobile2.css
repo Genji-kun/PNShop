@@ -124,3 +124,9 @@ div.searchbox{
 .main > p{
     font-size: 30px;
 }
+.addAlert > h2{
+    font-size: 20px;
+}
+.submitAlert > h2{
+    font-size: 15px;
+}
