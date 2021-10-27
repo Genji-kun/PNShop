@@ -351,7 +351,9 @@ div.youmayknow img{
     background: linear-gradient(#93d39f,#63a878);
 }
 .btns{
+    position: relative;
     display: flex;
+    overflow: hidden;
     justify-content: space-evenly;
 }
 .btns a{
@@ -375,4 +377,41 @@ div.youmayknow img{
     color: #FFFFFF;
     font-weight: bolder;
     background: linear-gradient(#e26f5b,#c74239);
+}
+.hiddenInformation{
+    display: none;
+}
+.hiddenTitle{
+    display: none;
+}
+.rateLike{
+    width: 70%;
+    background: linear-gradient(#65c474,#30b463);
+}
+.rateDislike{
+    width: 70%;
+    background: linear-gradient(#e26f5b,#c74239);
+}
+.website{
+    display: none;
+}
+.comment{
+    position: relative;
+    left: 10%;
+    width: 80%;
+}
+.comment a{
+    text-align: center;
+    display: block;
+    padding: 10px 5px;
+    background: linear-gradient(#d8bda6,#a3876e);
+    color: #FFFFFF;
+    font-family: Huhu; 
+    font-size: 20px;
+}
+.comment a:hover{
+    text-decoration: none;
+    color: #FFFFFF;
+    font-weight: bolder;
+    background:linear-gradient(#976f4b , #945134);
 }

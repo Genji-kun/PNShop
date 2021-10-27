@@ -1,25 +1,36 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>P&N Shop/products</title>
+        <title>P&N You May Know</title>
         <link href="images/logotab.png" rel="shortcut icon"/>
         <meta charset="utf-8">
         <meta name="author" content="Võ Phú Phát,Nguyễn Kim Bảo Ngân">
         <meta name="keywords" content="Chó,mèo,dog,cat,thức ăn cho thú cưng,P&N shop,pet food">
         <meta name="description" content="P&N shop là cửa hàng chuyên bán thức ăn cho chó mèo, website đặt hàng và mua hàng trực tuyến">
         <meta http-equiv="REFRESH" content="2000">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link href="css/style4.css" rel="stylesheet"/>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">        
+        <link href="css/loading.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="css/ipad4.css" rel="stylesheet" media="screen and (max-width: 1024px)"/>
+        <link href="css/mobile4.css" rel="stylesheet" media="screen and (max-width: 770px)"/>
+        <link href="css/smallermobile4.css" rel="stylesheet" media="screen and (max-width: 590px)"/>
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="js/script4.js"></script>
+        <script src="js/loading.js"></script> 
     </head>
     <body>
-        <header>
+        <div class = "main" id ="main">
+            <img class="animate__animated animate__bounce" src ="images/loader.png"/>      
+            <div class ="line" id ="line"></div>
+            <p class ="text" id ="text">0%</p>
+        </div>
+        <header class = "website">
             <div class="cover">
                 <a href ="index.html"><img src="images/logo.png"/></a> 
                 <div class="searchbox">
@@ -38,12 +49,12 @@
                 <a><img src="images/logo.png"/></a> 
             </div>
         </header>
-        <div>
+        <div class ="website">
             <a href="javascript:;" id="go-to-top" title="Go to top">
                 <img src="images/gototop.png"/>
             </a>
         </div>
-        <section>
+        <section class ="website">
             <div class = "bg">
                 <h1>Có thể bạn chưa biết:</h1>
                 <div class="YMKs">
@@ -229,6 +240,9 @@
                             <img alt="informationImg"/>
                             <p></p>
                         </div>
+                        <div class ="comment">
+                            <a href = "javascript:;"><i class="far fa-comment-dots"></i> Bình luận </a>
+                        </div>
                     </div>
                     <div class="information">
                         <div class = "informationText">
@@ -251,7 +265,7 @@
             </div>
             <div id="black-space"></div>
         </section>
-        <footer>
+        <footer class ="website">
             <div>
                 <div id="contactframe">
                     <h2>Liên hệ với chúng tôi:</h2>

@@ -185,7 +185,6 @@ $(document).ready(function() {
                     $(".dislike").removeClass("animate__fadeOutRight animate__animated")
                     $(".like a").text("Hữu ích")
                     $(".like a").append(`<i class="far fa-thumbs-up"></i>`)
-
                 }
                 break
             }
