@@ -766,3 +766,43 @@ div.thumb > div {
 .website{
     display: none;
 }
+.addAlert{
+    background-color: #FFFFFF;
+    position:fixed;
+    left: 25%;
+    top: 0%;
+    z-index: 1500;
+    width: 50%;
+    height: 7%;
+    border: #937C69 3px solid;
+    border-top: 0px;
+    border-radius: 0px 0px 10px 10px;
+}
+.addAlert > h2{
+    padding : 5px;
+    font-family: Huhu;
+    text-align: center;
+    font-size: 25px;
+    color: #937C69;
+    font-weight: bolder;
+}
+.submitAlert{
+    background-color: #FFFFFF;
+    position:fixed;
+    left: 15%;
+    top: 0%;
+    z-index: 1500;
+    width: 70%;
+    height: 7%;
+    border: #937C69 3px solid;
+    border-top: 0px;
+    border-radius: 0px 0px 10px 10px;
+}
+.submitAlert > h2{
+    padding : 5px;
+    font-family: Huhu;
+    text-align: center;
+    font-size: 25px;
+    color: #937C69;
+    font-weight: bolder;
+}
