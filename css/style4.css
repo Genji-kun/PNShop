@@ -421,7 +421,7 @@ div.youmayknow img{
 .comments{
     position: absolute;
     display: none;
-    height: 100%;
+    height: 102%;
     width: 90%;
     top: 0%;
     right:4%;
@@ -444,6 +444,7 @@ div.youmayknow img{
     align-items: center;
     flex-wrap: wrap;
     margin-left: 8px;
+    font-size: 15px;
 }
 .avt img{
     width: 80%;

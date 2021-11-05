@@ -145,6 +145,9 @@ $(document).ready(function() {
             }
         }
     })
+    $(".showComment").click(function(){
+        $(".comments").toggle()
+    })
     $(".exit").click(function() {
         $(this).parent().parent().fadeOut(500)
         $("#black-space").fadeOut()

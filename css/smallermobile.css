@@ -38,14 +38,3 @@ div.youmayknow a{
 .YMK-info > h1{
     font-size: 25px;
 }
-.btns a{
-    height: 50px;
-}
-.btns{
-    flex-direction: column;
-}
-.dislike, .like{
-    margin: 5px;
-    width: 100%;
-    font-size: 20px;
-}
