@@ -102,7 +102,6 @@ div#followus{
     padding: 3%;
 }
 .info{
-    display:block;
     width: 100%;
     left:0%;
     height: 100%;
@@ -238,7 +237,6 @@ a#go-to-top img{
     width: 100%;
 }
 .infoCart{
-    display:block;
     width: 100%;
     left:0%;
     height: 100%;

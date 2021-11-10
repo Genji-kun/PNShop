@@ -235,7 +235,7 @@ div.item img{
     border-radius: 20px 20px 0px 0px;
 }
 a#go-to-top{
-    display:block;
+    display: none;
     text-align: center;
     width: 5%;
     position: fixed;
@@ -318,7 +318,7 @@ a.followicon:hover{
     height: 10000000000000000px;
     z-index: 99;
     background-color: #000000;
-    opacity: 0;
+    display: none;
 }
 .exit{
     position: absolute;
@@ -342,7 +342,7 @@ a.followicon:hover{
     border-color: #937C69;
     border-width: 5px;
     border-radius: 20px;
-    opacity: 0;
+    display: none;
     text-align: center;
 }
 .infoCart > .notice {
@@ -682,7 +682,7 @@ div.thumb > div {
     border-color: #937C69;
     border-width: 5px;
     border-radius: 20px;
-    opacity: 0;
+    display: none;
     font-family: Huhu;
     text-align: center;
 }
@@ -777,6 +777,7 @@ div.thumb > div {
     border: #937C69 3px solid;
     border-top: 0px;
     border-radius: 0px 0px 10px 10px;
+    display: none;
 }
 .addAlert > h2{
     padding : 5px;
@@ -797,6 +798,7 @@ div.thumb > div {
     border: #937C69 3px solid;
     border-top: 0px;
     border-radius: 0px 0px 10px 10px;
+    display: none;
 }
 .submitAlert > h2{
     padding : 5px;

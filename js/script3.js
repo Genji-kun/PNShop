@@ -1,41 +1,56 @@
 $(document).ready(function() {
-    $("#go-to-top").hide()
-    
-    function squareDiv(){
+    function squazeDiv()
+    {
         $(".photo").height($(".photo").width())
     }
-    function positionImg(){
-        var img = $(".photo img")
-        var w = $(".photo").width()
-        var h = $(".photo").height()
-        for(var i = 0; i < img.length; i++)
-        {
-            if (img[i].width > img[i].height)
-            {
-                img[i].height = h
-                var overflow = (img[i].width - w)/2
-                $(img[i]).css({
-                    "margin-left": -overflow
-                })
-            }
-            else if (img[i].width < img[i].height) 
-            {
-                img[i].width = w
-                var overflow = (img[i].height - h)/2
-                $(img[i]).css({
-                    "margin-top": -overflow
-                })
-            }
-            else
-            {
-                img[i].width = w
-                img[i].height = h
-            }
-        }
-    }
-    squareDiv()
-    positionImg()
-    
+    squazeDiv()
+    $(window).resize(function() {
+        squazeDiv()
+    })
+    $(".photo").click(function() {
+        $("#black-space").show()
+        $(".info-img").show();
+        $(".info-img").children('a').attr('rel', $(this).children('a').attr('rel'));
+        $(".info-img img").attr('src', $(this).children().children('img').attr('src'));
+        $(".info-img .download").attr('href', $(this).children().children('img').attr('src'));
+        var thutu = $(".info-img").children('a').attr('rel')*1;
+        if(thutu <= 1)
+            $(".info-img .prev").hide()
+        else
+            $(".info-img .prev").show()
+        if (thutu >= $(".photo").length)
+            $(".info-img .next").hide()
+        else 
+            $(".info-img .next").show()
+    })
+    $(".exit").click(function() {
+        $(this).parent().parent().fadeOut(500)
+        $("#black-space").fadeOut()
+    })
+    $(".info-img .prev").click(function() {
+        var thutu = $(".info-img").children('a').attr('rel')*1 
+        thutu--;
+        $(".info-img").children('a').attr('rel', thutu);
+        $(".info-img img").attr('src', `photo&video/photo${thutu}.jpg`);
+        $(".info-img .download").attr('href', `photo&video/photo${thutu}.jpg`);
+        $(".info-img .next").show()
+        if(thutu <= 1)
+            $(".info-img .prev").hide()
+        else
+            $(".info-img .prev").show()
+    })
+    $(".info-img .next").click(function() {
+        var thutu = $(".info-img").children('a').attr('rel')*1
+        thutu++;
+        $(".info-img").children('a').attr('rel', thutu);
+        $(".info-img img").attr('src', `photo&video/photo${thutu}.jpg`);
+        $(".info-img .download").attr('href', `photo&video/photo${thutu}.jpg`);
+        $(".info-img .prev").show()
+        if (thutu >= $(".photo").length)
+            $(".info-img .next").hide()
+        else 
+            $(".info-img .next").show()
+    })
     $(window).scroll(function() {
         if($(this).scrollTop() > 10) {
             $(".cover").css({

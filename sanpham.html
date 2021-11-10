@@ -1,466 +1,675 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>P&N - Sản Phẩm</title>
-        <link href="images/logotab.png" rel="shortcut icon"/>
-        <meta charset="utf-8">
-        <meta name="author" content="Võ Phú Phát,Nguyễn Kim Bảo Ngân">
-        <meta name="keywords" content="Chó,mèo,dog,cat,thức ăn cho thú cưng,P&N shop,pet food">
-        <meta name="description" content="P&N shop là cửa hàng chuyên bán thức ăn cho chó mèo, website đặt hàng và mua hàng trực tuyến">
-        <meta http-equiv="REFRESH" content="2000">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/style2.css" rel="stylesheet"/>
-        <link href="css/loading.css" rel="stylesheet"/>
-        <link rel="stylesheet" href="css/animate.css">
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">        
-        <link href="css/ipad2.css" rel="stylesheet" media="screen and (max-width: 1024px)"/>
-        <link href="css/mobile2.css" rel="stylesheet" media="screen and (max-width: 770px)"/>
-        <link href="css/smallermobile2.css" rel="stylesheet" media="screen and (max-width: 590px)"/>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
-        <script src="js/wow.min.js"></script>
-        <script src="js/script2.js"></script>
-        <script src="js/loading.js"></script> 
-    </head>
-    <body>
-        <div class = "main" id ="main">
-            <img class="animate__animated animate__bounce" src ="images/loader.png"/>      
-            <div class ="line" id ="line"></div>
-            <p class ="text" id ="text">0%</p>
-        </div>
-        <header class ="website">
-            <div class="cover">
-                <a href ="index.html"><img src="images/logo.png"/></a> 
-                <div class="searchbox">
-                    <input type="text" id="keyword" placeholder="Tìm kiếm..."/>
-                    <button id="searchBtn"><i class="fas fa-search"></i></button>
-                </div>
-                 <div class="showMenu">
-                    <a href="javascript:;">
-                        <i class="fas fa-bars"></i>
-                    </a>
-                </div>
-                <nav>
-                    <ul class="menu">
-                        <li><a href="index.html">Trang chủ</a></li>
-                        <li><a href="youmayknow.html">Bạn có biết</a></li>
-                        <li><a href="image&video.html">Ảnh và video</a></li>
-                        <li><a href="javascript:;"><i class="fas fa-shopping-bag"></i> Giỏ hàng <span>0</span></a></li>
-                    </ul>
-                </nav>
+
+<head>
+    <title>P&N - Sản Phẩm</title>
+    <link href="images/logotab.png" rel="shortcut icon" />
+    <meta charset="utf-8">
+    <meta name="author" content="Võ Phú Phát,Nguyễn Kim Bảo Ngân">
+    <meta name="keywords" content="Chó,mèo,dog,cat,thức ăn cho thú cưng,P&N shop,pet food">
+    <meta name="description"
+        content="P&N shop là cửa hàng chuyên bán thức ăn cho chó mèo, website đặt hàng và mua hàng trực tuyến">
+    <meta http-equiv="REFRESH" content="2000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style2.css" rel="stylesheet" />
+    <link href="css/loading.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="css/ipad2.css" rel="stylesheet" media="screen and (max-width: 1024px)" />
+    <link href="css/mobile2.css" rel="stylesheet" media="screen and (max-width: 770px)" />
+    <link href="css/smallermobile2.css" rel="stylesheet" media="screen and (max-width: 590px)" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script src="js/script2.js"></script>
+    <script src="js/loading.js"></script>
+</head>
+
+<body>
+    <div class="main" id="main">
+        <img class="animate__animated animate__bounce" src="images/loader.png" />
+        <div class="line" id="line"></div>
+        <p class="text" id="text">0%</p>
+    </div>
+    <header class="website">
+        <div class="cover">
+            <a href="index.html"><img src="images/logo.png" /></a>
+            <div class="searchbox">
+                <input type="text" id="keyword" placeholder="Tìm kiếm..." />
+                <button id="searchBtn"><i class="fas fa-search"></i></button>
             </div>
-        </header>
-        <div class = "website">
-            <a href="javascript:;" id="go-to-top" title="Go to top">
-                <img src="images/gototop.png"/>
-            </a>
+            <div class="showMenu">
+                <a href="javascript:;">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="youmayknow.html">Bạn có biết</a></li>
+                    <li><a href="image&video.html">Ảnh và video</a></li>
+                    <li><a href="javascript:;"><i class="fas fa-shopping-bag"></i> Giỏ hàng <span>0</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="website">
+        <a href="javascript:;" id="go-to-top" title="Go to top">
+            <img src="images/gototop.png" />
+        </a>
         <div class="info">
-            <a href ="javascript:;" title="Thoát"><div class="exit off"><i class="fas fa-times"></i></div></a>
+            <a href="javascript:;" title="Thoát">
+                <div class="exit off"><i class="fas fa-times"></i></div>
+            </a>
             <div class="left">
-                <img class ="mainimage" src="images/sp1.png" alt="product"/>
-                <div class ="thumb">
-                    <div><img id ="firstthumb" src ="images/sp1_thumb1.jpg" alt ="hinh1"/></div>
-                    <div><img src ="images/sp1_thumb2.jpg" alt ="hinh2"/></div>
-                    <div><img src ="images/sp1_thumb3.jpg" alt ="hinh3"/></div>
-                    <div><img src ="images/sp1_thumb4.jpg" alt ="hinh4"/></div>
-                    <div><img src ="images/sp1_thumb5.jpg" alt ="hinh5"/></div>
+                <img class="mainimage" src="images/sp1.png" alt="product" />
+                <div class="thumb">
+                    <div><img id="firstthumb" src="images/sp1_thumb1.jpg" alt="hinh1" /></div>
+                    <div><img src="images/sp1_thumb2.jpg" alt="hinh2" /></div>
+                    <div><img src="images/sp1_thumb3.jpg" alt="hinh3" /></div>
+                    <div><img src="images/sp1_thumb4.jpg" alt="hinh4" /></div>
+                    <div><img src="images/sp1_thumb5.jpg" alt="hinh5" /></div>
                 </div>
             </div>
             <div class="right">
                 <h1><strong>Thức ăn cho mèo con gói Me-O 1,1kg</strong></h1>
-                <i><h3>125.000<sup> đ</sup></h3></i>
-                <div class ="textOverFlow">
+                <i>
+                    <h3>125.000<sup> đ</sup></h3>
+                </i>
+                <div class="textOverFlow">
                     <p>
                     </p>
                 </div>
-                <div class = "btns">
-                    <div class = "cart button">
+                <div class="btns">
+                    <div class="cart button">
                         <a>
                             <span>Thêm vào túi</span>
                         </a>
                     </div>
-                    <div class = "buy button">
+                    <div class="buy button">
                         <a>
                             <span>Mua ngay</span>
-                        </a>   
-                    </div> 
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class = "addAlert">
+        <div class="addAlert">
             <h2>Đã thêm thành công, vui lòng kiểm tra giỏ hàng !!!</h2>
         </div>
         <div id="black-space"></div>
-        <section class = "website">
+        <section class="website">
             <div class="empty">
-                <a><img src="images/logo.png"/></a> 
+                <a><img src="images/logo.png" /></a>
             </div>
             <div class="bg">
                 <div id="leftSide" class="side">
-                    <h1 class ="leftTitle">Các nhãn hàng</h1>
+                    <h1 class="leftTitle">Các nhãn hàng</h1>
                     <div><i class="fas fa-angle-down"></i></div>
                 </div>
                 <div class="brands">
-                    <a href="javascript:;" ><img src="images/brand1.jpg" alt = "brand1" title ="Ganador" /></a>
-                    <a href="javascript:;" ><img src="images/brand2.jpg" alt = "brand2" title ="Pedigree"/></a>
-                    <a href="javascript:;" class="hiddenBrand" ><img src="images/brand3.jpg" alt = "brand3" title ="Whiskas"/></a>
-                    <a href="javascript:;" class="hiddenBrand" ><img src="images/brand4.jpg" alt = "brand4" title ="RoyalCanin"/></a>
-                    <a href="javascript:;" class="hiddenBrand" ><img src="images/brand5.jpg" alt = "brand5" title ="BlueBuffalo"/></a>
-                    <a href="javascript:;" class="hiddenBrand" ><img src="images/brand6.jpg" alt = "brand6" title ="MKB"/></a>
-                    <a href="javascript:;" class="hiddenBrand" ><img src="images/brand7.jpg" alt = "brand7" title ="Catsrang"/></a>
-                    <a href="javascript:;" class="hiddenBrand" ><img src="images/brand8.jpg" alt = "brand8" title ="SmartHeart"/></a>
-                    <a href="javascript:;" class="hiddenBrand" ><img src="images/brand9.jpg" alt = "brand9" title ="Me-O"/></a>
-                    <a href="javascript:;" class="hiddenBrand" ><img src="images/brand10.jpg" alt = "brand10" title ="Minino"/></a>
+                    <a href="javascript:;"><img src="images/brand1.jpg" alt="brand1" title="Ganador" /></a>
+                    <a href="javascript:;"><img src="images/brand2.jpg" alt="brand2" title="Pedigree" /></a>
+                    <a href="javascript:;" class="hiddenBrand"><img src="images/brand3.jpg" alt="brand3"
+                            title="Whiskas" /></a>
+                    <a href="javascript:;" class="hiddenBrand"><img src="images/brand4.jpg" alt="brand4"
+                            title="RoyalCanin" /></a>
+                    <a href="javascript:;" class="hiddenBrand"><img src="images/brand5.jpg" alt="brand5"
+                            title="BlueBuffalo" /></a>
+                    <a href="javascript:;" class="hiddenBrand"><img src="images/brand6.jpg" alt="brand6"
+                            title="MKB" /></a>
+                    <a href="javascript:;" class="hiddenBrand"><img src="images/brand7.jpg" alt="brand7"
+                            title="Catsrang" /></a>
+                    <a href="javascript:;" class="hiddenBrand"><img src="images/brand8.jpg" alt="brand8"
+                            title="SmartHeart" /></a>
+                    <a href="javascript:;" class="hiddenBrand"><img src="images/brand9.jpg" alt="brand9"
+                            title="Me-O" /></a>
+                    <a href="javascript:;" class="hiddenBrand"><img src="images/brand10.jpg" alt="brand10"
+                            title="Minino" /></a>
                 </div>
             </div>
         </section>
-        <section class = "website">
+        <section class="website">
             <div class="bg">
-                <div id = "rightSide" class="side">
+                <div id="rightSide" class="side">
                     <div><i class="fas fa-angle-down"></i></div>
-                    <h1 class = "rightTitle"> Sản phẩm</h1>
+                    <h1 class="rightTitle"> Sản phẩm</h1>
                 </div>
                 <div class="frame-products">
                     <div class="sort">
                         <h3>LỌC NHANH</h3>
                         <div>
                             <div>
-                                <input id="all" type="radio" name="pet" class="sortDT" checked /> Tất cả 
+                                <input id="all" type="radio" name="pet" class="sortDT" checked /> Tất cả
                             </div>
                             <h4>Đối tượng</h4>
                             <div>
-                                <input id="dog" type="radio" name="pet" class="sortDT" /> Chó 
+                                <input id="dog" type="radio" name="pet" class="sortDT" /> Chó
                             </div>
                             <div>
-                                <input id="cat" type="radio" name="pet" class="sortDT" /> Mèo 
+                                <input id="cat" type="radio" name="pet" class="sortDT" /> Mèo
                             </div>
                         </div>
-                        <div class = "age">
+                        <div class="age">
                             <h4>Độ tuổi</h4>
                             <div class="doglist">
-                                <input id="kid" name="age" type="radio" /> Cún con 
+                                <input id="kid" name="age" type="radio" /> Cún con
                             </div>
                             <div class="doglist">
-                                <input id="adult"  name="age" type="radio" /> Chó trưởng thành  
+                                <input id="adult" name="age" type="radio" /> Chó trưởng thành
                             </div>
                             <div class="catlist">
-                                <input id="kid"  name="age" type="radio" /> Mèo con
+                                <input id="kid" name="age" type="radio" /> Mèo con
                             </div>
                             <div class="catlist">
-                                <input id="adult"  name="age" type="radio" /> Mèo trưởng thành
+                                <input id="adult" name="age" type="radio" /> Mèo trưởng thành
                             </div>
                         </div>
-                        <div class = "sortTH">
-                        <h4>Thương hiệu</h4>
+                        <div class="sortTH">
+                            <h4>Thương hiệu</h4>
                             <div>
-                                <input id="Ganador" type="checkbox" /> Ganador 
+                                <input id="Ganador" type="checkbox" /> Ganador
                             </div>
                             <div>
-                                <input id="Pedigree" type="checkbox" /> Pedigree 
+                                <input id="Pedigree" type="checkbox" /> Pedigree
                             </div>
                             <div>
-                                <input id="Whiskas" type="checkbox" /> Whiskas 
+                                <input id="Whiskas" type="checkbox" /> Whiskas
                             </div>
                             <div>
-                                <input id="RoyalCanin" type="checkbox" /> Royal Canin 
+                                <input id="RoyalCanin" type="checkbox" /> Royal Canin
                             </div>
                             <div>
                                 <input id="BlueBuffalo" type="checkbox" /> BlueBuffalo
                             </div>
                             <div>
-                                <input id="MKB" type="checkbox" /> MKB 
+                                <input id="MKB" type="checkbox" /> MKB
                             </div>
                             <div>
-                                <input id="Catsrang" type="checkbox" /> Catsrang 
+                                <input id="Catsrang" type="checkbox" /> Catsrang
                             </div>
                             <div>
-                                <input id="SmartHeart" type="checkbox" /> Smartheart 
+                                <input id="SmartHeart" type="checkbox" /> Smartheart
                             </div>
                             <div>
-                                <input id="Me-O" type="checkbox" /> Me-O 
+                                <input id="Me-O" type="checkbox" /> Me-O
                             </div>
                             <div>
-                                <input id="Minino" type="checkbox" /> Minino 
+                                <input id="Minino" type="checkbox" /> Minino
                             </div>
                         </div>
                     </div>
                     <div class="items page">
                         <div id="noProduct">
-                            <img src ="images/notice2.png" alt ="NoProduct"/>
+                            <img src="images/notice2.png" alt="NoProduct" />
                         </div>
                         <div class="item Me-O cat kid ">
-                            <a href ="javascript:;" rel ="1">
-                                <img src="images/sp1_thumb1.jpg" alt="product1"/>
+                            <a href="javascript:;" rel="1">
+                                <img src="images/sp1_thumb1.jpg" alt="product1" />
                                 <h2><strong>Thức ăn cho mèo con Me-O vị cá biển 1.1kg</strong></h2>
                                 <h3><i>125.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Thức Ăn Cho Mèo Trưởng Thành Me-O vị cá biển là thức ăn khô cho mèo cung cấp nguồn năng lượng chính cho cơ thể của thú cưng. Ngoài ra tinh bột trong loại đồ ăn cho mèo này giúp ngăn chặn bệnh táo bón ruột. Hương vị từ hải sản thơm ngon, sản phẩm sẽ góp phần tạo nên sự mới lạ trong bữa ăn cho thú cưng nhà bạn.
+                                <p class="hide">
+                                    Thức Ăn Cho Mèo Trưởng Thành Me-O vị cá biển là thức ăn khô cho mèo cung cấp nguồn
+                                    năng lượng chính cho cơ thể của thú cưng. Ngoài ra tinh bột trong loại đồ ăn cho mèo
+                                    này giúp ngăn chặn bệnh táo bón ruột. Hương vị từ hải sản thơm ngon, sản phẩm sẽ góp
+                                    phần tạo nên sự mới lạ trong bữa ăn cho thú cưng nhà bạn.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item Whiskas cat adult">
-                            <a href="javascript:;" rel ="2">
-                                <img src="images/sp2_thumb1.jpg" alt="product2"/>
+                            <a href="javascript:;" rel="2">
+                                <img src="images/sp2_thumb1.jpg" alt="product2" />
                                 <h2><strong>Thức ăn cho mèo Whiskas vị cá thu 1.2kg</strong></h2>
                                 <h3><i>115.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Hương vị Cá Thu thơm ngon được làm từ cá tươi hảo hạng, đảm bảo chất lượng cho mỗi bữa ăn của mèo. Cung cấp đủ vitamin và taurine, giúp đôi mắt của mèo luôn sáng tinh anh và khỏe mạnh. Bổ sung dưỡng chất đạm, Vitamin và khoáng chất từ cá tươi tốt cho hệ phát triển tối ưu, giúp mèo có cơ thể năng động và tràn đầy sức sống. Sản phẩm giàu Omega 3&6, axit béo và kẽm giúp mèo có bộ lông khỏe, mềm mại và bóng mượt. Các hạt có lớp vỏ mỏng giòn, thơm mùi cá. Bên trong là nhân mềm thơm ngon giúp mèo ăn thật ngon miệng. Kiểm soát được khẩu phần ăn hàng ngày, tránh việc quá nhiều để mèo bỏ lại thức ăn thừa. Nhanh chóng, tiện lợi, không tốn nhiều thời gian chuẩn bị.
+                                <p class="hide">
+                                    Hương vị Cá Thu thơm ngon được làm từ cá tươi hảo hạng, đảm bảo chất lượng cho mỗi
+                                    bữa ăn của mèo. Cung cấp đủ vitamin và taurine, giúp đôi mắt của mèo luôn sáng tinh
+                                    anh và khỏe mạnh. Bổ sung dưỡng chất đạm, Vitamin và khoáng chất từ cá tươi tốt cho
+                                    hệ phát triển tối ưu, giúp mèo có cơ thể năng động và tràn đầy sức sống. Sản phẩm
+                                    giàu Omega 3&6, axit béo và kẽm giúp mèo có bộ lông khỏe, mềm mại và bóng mượt. Các
+                                    hạt có lớp vỏ mỏng giòn, thơm mùi cá. Bên trong là nhân mềm thơm ngon giúp mèo ăn
+                                    thật ngon miệng. Kiểm soát được khẩu phần ăn hàng ngày, tránh việc quá nhiều để mèo
+                                    bỏ lại thức ăn thừa. Nhanh chóng, tiện lợi, không tốn nhiều thời gian chuẩn bị.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item BlueBuffalo dog kid">
-                            <a href="javascript:;" rel ="3">
-                                <img src="images/sp3_thumb1.jpg" alt="product3"/>
+                            <a href="javascript:;" rel="3">
+                                <img src="images/sp3_thumb1.jpg" alt="product3" />
                                 <h2><strong>Thức ăn cho chó con Baby Blue vị gà 1.8kg</strong></h2>
                                 <h3><i>420.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Thức ăn của Blue Buffalo luôn lấy thịt thật làm thành phần đầu tiên, có nghĩa là có nhiều thịt gà hơn bất kỳ thành phần nào khác. Protein chất lượng cao từ thịt gà thật giúp chó của bạn phát triển và duy trì cơ bắp khỏe mạnh. Thêm vào đó, chúng chứa rau và trái cây trong vườn. Thức ăn cho chó con có hàm lượng protein cao không chứa hạt được làm với các thành phần giúp thúc đẩy sự phát triển khỏe mạnh bao gồm DHA và ARA, các axit béo quan trọng có trong sữa mẹ, giúp hỗ trợ phát triển nhận thức và  võng mạc. Công thức này chứa LifeSource Bits độc quyền của BLUE - một sự pha trộn chính xác của các chất chống oxy hóa, vitamin và khoáng chất được lựa chọn cẩn thận bởi các bác sĩ thú y toàn diện và chuyên gia dinh dưỡng động vật để hỗ trợ sức khỏe hệ thống miễn dịch, các yêu cầu trong giai đoạn sống và cân bằng oxy hóa lành mạnh. Thức ăn khô cho chó Baby Blue được làm từ những nguyên liệu tự nhiên tốt nhất được tăng cường vitamin và khoáng chất.
+                                <p class="hide">
+                                    Thức ăn của Blue Buffalo luôn lấy thịt thật làm thành phần đầu tiên, có nghĩa là có
+                                    nhiều thịt gà hơn bất kỳ thành phần nào khác. Protein chất lượng cao từ thịt gà thật
+                                    giúp chó của bạn phát triển và duy trì cơ bắp khỏe mạnh. Thêm vào đó, chúng chứa rau
+                                    và trái cây trong vườn. Thức ăn cho chó con có hàm lượng protein cao không chứa hạt
+                                    được làm với các thành phần giúp thúc đẩy sự phát triển khỏe mạnh bao gồm DHA và
+                                    ARA, các axit béo quan trọng có trong sữa mẹ, giúp hỗ trợ phát triển nhận thức và
+                                    võng mạc. Công thức này chứa LifeSource Bits độc quyền của BLUE - một sự pha trộn
+                                    chính xác của các chất chống oxy hóa, vitamin và khoáng chất được lựa chọn cẩn thận
+                                    bởi các bác sĩ thú y toàn diện và chuyên gia dinh dưỡng động vật để hỗ trợ sức khỏe
+                                    hệ thống miễn dịch, các yêu cầu trong giai đoạn sống và cân bằng oxy hóa lành mạnh.
+                                    Thức ăn khô cho chó Baby Blue được làm từ những nguyên liệu tự nhiên tốt nhất được
+                                    tăng cường vitamin và khoáng chất.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item Me-O cat adult ">
-                            <a href="javascript:;" rel ="4">
-                                <img src="images/sp4_thumb1.jpg" alt="product4"/>
+                            <a href="javascript:;" rel="4">
+                                <img src="images/sp4_thumb1.jpg" alt="product4" />
                                 <h2><strong>Me-O thức ăn cho mèo vị cá ngừ 3kg</strong></h2>
                                 <h3><i>285.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Giúp cải thiện thị giác của mèo Ngăn ngừa bệnh đường tiết niệu và sỏi bàng quang Giảm nguy cơ bệnh thận và bệnh tim Tăng cường hệ thống miễn dịch và giúp làm giảm tác động của stress tới sức khỏe của mèo Bổ sung Omega 3, Omega 6 và kẽm nuôi dưỡng lông và da mèo óng mượt, khỏe mạnh chắc khỏe Canxi, photpho và vitamin D cho xương chắc, răng khỏe. Đồ Ăn Cho Mèo Me-O Cá Thu cải thiện thị giác. Taurine là axit cần thiết cho chức năng mắt và giúp cải thiện thị giác của mèo. Công thức FLUTD giúp ngăn ngừa bệnh đường tiết niệu và sỏi bàng quang, công thức Natri thấp giúp làm giảm nguy cơ bệnh thận và bệnh tim, vitamin C tăng cường hệ thống miễn dịch và giúp làm giảm tác động của stress tới sức khỏe của mèo, bổ sung Omega 3, Omega 6 và kẽm nuôi dưỡng lông và da mèo óng mượt, khỏe mạnh chắc khỏe, Can xi, Photpho và Vitamin D cho xương chắc, răng khỏe.
+                                <p class="hide">
+                                    Giúp cải thiện thị giác của mèo Ngăn ngừa bệnh đường tiết niệu và sỏi bàng quang
+                                    Giảm nguy cơ bệnh thận và bệnh tim Tăng cường hệ thống miễn dịch và giúp làm giảm
+                                    tác động của stress tới sức khỏe của mèo Bổ sung Omega 3, Omega 6 và kẽm nuôi dưỡng
+                                    lông và da mèo óng mượt, khỏe mạnh chắc khỏe Canxi, photpho và vitamin D cho xương
+                                    chắc, răng khỏe. Đồ Ăn Cho Mèo Me-O Cá Thu cải thiện thị giác. Taurine là axit cần
+                                    thiết cho chức năng mắt và giúp cải thiện thị giác của mèo. Công thức FLUTD giúp
+                                    ngăn ngừa bệnh đường tiết niệu và sỏi bàng quang, công thức Natri thấp giúp làm giảm
+                                    nguy cơ bệnh thận và bệnh tim, vitamin C tăng cường hệ thống miễn dịch và giúp làm
+                                    giảm tác động của stress tới sức khỏe của mèo, bổ sung Omega 3, Omega 6 và kẽm nuôi
+                                    dưỡng lông và da mèo óng mượt, khỏe mạnh chắc khỏe, Can xi, Photpho và Vitamin D cho
+                                    xương chắc, răng khỏe.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item BlueBuffalo dog adult">
-                            <a href="javascript:;" rel ="5"> 
-                                <img src="images/sp5_thumb1.jpg" alt="product5"/>
+                            <a href="javascript:;" rel="5">
+                                <img src="images/sp5_thumb1.jpg" alt="product5" />
                                 <h2><strong>True Solutions hỗ trợ vận động cho chó 0.3kg</strong></h2>
                                 <h3><i>59.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Hỗ trợ khả năng vận động của chó một cách tự nhiên với glucosamine và chondroitin, được chứng minh lâm sàng để hỗ trợ sức khỏe khớp, EPA từ dầu cá để hỗ trợ khả năng vận động và lượng khoáng chất tối ưu giúp xương chắc khỏe. Được bào chế bởi các bác sĩ thú y và tiến sĩ dinh dưỡng động vật. Đầu tiên, gà được sản xuất với các thành phần tự nhiên được tăng cường vitamin, khoáng chất và các chất dinh dưỡng khác.
+                                <p class="hide">
+                                    Hỗ trợ khả năng vận động của chó một cách tự nhiên với glucosamine và chondroitin,
+                                    được chứng minh lâm sàng để hỗ trợ sức khỏe khớp, EPA từ dầu cá để hỗ trợ khả năng
+                                    vận động và lượng khoáng chất tối ưu giúp xương chắc khỏe. Được bào chế bởi các bác
+                                    sĩ thú y và tiến sĩ dinh dưỡng động vật. Đầu tiên, gà được sản xuất với các thành
+                                    phần tự nhiên được tăng cường vitamin, khoáng chất và các chất dinh dưỡng khác.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item Me-O cat adult ">
-                            <a href="javascript:;" rel ="6">
-                                <img src="images/sp6_thumb1.jpg" alt="product6"/>
+                            <a href="javascript:;" rel="6">
+                                <img src="images/sp6_thumb1.jpg" alt="product6" />
                                 <h2><strong>Me-O thức ăn cho mèo vị hải sản 0.3kg</strong></h2>
                                 <h3><i>59.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Bao xá Cung cấp Acid Amino cần thiết cho đôi mắt và cải thiện thị giác Chứa Omega 3 và Omega 6 từ dầu chất lượng cao trong hợp chất với kẽm giúp nuôi dưỡng lông và da mèo Sản phẩm dạng hạt, có hương vị thơm ngon giúp kích thích vị giác. Đồ Ăn Cho Mèo Trưởng Thành Me-O Vị Hải Sản cung cấp Acid Amino cần thiết cho đôi mắt và cải thiện thị giác. Bên cạnh đó, loại thức ăn này còn chứa Omega 3 và Omega 6 từ dầu chất lượng cao trong hợp chất với kẽm giúp nuôi dưỡng lông và da mèo. Sản phẩm dạng hạt, có hương vị thơm ngon giúp kích thích vị giác tạo nên sự thích thú với bữa ăn của thú cưng nhà bạn.
+                                <p class="hide">
+                                    Bao xá Cung cấp Acid Amino cần thiết cho đôi mắt và cải thiện thị giác Chứa Omega 3
+                                    và Omega 6 từ dầu chất lượng cao trong hợp chất với kẽm giúp nuôi dưỡng lông và da
+                                    mèo Sản phẩm dạng hạt, có hương vị thơm ngon giúp kích thích vị giác. Đồ Ăn Cho Mèo
+                                    Trưởng Thành Me-O Vị Hải Sản cung cấp Acid Amino cần thiết cho đôi mắt và cải thiện
+                                    thị giác. Bên cạnh đó, loại thức ăn này còn chứa Omega 3 và Omega 6 từ dầu chất
+                                    lượng cao trong hợp chất với kẽm giúp nuôi dưỡng lông và da mèo. Sản phẩm dạng hạt,
+                                    có hương vị thơm ngon giúp kích thích vị giác tạo nên sự thích thú với bữa ăn của
+                                    thú cưng nhà bạn.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item BlueBuffalo cat kid ">
-                            <a href="javascript:;" rel ="7">
-                                <img src="images/sp7_thumb1.jpg" alt="product7"/>
+                            <a href="javascript:;" rel="7">
+                                <img src="images/sp7_thumb1.jpg" alt="product7" />
                                 <h2><strong>Baby Blue Crunchies cho mèo con vị cá hồi mặn 48gam</strong></h2>
                                 <h3><i>59.000<sup> đ</sup></i></h3>
-                                <p class ="hide">
-                                    Mọi người nuôi thú cưng đều muốn những gì tốt nhất cho mèo con của họ và bao gồm cả những món ăn ngon! Đó là lý do tại sao Baby Blue Crunchies có các thành phần bổ dưỡng mà bạn tin tưởng với hương vị không mèo con nào có thể cưỡng lại được. Với cá hồi thật trước và giòn sau khi nướng, không chứa hạt và được làm bằng những nguyên liệu mà đáng tin cậy và hợp khẩu vị của mèo con!. Thức ăn cho mèo con này có protein chất lượng cao từ cá hồi thật chỉ chứa 1,5 calo. Được xử lý dành cho mèo con được nướng trong lò để có một món ăn giòn như ý. KHÔNG chứa phụ phẩm từ thịt gà (hoặc gia cầm) và không chứa ngô, lúa mì, đậu nành, chất bảo quản và màu nhân tạo
+                                <p class="hide">
+                                    Mọi người nuôi thú cưng đều muốn những gì tốt nhất cho mèo con của họ và bao gồm cả
+                                    những món ăn ngon! Đó là lý do tại sao Baby Blue Crunchies có các thành phần bổ
+                                    dưỡng mà bạn tin tưởng với hương vị không mèo con nào có thể cưỡng lại được. Với cá
+                                    hồi thật trước và giòn sau khi nướng, không chứa hạt và được làm bằng những nguyên
+                                    liệu mà đáng tin cậy và hợp khẩu vị của mèo con!. Thức ăn cho mèo con này có protein
+                                    chất lượng cao từ cá hồi thật chỉ chứa 1,5 calo. Được xử lý dành cho mèo con được
+                                    nướng trong lò để có một món ăn giòn như ý. KHÔNG chứa phụ phẩm từ thịt gà (hoặc gia
+                                    cầm) và không chứa ngô, lúa mì, đậu nành, chất bảo quản và màu nhân tạo
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item BlueBuffalo dog adult ">
-                            <a href="javascript:;" rel ="8">
-                                <img src="images/sp8_thumb1.jpg" alt="product8"/>
+                            <a href="javascript:;" rel="8">
+                                <img src="images/sp8_thumb1.jpg" alt="product8" />
                                 <h2><strong>True Solutions dành cho giống chó nhỏ 1.8kg</strong></h2>
                                 <h3><i>433.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Công thức của các bác sĩ thú y, Small & Mighty bắt đầu với thịt gà giàu protein để hỗ trợ nhu cầu năng lượng của những chú chó nhỏ. Được làm bằng các thành phần tự nhiên được tăng cường vitamin, khoáng chất và các chất dinh dưỡng khác, bao gồm chất xơ prebiotic đã được chứng minh lâm sàng và hỗn hợp chất dinh dưỡng TruMune để hỗ trợ sức khỏe hệ tiêu hóa.
+                                <p class="hide">
+                                    Công thức của các bác sĩ thú y, Small & Mighty bắt đầu với thịt gà giàu protein để
+                                    hỗ trợ nhu cầu năng lượng của những chú chó nhỏ. Được làm bằng các thành phần tự
+                                    nhiên được tăng cường vitamin, khoáng chất và các chất dinh dưỡng khác, bao gồm chất
+                                    xơ prebiotic đã được chứng minh lâm sàng và hỗn hợp chất dinh dưỡng TruMune để hỗ
+                                    trợ sức khỏe hệ tiêu hóa.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item BlueBuffalo cat kid ">
-                            <a href="javascript:;" rel ="9">
-                                <img src="images/sp9_thumb1.jpg" alt="product9"/>
+                            <a href="javascript:;" rel="9">
+                                <img src="images/sp9_thumb1.jpg" alt="product9" />
                                 <h2><strong>Baby Blue thức ăn cho mèo con vị gà và gạo lứt 1.8kg</strong></h2>
                                 <h3><i>420.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Được xây dựng để tăng trưởng và phát triển khỏe mạnh, công thức Baby Blue tự nhiên của chúng tôi bắt đầu với thịt gà chất lượng cao và có gạo lứt lành mạnh, trái cây, rau và LifeSource Bits giàu chất chống oxy hóa, được tăng cường với vitamin, khoáng chất và các chất dinh dưỡng khác như DHA để hỗ trợ phát triển nhận thức và taurine cho sức khỏe tim mạch, Baby Blue cung cấp cho mèo con của bạn nguồn dinh dưỡng cần thiết để phát triển và vui chơi.
+                                <p class="hide">
+                                    Được xây dựng để tăng trưởng và phát triển khỏe mạnh, công thức Baby Blue tự nhiên
+                                    của chúng tôi bắt đầu với thịt gà chất lượng cao và có gạo lứt lành mạnh, trái cây,
+                                    rau và LifeSource Bits giàu chất chống oxy hóa, được tăng cường với vitamin, khoáng
+                                    chất và các chất dinh dưỡng khác như DHA để hỗ trợ phát triển nhận thức và taurine
+                                    cho sức khỏe tim mạch, Baby Blue cung cấp cho mèo con của bạn nguồn dinh dưỡng cần
+                                    thiết để phát triển và vui chơi.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item Me-O cat adult">
-                            <a href="javascript:;" rel ="10">
-                                <img src="images/sp10_thumb1.jpg" alt="product10"/>
+                            <a href="javascript:;" rel="10">
+                                <img src="images/sp10_thumb1.jpg" alt="product10" />
                                 <h2><strong>Me-o thức ăn mèo Persian 1.1kg</strong></h2>
                                 <h3><i>199.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Thức ăn mèo Me-O Persian được sản xuất từ công thức dinh dưỡng đặc biệt để đáp ứng tất cả các nhu cầu dinh dưỡng của mèo Ba Tư. Thành phần dinh dưỡng cao được kết hợp để đáp ứng các nhu cầu riêng của giống mèo này như phát triển lông, cơ xương, răng, da … Ngoài ra thức ăn cho mèo Me-O Persian có công dụng đặc biệt là chống búi lông cực tốt!
+                                <p class="hide">
+                                    Thức ăn mèo Me-O Persian được sản xuất từ công thức dinh dưỡng đặc biệt để đáp ứng
+                                    tất cả các nhu cầu dinh dưỡng của mèo Ba Tư. Thành phần dinh dưỡng cao được kết hợp
+                                    để đáp ứng các nhu cầu riêng của giống mèo này như phát triển lông, cơ xương, răng,
+                                    da … Ngoài ra thức ăn cho mèo Me-O Persian có công dụng đặc biệt là chống búi lông
+                                    cực tốt!
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item BlueBuffalo dog kid">
-                            <a href="javascript:;" rel ="11">
-                                <img src="images/sp11_thumb1.jpg" alt="product11"/>
+                            <a href="javascript:;" rel="11">
+                                <img src="images/sp11_thumb1.jpg" alt="product11" />
                                 <h2><strong>Baby Blue thức ăn cho chó con vị gà tây và khoai tây 0.3kg</strong></h2>
                                 <h3><i>59.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Baby Blue lành mạnh, ngon miệng cung cấp cho Cún con của bạn thức ăn bổ dưỡng cần thiết để chúng thành chú chó trưởng thành vui vẻ, khỏe mạnh. Baby Blue(không hạt) bao gồm gà tây thực làm thành phần đầu tiên, trái cây và rau, không có bất kỳ ngô, lúa mì hoặc đậu nành. Thức ăn của Blue Buffalo luôn lấy thịt thật làm thành phần đầu tiên, nghĩa là có nhiều thịt gà hơn bất kỳ thành phần nào khác. Protein chất lượng cao từ thịt gà thật giúp chó của bạn phát triển và duy trì cơ bắp khỏe mạnh. Thêm vào đó, chúng chứa rau và trái cây trong vườn. Thức ăn cho chó con có hàm lượng protein cao không chứa hạt được làm với các thành phần giúp thúc đẩy sự phát triển khỏe mạnh bao gồm DHA và ARA, các axit béo quan trọng có trong sữa mẹ, giúp hỗ trợ phát triển nhận thức và sức khỏe võng mạc. Thức ăn cho chó dạng ướt Baby Blue được làm từ những nguyên liệu tự nhiên tốt nhất được tăng cường vitamin và khoáng chất. Không chứa phụ phẩm từ thịt gà (hoặc gia cầm), ngô, lúa mì, đậu nành, hương vị nhân tạo hoặc chất bảo quản
+                                <p class="hide">
+                                    Baby Blue lành mạnh, ngon miệng cung cấp cho Cún con của bạn thức ăn bổ dưỡng cần
+                                    thiết để chúng thành chú chó trưởng thành vui vẻ, khỏe mạnh. Baby Blue(không hạt)
+                                    bao gồm gà tây thực làm thành phần đầu tiên, trái cây và rau, không có bất kỳ ngô,
+                                    lúa mì hoặc đậu nành. Thức ăn của Blue Buffalo luôn lấy thịt thật làm thành phần đầu
+                                    tiên, nghĩa là có nhiều thịt gà hơn bất kỳ thành phần nào khác. Protein chất lượng
+                                    cao từ thịt gà thật giúp chó của bạn phát triển và duy trì cơ bắp khỏe mạnh. Thêm
+                                    vào đó, chúng chứa rau và trái cây trong vườn. Thức ăn cho chó con có hàm lượng
+                                    protein cao không chứa hạt được làm với các thành phần giúp thúc đẩy sự phát triển
+                                    khỏe mạnh bao gồm DHA và ARA, các axit béo quan trọng có trong sữa mẹ, giúp hỗ trợ
+                                    phát triển nhận thức và sức khỏe võng mạc. Thức ăn cho chó dạng ướt Baby Blue được
+                                    làm từ những nguyên liệu tự nhiên tốt nhất được tăng cường vitamin và khoáng chất.
+                                    Không chứa phụ phẩm từ thịt gà (hoặc gia cầm), ngô, lúa mì, đậu nành, hương vị nhân
+                                    tạo hoặc chất bảo quản
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item BlueBuffalo cat adult kid">
-                            <a href="javascript:;" rel ="12">
-                                <img src="images/sp12_thumb1.jpg" alt="product12"/>
+                            <a href="javascript:;" rel="12">
+                                <img src="images/sp12_thumb1.jpg" alt="product12" />
                                 <h2><strong>Blue Tastefuls pate cho mèo vị cá ngừ 80gam</strong></h2>
                                 <h3><i>23.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Món paté mịn - Blue Tastefuls này bắt đầu với cá trắng làm thành phần đầu tiên. Được làm bằng những nguyên liệu tự nhiên tốt nhất, bao gồm cá ngừ và được tăng cường vitamin, khoáng chất với nhiều chất dinh dưỡng khác, thức ăn ướt cho mèo này rất ngon, chỉ cần một hương vị là mèo của bạn sẽ kêu meow meow thêm nữa!
+                                <p class="hide">
+                                    Món paté mịn - Blue Tastefuls này bắt đầu với cá trắng làm thành phần đầu tiên. Được
+                                    làm bằng những nguyên liệu tự nhiên tốt nhất, bao gồm cá ngừ và được tăng cường
+                                    vitamin, khoáng chất với nhiều chất dinh dưỡng khác, thức ăn ướt cho mèo này rất
+                                    ngon, chỉ cần một hương vị là mèo của bạn sẽ kêu meow meow thêm nữa!
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item BlueBuffalo cat adult ">
-                            <a href ="javascript:;" rel ="13">
-                                <img src="images/sp13_thumb1.jpg" alt="product13"/>
+                            <a href="javascript:;" rel="13">
+                                <img src="images/sp13_thumb1.jpg" alt="product13" />
                                 <h2><strong>Thức ăn True Solutions dưỡng da và lông cho mèo 1.8kg</strong></h2>
                                 <h3><i>433.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Giúp bộ lông mèo trở nên bóng mượt tự nhiên với axit béo omega 3 & 6, được minh chứng lâm sàng để hỗ trợ làn da khỏe mạnh và bộ lông bóng mượt. Được chế tạo bởi các bác sĩ thú y và tiến sĩ dinh dưỡng động vật, sản phẩm được làm bằng các thành phần tự nhiên bắt đầu từ cá hồi thật, được tăng cường vitamin, khoáng chất và các chất dinh dưỡng khác, và không chứa ngô, lúa mì, đậu nành, sữa hoặc trứng.
+                                <p class="hide">
+                                    Giúp bộ lông mèo trở nên bóng mượt tự nhiên với axit béo omega 3 & 6, được minh
+                                    chứng lâm sàng để hỗ trợ làn da khỏe mạnh và bộ lông bóng mượt. Được chế tạo bởi các
+                                    bác sĩ thú y và tiến sĩ dinh dưỡng động vật, sản phẩm được làm bằng các thành phần
+                                    tự nhiên bắt đầu từ cá hồi thật, được tăng cường vitamin, khoáng chất và các chất
+                                    dinh dưỡng khác, và không chứa ngô, lúa mì, đậu nành, sữa hoặc trứng.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item RoyalCanin cat kid">
-                            <a href="javascript:;" rel ="14">
-                                <img src="images/sp14_thumb1.jpg" alt="product14"/>
+                            <a href="javascript:;" rel="14">
+                                <img src="images/sp14_thumb1.jpg" alt="product14" />
                                 <h2><strong>Royal canin kitten 36 thức ăn cho mèo con 1.5kg</strong></h2>
                                 <h3><i>200.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Thức ăn cho mèo ROYAL CANIN Kitten hỗ trợ sức khỏe của mèo con bằng việc cung cấp các chất dinh dưỡng chính xác dựa trên nghiên cứu của các nhà khoa học từ ROYAL CANIN. Trong giai đoạn tăng trưởng, hệ thống tiêu hóa của mèo con chưa phát triển đầy đủ, chính vì vậy ROYAL CANIN Kitten thúc đẩy sự cân bằng hệ vi sinh đường ruột, hỗ trợ sự phát triển khỏe mạnh. Hỗ trợ sức khỏe hệ miễn dịch, duy trì sức khoẻ tiêu hóa, đặc biệt cai sữa dễ dàng, 100% dinh dưỡng cân bằng, 100% đảm bảo an toàn. ROYAL CANIN Kitten dành cho mèo con từ 4 đến 12 tháng tuổi.
+                                <p class="hide">
+                                    Thức ăn cho mèo ROYAL CANIN Kitten hỗ trợ sức khỏe của mèo con bằng việc cung cấp
+                                    các chất dinh dưỡng chính xác dựa trên nghiên cứu của các nhà khoa học từ ROYAL
+                                    CANIN. Trong giai đoạn tăng trưởng, hệ thống tiêu hóa của mèo con chưa phát triển
+                                    đầy đủ, chính vì vậy ROYAL CANIN Kitten thúc đẩy sự cân bằng hệ vi sinh đường ruột,
+                                    hỗ trợ sự phát triển khỏe mạnh. Hỗ trợ sức khỏe hệ miễn dịch, duy trì sức khoẻ tiêu
+                                    hóa, đặc biệt cai sữa dễ dàng, 100% dinh dưỡng cân bằng, 100% đảm bảo an toàn. ROYAL
+                                    CANIN Kitten dành cho mèo con từ 4 đến 12 tháng tuổi.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item MKB dog adult">
-                            <a href="javascript:;" rel ="15">
-                                <img src="images/sp15_thumb1.jpg" alt="product15"/>
+                            <a href="javascript:;" rel="15">
+                                <img src="images/sp15_thumb1.jpg" alt="product15" />
                                 <h2><strong>Thức ăn cho chó Corgi MOSHM 1,5kg</strong></h2>
                                 <h3><i>115.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Thức ăn cho chó Corgi MOSHM có thành phần từ các nguyên liệu tự nhiên, đảm bảo an toàn cho sức khỏe của chó. Không chứa chất tạo màu, tạo mùi và phụ gia độc hại. Thành phần dinh dưỡng cân bằng phù hợp cho chó ở mọi độ tuổi. Giúp chó con phát triển toàn diện và duy trì sức khỏe lý tưởng ở chó trưởng thành.
+                                <p class="hide">
+                                    Thức ăn cho chó Corgi MOSHM có thành phần từ các nguyên liệu tự nhiên, đảm bảo an
+                                    toàn cho sức khỏe của chó. Không chứa chất tạo màu, tạo mùi và phụ gia độc hại.
+                                    Thành phần dinh dưỡng cân bằng phù hợp cho chó ở mọi độ tuổi. Giúp chó con phát
+                                    triển toàn diện và duy trì sức khỏe lý tưởng ở chó trưởng thành.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item Ganador dog adult">
-                            <a href="javascript:;" rel ="16">
-                                <img src="images/sp16_thumb1.jpg" alt="product16"/>
+                            <a href="javascript:;" rel="16">
+                                <img src="images/sp16_thumb1.jpg" alt="product16" />
                                 <h2><strong>Ganador thức ăn cho chó lớn vị thịt gà và cừu 1.5kg</strong></h2>
                                 <h3><i>70.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Được lập công thức và thiết kế tại Pháp đảm bảo mức độ dinh dưỡng cao để duy trì giai đoạn sống lâu dài nhất của chó lớn, cho tất cả các giống và kích cỡ. Hoàn thiện với công nghệ tiến tiến trình bày cao cấp, thơm ngon và đúng cỡ hạt cho chó lớn. Đặc biệt thiết kế cho chế độ dinh dưỡng đầy đủ và cân đối. Là sản phẩm duy nhất trên thị trường hợp hai nguồn protein tuyệt hảo cho mức dinh dưỡng tốt nhất. Những lợi ích chính: vitamin & khoáng chất, các thành tố chất lượng cân đối, phân chặt & it mùi hôi, omega 3 & 6.
+                                <p class="hide">
+                                    Được lập công thức và thiết kế tại Pháp đảm bảo mức độ dinh dưỡng cao để duy trì
+                                    giai đoạn sống lâu dài nhất của chó lớn, cho tất cả các giống và kích cỡ. Hoàn thiện
+                                    với công nghệ tiến tiến trình bày cao cấp, thơm ngon và đúng cỡ hạt cho chó lớn. Đặc
+                                    biệt thiết kế cho chế độ dinh dưỡng đầy đủ và cân đối. Là sản phẩm duy nhất trên thị
+                                    trường hợp hai nguồn protein tuyệt hảo cho mức dinh dưỡng tốt nhất. Những lợi ích
+                                    chính: vitamin & khoáng chất, các thành tố chất lượng cân đối, phân chặt & it mùi
+                                    hôi, omega 3 & 6.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item MKB dog adult">
-                            <a href="javascript:;" rel ="17"> 
-                                <img src="images/sp17_thumb1.jpg" alt="product17"/>
+                            <a href="javascript:;" rel="17">
+                                <img src="images/sp17_thumb1.jpg" alt="product17" />
                                 <h2><strong>Thức ăn cho chó Pomeranian MOSHM 1.5kg</strong></h2>
                                 <h3><i>115.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Thức ăn cho chó Pomeranian MOSHM có hàm lượng dinh dưỡng cân bằng. Mỗi hạt thức ăn MOSHM được chế biến từ nguyên liệu hoàn toàn tự nhiên. Không chứa chất bảo quản, hương liệu, phẩm màu công nghiệp. Đảm bảo cho chó sức khỏe tốt nhất, phù hợp với nhu cầu dinh dưỡng của chó ở mọi lứa tuổi. Được làm từ thịt và cá thật. Không chứa gluten gây kích thích đường ruột ở chó. Giúp chó con phát triển toàn diện trong giai đoạn đầu đời. Duy trì khả năng hoạt động của chó trưởng thành và lớn tuổi. Hương vị thịt bò phù hợp với khẩu vị của chó. Kích thích chó ăn ngon miệng hơn.
+                                <p class="hide">
+                                    Thức ăn cho chó Pomeranian MOSHM có hàm lượng dinh dưỡng cân bằng. Mỗi hạt thức ăn
+                                    MOSHM được chế biến từ nguyên liệu hoàn toàn tự nhiên. Không chứa chất bảo quản,
+                                    hương liệu, phẩm màu công nghiệp. Đảm bảo cho chó sức khỏe tốt nhất, phù hợp với nhu
+                                    cầu dinh dưỡng của chó ở mọi lứa tuổi. Được làm từ thịt và cá thật. Không chứa
+                                    gluten gây kích thích đường ruột ở chó. Giúp chó con phát triển toàn diện trong giai
+                                    đoạn đầu đời. Duy trì khả năng hoạt động của chó trưởng thành và lớn tuổi. Hương vị
+                                    thịt bò phù hợp với khẩu vị của chó. Kích thích chó ăn ngon miệng hơn.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item Catsrang cat adult kid">
-                            <a href="javascript:;" rel ="18">
-                                <img src="images/sp18_thumb1.jpg" alt="product18"/>
+                            <a href="javascript:;" rel="18">
+                                <img src="images/sp18_thumb1.jpg" alt="product18" />
                                 <h2><strong>Catsrang thức ăn hạt cho mèo 5kg</strong></h2>
                                 <h3><i>345.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Thức Ăn Hạt Cho Mèo Catsrang All Stages chuyên dành cho mèo cưng. Với đặc tính dễ dàng tiêu hóa, giúp mèo đi phân rắn và giảm mùi khó chịu. Với hàm lượng dinh dưỡng cân bằng, rất thích hợp trong việc cải thiện da lông và phòng tránh bệnh quáng gà ở mèo. Không sử dụng chất kháng sinh, chất bảo quản, phẩm màu và hương liệu nhân tạo. Thức Ăn Cho Mèo Catsrang All Stages 2kg là sản phẩm thức ăn khô cho mèo hoàn toàn đảm bảo dưỡng chất cho các "boss". Thức Ăn Hạt Cho Mèo Catsrang All Stages chứa taurine, vitamin và các chất dinh dưỡng cần thiết khác giúp tăng cường hệ miễn dịch. Đã chứa đủ chất dinh dưỡng cho mèo. Ngoài ra còn bổ sung các vitamin A, C, D, E và các khoáng chất, giúp mèo phát triển toàn diện và khoẻ mạnh. Các thành phần trong Thức Ăn Hạt Cho Mèo Catsrang All Stages có thể loại bỏ búi lông trong dạ dày của mèo. “Boss” sẽ có bộ lông mềm mượt hơn nhờ các omega có trong thức ăn. Kích thước hạt nhỏ vừa phải, thuận tiện hơn cho các bé mèo.  Ăn thức ăn Catsrang, mèo sẽ đi phân rắn và giảm mùi hôi rõ rệt.
+                                <p class="hide">
+                                    Thức Ăn Hạt Cho Mèo Catsrang All Stages chuyên dành cho mèo cưng. Với đặc tính dễ
+                                    dàng tiêu hóa, giúp mèo đi phân rắn và giảm mùi khó chịu. Với hàm lượng dinh dưỡng
+                                    cân bằng, rất thích hợp trong việc cải thiện da lông và phòng tránh bệnh quáng gà ở
+                                    mèo. Không sử dụng chất kháng sinh, chất bảo quản, phẩm màu và hương liệu nhân tạo.
+                                    Thức Ăn Cho Mèo Catsrang All Stages 2kg là sản phẩm thức ăn khô cho mèo hoàn toàn
+                                    đảm bảo dưỡng chất cho các "boss". Thức Ăn Hạt Cho Mèo Catsrang All Stages chứa
+                                    taurine, vitamin và các chất dinh dưỡng cần thiết khác giúp tăng cường hệ miễn dịch.
+                                    Đã chứa đủ chất dinh dưỡng cho mèo. Ngoài ra còn bổ sung các vitamin A, C, D, E và
+                                    các khoáng chất, giúp mèo phát triển toàn diện và khoẻ mạnh. Các thành phần trong
+                                    Thức Ăn Hạt Cho Mèo Catsrang All Stages có thể loại bỏ búi lông trong dạ dày của
+                                    mèo. “Boss” sẽ có bộ lông mềm mượt hơn nhờ các omega có trong thức ăn. Kích thước
+                                    hạt nhỏ vừa phải, thuận tiện hơn cho các bé mèo. Ăn thức ăn Catsrang, mèo sẽ đi phân
+                                    rắn và giảm mùi hôi rõ rệt.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item Pedigree dog adult">
-                            <a href="javascript:;" rel ="19">
-                                <img src="images/sp19_thumb1.jpg" alt="product19"/>
+                            <a href="javascript:;" rel="19">
+                                <img src="images/sp19_thumb1.jpg" alt="product19" />
                                 <h2><strong>Thức ăn hạt cho chó lớn Pedigree vị thịt bò & rau củ 1.5kg</strong></h2>
                                 <h3><i>105.000<sup> đ</sup></i></h3>
-                                <p class ="hide">
-                                    Cún cần lượng protein gấp 3 lần con người để tăng trưởng. Vì thế, cún cần được bổ sung đầy đủ các chất dinh dưỡng để duy trì thể trạng khỏe mạnh và vóc dáng cân đối. Sản phẩm thức ăn hạt khô Pedigree vị bò và rau củ sẽ cung cấp cho cún những lợi ích sau: Thơm ngon với vị bò khoái khẩu kèm rau củ giúp cún ăn ngon miệng. Cung cấp đủ vitamin và khoáng chất, giúp tăng cường hệ thống miễn dịch của cún, giúp cún cưng phát triển khỏe mạnh, Cung cấp Omega 6 và Kẽm, được khoa học chứng sẽ mang đến bộ lông bóng mượt cho cún trong vòng 6 tuần . Sản phẩm chứa nhiều canxi và phốt pho, giúp cho răng và xương cún chắc khỏe Kiểm soát được khẩu phần ăn hàng ngày, tránh việc quá nhiều để cún bỏ lại thức ăn thừa. Nhanh chóng, tiện lợi, không tốn nhiều thời gian chuẩn bị, Nhiều định lượng để bạn lựa chọn tùy theo nhu cầu của cún.
+                                <p class="hide">
+                                    Cún cần lượng protein gấp 3 lần con người để tăng trưởng. Vì thế, cún cần được bổ
+                                    sung đầy đủ các chất dinh dưỡng để duy trì thể trạng khỏe mạnh và vóc dáng cân đối.
+                                    Sản phẩm thức ăn hạt khô Pedigree vị bò và rau củ sẽ cung cấp cho cún những lợi ích
+                                    sau: Thơm ngon với vị bò khoái khẩu kèm rau củ giúp cún ăn ngon miệng. Cung cấp đủ
+                                    vitamin và khoáng chất, giúp tăng cường hệ thống miễn dịch của cún, giúp cún cưng
+                                    phát triển khỏe mạnh, Cung cấp Omega 6 và Kẽm, được khoa học chứng sẽ mang đến bộ
+                                    lông bóng mượt cho cún trong vòng 6 tuần . Sản phẩm chứa nhiều canxi và phốt pho,
+                                    giúp cho răng và xương cún chắc khỏe Kiểm soát được khẩu phần ăn hàng ngày, tránh
+                                    việc quá nhiều để cún bỏ lại thức ăn thừa. Nhanh chóng, tiện lợi, không tốn nhiều
+                                    thời gian chuẩn bị, Nhiều định lượng để bạn lựa chọn tùy theo nhu cầu của cún.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item SmartHeart dog adult">
-                            <a href="javascript:;" rel ="20">
-                                <img src="images/sp20_thumb1.jpg" alt="product20"/>
+                            <a href="javascript:;" rel="20">
+                                <img src="images/sp20_thumb1.jpg" alt="product20" />
                                 <h2><strong>Thức ăn cho chó lớn vị bò nướng SmartHeart 1.5kg</strong></h2>
                                 <h3><i>95.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Thức Ăn Khô SmartHeart Cho Chó Trưởng Thành Vị Thịt Bò Nướng 1.5Kg dành cho chó trưởng thành phát triển nhằm đáp ứng hoặc vượt qua các tiêu chuẩn dinh dưỡng thức ăn cho chó AAFCO để duy trì cho chó trưởng thành đước thiết lập bởi hiệp hội thức ăn chăn nuôi Hoa Kì. Chó trưởng thành cần nguồn dinh dưỡng cân bằng và đầy đủ để có sức khỏe tốt, vóc dáng đẹp. Thức ăn SmartHeart cho chó trưởng thành đáp ứng đầy đủ nhu cầu dinh dưỡng, bổ sung dầu cá và lecithin, giàu cholin giúp tăng cường sự phát triển chức năng não và hệ thần kinh, tăng cường chức năng tim mạch                                </p>
-                            </a> 
+                                <p class="hide">
+                                    Thức Ăn Khô SmartHeart Cho Chó Trưởng Thành Vị Thịt Bò Nướng 1.5Kg dành cho chó
+                                    trưởng thành phát triển nhằm đáp ứng hoặc vượt qua các tiêu chuẩn dinh dưỡng thức ăn
+                                    cho chó AAFCO để duy trì cho chó trưởng thành đước thiết lập bởi hiệp hội thức ăn
+                                    chăn nuôi Hoa Kì. Chó trưởng thành cần nguồn dinh dưỡng cân bằng và đầy đủ để có sức
+                                    khỏe tốt, vóc dáng đẹp. Thức ăn SmartHeart cho chó trưởng thành đáp ứng đầy đủ nhu
+                                    cầu dinh dưỡng, bổ sung dầu cá và lecithin, giàu cholin giúp tăng cường sự phát
+                                    triển chức năng não và hệ thần kinh, tăng cường chức năng tim mạch </p>
+                            </a>
                         </div>
                         <div class="item Catsrang cat kid">
-                            <a href="javascript:;" rel ="21">
-                                <img src="images/sp21_thumb1.jpg" alt="product21"/>
+                            <a href="javascript:;" rel="21">
+                                <img src="images/sp21_thumb1.jpg" alt="product21" />
                                 <h2><strong>Catsrang Kitten thức ăn cho mèo con 1.5kg</strong></h2>
                                 <h3><i>245.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Thức ăn hạt cho mèo nhỏ Catsrang Kitten có nguồn gốc từ Hàn Quốc. Sản phẩm này áp dụng cho các chú mèo nhỏ, độ tuổi từ 4 đến 12 tháng. Cơ thể của các chú mèo lúc này yếu và cần nhiều chất như vitamin, chất khoáng, protein,...để cơ thể nhanh chóng phát triển cứng cáp. Catsrang Kitten giúp giải quyết một vấn đề vô cùng bất tiện mà hầu hết các chú mèo nhỏ đều gặp phải chính là vón lông ruột mèo. Vì cơ thể còn yếu, thiếu dưỡng chất nên bộ lông cũng chưa được mượt mà. Chính vì thế, các dưỡng chất cần thiết đã được bổ sung vào thức ăn để các bé mèo có thể tận hưởng thoải mái mà không lo còi xương, khó tiêu hay bị bết lông. Ngoài ra, ưu điểm nổi trội của loại sản phẩm này chính là tất cả các nguyên liệu đều được kiểm soát chặt chẽ. Không có chất bảo quản, chất kháng sinh, chất tạo mùi, tạo mùi hay hương liệu tổng hợp trong sản phẩm, Vì vậy, bạn có thể yên tâm sắm ngay một túi cho mèo cưng của mình nhé.
+                                <p class="hide">
+                                    Thức ăn hạt cho mèo nhỏ Catsrang Kitten có nguồn gốc từ Hàn Quốc. Sản phẩm này áp
+                                    dụng cho các chú mèo nhỏ, độ tuổi từ 4 đến 12 tháng. Cơ thể của các chú mèo lúc này
+                                    yếu và cần nhiều chất như vitamin, chất khoáng, protein,...để cơ thể nhanh chóng
+                                    phát triển cứng cáp. Catsrang Kitten giúp giải quyết một vấn đề vô cùng bất tiện mà
+                                    hầu hết các chú mèo nhỏ đều gặp phải chính là vón lông ruột mèo. Vì cơ thể còn yếu,
+                                    thiếu dưỡng chất nên bộ lông cũng chưa được mượt mà. Chính vì thế, các dưỡng chất
+                                    cần thiết đã được bổ sung vào thức ăn để các bé mèo có thể tận hưởng thoải mái mà
+                                    không lo còi xương, khó tiêu hay bị bết lông. Ngoài ra, ưu điểm nổi trội của loại
+                                    sản phẩm này chính là tất cả các nguyên liệu đều được kiểm soát chặt chẽ. Không có
+                                    chất bảo quản, chất kháng sinh, chất tạo mùi, tạo mùi hay hương liệu tổng hợp trong
+                                    sản phẩm, Vì vậy, bạn có thể yên tâm sắm ngay một túi cho mèo cưng của mình nhé.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item Minino cat adult kid">
-                            <a href="javascript:;" rel ="22">
-                                <img src="images/sp22_thumb1.jpg" alt="product22"/>
+                            <a href="javascript:;" rel="22">
+                                <img src="images/sp22_thumb1.jpg" alt="product22" />
                                 <h2><strong>Minino Yum thức ăn hạt cho mèo vị cá hồi 1.5kg</strong></h2>
                                 <h3><i>116.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Thức ăn hạt cho Mèo mọi lứa tuổi Minino Yum! - Vị Cá Hồi. Được đánh giá là công thức dinh dưỡng tốt nhất cho mèo từ Pháp, Minino Yum hương vị cá hồi đặc biệt làm từ "nguyên liệu thật" - "cá hồi thật" vừa đáp ứng nhu cầu dinh dưỡng cho mèo, vừa đảm bảo sự thơm ngon hấp dẫn. Sản phẩm dành cho mèo ở mọi lứa tuổi có Canxi và Vitamin D giúp khung xương khoẻ mạnh Omega 3 & 6 giúp mượt lông và da khoẻ; gạo và Yucca giúp đóng khuôn phân và giảm mùi; Taurine tốt cho mắt. Tất cả các sản phẩm đều tuân theo hệ thống tiêu chuẩn quốc tế của ngành sản xuất thức ăn thú cưng Châu Âu (FEDIAF) và Tổ chức kiểm soát nguồn thực phẩm Hoa Kì (AFFCO)
+                                <p class="hide">
+                                    Thức ăn hạt cho Mèo mọi lứa tuổi Minino Yum! - Vị Cá Hồi. Được đánh giá là công thức
+                                    dinh dưỡng tốt nhất cho mèo từ Pháp, Minino Yum hương vị cá hồi đặc biệt làm từ
+                                    "nguyên liệu thật" - "cá hồi thật" vừa đáp ứng nhu cầu dinh dưỡng cho mèo, vừa đảm
+                                    bảo sự thơm ngon hấp dẫn. Sản phẩm dành cho mèo ở mọi lứa tuổi có Canxi và Vitamin D
+                                    giúp khung xương khoẻ mạnh Omega 3 & 6 giúp mượt lông và da khoẻ; gạo và Yucca giúp
+                                    đóng khuôn phân và giảm mùi; Taurine tốt cho mắt. Tất cả các sản phẩm đều tuân theo
+                                    hệ thống tiêu chuẩn quốc tế của ngành sản xuất thức ăn thú cưng Châu Âu (FEDIAF) và
+                                    Tổ chức kiểm soát nguồn thực phẩm Hoa Kì (AFFCO)
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item Ganador dog adult">
-                            <a href="javascript:;" rel ="23">
-                                <img src="images/sp23_thumb1.jpg" alt="product23"/>
+                            <a href="javascript:;" rel="23">
+                                <img src="images/sp23_thumb1.jpg" alt="product23" />
                                 <h2><strong>Thức ăn cho chó trưởng thành Ganador vị gà nướng 20kg</strong></h2>
                                 <h3><i>810.000<sup> đ</sup></i></h3>
-                                <p class ="hide">
-                                    Sản phẩm Ganador đảm bảo chó cưng được nuôi dưỡng đầy đủ cả về thể chất lẫn tinh thần để chúng luôn có một cuộc sống mạnh khỏe, dài lâu và hạnh phúc bên bạn. Thức ăn cho chó trưởng thành Ganador vị gà nướng Adult Roasted Chicken giúp tăng sức đề kháng, chức các thành phần hỗ trợ tiêu hóa. Bổ sung Omega 3 và 6 cho làn da và bộ lông khỏe mạnh. Công thức cân bằng protein và khoáng chất, giúp xương và cơ chắc khỏe. Thành phần: ngũ cốc nguyên hạt (lúa mì, ngô, gạo), bột gia cầm, bã nành, cám lúa mì, mỡ gia cầm, khoáng chất (Sắt, Đồng, Mangan, Kẽm, lốt, Selen), Vitamin (A, D3, K3, B1, B2, B6, B12, PP, E (Tocopherol), Canxi D-Pantothenate, Biotin, Axit Folic, Choline), Dicalcium Phosphate, Canxi Catbonate, Natri Clorua, chất bảo quản, chất chống oxy hóa, màu thực phẩm, chất làm ngon miệng, hương vị thịt gà nướng, chiết xuất Yucca Schidigera.    
+                                <p class="hide">
+                                    Sản phẩm Ganador đảm bảo chó cưng được nuôi dưỡng đầy đủ cả về thể chất lẫn tinh
+                                    thần để chúng luôn có một cuộc sống mạnh khỏe, dài lâu và hạnh phúc bên bạn. Thức ăn
+                                    cho chó trưởng thành Ganador vị gà nướng Adult Roasted Chicken giúp tăng sức đề
+                                    kháng, chức các thành phần hỗ trợ tiêu hóa. Bổ sung Omega 3 và 6 cho làn da và bộ
+                                    lông khỏe mạnh. Công thức cân bằng protein và khoáng chất, giúp xương và cơ chắc
+                                    khỏe. Thành phần: ngũ cốc nguyên hạt (lúa mì, ngô, gạo), bột gia cầm, bã nành, cám
+                                    lúa mì, mỡ gia cầm, khoáng chất (Sắt, Đồng, Mangan, Kẽm, lốt, Selen), Vitamin (A,
+                                    D3, K3, B1, B2, B6, B12, PP, E (Tocopherol), Canxi D-Pantothenate, Biotin, Axit
+                                    Folic, Choline), Dicalcium Phosphate, Canxi Catbonate, Natri Clorua, chất bảo quản,
+                                    chất chống oxy hóa, màu thực phẩm, chất làm ngon miệng, hương vị thịt gà nướng,
+                                    chiết xuất Yucca Schidigera.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item Whiskas cat adult">
-                            <a href="javascript:;" rel ="24">
-                                <img src="images/sp24_thumb1.jpg" alt="product24"/>
+                            <a href="javascript:;" rel="24">
+                                <img src="images/sp24_thumb1.jpg" alt="product24" />
                                 <h2><strong>Thức ăn Whiskas Junior 450gr</strong></h2>
                                 <h3><i>55.000<sup> đ</sup></i></h3>
-                                <p class ="hide">
-                                    Thức Ăn Cho Mèo Con Whiskas Vị Cá Biển Và Sữa Dạng Túi 450g kg dành cho mèo con, mèo con sơ sinh từ 2-12 tháng, mèo mẹ mang thai, cho con bú. Sản phẩm là điểm khởi đầu cơ sở của một cuộc sống khỏe mạnh và hạnh phúc cho những chú mèo con sau này khi cung cấp đầy đủ dưỡng chất để mèo sơ sinh có thể hấp thu và phát triển khỏe mạnh.
+                                <p class="hide">
+                                    Thức Ăn Cho Mèo Con Whiskas Vị Cá Biển Và Sữa Dạng Túi 450g kg dành cho mèo con, mèo
+                                    con sơ sinh từ 2-12 tháng, mèo mẹ mang thai, cho con bú. Sản phẩm là điểm khởi đầu
+                                    cơ sở của một cuộc sống khỏe mạnh và hạnh phúc cho những chú mèo con sau này khi
+                                    cung cấp đầy đủ dưỡng chất để mèo sơ sinh có thể hấp thu và phát triển khỏe mạnh.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item RoyalCanin cat adult kid">
-                            <a href ="javascript:;" rel ="25">
-                                <img src="images/sp25_thumb1.jpg" alt="product25"/>
+                            <a href="javascript:;" rel="25">
+                                <img src="images/sp25_thumb1.jpg" alt="product25" />
                                 <h2><strong>Thức ăn cho mèo Royal Canin Hairball Care 2kg</strong></h2>
                                 <h3><i>410.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Thức ăn cho mèo Royal Canin Hairball Care được thiết kế để đáp ứng nhu cầu dinh dưỡng cụ thể của mèo trong nhà dễ bị hairballs. Mèo dành phần lớn thời gian chải chuốt trong ngày. Điều này có thể dẫn đến việc ăn nhiều tóc. Tóc bị nuốt trở nên bị nén lại ở đường tiêu hóa. Tạo thành các cục lông, hoặc là bị thoái hóa hoặc loại bỏ qua phân. Công thức dinh dưỡng cân bằng chính xác này được chế tạo đặc biệt. Để giúp làm giảm sự hình thành quả cầu tóc một cách tự nhiên. Royal Canin hỗ trợ sức khỏe của người bạn mèo của bạn. Bằng cách cung cấp dinh dưỡng thích hợp dựa trên sự hiểu biết thực sự về nhu cầu cụ thể của một con mèo và hơn 45 năm khoa học và quan sát.
-                                    Công dụng: Công thức đặc biệt giúp làm giảm tự nhiên sự hình thành quả cầu lông ở mèo trưởng thành, kể cả mèo bị săn chắc. Công thức được chế biến theo yêu cầu cung cấp một chế độ ăn uống đầy đủ và cân bằng. Đáp ứng tất cả nhu cầu dinh dưỡng của người bạn mèo của bạn. Bao gồm một sự pha trộn cụ thể của các loại sợi trong chế độ ăn. Bao gồm vỏ hạt psyllium và các xơ không hòa tan để giúp kích thích quá trình vận chuyển đường ruột một cách tự nhiên. Sự pha trộn chất xơ độc đáo này rất giàu chất nhầy và khuyến khích việc loại bỏ hàng ngày của tóc ăn vào. Ngăn ngừa tình trạng tích tụ, dẫn đến lông tơ.
-                                    Hình dạng và kết cấu độc đáo tạo ra hiệu ứng đánh bóng giúp giảm sự hình thành mảng bám.
+                                <p class="hide">
+                                    Thức ăn cho mèo Royal Canin Hairball Care được thiết kế để đáp ứng nhu cầu dinh
+                                    dưỡng cụ thể của mèo trong nhà dễ bị hairballs. Mèo dành phần lớn thời gian chải
+                                    chuốt trong ngày. Điều này có thể dẫn đến việc ăn nhiều tóc. Tóc bị nuốt trở nên bị
+                                    nén lại ở đường tiêu hóa. Tạo thành các cục lông, hoặc là bị thoái hóa hoặc loại bỏ
+                                    qua phân. Công thức dinh dưỡng cân bằng chính xác này được chế tạo đặc biệt. Để giúp
+                                    làm giảm sự hình thành quả cầu tóc một cách tự nhiên. Royal Canin hỗ trợ sức khỏe
+                                    của người bạn mèo của bạn. Bằng cách cung cấp dinh dưỡng thích hợp dựa trên sự hiểu
+                                    biết thực sự về nhu cầu cụ thể của một con mèo và hơn 45 năm khoa học và quan sát.
+                                    Công dụng: Công thức đặc biệt giúp làm giảm tự nhiên sự hình thành quả cầu lông ở
+                                    mèo trưởng thành, kể cả mèo bị săn chắc. Công thức được chế biến theo yêu cầu cung
+                                    cấp một chế độ ăn uống đầy đủ và cân bằng. Đáp ứng tất cả nhu cầu dinh dưỡng của
+                                    người bạn mèo của bạn. Bao gồm một sự pha trộn cụ thể của các loại sợi trong chế độ
+                                    ăn. Bao gồm vỏ hạt psyllium và các xơ không hòa tan để giúp kích thích quá trình vận
+                                    chuyển đường ruột một cách tự nhiên. Sự pha trộn chất xơ độc đáo này rất giàu chất
+                                    nhầy và khuyến khích việc loại bỏ hàng ngày của tóc ăn vào. Ngăn ngừa tình trạng
+                                    tích tụ, dẫn đến lông tơ.
+                                    Hình dạng và kết cấu độc đáo tạo ra hiệu ứng đánh bóng giúp giảm sự hình thành mảng
+                                    bám.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item SmartHeart dog kid">
-                            <a href="javascript:;" rel ="26">
-                                <img src="images/sp26_thumb1.jpg" alt="product26"/>
+                            <a href="javascript:;" rel="26">
+                                <img src="images/sp26_thumb1.jpg" alt="product26" />
                                 <h2><strong>Thức ăn cho chó con SmartHeart Puppy 3kg vị thịt bò và sữa</strong></h2>
                                 <h3><i>165.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Thức ăn cho chó con SmartHeart Puppy 3kg Vị thịt bò và sữa Beef & Milk Flavor. 
-                                    Chó con trải qua thời kì phát triển nhanh nhất ở những năm tháng đầu đời. Bao gồm các hoạt động và quá trình tìm hiểu những thách thức mới. Một nguồn dinh dưỡng cân bằng và đầy đủ là sự cần thiết đối với sự phát triển cho cơ thể chúng. Sản phẩm thức ăn dành cho chó con SmartHeart Puppy với công thức đáp ứng và thỏa mãn nhu cầu dinh dưỡng cho chó con của bạn bằng cách sử dụng các thành phần tốt nhất. Thành phần bao gồm gạo, thịt heo, đậu nành, mỡ gà, bột củ cải, dầu cá, chất thay thế sữa...  Công dụng của SmartHeart Puppy: - Tăng cường phát triển trí não - Giúp tim mạch khỏe mạnh - Đẹp da, mượt lông - Tăng cường hệ thống miễn dịch - Hệ thống tiêu hóa khỏe mạnh - Xương và răng chắc khỏe . Về hướng dẫn sử dụng, để tránh rối loạn tiêu hóa vì thay đổi thực phẩm, hãy từ từ thay thế với số lượng tăng dần khẩu phần của SmartHeart Puppy cho đến khi thay thế hoàn toàn. - Ngày 1 2: thức ăn cũ + thức ăn SmartHeart - Ngày 3 4: thức ăn cũ + thức ăn SmartHeart - Ngày 5 6: thức ăn cũ + thức ăn SmartHeart - Ngày 7 trở đi: hoàn toàn là thức ăn SmartHeart.
+                                <p class="hide">
+                                    Thức ăn cho chó con SmartHeart Puppy 3kg Vị thịt bò và sữa Beef & Milk Flavor.
+                                    Chó con trải qua thời kì phát triển nhanh nhất ở những năm tháng đầu đời. Bao gồm
+                                    các hoạt động và quá trình tìm hiểu những thách thức mới. Một nguồn dinh dưỡng cân
+                                    bằng và đầy đủ là sự cần thiết đối với sự phát triển cho cơ thể chúng. Sản phẩm thức
+                                    ăn dành cho chó con SmartHeart Puppy với công thức đáp ứng và thỏa mãn nhu cầu dinh
+                                    dưỡng cho chó con của bạn bằng cách sử dụng các thành phần tốt nhất. Thành phần bao
+                                    gồm gạo, thịt heo, đậu nành, mỡ gà, bột củ cải, dầu cá, chất thay thế sữa... Công
+                                    dụng của SmartHeart Puppy: - Tăng cường phát triển trí não - Giúp tim mạch khỏe mạnh
+                                    - Đẹp da, mượt lông - Tăng cường hệ thống miễn dịch - Hệ thống tiêu hóa khỏe mạnh -
+                                    Xương và răng chắc khỏe . Về hướng dẫn sử dụng, để tránh rối loạn tiêu hóa vì thay
+                                    đổi thực phẩm, hãy từ từ thay thế với số lượng tăng dần khẩu phần của SmartHeart
+                                    Puppy cho đến khi thay thế hoàn toàn. - Ngày 1 2: thức ăn cũ + thức ăn SmartHeart -
+                                    Ngày 3 4: thức ăn cũ + thức ăn SmartHeart - Ngày 5 6: thức ăn cũ + thức ăn
+                                    SmartHeart - Ngày 7 trở đi: hoàn toàn là thức ăn SmartHeart.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item Me-O cat adult">
-                            <a href="javascript:;" rel ="27">
-                                <img src="images/sp27_thumb1.jpg" alt="product27"/>
+                            <a href="javascript:;" rel="27">
+                                <img src="images/sp27_thumb1.jpg" alt="product27" />
                                 <h2><strong>Thức ăn hạt Me-O Gold Indoor 400gr</strong></h2>
                                 <h3><i>65.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
+                                <p class="hide">
                                     Thức ăn hạt Me-O Gold Indoor (Giúp duy trì vóc dáng cân đối và giảm nguy cơ béo phì)
                                     Sodium hexametaphosphate: giúp giảm mảng bám trên răng.
                                     Chiết xuất tinh dầu Yucca: giảm mùi hôi chất thải
@@ -470,216 +679,357 @@
                                     Selen và Vitamin E: giúp tăng cường chức năng miễn dịch.
                                     Canxi, Phốt pho và Vitamin D: giúp xương răng chắc khỏe.
                                     Sợi Cellulose và Sodium hexametaphosphate: thúc đẩy nướu và răng chắc khỏe.
-                                    Nguyên Liệu Chính: Thịt gà, gạo, bột bắp gluten, bột phụ phẩm gia cầm, mỡ gia cầm, bột gạo, chất xơ (cellulose dạng bột), bột cá, khoáng chất (kali clorua, kẽm hữu cơ, mangan hữu cơ, đồng hữu cơ, sắt hữu cơ, selen hữu cơ, kali iodua), dầu cá, tảo bẹ, men bia khô, Lecithin, Fruto-oligosaccharide (FOS, vitamin (vitamin A, D, E, K, Thiamin (B1), Riboflavin (B2), Niacin (B3), axit panthothenic ( B5), Pyridoxine (B6), Cobalamin (B12), Biotin, Axit folic, Choline), DL- Methionine, Taurine, Chất chống oxy hóa.
+                                    Nguyên Liệu Chính: Thịt gà, gạo, bột bắp gluten, bột phụ phẩm gia cầm, mỡ gia cầm,
+                                    bột gạo, chất xơ (cellulose dạng bột), bột cá, khoáng chất (kali clorua, kẽm hữu cơ,
+                                    mangan hữu cơ, đồng hữu cơ, sắt hữu cơ, selen hữu cơ, kali iodua), dầu cá, tảo bẹ,
+                                    men bia khô, Lecithin, Fruto-oligosaccharide (FOS, vitamin (vitamin A, D, E, K,
+                                    Thiamin (B1), Riboflavin (B2), Niacin (B3), axit panthothenic ( B5), Pyridoxine
+                                    (B6), Cobalamin (B12), Biotin, Axit folic, Choline), DL- Methionine, Taurine, Chất
+                                    chống oxy hóa.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item Whiskas cat adult">
-                            <a href="javascript:;" rel ="28">
-                                <img src="images/sp28_thumb1.jpg" alt="product28"/>
+                            <a href="javascript:;" rel="28">
+                                <img src="images/sp28_thumb1.jpg" alt="product28" />
                                 <h2><strong>Thức ăn cho mèo Whiskas vị cá ngừ 1.2kg</strong></h2>
                                 <h3><i>120.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Sản phẩm chứa dầu thực vật cùng các vitamin, khoáng chất, đồng thời không có chất bảo quản, đem lại một giá trị dinh dưỡng lớn cung cấp cho các hoạt động trong cơ thể mèo, giúp mèo phát triển khỏe mạnh và đẩy lùi các loại bệnh tật .Mèo là loài động vật có bản tính săn mồi nhanh nhạy nên cơ thể chúng rất cần được chú ý bổ sung các chất dinh dưỡng cần thiết để  luôn lanh lợi và khỏe mạnh. Sản phẩm thức ăn hạt khô Whiskas với 3 hương vị Cá Thu, Cá Ngừ và Cá Biển sẽ cung cấp cho mèo những lợi ích sau:  
-                                    3 hương vị thơm ngon: Cá Thu, Cá Ngừ, Cá Biển được làm từ cá tươi hảo hạng, đảm bảo chất lượng cho mỗi bữa ăn của mèo.  
-                                    Cung cấp đủ vitamin và taurine, giúp đôi mắt của mèo luôn sáng tinh anh và khỏe mạnh.   
-                                    Bổ sung dưỡng chất đạm, Vitamin và khoáng chất từ cá tươi tốt cho hệ phát triển tối ưu, giúp mèo có cơ thể năng động và tràn đầy sức sống.  
-                                    Sản phẩm giàu Omega 3&6, axit béo và kẽm giúp mèo có bộ lông khỏe, mềm mại và bóng mượt.
-                                    Các hạt có lớp vỏ mỏng giòn, thơm mùi cá. Bên trong là nhân mềm thơm ngon giúp mèo ăn thật ngon miệng.
-                                    Kiểm soát được khẩu phần ăn hàng ngày, tránh việc quá nhiều để mèo bỏ lại thức ăn thừa.
+                                <p class="hide">
+                                    Sản phẩm chứa dầu thực vật cùng các vitamin, khoáng chất, đồng thời không có chất
+                                    bảo quản, đem lại một giá trị dinh dưỡng lớn cung cấp cho các hoạt động trong cơ thể
+                                    mèo, giúp mèo phát triển khỏe mạnh và đẩy lùi các loại bệnh tật .Mèo là loài động
+                                    vật có bản tính săn mồi nhanh nhạy nên cơ thể chúng rất cần được chú ý bổ sung các
+                                    chất dinh dưỡng cần thiết để  luôn lanh lợi và khỏe mạnh. Sản phẩm thức ăn hạt khô
+                                    Whiskas với 3 hương vị Cá Thu, Cá Ngừ và Cá Biển sẽ cung cấp cho mèo những lợi ích
+                                    sau:  
+                                    3 hương vị thơm ngon: Cá Thu, Cá Ngừ, Cá Biển được làm từ cá tươi hảo hạng, đảm bảo
+                                    chất lượng cho mỗi bữa ăn của mèo.  
+                                    Cung cấp đủ vitamin và taurine, giúp đôi mắt của mèo luôn sáng tinh anh và khỏe
+                                    mạnh.   
+                                    Bổ sung dưỡng chất đạm, Vitamin và khoáng chất từ cá tươi tốt cho hệ phát triển tối
+                                    ưu, giúp mèo có cơ thể năng động và tràn đầy sức sống.  
+                                    Sản phẩm giàu Omega 3&6, axit béo và kẽm giúp mèo có bộ lông khỏe, mềm mại và bóng
+                                    mượt.
+                                    Các hạt có lớp vỏ mỏng giòn, thơm mùi cá. Bên trong là nhân mềm thơm ngon giúp mèo
+                                    ăn thật ngon miệng.
+                                    Kiểm soát được khẩu phần ăn hàng ngày, tránh việc quá nhiều để mèo bỏ lại thức ăn
+                                    thừa.
                                     Nhanh chóng, tiện lợi, không tốn nhiều thời gian chuẩn bị
                                     Có thể kết hợp cùng sốt cho mèo lớn Whiskas để thay đổi khẩu vị cho mèo.  
                                     Xuất xứ Thái Lan
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item MKB dog adult">
-                            <a href="javascript:;" rel ="29"> 
-                                <img src="images/sp29_thumb1.jpg" alt="product29"/>
+                            <a href="javascript:;" rel="29">
+                                <img src="images/sp29_thumb1.jpg" alt="product29" />
                                 <h2><strong> Thức ăn cho chó Shiba Inu MKB 4kg</strong></h2>
                                 <h3><i>280.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Thức ăn cho chó Shiba Inu MKB All Life Stages Formula Nutrition phù hợp với tất cả các giai đoạn phát triển của chó Shiba. Thức ăn cho chó Shiba Inu MKB All Life Stages Formula Nutrition được sản xuất dựa trên các nghiên cứu về đặc điểm xương hàm, cấu trúc miệng, thói quen nuốt và tốc độ ăn của chó cưng. Thức ăn dành riêng cho chó Shiba Inu tái tạo hoàn toàn sức khỏe của thú cưng. Mang lại nhiều lợi ích to lớn như:
-                                    Trẻ hóa sức khỏe của chó cưng. Cơ thể khỏe mạnh, làn da khỏe mạnh, công thức thơm ngon, dinh dưỡng cân bằng giúp cún ăn ngon.
-                                    Hỗ trợ sự phát triển với công thức đặc biệt phù hợp với giống chó Shiba. Hàm lượng Protein và Axit Amin được điều chỉnh một cách khoa học | L-carnitine giúp tăng trưởng và phát triển thể chất
+                                <p class="hide">
+                                    Thức ăn cho chó Shiba Inu MKB All Life Stages Formula Nutrition phù hợp với tất cả
+                                    các giai đoạn phát triển của chó Shiba. Thức ăn cho chó Shiba Inu MKB All Life
+                                    Stages Formula Nutrition được sản xuất dựa trên các nghiên cứu về đặc điểm xương
+                                    hàm, cấu trúc miệng, thói quen nuốt và tốc độ ăn của chó cưng. Thức ăn dành riêng
+                                    cho chó Shiba Inu tái tạo hoàn toàn sức khỏe của thú cưng. Mang lại nhiều lợi ích to
+                                    lớn như:
+                                    Trẻ hóa sức khỏe của chó cưng. Cơ thể khỏe mạnh, làn da khỏe mạnh, công thức thơm
+                                    ngon, dinh dưỡng cân bằng giúp cún ăn ngon.
+                                    Hỗ trợ sự phát triển với công thức đặc biệt phù hợp với giống chó Shiba. Hàm lượng
+                                    Protein và Axit Amin được điều chỉnh một cách khoa học | L-carnitine giúp tăng
+                                    trưởng và phát triển thể chất
                                     Thịt cá, 23 loại axit béo (EPA và DHA) chăm sóc sức khỏe lông và da của thú cưng.
                                     Kích thích và hỗ trợ hệ tiêu hóa, giảm mùi phân hiệu quả.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item Ganador dog kid">
-                            <a href="javascript:;" rel ="30">
-                                <img src="images/sp30_thumb1.jpg" alt="product30"/>
+                            <a href="javascript:;" rel="30">
+                                <img src="images/sp30_thumb1.jpg" alt="product30" />
                                 <h2><strong>Thức ăn hạt cho chó Puppy Ganador vị trứng sữa 1.5kg</strong></h2>
                                 <h3><i>155.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Thức ăn cho chó nhỏ hương vị trứng và sữa Ganador puppy Flavored With Egg And Milk - Gói 400g Chứa các vitamin giúp tăng cường đề kháng tự nhiên cho chó con Công thức cân bằng protein, canxi và phốt pho giúp phát triển xương và cơ bắp chắc khỏe Ganador chứa các thành phần giúp cải thiện vấn đề tiêu hóa nhạy cảm ở chó con.
+                                <p class="hide">
+                                    Thức ăn cho chó nhỏ hương vị trứng và sữa Ganador puppy Flavored With Egg And Milk -
+                                    Gói 400g Chứa các vitamin giúp tăng cường đề kháng tự nhiên cho chó con Công thức
+                                    cân bằng protein, canxi và phốt pho giúp phát triển xương và cơ bắp chắc khỏe
+                                    Ganador chứa các thành phần giúp cải thiện vấn đề tiêu hóa nhạy cảm ở chó con.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item Minino cat kid adult">
-                            <a href="javascript:;" rel ="31">
-                                <img src="images/sp31_thumb1.jpg" alt="product31"/>
+                            <a href="javascript:;" rel="31">
+                                <img src="images/sp31_thumb1.jpg" alt="product31" />
                                 <h2><strong>Thức Ăn Cho Mèo Minino Yum Vị Hải Sản 1.5kg</strong></h2>
                                 <h3><i>110.000<sup> đ</sup></i></h3>
-                                <p class ="hide">
+                                <p class="hide">
                                     Giá trị dinh dưỡng thức ăn cho mèo Minino Yum mang lại:
                                     Thành phần Taurine hỗ trợ phát triển thị giác ở mèo.
-                                    Canxi và vitamin D phát triển xương khớp, răng miệng mèo. Giúp mèo nhà bạn luôn nhanh nhẹn khỏe mạnh.
+                                    Canxi và vitamin D phát triển xương khớp, răng miệng mèo. Giúp mèo nhà bạn luôn
+                                    nhanh nhẹn khỏe mạnh.
                                     Axit béo Omega 3 & 6 hỗ trợ phát triển lông và da ở mèo.
                                     Gạo & Yucca hỗ trợ tiêu hóa, hình thành phân khô, giảm mùi hôi ở phân mèo.
                                     Hạn chế những nguy cơ mắc bệnh về đường ruột, hệ tiêu hóa ở mèo.
-                                    Chất chống oxy hóa, khoáng chất và vitamin giúp tăng cường hệ miễn dịch, tăng sức đề kháng ở mèo.
+                                    Chất chống oxy hóa, khoáng chất và vitamin giúp tăng cường hệ miễn dịch, tăng sức đề
+                                    kháng ở mèo.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item Catsrang cat adult">
-                            <a href="javascript:;" rel ="32">
-                                <img src="images/sp32_thumb1.jpg" alt="product32"/>
+                            <a href="javascript:;" rel="32">
+                                <img src="images/sp32_thumb1.jpg" alt="product32" />
                                 <h2><strong>Thức ăn cho mèo trưởng thành Catsrang 1.5kg</strong></h2>
                                 <h3><i>189.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Là thức ăn cho mèo chuyên dụng dành giúp phòng ngừa loại bỏ lông thừa trong ruột. Khi cho ăn sản phẩm này nhờ dễ dàng tiêu hóa nên mèo sẽ đi ra phân rắn và giảm mùi khó chịu. Là sản phẩm phù hợp cho tăng cường vẻ đẹp da và lông, phòng tránh bệnh quáng gà nhờ các chất dinh dưỡng được cũng cấp cân bằng và đầy đủ. Phòng tránh các bệnh có thể phát sinh cho mèo. Không sử dụng chất kháng sinh, chất bảo quản và màu + hương liệu nhân tạo.
+                                <p class="hide">
+                                    Là thức ăn cho mèo chuyên dụng dành giúp phòng ngừa loại bỏ lông thừa trong ruột.
+                                    Khi cho ăn sản phẩm này nhờ dễ dàng tiêu hóa nên mèo sẽ đi ra phân rắn và giảm mùi
+                                    khó chịu. Là sản phẩm phù hợp cho tăng cường vẻ đẹp da và lông, phòng tránh bệnh
+                                    quáng gà nhờ các chất dinh dưỡng được cũng cấp cân bằng và đầy đủ. Phòng tránh các
+                                    bệnh có thể phát sinh cho mèo. Không sử dụng chất kháng sinh, chất bảo quản và màu +
+                                    hương liệu nhân tạo.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item Pedigree dog kid adult">
-                            <a href="javascript:;" rel ="33">
-                                <img src="images/sp33_thumb1.jpg" alt="product33"/>
+                            <a href="javascript:;" rel="33">
+                                <img src="images/sp33_thumb1.jpg" alt="product33" />
                                 <h2><strong>Thức ăn Pegdigree dạng pate cho chó vị Gà sốt gói 130g</strong></h2>
                                 <h3><i>16.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Thức ăn Pedigree Beef là thịt gà bao gồm độ béo và khoáng chất tối đa giúp nuôi dưỡng da lông chó, và giúp chó tiêu hóa tốt hơn vì bao gồm những chất dinh dưỡng dễ dàng hấp thụ. Phần thức ăn đóng hộp còn dư lại sau khi mở hộp cần phải để tủ lạnh. Thức ăn khi cho ăn nên để ở nhiệt độ phòng cho hết lạnh rồi hãy sử dụng. Phần thức ăn đóng hộp dư để tủ lạnh qua 3 ngày nên bỏ đi.
+                                <p class="hide">
+                                    Thức ăn Pedigree Beef là thịt gà bao gồm độ béo và khoáng chất tối đa giúp nuôi
+                                    dưỡng da lông chó, và giúp chó tiêu hóa tốt hơn vì bao gồm những chất dinh dưỡng dễ
+                                    dàng hấp thụ. Phần thức ăn đóng hộp còn dư lại sau khi mở hộp cần phải để tủ lạnh.
+                                    Thức ăn khi cho ăn nên để ở nhiệt độ phòng cho hết lạnh rồi hãy sử dụng. Phần thức
+                                    ăn đóng hộp dư để tủ lạnh qua 3 ngày nên bỏ đi.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item MKB dog kid adult">
-                            <a href="javascript:;" rel ="34">
-                                <img src="images/sp34_thumb1.jpg" alt="product34"/>
+                            <a href="javascript:;" rel="34">
+                                <img src="images/sp34_thumb1.jpg" alt="product34" />
                                 <h2><strong>MKB thức ăn cho chó bổ sung năng lượng 15kg</strong></h2>
                                 <h3><i>1.850.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Dành cho chó ở mọi độ tuổi, cung cấp dinh dưỡng và năng lượng lớn cho chó linh hoạt và khỏe mạnh. Bổ sung chondroitin và glucosamine để hỗ trợ sức khỏe khớp và tim. Đường amoniac và chondroitin tỷ lệ khoa học 2: 1, hỗ trợ sửa chữa các sụn khớp bị tổn thương. L-carnitine giữ cho cơ bắp săn chắc và khỏe mạnh. Hàm lượng natri được điều chỉnh một cách khoa học để hỗ trợ sức khỏe tim mạch. Công thức hàm lượng thịt cao cung cấp đầy đủ năng lượng cho cơ bắp chắc khỏe. Nó thích hợp cho các chó Đức, chó long vàng, Labrador, Caucasian và các chó cần nguồn năng lượng lớn để hoạt động.
+                                <p class="hide">
+                                    Dành cho chó ở mọi độ tuổi, cung cấp dinh dưỡng và năng lượng lớn cho chó linh hoạt
+                                    và khỏe mạnh. Bổ sung chondroitin và glucosamine để hỗ trợ sức khỏe khớp và tim.
+                                    Đường amoniac và chondroitin tỷ lệ khoa học 2: 1, hỗ trợ sửa chữa các sụn khớp bị
+                                    tổn thương. L-carnitine giữ cho cơ bắp săn chắc và khỏe mạnh. Hàm lượng natri được
+                                    điều chỉnh một cách khoa học để hỗ trợ sức khỏe tim mạch. Công thức hàm lượng thịt
+                                    cao cung cấp đầy đủ năng lượng cho cơ bắp chắc khỏe. Nó thích hợp cho các chó Đức,
+                                    chó long vàng, Labrador, Caucasian và các chó cần nguồn năng lượng lớn để hoạt động.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item MKB cat kid adult">
-                            <a href="javascript:;" rel ="35">
-                                <img src="images/sp35_thumb1.jpg" alt="product35"/>
+                            <a href="javascript:;" rel="35">
+                                <img src="images/sp35_thumb1.jpg" alt="product35" />
                                 <h2><strong>Thức ăn cho mèo mẹ và con Fairy Chef Mother & Baby 2kg</strong></h2>
                                 <h3><i>275.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Thức ăn cho mèo mẹ và mèo con CATIDEA Fairy Chef Mother & Baby được xây dựng bởi chế độ ăn uống dinh dưỡng chính xác dành cho mèo con. Nó giúp và hỗ trợ quá trình cai sữa của mèo diễn ra suôn sẻ. Đồng thời đồng hành cùng mèo con qua từng giai đoạn phát triển. Sử dụng thức ăn cho mèo con và mèo mẹ CATIDEA Fairy Chef Mother & Baby mang lại những lợi ích đặc biệt sau: các thành phần thịt phù hợp với chế độ ăn uống tự nhiên của mèo, khôi phục tỷ lệ dinh dưỡng của sữa mèo. Sữa mẹ về nhiều và giàu dinh dưỡng, cung cấp dinh dưỡng đầy đủ nhất cho mèo con trong giai đoạn cai sữa. giúp mèo cưng phát triển trí não với DHA/EPA và các phản xạ tự nhiên. xây dựng sức đề kháng cao cho mèo con với phức hợp chống oxy hóa của Vitamin E, không gây ảnh hưởng tới hệ tiêu hóa còn non nớt của mèo cưng.
+                                <p class="hide">
+                                    Thức ăn cho mèo mẹ và mèo con CATIDEA Fairy Chef Mother & Baby được xây dựng bởi chế
+                                    độ ăn uống dinh dưỡng chính xác dành cho mèo con. Nó giúp và hỗ trợ quá trình cai
+                                    sữa của mèo diễn ra suôn sẻ. Đồng thời đồng hành cùng mèo con qua từng giai đoạn
+                                    phát triển. Sử dụng thức ăn cho mèo con và mèo mẹ CATIDEA Fairy Chef Mother & Baby
+                                    mang lại những lợi ích đặc biệt sau: các thành phần thịt phù hợp với chế độ ăn uống
+                                    tự nhiên của mèo, khôi phục tỷ lệ dinh dưỡng của sữa mèo. Sữa mẹ về nhiều và giàu
+                                    dinh dưỡng, cung cấp dinh dưỡng đầy đủ nhất cho mèo con trong giai đoạn cai sữa.
+                                    giúp mèo cưng phát triển trí não với DHA/EPA và các phản xạ tự nhiên. xây dựng sức
+                                    đề kháng cao cho mèo con với phức hợp chống oxy hóa của Vitamin E, không gây ảnh
+                                    hưởng tới hệ tiêu hóa còn non nớt của mèo cưng.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item SmartHeart dog adult kid">
-                            <a href="javascript:;" rel ="36">
-                                <img src="images/sp36_thumb1.jpg" alt="product36"/>
+                            <a href="javascript:;" rel="36">
+                                <img src="images/sp36_thumb1.jpg" alt="product36" />
                                 <h2><strong>Bánh thưởng cho chó vị trái cây và rau củ Smartheart 100gr</strong></h2>
                                 <h3><i>22.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Bánh thưởng Smartheart Dog treat Fruit and Veggie hương vị hoa quả và rau củ bổ sung omega 3 & 6 giúp làn da khỏe mạnh, prebiotics (pos) và xenluloza tự nhiên hỗ trợ hệ tiêu hóa hoạt động bình thường, thiết kế dạng viên đặc biệt giúp làm giảm mảng bám, cao răng, dinh dưỡng tự nhiên và các vitamin từ hoa quả và rau củ Nguyên liệu chính: Bột mì, tinh bột ngô, đậu tương nguyên dầu, mỡ gà, bột cellulose, hạt lanh, cà rốt, premix khoáng và vitamin, bông cải xanh, cà chua, chất tạo màu (tartrazine), chiết xuất quả việt quất, chất tạo mùi, chất chống oxy hóa (bha &bht).
+                                <p class="hide">
+                                    Bánh thưởng Smartheart Dog treat Fruit and Veggie hương vị hoa quả và rau củ bổ sung
+                                    omega 3 & 6 giúp làn da khỏe mạnh, prebiotics (pos) và xenluloza tự nhiên hỗ trợ hệ
+                                    tiêu hóa hoạt động bình thường, thiết kế dạng viên đặc biệt giúp làm giảm mảng bám,
+                                    cao răng, dinh dưỡng tự nhiên và các vitamin từ hoa quả và rau củ Nguyên liệu chính:
+                                    Bột mì, tinh bột ngô, đậu tương nguyên dầu, mỡ gà, bột cellulose, hạt lanh, cà rốt,
+                                    premix khoáng và vitamin, bông cải xanh, cà chua, chất tạo màu (tartrazine), chiết
+                                    xuất quả việt quất, chất tạo mùi, chất chống oxy hóa (bha &bht).
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item Pedigree dog kid">
-                            <a href="javascript:;" rel ="37">
-                                <img src="images/sp37_thumb1.jpg" alt="product37"/>
+                            <a href="javascript:;" rel="37">
+                                <img src="images/sp37_thumb1.jpg" alt="product37" />
                                 <h2><strong>Thức ăn chó con Pedigree vị gà & trứng túi 1.3kg</strong></h2>
                                 <h3><i>110.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Giai đoạn từ 3-12 tháng tuổi đối với cún rất quan trọng. Trong thời gian này, nếu được bổ sung đầy đủ các chất dinh dưỡng cần thiết, cún sẽ phát triển nhanh chóng, khỏe mạnh và thông minh lanh lợi. Sản phẩm thức ăn hạt khô Pedigree vị gà, trứng và sữa sẽ cung cấp cho cún con những lợi ích sau: Hương vị gà và trứng thơm ngon với nhân sữa bên trong, giúp cún ăn ngon miệng. Cung cấp đủ vitamin và khoáng chất, giúp tăng cường hệ thống miễn dịch của cún, giiúp cún cưng phát triển khỏe mạnh, Bổ sung DHA và Choline rất cần thiết cho sự phát triển của não bộ, để cún thật thông minh, lanh lợi. Sản phẩm chứa nhiều canxi và phốt pho, giúp cho răng và xương cún chắc khỏe. Hạt nhỏ, vỏ mỏng giòn, nhân sữa thơm ngon giúp cún với hàm răng nhỏ chưa phát triển cứng cáp cũng có thể ăn dễ dàng. Kiểm soát được khẩu phần ăn hàng ngày, tránh việc quá nhiều để cún bỏ lại thức ăn thừa. Nhanh chóng, tiện lợi, không tốn nhiều thời gian chuẩn bị, Nhiều định lượng để bạn lựa chọn tùy theo nhu cầu của cún.
+                                <p class="hide">
+                                    Giai đoạn từ 3-12 tháng tuổi đối với cún rất quan trọng. Trong thời gian này, nếu
+                                    được bổ sung đầy đủ các chất dinh dưỡng cần thiết, cún sẽ phát triển nhanh chóng,
+                                    khỏe mạnh và thông minh lanh lợi. Sản phẩm thức ăn hạt khô Pedigree vị gà, trứng và
+                                    sữa sẽ cung cấp cho cún con những lợi ích sau: Hương vị gà và trứng thơm ngon với
+                                    nhân sữa bên trong, giúp cún ăn ngon miệng. Cung cấp đủ vitamin và khoáng chất, giúp
+                                    tăng cường hệ thống miễn dịch của cún, giiúp cún cưng phát triển khỏe mạnh, Bổ sung
+                                    DHA và Choline rất cần thiết cho sự phát triển của não bộ, để cún thật thông minh,
+                                    lanh lợi. Sản phẩm chứa nhiều canxi và phốt pho, giúp cho răng và xương cún chắc
+                                    khỏe. Hạt nhỏ, vỏ mỏng giòn, nhân sữa thơm ngon giúp cún với hàm răng nhỏ chưa phát
+                                    triển cứng cáp cũng có thể ăn dễ dàng. Kiểm soát được khẩu phần ăn hàng ngày, tránh
+                                    việc quá nhiều để cún bỏ lại thức ăn thừa. Nhanh chóng, tiện lợi, không tốn nhiều
+                                    thời gian chuẩn bị, Nhiều định lượng để bạn lựa chọn tùy theo nhu cầu của cún.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item Minino cat kid adult">
-                            <a href="javascript:;" rel ="38">
-                                <img src="images/sp38_thumb1.jpg" alt="product38"/>
+                            <a href="javascript:;" rel="38">
+                                <img src="images/sp38_thumb1.jpg" alt="product38" />
                                 <h2><strong>Thức ăn cá ngừ cho mèo Minino của Pháp 480gr</strong></h2>
                                 <h3><i>30.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Từ lâu chúng ta đã biết đến nhiều thức ăn cho Mèo nhãn hàng của pháp. Thức ăn cho Mèo Minino là sản phẩm mới của Pháp.
-                                    Thức ăn cho Mèo Minino cung cấp đầy đủ các dưỡng chất dành cho Mèo. Thức ăn giành cho Mèo Minino dành cho cả Mèo nhỏ và Mèo lớn. Hình dáng thức ăn có hình tròn trụ giống hạt Canin Fit 32 phù hợp với các giống Mèo. Làm giảm lông vón cục trong hệ tiêu hóa. Tăng cường dưỡng chất bảo vệ cơ thể. Giảm hiện tượng bị giảm thị lực và thính lực của Mèo.
+                                <p class="hide">
+                                    Từ lâu chúng ta đã biết đến nhiều thức ăn cho Mèo nhãn hàng của pháp. Thức ăn cho
+                                    Mèo Minino là sản phẩm mới của Pháp.
+                                    Thức ăn cho Mèo Minino cung cấp đầy đủ các dưỡng chất dành cho Mèo. Thức ăn giành
+                                    cho Mèo Minino dành cho cả Mèo nhỏ và Mèo lớn. Hình dáng thức ăn có hình tròn trụ
+                                    giống hạt Canin Fit 32 phù hợp với các giống Mèo. Làm giảm lông vón cục trong hệ
+                                    tiêu hóa. Tăng cường dưỡng chất bảo vệ cơ thể. Giảm hiện tượng bị giảm thị lực và
+                                    thính lực của Mèo.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item RoyalCanin dog adult">
-                            <a href="javascript:;" rel ="39">
-                                <img src="images/sp39_thumb1.jpg" alt="product39"/>
+                            <a href="javascript:;" rel="39">
+                                <img src="images/sp39_thumb1.jpg" alt="product39" />
                                 <h2><strong>Royal Canin Medium Aging 10+ gói 13kg</strong></h2>
                                 <h3><i>1.685.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Về mặt hàng này. Thức ăn khô cho chó Royal Canin Medium Aging 10+ là dinh dưỡng chính xác được sản xuất đặc biệt dành cho chó cỡ trung bình cao tuổi từ 10 tuổi trở lên nặng 10–25 kg. Giúp hỗ trợ xương và sức khỏe khớp ở những con chó giống trung bình. Nuôi dưỡng với axit béo Omega-3 EPA và DHA cho làn da và bộ lông khỏe mạnh. Kẹo dễ ăn, có thể bù nước được thiết kế dành riêng cho hàm của những chú chó cỡ vừa cao cấp.Omega-3 EPA và DHA cho làn da và bộ lông khỏe mạnh. Kẹo dễ ăn, có thể bù nước được thiết kế dành riêng cho hàm của những chú chó cỡ vừa cao cấp.
+                                <p class="hide">
+                                    Về mặt hàng này. Thức ăn khô cho chó Royal Canin Medium Aging 10+ là dinh dưỡng
+                                    chính xác được sản xuất đặc biệt dành cho chó cỡ trung bình cao tuổi từ 10 tuổi trở
+                                    lên nặng 10–25 kg. Giúp hỗ trợ xương và sức khỏe khớp ở những con chó giống trung
+                                    bình. Nuôi dưỡng với axit béo Omega-3 EPA và DHA cho làn da và bộ lông khỏe mạnh.
+                                    Kẹo dễ ăn, có thể bù nước được thiết kế dành riêng cho hàm của những chú chó cỡ vừa
+                                    cao cấp.Omega-3 EPA và DHA cho làn da và bộ lông khỏe mạnh. Kẹo dễ ăn, có thể bù
+                                    nước được thiết kế dành riêng cho hàm của những chú chó cỡ vừa cao cấp.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item Catsrang cat kid adult">
-                            <a href="javascript:;" rel ="40">
-                                <img src="images/sp40_thumb1.jpg" alt="product40"/>
+                            <a href="javascript:;" rel="40">
+                                <img src="images/sp40_thumb1.jpg" alt="product40" />
                                 <h2><strong>Thức ăn hạt cho mèo mọi lứa tuổi Catsrang 2kg</strong></h2>
                                 <h3><i>198.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Catsrang All Stages là thức ăn cao cấp được thiết kế một cách khoa học đảm bảo thành phần dinh dưỡng cần thiết cho mèo mọi lứa tuổi. Sản phẩm chứa đa dạng hàm lượng các thành phần dinh dưỡng thiết yếu đảm bảo hỗ trợ tốt nhất cho hệ miễn dịch, sức khỏe đường tiết niệu, sức khỏe khoang miệng, giảm búi lông, và có nhiều vitamins tốt cho sức khỏe. Giảm búi lông: Thành phần chứa nhiều chất xơ, giúp tiêu búi lông, đào thải lông mèo nuốt phải một cách dễ dàng. Taurine 2000mg+: Sản phẩm chứa Taurine trên 2000mg+ giúp hỗ trợ sức khỏe tim mạch và mắt sáng. Đảm bảo sức khỏe đường tiết niệu: Với thành phần DL-Methionine giúp hỗ trợ đường tiết niệu, duy trì độ axit thấp trong nước tiểu. Lông đẹp khỏe mạnh: Sản phẩm chứa axit béo tốt như Omega 3, Omega 6, Vitamin E, Chelate Mineral hỗ trợ duy trì chất lông khỏe mạnh cho mèo. Tăng khả năng hệ miễn dịch: Vitamin A và Mineral, Selennium giúp tăng cường hệ miễn dịch và chống lão hóa. 3 Free: Không màu, Không hương liệu nhân tạo, Không chất bảo quản. Nâng cao tuổi thọ: Sản phẩm có chứa thành phần FOS giúp các lợi khuẩn hoạt động tích cực, duy trì sức khỏe lâu dài.
+                                <p class="hide">
+                                    Catsrang All Stages là thức ăn cao cấp được thiết kế một cách khoa học đảm bảo thành
+                                    phần dinh dưỡng cần thiết cho mèo mọi lứa tuổi. Sản phẩm chứa đa dạng hàm lượng các
+                                    thành phần dinh dưỡng thiết yếu đảm bảo hỗ trợ tốt nhất cho hệ miễn dịch, sức khỏe
+                                    đường tiết niệu, sức khỏe khoang miệng, giảm búi lông, và có nhiều vitamins tốt cho
+                                    sức khỏe. Giảm búi lông: Thành phần chứa nhiều chất xơ, giúp tiêu búi lông, đào thải
+                                    lông mèo nuốt phải một cách dễ dàng. Taurine 2000mg+: Sản phẩm chứa Taurine trên
+                                    2000mg+ giúp hỗ trợ sức khỏe tim mạch và mắt sáng. Đảm bảo sức khỏe đường tiết niệu:
+                                    Với thành phần DL-Methionine giúp hỗ trợ đường tiết niệu, duy trì độ axit thấp trong
+                                    nước tiểu. Lông đẹp khỏe mạnh: Sản phẩm chứa axit béo tốt như Omega 3, Omega 6,
+                                    Vitamin E, Chelate Mineral hỗ trợ duy trì chất lông khỏe mạnh cho mèo. Tăng khả năng
+                                    hệ miễn dịch: Vitamin A và Mineral, Selennium giúp tăng cường hệ miễn dịch và chống
+                                    lão hóa. 3 Free: Không màu, Không hương liệu nhân tạo, Không chất bảo quản. Nâng cao
+                                    tuổi thọ: Sản phẩm có chứa thành phần FOS giúp các lợi khuẩn hoạt động tích cực, duy
+                                    trì sức khỏe lâu dài.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item Whiskas cat kid adult">
-                            <a href="javascript:;" rel ="41">
-                                <img src="images/sp41_thumb1.jpg" alt="product41"/>
+                            <a href="javascript:;" rel="41">
+                                <img src="images/sp41_thumb1.jpg" alt="product41" />
                                 <h2><strong>Pate cho mèo vị nước sốt thịt bò WHISKAS 8.5gr</strong></h2>
                                 <h3><i>25.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Pate cho mèo vị nước sốt thịt bò WHISKAS  Beef Flavour Sauce, thơm ngon đặc trưng dành riêng cho mèo, giúp mèo cưng ăn uống ngon miệng hơn. Tăng miễn dịch, hỗ trợ tiêu hóa. Chăm sóc lông mềm mượt và hạn chế tối đa tỷ lệ rụng lông hàng năm của mèo cưng. Nước sốt cho mèo  vị thịt bò WHISKAS Beef Flavour in Sauce có tác dụng cân bằng dinh dưỡng hàng ngày, lựa chọn những thành phần thịt bò ngon nhất trong chế biến, giàu protein, các vitamin & khoáng chất thiết yếu và không có chất bảo quản. Chất kết dính, hương liệu. Tất cả các Vitamin & khoáng chất thiết yếu. Không có chất bảo quản. Sản phẩm có thể cho mèo ăn ngay hoặc trộn với cơm hoặc hạt thức ăn khô. Sự lựa chọn dành cho các em mèo biếng ăn.
+                                <p class="hide">
+                                    Pate cho mèo vị nước sốt thịt bò WHISKAS  Beef Flavour Sauce, thơm ngon đặc trưng
+                                    dành riêng cho mèo, giúp mèo cưng ăn uống ngon miệng hơn. Tăng miễn dịch, hỗ trợ
+                                    tiêu hóa. Chăm sóc lông mềm mượt và hạn chế tối đa tỷ lệ rụng lông hàng năm của mèo
+                                    cưng. Nước sốt cho mèo  vị thịt bò WHISKAS Beef Flavour in Sauce có tác dụng cân
+                                    bằng dinh dưỡng hàng ngày, lựa chọn những thành phần thịt bò ngon nhất trong chế
+                                    biến, giàu protein, các vitamin & khoáng chất thiết yếu và không có chất bảo quản.
+                                    Chất kết dính, hương liệu. Tất cả các Vitamin & khoáng chất thiết yếu. Không có chất
+                                    bảo quản. Sản phẩm có thể cho mèo ăn ngay hoặc trộn với cơm hoặc hạt thức ăn khô. Sự
+                                    lựa chọn dành cho các em mèo biếng ăn.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item Ganador dog adult">
-                            <a href="javascript:;" rel ="42">
-                                <img src="images/sp42_thumb1.jpg" alt="product42"/>
+                            <a href="javascript:;" rel="42">
+                                <img src="images/sp42_thumb1.jpg" alt="product42" />
                                 <h2><strong>Thức ăn cho chó trưởng thành Ganador Fib's 400gr</strong></h2>
                                 <h3><i>50.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Fib’s là một sản phẩm thức ăn đầy đủ và cân đối, được phát triển để đáp ứng toàn bộ nhu cầu dinh dưỡng của Chó trưởng thành, mọi giống và mọi kích cỡ. Fib’s có công thức độc quyền gồm hỗn hợp các loại thịt khoái khẩu của Chó. Fib's của có hai hình dạng của xương & tròn cũng được thiết kế cho chó trưởng thành mà không có chất tạo màu nhân tạo. Lợi ích chính Fib's cho chó trưởng thành là: Cân bằng dinh dưỡng Cho da khỏe mạnh. Xương khỏe mạnh Thành phần hàm lượng dinh dưỡng. Đạm (min) 26% Canxi (min – max) 1,0 – 1,7% Béo thô (min) 12% Phốt pho tổng số (min – max) 0,8% – 1,5% Xơ thô (max) 6% Lysin tổng số (min) 1,2% Độ ẩm (max) 12% Methionine và cystine tổng số (min) 0,8% Năng lượng trao đổi (min) 3.500 Kcal/kg Hóa chất và kháng sinh (max) None Những lợi ích chính: Calcium, DHA, Tăng trưởng Cân đối, Omega 3 & 6 Thành phần Ngô, cám lúa mì, , Sản phẩm mì, gia cầm Bột Cám gạo, đậu nành đậu nành, gia cầm Fat, Wheat Gluten, thịt và xương Bột Khoáng sản (sắt, đồng, mangan, kẽm, iốt, Selen), vitamin (A , D3, E, K3, B1, B2, B6, B12, PP, D Calcium pantothenate, Biotin, folic Acid, Choline), Dicalcium Phosphate, Calcium Carbonate, muối, axit amin, Antimold, chống lão hóa, màu.                                    
+                                <p class="hide">
+                                    Fib’s là một sản phẩm thức ăn đầy đủ và cân đối, được phát triển để đáp ứng toàn bộ
+                                    nhu cầu dinh dưỡng của Chó trưởng thành, mọi giống và mọi kích cỡ. Fib’s có công
+                                    thức độc quyền gồm hỗn hợp các loại thịt khoái khẩu của Chó. Fib's của có hai hình
+                                    dạng của xương & tròn cũng được thiết kế cho chó trưởng thành mà không có chất tạo
+                                    màu nhân tạo. Lợi ích chính Fib's cho chó trưởng thành là: Cân bằng dinh dưỡng Cho
+                                    da khỏe mạnh. Xương khỏe mạnh Thành phần hàm lượng dinh dưỡng. Đạm (min) 26% Canxi
+                                    (min – max) 1,0 – 1,7% Béo thô (min) 12% Phốt pho tổng số (min – max) 0,8% – 1,5% Xơ
+                                    thô (max) 6% Lysin tổng số (min) 1,2% Độ ẩm (max) 12% Methionine và cystine tổng số
+                                    (min) 0,8% Năng lượng trao đổi (min) 3.500 Kcal/kg Hóa chất và kháng sinh (max) None
+                                    Những lợi ích chính: Calcium, DHA, Tăng trưởng Cân đối, Omega 3 & 6 Thành phần Ngô,
+                                    cám lúa mì, , Sản phẩm mì, gia cầm Bột Cám gạo, đậu nành đậu nành, gia cầm Fat,
+                                    Wheat Gluten, thịt và xương Bột Khoáng sản (sắt, đồng, mangan, kẽm, iốt, Selen),
+                                    vitamin (A , D3, E, K3, B1, B2, B6, B12, PP, D Calcium pantothenate, Biotin, folic
+                                    Acid, Choline), Dicalcium Phosphate, Calcium Carbonate, muối, axit amin, Antimold,
+                                    chống lão hóa, màu.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item RoyalCanin dog kid ">
-                            <a href="javascript:;" rel ="43">
-                                <img src="images/sp43_thumb1.jpg" alt="product43"/>
+                            <a href="javascript:;" rel="43">
+                                <img src="images/sp43_thumb1.jpg" alt="product43" />
                                 <h2><strong>Royal Canin Mini Puppy thức ăn cho chó con cỡ nhỏ 800gr</strong></h2>
                                 <h3><i>185.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Thức ăn cho chó con cỡ nhỏ ROYAL CANIN  Mini Puppy dành cho các giống chó con dưới 10 tháng tuổi. Với công thức đặc chế riêng cho nhu cầu dinh dưỡng của chó con thuộc các giống cỡ nhỏ. Thức ăn cho chó con (các giống chó cỡ nhỏ) được nghiên cứu để cung cấp dinh dưỡng theo nhu cầu thực tế của chó con. Duy trì sức đề kháng cho chó con: chất chống oxy hóa CELT. Hỗ trợ hệ tiêu hóa hoạt động ổn định: L.I.P, đường FOS. Cung cấp dinh dưỡng toàn diện cho chó: chế biến theo công thức cung cấp năng lượng cao. ROYAL CANIN Mini Puppy có dạng viên hình tam giác phù hợp với cấu tạo răng của chó, giảm nguy cơ hình thành mảng bám răng ở chó. Kích thước hạt phù hợp cỡ răng, thông qua việc cọ xát vào răng giúp bảo vệ răng miệng cho chó. Duy trì hệ tiêu hóa khỏe mạnh. Men tiêu hóa L.I.P hỗ trợ hấp thu chất dinh dưỡng cho chó, cân bằng hệ vi sinh đường ruột, giảm bớt lượng phân và mùi nhẹ hơn. Đường tự nhiên FOS: cân bằng hệ vi sinh đường ruột. Gia tăng số lượng lợi khuẩn, bảo vệ đường ruột khỏi vi khuẩn có hại.
+                                <p class="hide">
+                                    Thức ăn cho chó con cỡ nhỏ ROYAL CANIN  Mini Puppy dành cho các giống chó con dưới
+                                    10 tháng tuổi. Với công thức đặc chế riêng cho nhu cầu dinh dưỡng của chó con thuộc
+                                    các giống cỡ nhỏ. Thức ăn cho chó con (các giống chó cỡ nhỏ) được nghiên cứu để cung
+                                    cấp dinh dưỡng theo nhu cầu thực tế của chó con. Duy trì sức đề kháng cho chó con:
+                                    chất chống oxy hóa CELT. Hỗ trợ hệ tiêu hóa hoạt động ổn định: L.I.P, đường FOS.
+                                    Cung cấp dinh dưỡng toàn diện cho chó: chế biến theo công thức cung cấp năng lượng
+                                    cao. ROYAL CANIN Mini Puppy có dạng viên hình tam giác phù hợp với cấu tạo răng của
+                                    chó, giảm nguy cơ hình thành mảng bám răng ở chó. Kích thước hạt phù hợp cỡ răng,
+                                    thông qua việc cọ xát vào răng giúp bảo vệ răng miệng cho chó. Duy trì hệ tiêu hóa
+                                    khỏe mạnh. Men tiêu hóa L.I.P hỗ trợ hấp thu chất dinh dưỡng cho chó, cân bằng hệ vi
+                                    sinh đường ruột, giảm bớt lượng phân và mùi nhẹ hơn. Đường tự nhiên FOS: cân bằng hệ
+                                    vi sinh đường ruột. Gia tăng số lượng lợi khuẩn, bảo vệ đường ruột khỏi vi khuẩn có
+                                    hại.
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <div class="item SmartHeart dog kid">
-                            <a href="javascript:;" rel ="44">
-                                <img src="images/sp44_thumb1.jpg" alt="product44"/>
+                            <a href="javascript:;" rel="44">
+                                <img src="images/sp44_thumb1.jpg" alt="product44" />
                                 <h2><strong>Thức ăn hạt khô cho chó con Smartheart Power pack puppy 1kg</strong></h2>
                                 <h3><i>99.000<sup> đ</sup></i></h3>
-                                <p class = "hide">
-                                    Thức ăn Smart Heart Power Pack Puppy 1kg Dành cho chó con dưới 1 năm tuổi - CutePets Với công thức vượt trội giúp Làm tăng sức mạnh cơ bắp L-carnitine được thêm vào làm săn chắc cơ bắp Tạo thêm khối cơ bắp Năng lượng cao danh cho các chú chó năng động và mạnh mẽ Làn da khỏe mạnh, lông óng mượt Hệ tiêu hóa khỏe mạnh Hệ miễn dịch mạnh mẽ. Đối với những người nuôi thú cưng. Thức Ăn Hạt Cho Chó Tăng Cường Cơ Bắp – Smart Heart Power Pack Puppy không còn là một cái tên xa lạ. Đây là loại thức ăn cho cún cưng đến từ Thái Lan với tỉ lệ protein cao, cung cấp chất dinh dưỡng một cách đầy đủ tăng cường cơ bắp cho cún. Liệu bạn có đang phân vân rằng loại thức ăn này có những thành phần gì, có tốt chí thú cưng không. Hãy cùng tham khảo những thông tin dưới đây nhé !
+                                <p class="hide">
+                                    Thức ăn Smart Heart Power Pack Puppy 1kg Dành cho chó con dưới 1 năm tuổi - CutePets
+                                    Với công thức vượt trội giúp Làm tăng sức mạnh cơ bắp L-carnitine được thêm vào làm
+                                    săn chắc cơ bắp Tạo thêm khối cơ bắp Năng lượng cao danh cho các chú chó năng động
+                                    và mạnh mẽ Làn da khỏe mạnh, lông óng mượt Hệ tiêu hóa khỏe mạnh Hệ miễn dịch mạnh
+                                    mẽ. Đối với những người nuôi thú cưng. Thức Ăn Hạt Cho Chó Tăng Cường Cơ Bắp – Smart
+                                    Heart Power Pack Puppy không còn là một cái tên xa lạ. Đây là loại thức ăn cho cún
+                                    cưng đến từ Thái Lan với tỉ lệ protein cao, cung cấp chất dinh dưỡng một cách đầy đủ
+                                    tăng cường cơ bắp cho cún. Liệu bạn có đang phân vân rằng loại thức ăn này có những
+                                    thành phần gì, có tốt chí thú cưng không. Hãy cùng tham khảo những thông tin dưới
+                                    đây nhé !
                                 </p>
-                            </a> 
+                            </a>
                         </div>
                         <ul class="listpage">
-                            <li><a href="javascript:;" rel="1" >1</a></li>
+                            <li><a href="javascript:;" rel="1">1</a></li>
                             <li><a href="javascript:;" rel="2">2</a></li>
                             <li><a href="javascript:;" rel="3">3</a></li>
                             <li><a href="javascript:;" rel="4">4</a></li>
-                         </ul>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
-        <section class = "website">
+        <section class="website">
             <div class="infoCart">
-                <a href ="javascript:;" title="Thoát"><div class="exit"><i class="fas fa-times"></i></div></a>
+                <a href="javascript:;" title="Thoát">
+                    <div class="exit"><i class="fas fa-times"></i></div>
+                </a>
                 <h1>Giỏ hàng của bạn</h1>
                 <div class="notice">
-                    <img src="images/notice.png" alt="NoProduct"/>
+                    <img src="images/notice.png" alt="NoProduct" />
                 </div>
                 <div class="header">
                     <h2>Sản phẩm</h2>
@@ -702,75 +1052,84 @@
         </section>
         <section>
             <div class="infoBill">
-                <div class = "submitAlert">
+                <div class="submitAlert">
                     <h2>Đặt hàng thành công, xin cảm ơn quý khách đã mua sắm tại shop.</h2>
                 </div>
-                <a href ="javascript:;" title="Thoát"><div class="exit"><i class="fas fa-times"></i></div></a>
+                <a href="javascript:;" title="Thoát">
+                    <div class="exit"><i class="fas fa-times"></i></div>
+                </a>
                 <h1>Điền thông tin của bạn</h1>
                 <form>
                     <table>
                         <tr>
                             <td class="userInfo">Họ tên (<span>*</span>):</td>
                             <td>
-                                <input type="text" id="name" placeholder="Nhập họ tên của bạn..."/>
+                                <input type="text" id="name" placeholder="Nhập họ tên của bạn..." />
                             </td>
                         </tr>
                         <tr>
                             <td class="userInfo">Liên hệ (<span>*</span>):</td>
                             <td>
-                                <input type="text" id="tel" placeholder="Nhập số điện thoại..."/>
+                                <input type="text" id="tel" placeholder="Nhập số điện thoại..." />
                             </td>
                         </tr>
                         <tr>
                             <td class="userInfo">Địa chỉ (<span>*</span>):</td>
                             <td>
-                                <input type="text" id="address" placeholder="Nhập địa chỉ giao hàng..."/>
+                                <input type="text" id="address" placeholder="Nhập địa chỉ giao hàng..." />
                             </td>
                         </tr>
                         <tr>
                             <td class="userInfo">Ship:</td>
                             <td class="selectShip">
                                 <div>
-                                    <input class="shipType" id="superFast" name="ship" type="radio"/> Hỏa tốc
+                                    <input class="shipType" id="superFast" name="ship" type="radio" /> Hỏa tốc
                                 </div>
                                 <div>
-                                    <input class="shipType" id="fast" name="ship" checked type="radio"/> Nhanh
+                                    <input class="shipType" id="fast" name="ship" checked type="radio" /> Nhanh
                                 </div>
                                 <div>
-                                    <input class="shipType" id="normal" name="ship" type="radio"/> Thông thường
+                                    <input class="shipType" id="normal" name="ship" type="radio" /> Thông thường
                                 </div>
                             </td>
                         </tr>
                     </table>
                 </form>
                 <h1>Giá đơn hàng: <span id="priceProducts"></span></h2>
-                <h1>Phí ship: <span id="priceShip">30.000 đ</span> <span><i>(Toàn quốc)</i></span></h2>
-                <h1>Tổng tiền: <span id="totalPrice"></span></h1>
-                <div class="hiddenNotice">Vui lòng điền đầy thông tin!</div>
-                <div class="confirm button">
-                    <a>
-                        <span>Xác nhận</span>
-                    </a>
-                </div>
+                    <h1>Phí ship: <span id="priceShip">30.000 đ</span> <span><i>(Toàn quốc)</i></span></h2>
+                        <h1>Tổng tiền: <span id="totalPrice"></span></h1>
+                        <div class="hiddenNotice">Vui lòng điền đầy thông tin!</div>
+                        <div class="confirm button">
+                            <a>
+                                <span>Xác nhận</span>
+                            </a>
+                        </div>
             </div>
         </section>
-        <footer class = "website">
+        <footer class="website">
             <div>
                 <div id="contactframe">
                     <h2>Liên hệ với chúng tôi:</h2>
                     <h3><b><i class="fas fa-phone"></i> : 0909052307</b></h3>
-                    <h3><b><a href="mailto:pnshop2307@gmail.com"><i class="far fa-envelope"></i> : pnshop2307</a></b></h3>
-                    <h3><b><a href="https://www.google.com/maps/place/371+Nguy%E1%BB%85n+Ki%E1%BB%87m,+Ph%C6%B0%E1%BB%9Dng+3,+G%C3%B2+V%E1%BA%A5p,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh" target="blank"><i class="fas fa-map-marker-alt"></i> : 371 Nguyễn Kiệm, P.3, Q.Gò Vấp, TP.HCM</a></b></h3>
+                    <h3><b><a href="mailto:pnshop2307@gmail.com"><i class="far fa-envelope"></i> : pnshop2307</a></b>
+                    </h3>
+                    <h3><b><a href="https://www.google.com/maps/place/371+Nguy%E1%BB%85n+Ki%E1%BB%87m,+Ph%C6%B0%E1%BB%9Dng+3,+G%C3%B2+V%E1%BA%A5p,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh"
+                                target="blank"><i class="fas fa-map-marker-alt"></i> : 371 Nguyễn Kiệm, P.3, Q.Gò Vấp,
+                                TP.HCM</a></b></h3>
                 </div>
                 <div id="followus">
                     <h2>Theo dõi chúng tôi tại:</h2>
                     <div class="followicons">
-                        <a class ="followicon" href="https://www.facebook.com/PN-Shop-110697547988617" target="blank"><i class="fab fa-facebook-f"></i></a>
-                        <a class ="followicon" href="https://www.instagram.com/pn._.petshop/" target="blank"><i class="fab fa-instagram"></i></a>
-                        <a class ="followicon" href="https://twitter.com/PNshop2307" target="blank"><i class="fab fa-twitter"></i></a>
+                        <a class="followicon" href="https://www.facebook.com/PN-Shop-110697547988617" target="blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a class="followicon" href="https://www.instagram.com/pn._.petshop/" target="blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <a class="followicon" href="https://twitter.com/PNshop2307" target="blank"><i
+                                class="fab fa-twitter"></i></a>
                     </div>
-                </div>    
+                </div>
             </div>
         </footer>
-    </body>
+</body>
+
 </html>

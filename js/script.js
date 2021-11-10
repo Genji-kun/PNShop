@@ -1,12 +1,6 @@
 $(document).ready(function() {
-    $("#go-to-top").hide()
     $(".info").hide()
-    $(".YMK-info").hide()
-    $("#black-space").hide()
-    $("#go-to-top").css({"opacity": 1})
     $(".info").css({"opacity": 1})
-    $(".YMK-info").css({"opacity": 1})
-    $("#black-space").css({"opacity": 0.6})
     setTimeout (function(){
         $(".website").css( "display","block")
     },3000)
