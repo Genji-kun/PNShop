@@ -1,18 +1,18 @@
-$(document).ready(function() {
-    setTimeout (function(){
-        $(".website").css( "display","block")
-    },3000)
+$(document).ready(function () {
+    setTimeout(function () {
+        $(".website").css("display", "block")
+    }, 3000)
     $(".website").addClass("animate__fadeIn  animate__animated")
-    setTimeout (function(){
+    setTimeout(function () {
         $(".website").removeClass("animate__fadeIn  animate__animated")
-    },4000)
-    $(window).scroll(function() {
-        if($(this).scrollTop() > 10) {
+    }, 4000)
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 10) {
             $(".cover").css({
                 "position": "fixed",
                 "top": 0,
             })
-        } else{
+        } else {
             $(".cover").css({
                 "position": "fixed",
                 "top": 0,
@@ -23,10 +23,10 @@ $(document).ready(function() {
         else
             $("#go-to-top").hide("slow")
     })
-    $(".youmayknow").click(function(){
+    $(".youmayknow").click(function () {
         $(".informationText").html($(this).children("a").children(".hiddenInformation").html())
         $(".otherComments").html($(this).children("a").children(".hiddenComment").html())
-        $(".exampleImg img").attr("src",$(this).children("a").children("img").attr("src"))
+        $(".exampleImg img").attr("src", $(this).children("a").children("img").attr("src"))
         $(".YMK-info h1").text($(this).children("a").children(".document").children("h2").text())
         $(".exampleImg p").text($(this).children("a").children("p").text())
         $(".YMK-info").fadeIn(500)
@@ -35,22 +35,19 @@ $(document).ready(function() {
         $(".dislike").removeClass("rateDislike animate__slideInRight animate__animated")
         $(".like").removeClass("animate__fadeOutLeft animate__animated")
         $(".dislike").removeClass("animate__fadeOutRight animate__animated")
-        if(likeNum[$(this).children("a").attr("rel")] == true)
-        {
+        if (likeNum[$(this).children("a").attr("rel")] == true) {
             $(".like").addClass("rateLike")
             $(".like").show()
             $(".dislike").hide()
             $(".like").children("a").text("Cảm ơn đánh giá của bạn!!")
         }
-        else if(dislikeNum[$(this).children("a").attr("rel")] == true)
-        {
+        else if (dislikeNum[$(this).children("a").attr("rel")] == true) {
             $(".dislike").addClass("rateDislike")
             $(".dislike").show()
             $(".like").hide()
             $(".dislike").children("a").text("Cảm ơn đánh giá của bạn!!")
         }
-        else
-        {
+        else {
             $(".dislike").removeClass("rateDislike")
             $(".like").show()
             $(".dislike").children("a").text("Không hữu ích ")
@@ -62,32 +59,26 @@ $(document).ready(function() {
         }
     })
     var likeNum = []
-    for (var i = 0; i < $(".youmayknow").length; i++)
-    {
+    for (var i = 0; i < $(".youmayknow").length; i++) {
         likeNum.push(false)
     }
     var dislikeNum = []
-    for (var i = 0; i < $(".youmayknow").length; i++)
-    {
+    for (var i = 0; i < $(".youmayknow").length; i++) {
         dislikeNum.push(false)
     }
-    $(".like").click(function(){
+    $(".like").click(function () {
         var docImg = $(".YMK-detail img").attr("src")
         var ymkImg = $(".youmayknow img")
-        for(var i = 0; i < $(".youmayknow img").length; i++)
-        {
-            if(docImg == $(ymkImg[i]).attr("src"))
-            {
-                if(likeNum[i] == false)
-                {
+        for (var i = 0; i < $(".youmayknow img").length; i++) {
+            if (docImg == $(ymkImg[i]).attr("src")) {
+                if (likeNum[i] == false) {
                     likeNum[i] = true
                     $(".dislike").addClass("animate__fadeOutRight animate__animated")
                     $(".like").addClass("rateLike animate__slideInLeft animate__animated")
                     $(".dislike").fadeOut(200)
                     $(".like a").text("Cảm ơn đánh giá của bạn!!")
                 }
-                else
-                {   
+                else {
                     likeNum[i] = false
                     $(".like").removeClass("rateLike animate__slideInLeft animate__animated")
                     $(".dislike").addClass("animate__fadeInLeft animate__animated")
@@ -106,23 +97,19 @@ $(document).ready(function() {
             }
         }
     })
-    $(".dislike").click(function(){
+    $(".dislike").click(function () {
         var docImg = $(".YMK-detail img").attr("src")
         var ymkImg = $(".youmayknow img")
-        for(var i = 0; i < $(".youmayknow img").length; i++)
-        {
-            if(docImg == $(ymkImg[i]).attr("src"))
-            { 
-                if(dislikeNum[i] == false)
-                {
+        for (var i = 0; i < $(".youmayknow img").length; i++) {
+            if (docImg == $(ymkImg[i]).attr("src")) {
+                if (dislikeNum[i] == false) {
                     dislikeNum[i] = true
                     $(".like").addClass("animate__fadeOutLeft animate__animated")
                     $(".dislike").addClass("rateDislike animate__slideInRight animate__animated")
                     $(".like").fadeOut(200)
                     $(".dislike a").text("Cảm ơn đánh giá của bạn!!")
                 }
-                else
-                {   
+                else {
                     dislikeNum[i] = false
                     $(".dislike").removeClass("rateDislike animate__slideInRight animate__animated")
                     $(".like").addClass("animate__fadeInRight animate__animated")
@@ -141,13 +128,12 @@ $(document).ready(function() {
             }
         }
     })
-    $(".showComment").click(function(){
+    $(".showComment").click(function () {
         $(".comments").toggle()
     })
-    $("#sendComment").click(function(){
+    $("#sendComment").click(function () {
         var newComment = $(".inputComment input").val()
-        if(newComment != "")
-        {
+        if (newComment != "") {
             $(".otherComments").prepend(`
                 <div class="comment active">
                     <div class="avt">
@@ -160,20 +146,20 @@ $(document).ready(function() {
                 </div>
             `)
         }
-        setTimeout(function(){
+        setTimeout(function () {
             $(".comments .comment").removeClass("active")
-        },1000)
+        }, 1000)
         $(".inputComment input").val("")
     })
-    $(".exit").click(function() {
+    $(".exit").click(function () {
         $(this).parent().parent().fadeOut(500)
         $("#black-space").fadeOut()
         $(".like").removeClass("animate__fadeOutLeft animate__animated")
         $(".dislike").removeClass("animate__fadeOutRight animate__animated")
     })
-    $("#go-to-top").click(function() {
+    $("#go-to-top").click(function () {
         $("html, body").animate({
-            scrollTop:0
+            scrollTop: 0
         }, 1000);
     })
 })
