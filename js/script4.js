@@ -30,6 +30,7 @@ $(document).ready(function() {
     })
     $(".youmayknow").click(function(){
         $(".informationText").html($(this).children("a").children(".hiddenInformation").html())
+        $(".otherComments").html($(this).children("a").children(".hiddenComment").html())
         $(".exampleImg img").attr("src",$(this).children("a").children("img").attr("src"))
         $(".YMK-info h1").text($(this).children("a").children(".document").children("h2").text())
         $(".exampleImg p").text($(this).children("a").children("p").text())
@@ -147,6 +148,27 @@ $(document).ready(function() {
     })
     $(".showComment").click(function(){
         $(".comments").toggle()
+    })
+    $("#sendComment").click(function(){
+        var newComment = $(".inputComment input").val()
+        if(newComment != "")
+        {
+            $(".otherComments").prepend(`
+                <div class="comment active">
+                    <div class="avt">
+                        <img src="images/user.png" alt="user"/>
+                        <p>Ẩn danh</p>
+                    </div>
+                    <div class="commentContent">
+                        <p>${newComment}</p>
+                    </div>
+                </div>
+            `)
+        }
+        setTimeout(function(){
+            $(".comments .comment").removeClass("active")
+        },1000)
+        $(".inputComment input").val("")
     })
     $(".exit").click(function() {
         $(this).parent().parent().fadeOut(500)

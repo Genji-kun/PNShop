@@ -1,0 +1,72 @@
+div.document{
+    height: 18vw;
+}
+.YMK-info{
+    display:block;
+    width: 100%;
+    left:0%;
+    height: 100%;
+    top: 0%;
+    overflow:scroll;
+    padding: 5%;
+    border-radius: unset;
+}
+.YMK-info > h1{
+    font-size: 35px;
+}
+.YMK-detail{
+    flex-direction: column;
+}
+.exampleImg{
+    width: 100%;
+    border-bottom: 2px solid #937C69;
+}
+.exampleImg > div{
+    width: 100%;
+    text-align: center;
+}
+.exampleImg img{
+    width: 50%;
+}
+.information{
+    margin-top: 5%;
+    width: 100%;
+    border-left: none;
+    margin-left: 0;
+    padding: 0;
+}
+.informationText{
+    width: 100%;
+}
+.showComment{
+    left: 0%;
+    margin-bottom: 10px;
+}
+.comments{
+    width: 100%;
+    right: 0%;
+}
+
+
+
+
+
+
+
+
+
+
+footer > div{
+    flex-direction: column;
+}
+
+div#contactframe{
+    border-right: none;
+    border-bottom: 2px solid #FFFFFF;
+    width: 100%;
+    padding: 3%;
+}
+div#followus{
+    width: 100%;
+    padding: 3%;
+}

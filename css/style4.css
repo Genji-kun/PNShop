@@ -426,6 +426,7 @@ div.youmayknow img{
     top: 0%;
     right:4%;
     background-color: #FFFFFF;
+    overflow: auto;
 }
 .comment{
     background-color: #dcd8d4;
@@ -493,4 +494,25 @@ div.youmayknow img{
 }
 .hiddenComment{
     display: none;
+}
+/*width*/
+.comments::-webkit-scrollbar {
+    width: 7px;
+}
+/*chỉnh cái màu nền*/
+.comments::-webkit-scrollbar-track {
+    background-color: #e0d7d0;
+    border-radius: 10px;
+}
+/*cái cục*/
+.comments::-webkit-scrollbar-thumb {
+    background:#937C69; 
+    border-radius: 10px;
+}
+/*cái cục khi hover*/
+.comments::-webkit-scrollbar-thumb:hover {
+    background: #75614f; 
+}
+.active{
+    background-color: #aca8a3;
 }

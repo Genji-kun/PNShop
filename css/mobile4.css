@@ -1,0 +1,34 @@
+div.youmayknow{
+    width: 45%;
+    flex-direction: column;
+    margin: 5px;
+}
+div.youmayknow a{
+    height: 420px;
+}
+div.youmayknow img{
+    width: 100%;
+}
+div.document{
+    width: 100%;
+    overflow: unset;
+    height: fit-content;
+    margin-top: 5%;
+}
+div.document > p{
+    display:none;
+}
+.YMKs{  
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.bg{
+    width: 100%;
+}
+footer div h2{
+    font-size:25px;
+}
+div#contactframe h3{
+    font-size: 15px;
+}
