@@ -30,7 +30,7 @@ a#go-to-top{
     right: 2.5%;
     text-decoration: none;
     padding:2px;
-    opacity: 0;
+    display: none;
 }
 a#go-to-top img{
     width: 100%;
@@ -282,7 +282,8 @@ a.followicon:hover{
     height: 100%;
     z-index: 99;
     background-color: #000000;
-    opacity: 0;
+    opacity: 0.6;
+    display: none;
 }
 .exit{
     position: absolute;
@@ -424,7 +425,7 @@ div.thumb > div {
     border-color: #937C69;
     border-width: 5px;
     border-radius: 20px;
-    opacity: 0;
+    display: none;
 } 
 .YMK-info h1{
     color: #75614f;

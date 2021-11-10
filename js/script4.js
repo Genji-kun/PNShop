@@ -1,9 +1,4 @@
 $(document).ready(function() {
-    $("#go-to-top").hide()
-    $(".YMK-info").hide()
-    $("#black-space").hide()
-    $(".YMK-info").css({"opacity": 1})
-    $("#black-space").css({"opacity": 0.6})
     setTimeout (function(){
         $(".website").css( "display","block")
     },3000)
@@ -81,7 +76,7 @@ $(document).ready(function() {
         for(var i = 0; i < $(".youmayknow img").length; i++)
         {
             if(docImg == $(ymkImg[i]).attr("src"))
-            { 
+            {
                 if(likeNum[i] == false)
                 {
                     likeNum[i] = true

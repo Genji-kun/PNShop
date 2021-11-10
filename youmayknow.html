@@ -1,405 +1,620 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>P&N - Bạn Có Biết</title>
-        <link href="images/logotab.png" rel="shortcut icon"/>
-        <meta charset="utf-8">
-        <meta name="author" content="Võ Phú Phát,Nguyễn Kim Bảo Ngân">
-        <meta name="keywords" content="Chó,mèo,dog,cat,thức ăn cho thú cưng,P&N shop,pet food">
-        <meta name="description" content="P&N shop là cửa hàng chuyên bán thức ăn cho chó mèo, website đặt hàng và mua hàng trực tuyến">
-        <meta http-equiv="REFRESH" content="2000">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/style4.css" rel="stylesheet"/>
-        <link href="css/loading.css" rel="stylesheet"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-        <link href="css/ipad4.css" rel="stylesheet" media="screen and (max-width: 1024px)"/>
-        <link href="css/mobile4.css" rel="stylesheet" media="screen and (max-width: 770px)"/>
-        <link href="css/smallermobile4.css" rel="stylesheet" media="screen and (max-width: 590px)"/>
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="js/script4.js"></script>
-        <script src="js/loading.js"></script> 
-    </head>
-    <body>
-        <div class = "main" id ="main">
-            <img class="animate__animated animate__bounce" src ="images/loader.png"/>      
-            <div class ="line" id ="line"></div>
-            <p class ="text" id ="text">0%</p>
+
+<head>
+    <title>P&N - Bạn Có Biết</title>
+    <link href="images/logotab.png" rel="shortcut icon" />
+    <meta charset="utf-8">
+    <meta name="author" content="Võ Phú Phát,Nguyễn Kim Bảo Ngân">
+    <meta name="keywords" content="Chó,mèo,dog,cat,thức ăn cho thú cưng,P&N shop,pet food">
+    <meta name="description"
+        content="P&N shop là cửa hàng chuyên bán thức ăn cho chó mèo, website đặt hàng và mua hàng trực tuyến">
+    <meta http-equiv="REFRESH" content="2000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/style4.css" rel="stylesheet" />
+    <link href="css/loading.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="css/ipad4.css" rel="stylesheet" media="screen and (max-width: 1024px)" />
+    <link href="css/mobile4.css" rel="stylesheet" media="screen and (max-width: 770px)" />
+    <link href="css/smallermobile4.css" rel="stylesheet" media="screen and (max-width: 590px)" />
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js/script4.js"></script>
+    <script src="js/loading.js"></script>
+</head>
+
+<body>
+    <div class="main" id="main">
+        <img class="animate__animated animate__bounce" src="images/loader.png" />
+        <div class="line" id="line"></div>
+        <p class="text" id="text">0%</p>
+    </div>
+    <header class="website">
+        <div class="cover">
+            <a href="index.html"><img src="images/logo.png" /></a>
+            <div class="searchbox">
+                <input type="text" placeholder="Tìm kiếm...">
+                <button type="submit"><i class="fas fa-search"></i></button>
+            </div>
+            <nav>
+                <ul class="menu">
+                    <li><a href="index.html">Trang chủ</a></li>
+                    <li><a href="sanpham.html">Sản phẩm</a></li>
+                    <li><a href="image&video.html">Ảnh và video</a></li>
+                </ul>
+            </nav>
         </div>
-        <header class = "website">
-            <div class="cover">
-                <a href ="index.html"><img src="images/logo.png"/></a> 
-                <div class="searchbox">
-                    <input type="text" placeholder="Tìm kiếm...">
-                    <button type="submit"><i class="fas fa-search"></i></button>
-                </div>
-                <nav>
-                    <ul class="menu">
-                        <li><a href="index.html">Trang chủ</a></li>
-                        <li><a href="sanpham.html">Sản phẩm</a></li>
-                        <li><a href="image&video.html">Ảnh và video</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="empty">
-                <a><img src="images/logo.png"/></a> 
-            </div>
-        </header>
-        <div class ="website">
-            <a href="javascript:;" id="go-to-top" title="Go to top">
-                <img src="images/gototop.png"/>
-            </a>
+        <div class="empty">
+            <a><img src="images/logo.png" /></a>
         </div>
-        <section class ="website">
-            <div class = "bg">
-                <h1>Có thể bạn chưa biết:</h1>
-                <div class="YMKs">
-                    <div class = "youmayknow">
-                        <a href ="javascript:;" rel="0">
-                            <img src="images/document1.jpg" alt ="document1"/>
-                            <div class= "document">
-                                <h2>ĐÔI MẮT CỦA NHỮNG CHÚ CHÓ NHÌN ĐƯỢC MÀU SẮC GÌ?</h2>
-                                <p>Có phải những chú chó chỉ nhìn thấy hai màu trắng và đen?<br>Thế giới qua đôi mắt của chúng trông như thế nào?</br></p>
-                            </div>
-                            <div class ="hiddenInformation">
-                                <p><small><em>Có phải những chú chó chỉ nhìn thấy hai màu trắng và đen? Thế giới qua đôi mắt của chúng trông như thế nào?</em></small></p>
-                                <p>Nhiều nghiên cứu đã chỉ ra rằng, chó không chỉ nhìn thấy 2 màu sắc trắng, đen mà có thể nhìn được một số màu sắc khác. Tuy nhiên, số lượng màu mà chúng nhìn thấy rất ít và cũng không được tươi sáng như trong mắt của chúng ta.</p>
-                                <p>Thế  giới của những chú chó có những màu sắc cơ bản là <b>vàng, xanh dương, xám</b>.</p> 
-                                <p>Mắt của người có 3 loại tế bào hình nón, chúng hoạt động phối hợp với nhau giúp cho chúng ta có thể nhìn được tất cả các màu sắc. Hầu hết các trường hợp mù màu ở người là do thiếu đi 1 loại tế bào hình nón. Họ vẫn nhìn được màu sắc, nhưng số lượng ít hơn so với người bình thường. Điều này cũng tương tự như ở những chú chó, chỉ có 2 loại tế bào nón.</p>
-                                <p>Chúng nhìn màu xanh lá, vàng, cam thành màu vàng nhạt; các màu tím, xanh dương thành xanh dương, xanh lam thành màu xám.</p>
-                                <p>Chúng không thể nhìn được các màu đỏ, cam</p> 
-                                <p>Sự thật là nhiều món đồ chơi cho chó có màu đỏ, cam. Trong mắt chúng ta, những màu này rất nổi bật nhưng qua mắt của những chú chó, các màu sắc đó trở thành xám nâu hoặc là màu đen. Khi bạn ném món đồ chơi màu đỏ, chú chó của bạn không bắt được, có thể là do nó không phân biệt được màu sắc của món đồ trên nền cỏ xanh.</p>  
-                                <p><b><i>Chó có thể nhìn được trong bóng tối?</i></b></p> 
-                                <p>Mắt chó có nhiều tế bào que hơn chúng ta, do đó, chúng có thể nhìn mọi vật trong bóng tối rõ hơn. Chó cũng có thêm 1 lớp mô mắt mà con người thiếu, gọi là “tapetum lucidum”, có vai trò phản xạ ánh sáng vào võng mạc. Lớp mô mắt này giúp chó tăng tầm nhìn vào ban đêm và đó cũng là lý do mà chúng ta thấy mắt chó sáng lên trong bóng tối.</p>          
-                            </div>
-                            <p class = "hiddenTitle">"Chó không chỉ nhìn thấy 2 màu sắc trắng, đen mà có thể nhìn được một số màu sắc khác"</p>
-                            <div class="hiddenComment">
-                                <div class="comment">
-                                    <div class="avt">
-                                        <img src="images/user.png" alt="user" />
-                                        <p>Ẩn danh</p>
-                                    </div>
-                                    <div class="commentContent">
-                                        <p>Bài viết hữu ích quá!</p>
-                                    </div>
-                                </div>
-                                <div class="comment">
-                                    <div class="avt">
-                                        <img src="images/user.png" alt="user" />
-                                        <p>Ẩn danh</p>
-                                    </div>
-                                    <div class="commentContent">
-                                        <p>Tôi nuôi chó 5 năm rồi, mà lần đầu tôi mới biết vụ này</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class = "youmayknow">
-                        <a href ="javascript:;" rel="1">
-                            <img src="images/document2.jpg" alt ="document2"/>
-                            <div class= "document">
-                                <h2>THÚ CƯNG CÓ PHẢI LÀ NGUỒN LÂY NHIỄM BỆNH COVID-19 KHÔNG?</h2>
-                                <p>Dịch bệnh Covid-19 được lây truyền từ người sang người khi tiếp xúc gần với người bệnh. Liệu rằng thú cưng có truyền virus sang người không?<br>Đây cũng là thắc mắc và mối lo cũng nhiều chủ nuôi.</br></p>
-                            </div>
-                            <div class ="hiddenInformation">
-                                <p><small><em>Như bạn đã biết, dịch bệnh Covid-19 được lây truyền từ người sang người khi tiếp xúc gần với người bệnh. Liệu rằng thú cưng có khả năng truyền virus sang người hay không? Đây cũng là thắc mắc và mối lo cũng nhiều chủ nuôi.</em></small></p>
-                                <h3>Thú cưng có lây Covid-19 sang người hay không?</h3>
-                                <p>Theo nghiên cứu chi tiết cho thấy SARS-CoV truyền từ cầy hương sang người ở Trung Quốc vào năm 2002 và MERS-CoV truyền từ lạc đà đến người ở Ả Rập Saudi vào năm 2012. Một số chủng coronavirus chỉ tồn tại ở động vật mà chưa lây sang người. Tuy nhiên, tính đến thời điểm hiện tại không có bằng chứng nào cho thấy động vật đóng vai trò quan trọng trong việc lây lan SARS-CoV-2, vi-rút gây ra COVID-19 cho con người.</p>
-                                <p>Dựa trên thông tin thu được, nguy cơ động vật lây lan COVID-19 cho con người được coi là thấp. Người nghi nhiễm hoặc đã xác nhận nhiễm COVID-19 nên tránh tiếp xúc với động vật, kể cả thú cưng, gia súc gia cầm và động vật hoang dã.</p>
-                                <p>Theo Hội Thú Y Thú Nhỏ Thế Giới (WSAVA): “Hiện nay có rất ít bằng chứng cho thấy thú cưng có thể bị lây nhiễm bởi SARS-CoV-2 và hoàn toàn không có chứng cứ về việc chó hoặc mèo có thể là nguồn lây bệnh cho các con vật khác hoặc cho người và gây bệnh COVID-19.”</p>
-                                <p>CDC khuyến nghị: “Cũng giống việc bạn hạn chế ở gần người khác, bạn nên giảm thiểu tiếp xúc với thú cưng hoặc các con vật khác khi bị bệnh COVID-19. Mặc dù hiện nay chưa có báo cáo về thú cưng hay các con vật khác sẽ phát bệnh COVID-19, những bệnh nhân COVID-19 được khuyến cáo hạn chế các tiếp xúc với thú nuôi của họ. Nếu có thể bạn hãy nhờ người thân trong nhà chăm sóc chúng khi bạn bị bệnh.</p>
-                                <p>Nếu bạn bị bệnh, hãy hạn chế việc tiếp xúc trực tiếp với động vật trong nhà mình qua các hành động vuốt ve, ôm ấp, để thú liếm hoặc chia sẻ đồ ăn. Nếu bạn cần chăm sóc thú nuôi hoặc ở gần chúng trong lúc bị bệnh, hãy đảm bảo việc duy trì các phương pháp vệ sinh tốt, bao gồm rửa tay trước, sau khi tiếp xúc với thú và đeo khẩu trang.”</p>
-                                <h3>Đảm bảo sức khỏe khi sống cùng động vật</h3>
-                                <p>Tất cả các động vật đều mang mầm bệnh có thể gây bệnh cho người, việc thực hiện các thói quen lành mạnh liên quan đến thú cưng và động vật khác luôn là điều đúng đắn.</p>
-                                <p>Rửa tay sau khi tiếp xúc với động vật, đồ ăn, chất thải hoặc vật tư cung cấp của chúng.</p>
-                                <p>Thực hiện vệ sinh và dọn dẹp cho thú cưng đúng cách.</p>
-                                <p>Hãy trao đổi với bác sĩ thú y nếu quý vị có bất kỳ thắc mắc nào về tình trạng sức khỏe thú cưng của quý vị.</p>
-                                <p>Lưu ý rằng, trẻ em dưỡi 5 tuổi, những người có hệ miễn dịch suy yếu và người lớn tuổi có nhiều khả năng mắc bệnh do vi trùng có thể có trên một số động vật.</p>
-                                <p>Thú cưng không phải là nguồn lây bệnh Covid-19 sang người, vì thế các chủ nuôi nên yên tâm giữ thú cưng bên cạnh mình trong mùa dịch nè nhé!</p>
-                            </div>
-                            <p class = "hiddenTitle">"Người nghi nhiễm hoặc đã xác nhận nhiễm COVID-19 nên tránh tiếp xúc với động vật, kể cả thú cưng, gia súc gia cầm và động vật hoang dã."</p>
-                            <div class="hiddenComment">
-                                <div class="comment">
-                                    <div class="avt">
-                                        <img src="images/user.png" alt="user" />
-                                        <p>Ẩn danh</p>
-                                    </div>
-                                    <div class="commentContent">
-                                        <p>Bài viết rất hay, cảm ơn P&N đã cung cấp thông tin này!</p>
-                                    </div>
-                                </div>
-                                <div class="comment">
-                                    <div class="avt">
-                                        <img src="images/user.png" alt="user" />
-                                        <p>Ẩn danh</p>
-                                    </div>
-                                    <div class="commentContent">
-                                        <p>Tôi thật sự yêu thú cưng của mình và nếu như chúng bị mắc bệnh, tôi sẽ chăm sóc mà không bỏ rơi chúng</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class = "youmayknow">
-                        <a href ="javascript:;" rel="2">
-                            <img src="images/document3.jpg" alt ="document3"/>
-                            <div class= "document">
-                                <h2>TẠI SAO MÈO LẠI NGỦ NHIỀU ĐẾN VẬY?</h2>
-                                <p>Ai nuôi mèo cũng biết rằng chúng ngủ rất nhiều, theo ước tính thì lũ mèo có thể lăn ra ngủ từ 12 - 16 tiếng/ngày. Vì sao lại như vậy?<br>Có lẽ sau khi đọc xong bài viết này, bạn sẽ không chê mèo là "lũ lười biếng, chỉ biết ngủ" nữa.</br></p>
-                            </div>
-                            <div class ="hiddenInformation">
-                                <p><small><em>Mèo ngủ trung bình 15 giờ mỗi ngày và một số có thể ngủ đến 20 giờ trong khoảng thời gian 24 giờ. Điều này làm nhiều người thắc mắc: Tại sao mèo ngủ nhiều như vậy?</em></small></p>
-                                <h3>Giấc ngủ trưa của mèo</h3>
-                                <p>Điều đầu tiên cần nhận ra là mèo hoạt động tích cực nhất giữa hoàng hôn và bình minh, có nghĩa là chúng ngủ chủ yếu ban ngày và trở nên năng động vào lúc hoàng hôn. Đặc tính này có thể khiến bạn bị sốc nếu là lần đầu tiên nuôi mèo. Mèo rất dễ đi vào giấc ngủ và ngủ rất say. Nhưng ngay sau khi mèo ăn sáng, là lúc cả thế giới bừng tỉnh chuẩn bị cho ngày làm việc thì mèo lại cuộn mình cho một giấc ngủ dài.</p>
-                                <h3>Bảo tồn năng lượng</h3>
-                                <p>Cơ thể mèo được cấu tạo như một loài động vật ăn thịt, có nghĩa là chúng có bản năng rượt đuổi và săn lùng, chủ yếu là vào ban đêm. Loài mèo có kích thước lớn hay còn được gọi là sư tử có đặc điểm ngủ tương tự, ngủ vào ban ngày và săn bắn vào ban đêm. Mặc dù đã được thuần hóa gần như toàn bộ nhưng mèo nhà vẫn giữ lại bản chất hoang dã đó. Ngay cả những lúc chơi đùa, chúng cũng bộc lộ bản năng nguyên sơ đó của mình, chẳng hạn như cách bò trườn trong bóng tối và ngay lập tức vồ lấy con mồi mà không một lời cảnh báo.</p>
-                                <p>Khi mèo săn mồi, cơ thể chúng sẽ có nguồn năng lượng đáng kinh ngạc. Cho dù mèo săn mồi ngoài trời hay vờn đồ chơi nhồi bông, nguồn năng lượng dồi dào đó được tích lũy từ những giấc ngủ dài, phục vụ cho các hoạt động chạy nhảy, leo trèo và rình rập.</p>
-                                <h3>Mắt nhắm mắt mở</h3>
-                                <p>Giống như con người, mèo ngủ lơ mơ hoặc ngủ rất sâu. Khi ngủ gật gù (kéo dài khoảng mười lăm phút đến nửa giờ), mèo sẽ ở tư thế sẵn sàng hành động ngay lập tức khi phát hiện điều lạ.</p>
-                                <p>Khi ngủ sâu, não mèo có những chuyển động nhanh. Giấc ngủ sâu có xu hướng kéo dài khoảng năm phút, sau đó chúng lại rơi vào trạng thái lơ mơ. Chu kỳ ngủ sâu – lơ mơ như vậy tiếp tục cho đến khi mèo tỉnh dậy.</p>
-                                <p>Mèo con và mèo lớn tuổi có khuynh hướng ngủ nhiều hơn mèo trưởng thành ở độ tuổi trung niên.</p>
-                                <h3>Ngày mưa</h3>
-                                <p>Sẽ không có gì ngạc nhiên khi nói rằng mèo cũng bị ảnh hưởng bởi thời tiết, giống như chúng ta. Hành vi của mèo có thể rất khác nhau, tùy thuộc vào giống, tuổi tác, tính khí và sức khỏe tổng quát của chúng. Tuy nhiên, bất kể tính tình của mèo thế nào thì chúng ngủ nhiều hơn khi thời tiết thay đổi. Vâng, ngay cả khi mèo chỉ sống trong nhà thì nó (và kể cả bạn) sẽ ngáp ngắn ngáp dài, mắt lơ mơ vào những ngày mưa hoặc lạnh.</p>
-                                <h3>Mấy giờ rồi?</h3>
-                                <p>Mèo chỉ hoạt động ở bên ngoài từ lúc hoàng hôn, có nghĩa là chúng hoạt động tích cực nhất trong những giờ chạng vạng đón bình minh và hoàng hôn. Chúng có xu hướng nằm sát mặt đất trong đêm tối và hàng giờ vào ban ngày, khi những kẻ săn mồi khác đang rình rập. Một số con mèo có thể hoạt động vào ban đêm, đặc biệt mèo con. Nhưng mèo cũng hòa đồng và có khả năng thích nghi cao. Điều này có nghĩa là một con mèo có thể điều chỉnh thói quen ngủ của mình để có thể dành nhiều thời gian hơn với những người thân yêu, tức là chủ của nó. Mèo cũng sẽ cân đối thời gian ngủ dựa vào lịch cho ăn, đó là lý do tại sao mèo nuôi trong nhà ngủ nhiều hơn mèo lang thang ngoài trời.</p>
-                                <p>Cho dù mèo của bạn là một con mèo hoạt bát hay một con mèo chín chắn thì mức độ tương tác và hoạt động của nó phụ thuộc rất nhiều vào việc liệu có nạp năng lượng liên tục hay không.</p>
-                            </div>
-                            <p class = "hiddenTitle">"Mức độ tương tác và hoạt động của mèo phụ thuộc rất nhiều vào việc liệu có nạp năng lượng liên tục hay không."</p>
-                            <div class="hiddenComment">
-                                <div class="comment">
-                                    <div class="avt">
-                                        <img src="images/user.png" alt="user" />
-                                        <p>Ẩn danh</p>
-                                    </div>
-                                    <div class="commentContent">
-                                        <p>Mèo nhà tôi ngủ 20 tiếng 1 ngày rồi</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class = "youmayknow">
-                        <a href ="javascript:;" rel="3">
-                            <img src="images/document4.jpg" alt ="document4"/>
-                            <div class= "document">
-                                <h2>THỨC ĂN CÓ ẢNH HƯỞNG ĐẾN RĂNG MIỆNG THÚ CƯNG KHÔNG?</h2>
-                                <p>Sử dụng kem đánh răng hằng ngày là cách hiệu quả nhất để ngăn ngừa sự hình thành vôi răng gây bệnh nha chu ở chó, nhưng chế độ ăn uống cũng góp vai trò vô cùng quan trọng.</p>
-                            </div>
-                            <div class ="hiddenInformation">
-                                <p><small><em>Sử dụng kem đánh răng hằng ngày và vệ sinh răng miệng thường xuyên là cách hiệu quả nhất để ngăn ngừa sự hình thành vôi răng gây bệnh nha chu ở chó, nhưng chế độ ăn uống cũng góp vai trò vô cùng quan trọng.</em></small></p>
-                                <p>Việc đánh răng thường xuyên cho chó không phải là việc mà chủ nhân nào cũng có thể duy trì. Vật nuôi phải tuân thủ các quy trình ngay từ khi còn nhỏ.</p>
-                                <p>Vôi răng là một vấn đề phổ biến ở hầu hết mèo và chó do sự khoáng hóa của mảng bám răng. Mảng bám được cấu tạo chủ yếu từ cách mảnh thức ăn và vi khuẩn. Các nghiên cứu đã báo cáo sự tồn tại của vôi răng ở 86% mèo trong độ tuổi từ 1-4 tuổi và tất cả mèo từ 5 tuổi trở lên.</p>
-                                <p>Các nghiên cứu từ những năm 1930, 1940 và 1960 cho thấy những con chó ăn thức ăn hạt có sức khỏe răng miệng tốt hơn so với những con chó ăn thức ăn thường khác. Khi chế độ ăn uống hợp lý về mặt dinh dưỡng, chứa đầy đủ các vitamin, chất dinh dưỡng và enzyme cần thiết thì sức khỏe răng miệng của thú cưng sẽ được duy trì ở trang thái ổn định.</p>
-                                <p>Cho chó ăn thức ăn hạt thay vì các loại thức ăn thông thường sẽ có lợi cho răng miệng hơn. Bề mặt của những viên sỏi nhỏ cọ xát vào răng có thể góp phần loại bỏ và giảm mảng bám. Các loại bánh thưởng có bề mặt cứng hoặc gum nhai đều dẽ giúp giảm thiểu mảng bám và đôi khi làm giảm mùi hôi răng miệng.</p>
-                                <p>Tuy nhiên, các loại thức ăn hạt kém chất lượng sẽ chứa thành phần chủ yếu là từ cám và bột thịt, điều ngày sẽ gây nên tình trạng mảng bám nặng nếu như không được vệ sinh hằng ngày theo chế độ giống như ở người.</p>
-                                <p>Chế độ ăn uống cho thú cưng phải lành mạnh để đảm bảo sức khỏe răng miệng. Hãy chọn các loại thức ăn hạt khô, thức ăn hạt mềm dành cho thú cưng có chất lượng cao có các thành phần từ thịt thật. Thức ăn chất lượng cao còn đảm bảo sức khỏe tang cường thể chất cho thú cưng. Hãy thật sự để tâm đến chế độ ăn uống của “người bạn đồng hành” này nhé.</p>
-                            </div>
-                            <p class = "hiddenTitle">"Chế độ ăn uống cho thú cưng phải lành mạnh để đảm bảo sức khỏe răng miệng."</p>
-                            <div class="hiddenComment">
-                                <div class="comment">
-                                    <div class="avt">
-                                        <img src="images/user.png" alt="user" />
-                                        <p>Ẩn danh</p>
-                                    </div>
-                                    <div class="commentContent">
-                                        <p>Hữu ích lắm</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class = "youmayknow">
-                        <a href ="javascript:;" rel="4">
-                            <img src="images/document5.jpg" alt ="document5"/>
-                            <div class= "document">
-                                <h2>TẠI SAO MÈO THÍCH ĐỘ CAO?</h2>
-                                <p>Đối với con người chúng ta, tủ lạnh đơn giản chỉ là một thiết bị nhà bếp không hơn, không kém. Nhưng đối với một số con mèo, nắp trên cùng của tủ lạnh là miền đất hứa, là một điểm đến phải ghé thăm bằng mọi giá.</p>
-                            </div>
-                            <div class ="hiddenInformation">
-                                <p><small><em>Đối với con người chúng ta, tủ lạnh đơn giản chỉ là một thiết bị nhà bếp không hơn, không kém. Nhưng đối với một số con mèo, nắp trên cùng của tủ lạnh là miền đất hứa, là một điểm đến phải ghé thăm bằng mọi giá.</em></small></p>
-                                <p>Tại sao mèo lại thích tụ tập ở những nơi cao như vậy? Không phải là vì chúng muốn kiếm đồ ăn (ít nhất là vào lúc này), mà thay vào đó, tủ lạnh là một trong những điểm cao nhất trong nhà nên đó là một vị trí đặc biệt do sở thích chiều cao của mèo nhà bạn.</p>
-                                <p>Mèo sống trong trong không gian ba chiều; chúng không phải là những sinh vật bị giới hạn bởi mặt đất như chó. Chúng chỉ đơn giản là thích leo trèo.</p>
-                                <h3>Tại sao mèo thích độ cao?</h3>
-                                <p>Mèo có một bề dài lịch sử với những câu chuyện hấp dẫn liên quan đến độ cao. Rất lâu trước khi con mèo nhà bạn leo trèo lên rèm cửa phòng ăn và vung vẩy trên đỉnh tủ bếp thì tổ tiên hoang sơ, nhanh nhẹn của chúng đã leo cây để tìm kiếm thực phẩm.</p>
-                                <p>Đối với mèo hoang dã, một vị trí cao hơn là nơi che dấu tốt hơn để săn mồi.</p>
-                                <p>Cây cối cũng giúp động vật hoang dã tự cứu lấy bản thân. Đó là nơi hoàn hảo để thoát khỏi những kẻ săn mồi trên mặt đất và ẩn nấp khỏi những con chim săn mồi. Mặc dù nhà của bạn không có linh cẩu nhưng vẫn có thể có hai mối đe dọa đáng sợ khác đòi hỏi mèo phải theo dõi liên tục và thoát hiểm nhanh chóng là chó và trẻ em.</p>
-                                <p>Mèo cảm thấy an toàn khi chúng ở trên cao, đặc biệt nếu bạn có con nhỏ hoặc có nuôi chó thường thích theo đuôi và làm phiền chúng. Do đó, hãy bố trí cho mèo nhiều không gian thẳng đứng để chúng cảm thấy an toàn.</p>
-                                <p>Ngoài ra còn có một một vị trí đắt giá bên cạnh vị trí cao nhất trong nhà. Đối với các hộ gia đình có nuôi nhiều mèo, vị trí này chính là các góc phòng, tạo cho mèo cảm giác được che chở đáng kể.</p>
-                                <p>Độ cao có thể là một dấu hiệu gián tiếp biểu hiện trạng thái của mèo. Con mèo nào kiểm soát tốt nhất những vị trí cao nhất thường là loài chiếm ưu thế, nếu hiểu theo nghĩa đen thì đó chính là mèo thủ lĩnh. Từ vị trí đó, mèo có thể kiểm soát ‘vương quốc’ của mình và ý thức rõ hơn về hoạt động của con người và thú cưng khác.</p>
-                                <h3>Làm thế nào để bố trí không gian thẳng đứng cho mèo tại nhà</h3>
-                                <p>Vâng, mèo theo bản năng thích thú và cảm thấy thoải mái với độ cao, nhưng chúng cũng cần có không gian theo chiều thẳng đứng để đạt được cảm giác kích thích tinh thần. Vì vậy, bạn phải tạo cho chúng nhiều cơ hội để leo trèo và khám phá quanh nhà.</p>
-                                <p>Không gian thẳng đứng đóng vai trò rất quan trọng trong cuộc sống của mèo. Bạn có thể tăng không gian thẳng đứng bằng cách treo kệ trên tường để chúng leo lên và ít nhất là bạn nên bố trí một căn hộ cao cấp cho mỗi con mèo.</p>
-                                <p>Các ngôi nhà nên được trang bị không gian thẳng đứng thích hợp với từng con mèo để đảm bảo cả chủ và mèo đều vui vẻ và hạnh phúc. Người dân thành phố nói riêng thường sống ở những căn hộ chật hẹp nên họ luôn muốn tối đa hóa diện tích nền, nhưng hãy thử tưởng tượng bạn sẽ ra sao nếu nhốt mình cả ngày trong đó. Ngôi nhà của bạn càng nhỏ thì bạn càng cần bố trí nhiều không gian thẳng đứng. Chẳng hạn, bạn phải có những thứ đơn giản nhất như cột leo trèo, nó cần thiết với mèo cũng giống như hộp đi vệ sinh vậy.</p>
-                                <p>Căn hộ có nhiều cửa sổ sẽ khiến mèo thích thú hơn, đặc biệt là cửa sổ thường xuyên có chim bay qua bay lại. Nhưng hãy nhớ là mèo nổi tiếng với sự tò mò nên nếu mở cửa sổ hoặc cửa ban công hoặc để cửa hở cũng có thể dẫn đến tai nạn chết mèo. Khi thời tiết ấm hơn, mèo có nguy cơ bị “hội chứng cao tầng”, là một thuật ngữ do các bác sĩ thú y đặt ra để chỉ những vết thương do té ngã từ các tòa nhà.</p>
-                                <p>Tuy nhiên, nhờ vào trí óc sáng tạo, bạn có thể cho mèo một không gian cửa sổ an toàn và thú vị hơn. Hãy cân nhắc lắp một cành cây để mèo đứng lên đó ngắm cảnh vào những giờ cao điểm hoặc đặt cây dành cho mèo ở gần cửa sổ đóng kín nếu cửa sổ nhìn ra chỗ đựng thức ăn cho chim thì càng tốt. Với cách này, mèo vẫn được đảm bảo an toàn nhưng vẫn được ngắm chim giải trí, cách này được nhiều người nói vui là “TV chim” cho mèo.</p>
-                            </div>
-                            <p class = "hiddenTitle">"Mèo có một bề dài lịch sử với những câu chuyện hấp dẫn liên quan đến độ cao."</p>
-                            <div class="hiddenComment">
-                                <div class="comment">
-                                    <div class="avt">
-                                        <img src="images/user.png" alt="user" />
-                                        <p>Ẩn danh</p>
-                                    </div>
-                                    <div class="commentContent">
-                                        <p>Hehe</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class = "youmayknow">
-                        <a href ="javascript:;" rel="5">
-                            <img src="images/document6.jpg" alt ="document6"/>
-                            <div class= "document">
-                                <h2>TẠI SAO CHÓ RỤNG LÔNG?</h2>
-                                <p>Mặc dù rụng lông là bình thường ở hầu như tất cả những con chó, nhưng đôi khi việc rụng lông quá nhiều có thể là một biểu hiện của một tình trạng nào đó nghiêm trọng hơn. Dưới đây là lý do tại sao chó rụng lông và rụng bao nhiêu lông được coi là “bình thường” và những dấu hiệu cảnh báo nguy cơ tiềm ẩn về sức khỏe.</p>
-                            </div>
-                            <div class ="hiddenInformation">
-                                <p><small><em>Mặc dù rụng lông là bình thường ở hầu như tất cả những con chó, nhưng đôi khi việc rụng lông quá nhiều có thể là một biểu hiện của một tình trạng nào đó nghiêm trọng hơn. Dưới đây là lý do tại sao chó rụng lông và rụng bao nhiêu lông được coi là “bình thường” và những dấu hiệu cảnh báo nguy cơ tiềm ẩn về sức khỏe.</em></small></p>
-                                <h3>Những lý do chó rụng lông</h3>
-                                <p>Lông chó có tác dụng giúp kiểm soát nhiệt độ cơ thể và bảo vệ da khỏi ánh mặt trời và các yếu tố môi trường khác. Khi lông ngừng phát triển, nó sẽ tự nhiên bị rụng đi. Lượng và tần suất phụ thuộc vào vài yếu tố, bao gồm tình trạng sức khỏe, giống và một số yếu tố như mùa và môi trường.</p>
-                                <h3>Lông rụng bao nhiêu là bình thường?</h3>
-                                <p>Chó, đặc biệt là giống có hai lớp lông, đặc trưng rụng lớp lông bên trong vào mùa xuân và thu. Giống rụng lông nhiều là Border Collies, Labrador Retrievers, Beagles và German Shepherds ( giống chó chăn cừu Đức). Lượng lông rụng chúng ta coi là nhiều nhưng có thể là hoàn toàn bình thường đối với một số loài chó, nhưng đôi khi nó cũng có thể là kết quả của tình trạng sức khỏe bên trong nào đó.</p>
-                                <h3>Nguyên nhân bất thường của tình trạng rụng lông</h3>
-                                <p>Nguyên nhân lớn nhất có lẽ là do môi trường dẫn đến lượng lông rụng tăng lên. Những con chó có triệu chứng tăng rụng có thể là do bị căng thẳng hoặc buồn bã và tình trạng này có thể cải thiện nếu nó nhận được tình yêu từ bạn. Ngoài ra, xin tư vấn của bác sỹ thú y xem liệu có loại thuốc hoặc sản phẩm hỗ trợ nào có thể giúp giải quyết tình trạng này không.</p>
-                                <p>Một số chứng rối loạn da nhất định có thể dẫn đến tình trạng rụng lông và lông rụng từng mảng. Ví dụ, nhiễm một số loại ký sinh trùng như bọ chét, chấy hoặc ve, có thể là nguyên nhân dẫn đến tình trạng rụng lông. Nấm ngoài da, viêm da và một số loại nhiễm trùng nấm nhất định, bệnh liên quan đến hệ miễn dịch và ung thư cũng có thể là nguyên nhân dẫn đến rụng lông. Nếu bạn thấy có tình trạng kích ứng da như vết sưng, vảy hoặc phát ban, bên cạnh tình trạng rụng lông thì hãy lập tức trao đổi với bác sỹ thú y.</p>
-                                <p>Những thay đổi hormone và dị ứng có thể là nguyên nhân khác dẫn đến tình trạng rụng lông. Loại thực phẩm nhất định nào đó, thuốc hoặc sản phẩm làm sạch nhà hoặc dùng trong vệ sinh tắm gội cho chó cũng có thể là nguyên nhân gây bùng phát những phản ứng dị ứng ở chó.</p>
-                                <h3>Làm cách nào để kiểm soát tình trạng rụng lông ở chó?</h3>
-                                <p>Trong khi không thể làm cách nào để ngăn chặn tình trạng chó rụng lông thông thường, thì bạn có thể yêu cầu chuyên gia về vệ sinh cho chó hoặc bác sỹ thú y kê cho bạn sản phẩm phù hợp cho loại lông của chú chó nhà bạn nhằm giúp giảm lượng lông rụng trong nhà. Nếu bạn cho rằng chú chó nhà mình rụng lông do nhiễm các loại ký sinh trùng có hại, do tình trạng da, căng thẳng hoặc do vấn đề y tế thì hãy trao đổi với bác sỹ thú y để xác định vấn đề và biện pháp điều trị phù hợp.</p>
-                            </div>
-                            <p class = "hiddenTitle">"Lông chó có tác dụng giúp kiểm soát nhiệt độ cơ thể và bảo vệ da khỏi ánh mặt trời và các yếu tố môi trường khác."</p>
-                            <div class="hiddenComment">
-                                <div class="comment">
-                                    <div class="avt">
-                                        <img src="images/user.png" alt="user" />
-                                        <p>Ẩn danh</p>
-                                    </div>
-                                    <div class="commentContent">
-                                        <p>Lược chải lông chó mèo chuyên dụng giá ưu đãi liên hệ sđt:0734378xxx</p>
-                                    </div>
-                                </div>
-                                <div class="comment">
-                                    <div class="avt">
-                                        <img src="images/user.png" alt="user" />
-                                        <p>Ẩn danh</p>
-                                    </div>
-                                    <div class="commentContent">
-                                        <p>Nuôi chó nhàn lắm</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class = "youmayknow">
-                        <a href ="javascript:;" rel="6">
-                            <img src="images/document7.jpg" alt ="document7"/>
-                            <div class= "document">
-                                <h2>MÈO CÓ PHẢI "CHẤT LỎNG"?</h2>
-                                <p>Loài mèo không rõ bằng cách nào, chúng có thể chui vừa vào tất cả các vật chứa, miễn là có đủ thời gian. Các con “Sen” luôn có thắc mắc vui là liệu “Hoàng thượng” có phải một dạng chất lỏng không? Câu hỏi này được một số nhà khoa học “rảnh rỗi” đáp.</p>
-                            </div>
-                            <div class ="hiddenInformation">
-                                <p><small><em>Loài mèo không rõ bằng cách nào, chúng có thể chui vừa vào tất cả các vật chứa, miễn là có đủ thời gian. Các con “Sen” luôn có thắc mắc vui là liệu “Hoàng thượng” có phải một dạng chất lỏng không? Câu hỏi này được một số nhà khoa học “rảnh rỗi” đáp.</em></small></p>
-                                <h3>Chất lỏng là gì?</h2>
-                                <p>Trong vật lý, chất lỏng là thứ có thể thay đổi theo hình dạng của vật chứa nhưng vẫn giữ nguyên thể tích và không phụ thuộc vào áp suất. Hình dạng của chất lỏng được xác định bởi vật chứa nó nên có thể nói các hạt chất lỏng (thường là các phân tử) có thể chuyển động tự do trong khối chất lỏng, nhưng chúng tạo thành một bề mặt rõ ràng không nhất thiết phải giống với bình chứa. Không giống với chất khí, hình dạng của nó không khớp hoàn toàn với bình chứa.</p>
-                                <p>Và loài mèo thực sự phù hợp với nguyên lý này, chúng có thể chui vào những thứ có hình dạng, kích thước bất kỳ mà chúng muốn.</p>
-                                <h3>Vì sao Mèo được ví như chất lỏng?</h2>
-                                <p>Không rõ bằng cách nào mà mèo có thể chui vào mọi ngóc ngách tưởng như bất khả thi nhất. Tất nhiên về khoa học, mèo là một sinh vật ở thể rắn. Nhưng một số nhà khoa học rảnh rỗi thì không nghĩ vậy. Có một nhóm chuyên gia đã dành tâm huyết để nghiên cứu về tính hóa lỏng của loài mèo, và nghiên cứu ấy thậm chí đã đạt giải Ig Nobel Vật lý 2017 vào tháng 9/2017. Nghiên cứu này lấy cảm hứng từ hình ảnh những chú mèo bị kẹt trong ly, xô và bồn rửa mặt.</p>
-                                <p>Đặc tính “vừa với mọi vật chứa” của chất lỏng cần một khoảng thời gian để điều chỉnh, được gọi là “quãng nghỉ” – relaxation time. Tùy vào mật độ của chất lỏng, thời gian này có thể chậm hoặc nhanh. Giờ đến trường hợp của mèo. Không rõ bằng cách nào, chúng có thể chui lọt những thùng chứa không tưởng, miễn là có đủ thời gian. Điều này <b>chứng tỏ mèo sẽ là chất lỏng, nếu chúng ta cho chúng thời gian để biến thành dạng lỏng</b>.</p>
-                                <p>Tóm lại là mèo chính là một dạng chất lỏng! Nhưng tất nhiên đây là chia sẻ nghiên cứu chỉ để… cho vui thôi, vì nó mang tính chất trừu tượng nhiều hơn là áp dụng vào thực tế.</p>
-                                <h3>Điểm qua một số điều thú vị về loài mèo</h3>
-                                <p>1. Mèo thường hay thở ra tiếng grừ nhỏ mỗi khi chúng ngủ hoặc ngái ngủ, tần suất của âm thanh này là 26 lần mỗi giây, tương đương với công suất một chiếc động cơ diesel không tải.</p>
-                                <p>2. Những chú mèo con thường ngủ rất nhiều vì có một loại hóc-môn tăng trưởng được sản sinh khi chúng ngủ.</p>
-                                <p>3. Chúng không cảm nhận được vị ngọt, vì vậy bạn đừng nghĩ chúng thích ăn bánh kẹo vì thích ngọt.</p>
-                                <p>4. Mỗi một con mèo có dấu vân mũi riêng, giống như dấu vân tay của con người.</p>
-                                <p>5. Mũi mèo đánh hơi rất kém nên tai và mắt là hai giác quan chính. Thính giác của chúng nhạy gấp đôi con người và thị giác tốt gấp 6 lần.</p>
-                                <p>6. Mèo sống sót khi rơi từ tầng 32.Khi rơi từ tầng 7 trở lên, mèo sẽ xòe rộng tứ chi giống như một chiếc dù, lợi dụng vận tốc cuối để tiếp đất an toàn bằng bụng.</p>
-                            </div>
-                            <p class = "hiddenTitle">"Không rõ bằng cách nào mà mèo có thể chui vào mọi ngóc ngách tưởng như bất khả thi nhất."</p>
-                            <div class="hiddenComment">
-                                <div class="comment">
-                                    <div class="avt">
-                                        <img src="images/user.png" alt="user" />
-                                        <p>Ẩn danh</p>
-                                    </div>
-                                    <div class="commentContent">
-                                        <p>...</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class ="YMK-info">
-                <a href ="javascript:;" title="Thoát"><div class="exit"><i class="fas fa-times"></i></div></a>
-                <h1><strong></strong></h1>
-                <div class ="YMK-detail">
-                    <div class="exampleImg">
-                        <div>
-                            <img alt="informationImg"/>
-                            <p></p>
+    </header>
+    <div class="website">
+        <a href="javascript:;" id="go-to-top" title="Go to top">
+            <img src="images/gototop.png" />
+        </a>
+    </div>
+    <section class="website">
+        <div class="bg">
+            <h1>Có thể bạn chưa biết:</h1>
+            <div class="YMKs">
+                <div class="youmayknow">
+                    <a href="javascript:;" rel="0">
+                        <img src="images/document1.jpg" alt="document1" />
+                        <div class="document">
+                            <h2>ĐÔI MẮT CỦA NHỮNG CHÚ CHÓ NHÌN ĐƯỢC MÀU SẮC GÌ?</h2>
+                            <p>Có phải những chú chó chỉ nhìn thấy hai màu trắng và đen?<br>Thế giới qua đôi mắt của
+                                chúng trông như thế nào?</br></p>
                         </div>
-                        <div class ="showComment">
-                            <a href = "javascript:;"><i class="far fa-comment-dots"></i> Bình luận </a>
+                        <div class="hiddenInformation">
+                            <p><small><em>Có phải những chú chó chỉ nhìn thấy hai màu trắng và đen? Thế giới qua đôi mắt
+                                        của chúng trông như thế nào?</em></small></p>
+                            <p>Nhiều nghiên cứu đã chỉ ra rằng, chó không chỉ nhìn thấy 2 màu sắc trắng, đen mà có thể
+                                nhìn được một số màu sắc khác. Tuy nhiên, số lượng màu mà chúng nhìn thấy rất ít và cũng
+                                không được tươi sáng như trong mắt của chúng ta.</p>
+                            <p>Thế giới của những chú chó có những màu sắc cơ bản là <b>vàng, xanh dương, xám</b>.</p>
+                            <p>Mắt của người có 3 loại tế bào hình nón, chúng hoạt động phối hợp với nhau giúp cho chúng
+                                ta có thể nhìn được tất cả các màu sắc. Hầu hết các trường hợp mù màu ở người là do
+                                thiếu đi 1 loại tế bào hình nón. Họ vẫn nhìn được màu sắc, nhưng số lượng ít hơn so với
+                                người bình thường. Điều này cũng tương tự như ở những chú chó, chỉ có 2 loại tế bào nón.
+                            </p>
+                            <p>Chúng nhìn màu xanh lá, vàng, cam thành màu vàng nhạt; các màu tím, xanh dương thành xanh
+                                dương, xanh lam thành màu xám.</p>
+                            <p>Chúng không thể nhìn được các màu đỏ, cam</p>
+                            <p>Sự thật là nhiều món đồ chơi cho chó có màu đỏ, cam. Trong mắt chúng ta, những màu này
+                                rất nổi bật nhưng qua mắt của những chú chó, các màu sắc đó trở thành xám nâu hoặc là
+                                màu đen. Khi bạn ném món đồ chơi màu đỏ, chú chó của bạn không bắt được, có thể là do nó
+                                không phân biệt được màu sắc của món đồ trên nền cỏ xanh.</p>
+                            <p><b><i>Chó có thể nhìn được trong bóng tối?</i></b></p>
+                            <p>Mắt chó có nhiều tế bào que hơn chúng ta, do đó, chúng có thể nhìn mọi vật trong bóng tối
+                                rõ hơn. Chó cũng có thêm 1 lớp mô mắt mà con người thiếu, gọi là “tapetum lucidum”, có
+                                vai trò phản xạ ánh sáng vào võng mạc. Lớp mô mắt này giúp chó tăng tầm nhìn vào ban đêm
+                                và đó cũng là lý do mà chúng ta thấy mắt chó sáng lên trong bóng tối.</p>
                         </div>
-                    </div>
-                    <div class="information">
-                        <div class = "informationText">
-                        </div>
-                        <p>Bạn thấy thông tin này như thế nào?</p>
-                        <div class = "btns">
-                            <div class = "like">
-                                <a href = "javascript:;">
-                                    Hữu ích <i class="far fa-thumbs-up"></i>
-                                </a>   
-                            </div>
-                            <div class = "dislike">
-                                <a href = "javascript:;">
-                                    Không hữu ích <i class="far fa-thumbs-down"></i>
-                                </a>   
-                            </div>  
-                        </div>
-                        <div class="comments">
-                            <div class="comment addComment">
+                        <p class="hiddenTitle">"Chó không chỉ nhìn thấy 2 màu sắc trắng, đen mà có thể nhìn được một số
+                            màu sắc khác"</p>
+                        <div class="hiddenComment">
+                            <div class="comment">
                                 <div class="avt">
                                     <img src="images/user.png" alt="user" />
                                     <p>Ẩn danh</p>
                                 </div>
                                 <div class="commentContent">
-                                    <div class="inputComment">
-                                        <input type="text" placeholder="Viết bình luận..."/>
-                                    </div>
-                                    <button id="sendComment" type="submit"><i class="fas fa-paper-plane"></i></i></button>
+                                    <p>Bài viết hữu ích quá!</p>
                                 </div>
+                            </div>
+                            <div class="comment">
+                                <div class="avt">
+                                    <img src="images/user.png" alt="user" />
+                                    <p>Ẩn danh</p>
+                                </div>
+                                <div class="commentContent">
+                                    <p>Tôi nuôi chó 5 năm rồi, mà lần đầu tôi mới biết vụ này</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="youmayknow">
+                    <a href="javascript:;" rel="1">
+                        <img src="images/document2.jpg" alt="document2" />
+                        <div class="document">
+                            <h2>THÚ CƯNG CÓ PHẢI LÀ NGUỒN LÂY NHIỄM BỆNH COVID-19 KHÔNG?</h2>
+                            <p>Dịch bệnh Covid-19 được lây truyền từ người sang người khi tiếp xúc gần với người bệnh.
+                                Liệu rằng thú cưng có truyền virus sang người không?<br>Đây cũng là thắc mắc và mối lo
+                                cũng nhiều chủ nuôi.</br></p>
+                        </div>
+                        <div class="hiddenInformation">
+                            <p><small><em>Như bạn đã biết, dịch bệnh Covid-19 được lây truyền từ người sang người khi
+                                        tiếp xúc gần với người bệnh. Liệu rằng thú cưng có khả năng truyền virus sang
+                                        người hay không? Đây cũng là thắc mắc và mối lo cũng nhiều chủ
+                                        nuôi.</em></small></p>
+                            <h3>Thú cưng có lây Covid-19 sang người hay không?</h3>
+                            <p>Theo nghiên cứu chi tiết cho thấy SARS-CoV truyền từ cầy hương sang người ở Trung Quốc
+                                vào năm 2002 và MERS-CoV truyền từ lạc đà đến người ở Ả Rập Saudi vào năm 2012. Một số
+                                chủng coronavirus chỉ tồn tại ở động vật mà chưa lây sang người. Tuy nhiên, tính đến
+                                thời điểm hiện tại không có bằng chứng nào cho thấy động vật đóng vai trò quan trọng
+                                trong việc lây lan SARS-CoV-2, vi-rút gây ra COVID-19 cho con người.</p>
+                            <p>Dựa trên thông tin thu được, nguy cơ động vật lây lan COVID-19 cho con người được coi là
+                                thấp. Người nghi nhiễm hoặc đã xác nhận nhiễm COVID-19 nên tránh tiếp xúc với động vật,
+                                kể cả thú cưng, gia súc gia cầm và động vật hoang dã.</p>
+                            <p>Theo Hội Thú Y Thú Nhỏ Thế Giới (WSAVA): “Hiện nay có rất ít bằng chứng cho thấy thú cưng
+                                có thể bị lây nhiễm bởi SARS-CoV-2 và hoàn toàn không có chứng cứ về việc chó hoặc mèo
+                                có thể là nguồn lây bệnh cho các con vật khác hoặc cho người và gây bệnh COVID-19.”</p>
+                            <p>CDC khuyến nghị: “Cũng giống việc bạn hạn chế ở gần người khác, bạn nên giảm thiểu tiếp
+                                xúc với thú cưng hoặc các con vật khác khi bị bệnh COVID-19. Mặc dù hiện nay chưa có báo
+                                cáo về thú cưng hay các con vật khác sẽ phát bệnh COVID-19, những bệnh nhân COVID-19
+                                được khuyến cáo hạn chế các tiếp xúc với thú nuôi của họ. Nếu có thể bạn hãy nhờ người
+                                thân trong nhà chăm sóc chúng khi bạn bị bệnh.</p>
+                            <p>Nếu bạn bị bệnh, hãy hạn chế việc tiếp xúc trực tiếp với động vật trong nhà mình qua các
+                                hành động vuốt ve, ôm ấp, để thú liếm hoặc chia sẻ đồ ăn. Nếu bạn cần chăm sóc thú nuôi
+                                hoặc ở gần chúng trong lúc bị bệnh, hãy đảm bảo việc duy trì các phương pháp vệ sinh
+                                tốt, bao gồm rửa tay trước, sau khi tiếp xúc với thú và đeo khẩu trang.”</p>
+                            <h3>Đảm bảo sức khỏe khi sống cùng động vật</h3>
+                            <p>Tất cả các động vật đều mang mầm bệnh có thể gây bệnh cho người, việc thực hiện các thói
+                                quen lành mạnh liên quan đến thú cưng và động vật khác luôn là điều đúng đắn.</p>
+                            <p>Rửa tay sau khi tiếp xúc với động vật, đồ ăn, chất thải hoặc vật tư cung cấp của chúng.
+                            </p>
+                            <p>Thực hiện vệ sinh và dọn dẹp cho thú cưng đúng cách.</p>
+                            <p>Hãy trao đổi với bác sĩ thú y nếu quý vị có bất kỳ thắc mắc nào về tình trạng sức khỏe
+                                thú cưng của quý vị.</p>
+                            <p>Lưu ý rằng, trẻ em dưỡi 5 tuổi, những người có hệ miễn dịch suy yếu và người lớn tuổi có
+                                nhiều khả năng mắc bệnh do vi trùng có thể có trên một số động vật.</p>
+                            <p>Thú cưng không phải là nguồn lây bệnh Covid-19 sang người, vì thế các chủ nuôi nên yên
+                                tâm giữ thú cưng bên cạnh mình trong mùa dịch nè nhé!</p>
+                        </div>
+                        <p class="hiddenTitle">"Người nghi nhiễm hoặc đã xác nhận nhiễm COVID-19 nên tránh tiếp xúc với
+                            động vật, kể cả thú cưng, gia súc gia cầm và động vật hoang dã."</p>
+                        <div class="hiddenComment">
+                            <div class="comment">
+                                <div class="avt">
+                                    <img src="images/user.png" alt="user" />
+                                    <p>Ẩn danh</p>
+                                </div>
+                                <div class="commentContent">
+                                    <p>Bài viết rất hay, cảm ơn P&N đã cung cấp thông tin này!</p>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <div class="avt">
+                                    <img src="images/user.png" alt="user" />
+                                    <p>Ẩn danh</p>
+                                </div>
+                                <div class="commentContent">
+                                    <p>Tôi thật sự yêu thú cưng của mình và nếu như chúng bị mắc bệnh, tôi sẽ chăm sóc
+                                        mà không bỏ rơi chúng</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="youmayknow">
+                    <a href="javascript:;" rel="2">
+                        <img src="images/document3.jpg" alt="document3" />
+                        <div class="document">
+                            <h2>TẠI SAO MÈO LẠI NGỦ NHIỀU ĐẾN VẬY?</h2>
+                            <p>Ai nuôi mèo cũng biết rằng chúng ngủ rất nhiều, theo ước tính thì lũ mèo có thể lăn ra
+                                ngủ từ 12 - 16 tiếng/ngày. Vì sao lại như vậy?<br>Có lẽ sau khi đọc xong bài viết này,
+                                bạn sẽ không chê mèo là "lũ lười biếng, chỉ biết ngủ" nữa.</br></p>
+                        </div>
+                        <div class="hiddenInformation">
+                            <p><small><em>Mèo ngủ trung bình 15 giờ mỗi ngày và một số có thể ngủ đến 20 giờ trong
+                                        khoảng thời gian 24 giờ. Điều này làm nhiều người thắc mắc: Tại sao mèo ngủ
+                                        nhiều như vậy?</em></small></p>
+                            <h3>Giấc ngủ trưa của mèo</h3>
+                            <p>Điều đầu tiên cần nhận ra là mèo hoạt động tích cực nhất giữa hoàng hôn và bình minh, có
+                                nghĩa là chúng ngủ chủ yếu ban ngày và trở nên năng động vào lúc hoàng hôn. Đặc tính này
+                                có thể khiến bạn bị sốc nếu là lần đầu tiên nuôi mèo. Mèo rất dễ đi vào giấc ngủ và ngủ
+                                rất say. Nhưng ngay sau khi mèo ăn sáng, là lúc cả thế giới bừng tỉnh chuẩn bị cho ngày
+                                làm việc thì mèo lại cuộn mình cho một giấc ngủ dài.</p>
+                            <h3>Bảo tồn năng lượng</h3>
+                            <p>Cơ thể mèo được cấu tạo như một loài động vật ăn thịt, có nghĩa là chúng có bản năng rượt
+                                đuổi và săn lùng, chủ yếu là vào ban đêm. Loài mèo có kích thước lớn hay còn được gọi là
+                                sư tử có đặc điểm ngủ tương tự, ngủ vào ban ngày và săn bắn vào ban đêm. Mặc dù đã được
+                                thuần hóa gần như toàn bộ nhưng mèo nhà vẫn giữ lại bản chất hoang dã đó. Ngay cả những
+                                lúc chơi đùa, chúng cũng bộc lộ bản năng nguyên sơ đó của mình, chẳng hạn như cách bò
+                                trườn trong bóng tối và ngay lập tức vồ lấy con mồi mà không một lời cảnh báo.</p>
+                            <p>Khi mèo săn mồi, cơ thể chúng sẽ có nguồn năng lượng đáng kinh ngạc. Cho dù mèo săn mồi
+                                ngoài trời hay vờn đồ chơi nhồi bông, nguồn năng lượng dồi dào đó được tích lũy từ những
+                                giấc ngủ dài, phục vụ cho các hoạt động chạy nhảy, leo trèo và rình rập.</p>
+                            <h3>Mắt nhắm mắt mở</h3>
+                            <p>Giống như con người, mèo ngủ lơ mơ hoặc ngủ rất sâu. Khi ngủ gật gù (kéo dài khoảng mười
+                                lăm phút đến nửa giờ), mèo sẽ ở tư thế sẵn sàng hành động ngay lập tức khi phát hiện
+                                điều lạ.</p>
+                            <p>Khi ngủ sâu, não mèo có những chuyển động nhanh. Giấc ngủ sâu có xu hướng kéo dài khoảng
+                                năm phút, sau đó chúng lại rơi vào trạng thái lơ mơ. Chu kỳ ngủ sâu – lơ mơ như vậy tiếp
+                                tục cho đến khi mèo tỉnh dậy.</p>
+                            <p>Mèo con và mèo lớn tuổi có khuynh hướng ngủ nhiều hơn mèo trưởng thành ở độ tuổi trung
+                                niên.</p>
+                            <h3>Ngày mưa</h3>
+                            <p>Sẽ không có gì ngạc nhiên khi nói rằng mèo cũng bị ảnh hưởng bởi thời tiết, giống như
+                                chúng ta. Hành vi của mèo có thể rất khác nhau, tùy thuộc vào giống, tuổi tác, tính khí
+                                và sức khỏe tổng quát của chúng. Tuy nhiên, bất kể tính tình của mèo thế nào thì chúng
+                                ngủ nhiều hơn khi thời tiết thay đổi. Vâng, ngay cả khi mèo chỉ sống trong nhà thì nó
+                                (và kể cả bạn) sẽ ngáp ngắn ngáp dài, mắt lơ mơ vào những ngày mưa hoặc lạnh.</p>
+                            <h3>Mấy giờ rồi?</h3>
+                            <p>Mèo chỉ hoạt động ở bên ngoài từ lúc hoàng hôn, có nghĩa là chúng hoạt động tích cực nhất
+                                trong những giờ chạng vạng đón bình minh và hoàng hôn. Chúng có xu hướng nằm sát mặt đất
+                                trong đêm tối và hàng giờ vào ban ngày, khi những kẻ săn mồi khác đang rình rập. Một số
+                                con mèo có thể hoạt động vào ban đêm, đặc biệt mèo con. Nhưng mèo cũng hòa đồng và có
+                                khả năng thích nghi cao. Điều này có nghĩa là một con mèo có thể điều chỉnh thói quen
+                                ngủ của mình để có thể dành nhiều thời gian hơn với những người thân yêu, tức là chủ của
+                                nó. Mèo cũng sẽ cân đối thời gian ngủ dựa vào lịch cho ăn, đó là lý do tại sao mèo nuôi
+                                trong nhà ngủ nhiều hơn mèo lang thang ngoài trời.</p>
+                            <p>Cho dù mèo của bạn là một con mèo hoạt bát hay một con mèo chín chắn thì mức độ tương tác
+                                và hoạt động của nó phụ thuộc rất nhiều vào việc liệu có nạp năng lượng liên tục hay
+                                không.</p>
+                        </div>
+                        <p class="hiddenTitle">"Mức độ tương tác và hoạt động của mèo phụ thuộc rất nhiều vào việc liệu
+                            có nạp năng lượng liên tục hay không."</p>
+                        <div class="hiddenComment">
+                            <div class="comment">
+                                <div class="avt">
+                                    <img src="images/user.png" alt="user" />
+                                    <p>Ẩn danh</p>
+                                </div>
+                                <div class="commentContent">
+                                    <p>Mèo nhà tôi ngủ 20 tiếng 1 ngày rồi</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="youmayknow">
+                    <a href="javascript:;" rel="3">
+                        <img src="images/document4.jpg" alt="document4" />
+                        <div class="document">
+                            <h2>THỨC ĂN CÓ ẢNH HƯỞNG ĐẾN RĂNG MIỆNG THÚ CƯNG KHÔNG?</h2>
+                            <p>Sử dụng kem đánh răng hằng ngày là cách hiệu quả nhất để ngăn ngừa sự hình thành vôi răng
+                                gây bệnh nha chu ở chó, nhưng chế độ ăn uống cũng góp vai trò vô cùng quan trọng.</p>
+                        </div>
+                        <div class="hiddenInformation">
+                            <p><small><em>Sử dụng kem đánh răng hằng ngày và vệ sinh răng miệng thường xuyên là cách
+                                        hiệu quả nhất để ngăn ngừa sự hình thành vôi răng gây bệnh nha chu ở chó, nhưng
+                                        chế độ ăn uống cũng góp vai trò vô cùng quan trọng.</em></small></p>
+                            <p>Việc đánh răng thường xuyên cho chó không phải là việc mà chủ nhân nào cũng có thể duy
+                                trì. Vật nuôi phải tuân thủ các quy trình ngay từ khi còn nhỏ.</p>
+                            <p>Vôi răng là một vấn đề phổ biến ở hầu hết mèo và chó do sự khoáng hóa của mảng bám răng.
+                                Mảng bám được cấu tạo chủ yếu từ cách mảnh thức ăn và vi khuẩn. Các nghiên cứu đã báo
+                                cáo sự tồn tại của vôi răng ở 86% mèo trong độ tuổi từ 1-4 tuổi và tất cả mèo từ 5 tuổi
+                                trở lên.</p>
+                            <p>Các nghiên cứu từ những năm 1930, 1940 và 1960 cho thấy những con chó ăn thức ăn hạt có
+                                sức khỏe răng miệng tốt hơn so với những con chó ăn thức ăn thường khác. Khi chế độ ăn
+                                uống hợp lý về mặt dinh dưỡng, chứa đầy đủ các vitamin, chất dinh dưỡng và enzyme cần
+                                thiết thì sức khỏe răng miệng của thú cưng sẽ được duy trì ở trang thái ổn định.</p>
+                            <p>Cho chó ăn thức ăn hạt thay vì các loại thức ăn thông thường sẽ có lợi cho răng miệng
+                                hơn. Bề mặt của những viên sỏi nhỏ cọ xát vào răng có thể góp phần loại bỏ và giảm mảng
+                                bám. Các loại bánh thưởng có bề mặt cứng hoặc gum nhai đều dẽ giúp giảm thiểu mảng bám
+                                và đôi khi làm giảm mùi hôi răng miệng.</p>
+                            <p>Tuy nhiên, các loại thức ăn hạt kém chất lượng sẽ chứa thành phần chủ yếu là từ cám và
+                                bột thịt, điều ngày sẽ gây nên tình trạng mảng bám nặng nếu như không được vệ sinh hằng
+                                ngày theo chế độ giống như ở người.</p>
+                            <p>Chế độ ăn uống cho thú cưng phải lành mạnh để đảm bảo sức khỏe răng miệng. Hãy chọn các
+                                loại thức ăn hạt khô, thức ăn hạt mềm dành cho thú cưng có chất lượng cao có các thành
+                                phần từ thịt thật. Thức ăn chất lượng cao còn đảm bảo sức khỏe tang cường thể chất cho
+                                thú cưng. Hãy thật sự để tâm đến chế độ ăn uống của “người bạn đồng hành” này nhé.</p>
+                        </div>
+                        <p class="hiddenTitle">"Chế độ ăn uống cho thú cưng phải lành mạnh để đảm bảo sức khỏe răng
+                            miệng."</p>
+                        <div class="hiddenComment">
+                            <div class="comment">
+                                <div class="avt">
+                                    <img src="images/user.png" alt="user" />
+                                    <p>Ẩn danh</p>
+                                </div>
+                                <div class="commentContent">
+                                    <p>Hữu ích lắm</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="youmayknow">
+                    <a href="javascript:;" rel="4">
+                        <img src="images/document5.jpg" alt="document5" />
+                        <div class="document">
+                            <h2>TẠI SAO MÈO THÍCH ĐỘ CAO?</h2>
+                            <p>Đối với con người chúng ta, tủ lạnh đơn giản chỉ là một thiết bị nhà bếp không hơn, không
+                                kém. Nhưng đối với một số con mèo, nắp trên cùng của tủ lạnh là miền đất hứa, là một
+                                điểm đến phải ghé thăm bằng mọi giá.</p>
+                        </div>
+                        <div class="hiddenInformation">
+                            <p><small><em>Đối với con người chúng ta, tủ lạnh đơn giản chỉ là một thiết bị nhà bếp không
+                                        hơn, không kém. Nhưng đối với một số con mèo, nắp trên cùng của tủ lạnh là miền
+                                        đất hứa, là một điểm đến phải ghé thăm bằng mọi giá.</em></small></p>
+                            <p>Tại sao mèo lại thích tụ tập ở những nơi cao như vậy? Không phải là vì chúng muốn kiếm đồ
+                                ăn (ít nhất là vào lúc này), mà thay vào đó, tủ lạnh là một trong những điểm cao nhất
+                                trong nhà nên đó là một vị trí đặc biệt do sở thích chiều cao của mèo nhà bạn.</p>
+                            <p>Mèo sống trong trong không gian ba chiều; chúng không phải là những sinh vật bị giới hạn
+                                bởi mặt đất như chó. Chúng chỉ đơn giản là thích leo trèo.</p>
+                            <h3>Tại sao mèo thích độ cao?</h3>
+                            <p>Mèo có một bề dài lịch sử với những câu chuyện hấp dẫn liên quan đến độ cao. Rất lâu
+                                trước khi con mèo nhà bạn leo trèo lên rèm cửa phòng ăn và vung vẩy trên đỉnh tủ bếp thì
+                                tổ tiên hoang sơ, nhanh nhẹn của chúng đã leo cây để tìm kiếm thực phẩm.</p>
+                            <p>Đối với mèo hoang dã, một vị trí cao hơn là nơi che dấu tốt hơn để săn mồi.</p>
+                            <p>Cây cối cũng giúp động vật hoang dã tự cứu lấy bản thân. Đó là nơi hoàn hảo để thoát khỏi
+                                những kẻ săn mồi trên mặt đất và ẩn nấp khỏi những con chim săn mồi. Mặc dù nhà của bạn
+                                không có linh cẩu nhưng vẫn có thể có hai mối đe dọa đáng sợ khác đòi hỏi mèo phải theo
+                                dõi liên tục và thoát hiểm nhanh chóng là chó và trẻ em.</p>
+                            <p>Mèo cảm thấy an toàn khi chúng ở trên cao, đặc biệt nếu bạn có con nhỏ hoặc có nuôi chó
+                                thường thích theo đuôi và làm phiền chúng. Do đó, hãy bố trí cho mèo nhiều không gian
+                                thẳng đứng để chúng cảm thấy an toàn.</p>
+                            <p>Ngoài ra còn có một một vị trí đắt giá bên cạnh vị trí cao nhất trong nhà. Đối với các hộ
+                                gia đình có nuôi nhiều mèo, vị trí này chính là các góc phòng, tạo cho mèo cảm giác được
+                                che chở đáng kể.</p>
+                            <p>Độ cao có thể là một dấu hiệu gián tiếp biểu hiện trạng thái của mèo. Con mèo nào kiểm
+                                soát tốt nhất những vị trí cao nhất thường là loài chiếm ưu thế, nếu hiểu theo nghĩa đen
+                                thì đó chính là mèo thủ lĩnh. Từ vị trí đó, mèo có thể kiểm soát ‘vương quốc’ của mình
+                                và ý thức rõ hơn về hoạt động của con người và thú cưng khác.</p>
+                            <h3>Làm thế nào để bố trí không gian thẳng đứng cho mèo tại nhà</h3>
+                            <p>Vâng, mèo theo bản năng thích thú và cảm thấy thoải mái với độ cao, nhưng chúng cũng cần
+                                có không gian theo chiều thẳng đứng để đạt được cảm giác kích thích tinh thần. Vì vậy,
+                                bạn phải tạo cho chúng nhiều cơ hội để leo trèo và khám phá quanh nhà.</p>
+                            <p>Không gian thẳng đứng đóng vai trò rất quan trọng trong cuộc sống của mèo. Bạn có thể
+                                tăng không gian thẳng đứng bằng cách treo kệ trên tường để chúng leo lên và ít nhất là
+                                bạn nên bố trí một căn hộ cao cấp cho mỗi con mèo.</p>
+                            <p>Các ngôi nhà nên được trang bị không gian thẳng đứng thích hợp với từng con mèo để đảm
+                                bảo cả chủ và mèo đều vui vẻ và hạnh phúc. Người dân thành phố nói riêng thường sống ở
+                                những căn hộ chật hẹp nên họ luôn muốn tối đa hóa diện tích nền, nhưng hãy thử tưởng
+                                tượng bạn sẽ ra sao nếu nhốt mình cả ngày trong đó. Ngôi nhà của bạn càng nhỏ thì bạn
+                                càng cần bố trí nhiều không gian thẳng đứng. Chẳng hạn, bạn phải có những thứ đơn giản
+                                nhất như cột leo trèo, nó cần thiết với mèo cũng giống như hộp đi vệ sinh vậy.</p>
+                            <p>Căn hộ có nhiều cửa sổ sẽ khiến mèo thích thú hơn, đặc biệt là cửa sổ thường xuyên có
+                                chim bay qua bay lại. Nhưng hãy nhớ là mèo nổi tiếng với sự tò mò nên nếu mở cửa sổ hoặc
+                                cửa ban công hoặc để cửa hở cũng có thể dẫn đến tai nạn chết mèo. Khi thời tiết ấm hơn,
+                                mèo có nguy cơ bị “hội chứng cao tầng”, là một thuật ngữ do các bác sĩ thú y đặt ra để
+                                chỉ những vết thương do té ngã từ các tòa nhà.</p>
+                            <p>Tuy nhiên, nhờ vào trí óc sáng tạo, bạn có thể cho mèo một không gian cửa sổ an toàn và
+                                thú vị hơn. Hãy cân nhắc lắp một cành cây để mèo đứng lên đó ngắm cảnh vào những giờ cao
+                                điểm hoặc đặt cây dành cho mèo ở gần cửa sổ đóng kín nếu cửa sổ nhìn ra chỗ đựng thức ăn
+                                cho chim thì càng tốt. Với cách này, mèo vẫn được đảm bảo an toàn nhưng vẫn được ngắm
+                                chim giải trí, cách này được nhiều người nói vui là “TV chim” cho mèo.</p>
+                        </div>
+                        <p class="hiddenTitle">"Mèo có một bề dài lịch sử với những câu chuyện hấp dẫn liên quan đến độ
+                            cao."</p>
+                        <div class="hiddenComment">
+                            <div class="comment">
+                                <div class="avt">
+                                    <img src="images/user.png" alt="user" />
+                                    <p>Ẩn danh</p>
+                                </div>
+                                <div class="commentContent">
+                                    <p>Hehe</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="youmayknow">
+                    <a href="javascript:;" rel="5">
+                        <img src="images/document6.jpg" alt="document6" />
+                        <div class="document">
+                            <h2>TẠI SAO CHÓ RỤNG LÔNG?</h2>
+                            <p>Mặc dù rụng lông là bình thường ở hầu như tất cả những con chó, nhưng đôi khi việc rụng
+                                lông quá nhiều có thể là một biểu hiện của một tình trạng nào đó nghiêm trọng hơn. Dưới
+                                đây là lý do tại sao chó rụng lông và rụng bao nhiêu lông được coi là “bình thường” và
+                                những dấu hiệu cảnh báo nguy cơ tiềm ẩn về sức khỏe.</p>
+                        </div>
+                        <div class="hiddenInformation">
+                            <p><small><em>Mặc dù rụng lông là bình thường ở hầu như tất cả những con chó, nhưng đôi khi
+                                        việc rụng lông quá nhiều có thể là một biểu hiện của một tình trạng nào đó
+                                        nghiêm trọng hơn. Dưới đây là lý do tại sao chó rụng lông và rụng bao nhiêu lông
+                                        được coi là “bình thường” và những dấu hiệu cảnh báo nguy cơ tiềm ẩn về sức
+                                        khỏe.</em></small></p>
+                            <h3>Những lý do chó rụng lông</h3>
+                            <p>Lông chó có tác dụng giúp kiểm soát nhiệt độ cơ thể và bảo vệ da khỏi ánh mặt trời và các
+                                yếu tố môi trường khác. Khi lông ngừng phát triển, nó sẽ tự nhiên bị rụng đi. Lượng và
+                                tần suất phụ thuộc vào vài yếu tố, bao gồm tình trạng sức khỏe, giống và một số yếu tố
+                                như mùa và môi trường.</p>
+                            <h3>Lông rụng bao nhiêu là bình thường?</h3>
+                            <p>Chó, đặc biệt là giống có hai lớp lông, đặc trưng rụng lớp lông bên trong vào mùa xuân và
+                                thu. Giống rụng lông nhiều là Border Collies, Labrador Retrievers, Beagles và German
+                                Shepherds ( giống chó chăn cừu Đức). Lượng lông rụng chúng ta coi là nhiều nhưng có thể
+                                là hoàn toàn bình thường đối với một số loài chó, nhưng đôi khi nó cũng có thể là kết
+                                quả của tình trạng sức khỏe bên trong nào đó.</p>
+                            <h3>Nguyên nhân bất thường của tình trạng rụng lông</h3>
+                            <p>Nguyên nhân lớn nhất có lẽ là do môi trường dẫn đến lượng lông rụng tăng lên. Những con
+                                chó có triệu chứng tăng rụng có thể là do bị căng thẳng hoặc buồn bã và tình trạng này
+                                có thể cải thiện nếu nó nhận được tình yêu từ bạn. Ngoài ra, xin tư vấn của bác sỹ thú y
+                                xem liệu có loại thuốc hoặc sản phẩm hỗ trợ nào có thể giúp giải quyết tình trạng này
+                                không.</p>
+                            <p>Một số chứng rối loạn da nhất định có thể dẫn đến tình trạng rụng lông và lông rụng từng
+                                mảng. Ví dụ, nhiễm một số loại ký sinh trùng như bọ chét, chấy hoặc ve, có thể là nguyên
+                                nhân dẫn đến tình trạng rụng lông. Nấm ngoài da, viêm da và một số loại nhiễm trùng nấm
+                                nhất định, bệnh liên quan đến hệ miễn dịch và ung thư cũng có thể là nguyên nhân dẫn đến
+                                rụng lông. Nếu bạn thấy có tình trạng kích ứng da như vết sưng, vảy hoặc phát ban, bên
+                                cạnh tình trạng rụng lông thì hãy lập tức trao đổi với bác sỹ thú y.</p>
+                            <p>Những thay đổi hormone và dị ứng có thể là nguyên nhân khác dẫn đến tình trạng rụng lông.
+                                Loại thực phẩm nhất định nào đó, thuốc hoặc sản phẩm làm sạch nhà hoặc dùng trong vệ
+                                sinh tắm gội cho chó cũng có thể là nguyên nhân gây bùng phát những phản ứng dị ứng ở
+                                chó.</p>
+                            <h3>Làm cách nào để kiểm soát tình trạng rụng lông ở chó?</h3>
+                            <p>Trong khi không thể làm cách nào để ngăn chặn tình trạng chó rụng lông thông thường, thì
+                                bạn có thể yêu cầu chuyên gia về vệ sinh cho chó hoặc bác sỹ thú y kê cho bạn sản phẩm
+                                phù hợp cho loại lông của chú chó nhà bạn nhằm giúp giảm lượng lông rụng trong nhà. Nếu
+                                bạn cho rằng chú chó nhà mình rụng lông do nhiễm các loại ký sinh trùng có hại, do tình
+                                trạng da, căng thẳng hoặc do vấn đề y tế thì hãy trao đổi với bác sỹ thú y để xác định
+                                vấn đề và biện pháp điều trị phù hợp.</p>
+                        </div>
+                        <p class="hiddenTitle">"Lông chó có tác dụng giúp kiểm soát nhiệt độ cơ thể và bảo vệ da khỏi
+                            ánh mặt trời và các yếu tố môi trường khác."</p>
+                        <div class="hiddenComment">
+                            <div class="comment">
+                                <div class="avt">
+                                    <img src="images/user.png" alt="user" />
+                                    <p>Ẩn danh</p>
+                                </div>
+                                <div class="commentContent">
+                                    <p>Lược chải lông chó mèo chuyên dụng giá ưu đãi liên hệ sđt:0734378xxx</p>
+                                </div>
+                            </div>
+                            <div class="comment">
+                                <div class="avt">
+                                    <img src="images/user.png" alt="user" />
+                                    <p>Ẩn danh</p>
+                                </div>
+                                <div class="commentContent">
+                                    <p>Nuôi chó nhàn lắm</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="youmayknow">
+                    <a href="javascript:;" rel="6">
+                        <img src="images/document7.jpg" alt="document7" />
+                        <div class="document">
+                            <h2>MÈO CÓ PHẢI "CHẤT LỎNG"?</h2>
+                            <p>Loài mèo không rõ bằng cách nào, chúng có thể chui vừa vào tất cả các vật chứa, miễn là
+                                có đủ thời gian. Các con “Sen” luôn có thắc mắc vui là liệu “Hoàng thượng” có phải một
+                                dạng chất lỏng không? Câu hỏi này được một số nhà khoa học “rảnh rỗi” đáp.</p>
+                        </div>
+                        <div class="hiddenInformation">
+                            <p><small><em>Loài mèo không rõ bằng cách nào, chúng có thể chui vừa vào tất cả các vật
+                                        chứa, miễn là có đủ thời gian. Các con “Sen” luôn có thắc mắc vui là liệu “Hoàng
+                                        thượng” có phải một dạng chất lỏng không? Câu hỏi này được một số nhà khoa học
+                                        “rảnh rỗi” đáp.</em></small></p>
+                            <h3>Chất lỏng là gì?</h2>
+                                <p>Trong vật lý, chất lỏng là thứ có thể thay đổi theo hình dạng của vật chứa nhưng vẫn
+                                    giữ nguyên thể tích và không phụ thuộc vào áp suất. Hình dạng của chất lỏng được xác
+                                    định bởi vật chứa nó nên có thể nói các hạt chất lỏng (thường là các phân tử) có thể
+                                    chuyển động tự do trong khối chất lỏng, nhưng chúng tạo thành một bề mặt rõ ràng
+                                    không nhất thiết phải giống với bình chứa. Không giống với chất khí, hình dạng của
+                                    nó không khớp hoàn toàn với bình chứa.</p>
+                                <p>Và loài mèo thực sự phù hợp với nguyên lý này, chúng có thể chui vào những thứ có
+                                    hình dạng, kích thước bất kỳ mà chúng muốn.</p>
+                                <h3>Vì sao Mèo được ví như chất lỏng?</h2>
+                                    <p>Không rõ bằng cách nào mà mèo có thể chui vào mọi ngóc ngách tưởng như bất khả
+                                        thi nhất. Tất nhiên về khoa học, mèo là một sinh vật ở thể rắn. Nhưng một số nhà
+                                        khoa học rảnh rỗi thì không nghĩ vậy. Có một nhóm chuyên gia đã dành tâm huyết
+                                        để nghiên cứu về tính hóa lỏng của loài mèo, và nghiên cứu ấy thậm chí đã đạt
+                                        giải Ig Nobel Vật lý 2017 vào tháng 9/2017. Nghiên cứu này lấy cảm hứng từ hình
+                                        ảnh những chú mèo bị kẹt trong ly, xô và bồn rửa mặt.</p>
+                                    <p>Đặc tính “vừa với mọi vật chứa” của chất lỏng cần một khoảng thời gian để điều
+                                        chỉnh, được gọi là “quãng nghỉ” – relaxation time. Tùy vào mật độ của chất lỏng,
+                                        thời gian này có thể chậm hoặc nhanh. Giờ đến trường hợp của mèo. Không rõ bằng
+                                        cách nào, chúng có thể chui lọt những thùng chứa không tưởng, miễn là có đủ thời
+                                        gian. Điều này <b>chứng tỏ mèo sẽ là chất lỏng, nếu chúng ta cho chúng thời gian
+                                            để biến thành dạng lỏng</b>.</p>
+                                    <p>Tóm lại là mèo chính là một dạng chất lỏng! Nhưng tất nhiên đây là chia sẻ nghiên
+                                        cứu chỉ để… cho vui thôi, vì nó mang tính chất trừu tượng nhiều hơn là áp dụng
+                                        vào thực tế.</p>
+                                    <h3>Điểm qua một số điều thú vị về loài mèo</h3>
+                                    <p>1. Mèo thường hay thở ra tiếng grừ nhỏ mỗi khi chúng ngủ hoặc ngái ngủ, tần suất
+                                        của âm thanh này là 26 lần mỗi giây, tương đương với công suất một chiếc động cơ
+                                        diesel không tải.</p>
+                                    <p>2. Những chú mèo con thường ngủ rất nhiều vì có một loại hóc-môn tăng trưởng được
+                                        sản sinh khi chúng ngủ.</p>
+                                    <p>3. Chúng không cảm nhận được vị ngọt, vì vậy bạn đừng nghĩ chúng thích ăn bánh
+                                        kẹo vì thích ngọt.</p>
+                                    <p>4. Mỗi một con mèo có dấu vân mũi riêng, giống như dấu vân tay của con người.</p>
+                                    <p>5. Mũi mèo đánh hơi rất kém nên tai và mắt là hai giác quan chính. Thính giác của
+                                        chúng nhạy gấp đôi con người và thị giác tốt gấp 6 lần.</p>
+                                    <p>6. Mèo sống sót khi rơi từ tầng 32.Khi rơi từ tầng 7 trở lên, mèo sẽ xòe rộng tứ
+                                        chi giống như một chiếc dù, lợi dụng vận tốc cuối để tiếp đất an toàn bằng bụng.
+                                    </p>
+                        </div>
+                        <p class="hiddenTitle">"Không rõ bằng cách nào mà mèo có thể chui vào mọi ngóc ngách tưởng như
+                            bất khả thi nhất."</p>
+                        <div class="hiddenComment">
+                            <div class="comment">
+                                <div class="avt">
+                                    <img src="images/user.png" alt="user" />
+                                    <p>Ẩn danh</p>
+                                </div>
+                                <div class="commentContent">
+                                    <p>...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="YMK-info">
+            <a href="javascript:;" title="Thoát">
+                <div class="exit"><i class="fas fa-times"></i></div>
+            </a>
+            <h1><strong></strong></h1>
+            <div class="YMK-detail">
+                <div class="exampleImg">
+                    <div>
+                        <img alt="informationImg" />
+                        <p></p>
+                    </div>
+                    <div class="showComment">
+                        <a href="javascript:;"><i class="far fa-comment-dots"></i> Bình luận </a>
+                    </div>
+                </div>
+                <div class="information">
+                    <div class="informationText">
+                    </div>
+                    <p>Bạn thấy thông tin này như thế nào?</p>
+                    <div class="btns">
+                        <div class="like">
+                            <a href="javascript:;">
+                                Hữu ích <i class="far fa-thumbs-up"></i>
+                            </a>
+                        </div>
+                        <div class="dislike">
+                            <a href="javascript:;">
+                                Không hữu ích <i class="far fa-thumbs-down"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="comments">
+                        <div class="comment addComment">
+                            <div class="avt">
+                                <img src="images/user.png" alt="user" />
+                                <p>Ẩn danh</p>
+                            </div>
+                            <div class="commentContent">
+                                <div class="inputComment">
+                                    <input type="text" placeholder="Viết bình luận..." />
+                                </div>
+                                <button id="sendComment" type="submit"><i class="fas fa-paper-plane"></i></i></button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div id="black-space"></div>
-        </section>
-        <footer class ="website">
-            <div>
-                <div id="contactframe">
-                    <h2>Liên hệ với chúng tôi:</h2>
-                    <h3><b><i class="fas fa-phone"></i> : 0909052307</b></h3>
-                    <h3><b><a href="mailto:pnshop2307@gmail.com"><i class="far fa-envelope"></i> : pnshop2307</a></b></h3>
-                    <h3><b><a href="https://www.google.com/maps/place/371+Nguy%E1%BB%85n+Ki%E1%BB%87m,+Ph%C6%B0%E1%BB%9Dng+3,+G%C3%B2+V%E1%BA%A5p,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh" target="blank"><i class="fas fa-map-marker-alt"></i> : 371 Nguyễn Kiệm, P.3, Q.Gò Vấp, TP.HCM</a></b></h3>
-                </div>
-                <div id="followus">
-                    <h2>Theo dõi chúng tôi tại:</h2>
-                    <div class="followicons">
-                        <a class ="followicon" href="https://www.facebook.com/PN-Shop-110697547988617" target="blank"><i class="fab fa-facebook-f"></i></a>
-                        <a class ="followicon" href="https://www.instagram.com/pn._.petshop/" target="blank"><i class="fab fa-instagram"></i></a>
-                        <a class ="followicon" href="https://twitter.com/PNshop2307" target="blank"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>    
+        </div>
+        <div id="black-space"></div>
+    </section>
+    <footer class="website">
+        <div>
+            <div id="contactframe">
+                <h2>Liên hệ với chúng tôi:</h2>
+                <h3><b><i class="fas fa-phone"></i> : 0909052307</b></h3>
+                <h3><b><a href="mailto:pnshop2307@gmail.com"><i class="far fa-envelope"></i> : pnshop2307</a></b></h3>
+                <h3><b><a href="https://www.google.com/maps/place/371+Nguy%E1%BB%85n+Ki%E1%BB%87m,+Ph%C6%B0%E1%BB%9Dng+3,+G%C3%B2+V%E1%BA%A5p,+Th%C3%A0nh+ph%E1%BB%91+H%E1%BB%93+Ch%C3%AD+Minh"
+                            target="blank"><i class="fas fa-map-marker-alt"></i> : 371 Nguyễn Kiệm, P.3, Q.Gò Vấp,
+                            TP.HCM</a></b></h3>
             </div>
-        </footer>
-    </body>
+            <div id="followus">
+                <h2>Theo dõi chúng tôi tại:</h2>
+                <div class="followicons">
+                    <a class="followicon" href="https://www.facebook.com/PN-Shop-110697547988617" target="blank"><i
+                            class="fab fa-facebook-f"></i></a>
+                    <a class="followicon" href="https://www.instagram.com/pn._.petshop/" target="blank"><i
+                            class="fab fa-instagram"></i></a>
+                    <a class="followicon" href="https://twitter.com/PNshop2307" target="blank"><i
+                            class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
 </html>

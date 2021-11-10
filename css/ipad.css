@@ -64,7 +64,6 @@ div#followus{
     padding: 3%;
 }
 .info{
-    display:block;
     width: 100%;
     left:0%;
     height: 100%;
@@ -135,7 +134,6 @@ a#go-to-top img{
     display:none;
 }
 .YMK-info{
-    display:block;
     width: 100%;
     left:0%;
     height: 100%;

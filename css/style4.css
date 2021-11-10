@@ -115,7 +115,7 @@ div.empty img{
     width: 7%;
 }
 a#go-to-top{
-    display:block;
+    display:none;
     text-align: center;
     width: 5%;
     position: fixed;
@@ -216,7 +216,8 @@ a.followicon:hover{
     height: 100%;
     z-index: 99;
     background-color: #000000;
-    opacity: 0;
+    display: none;
+    opacity: 0.6;
 }
 .YMKs{
     background-color: #FFFFFF;
@@ -278,7 +279,7 @@ div.youmayknow img{
     border-color: #937C69;
     border-width: 5px;
     border-radius: 20px;
-    opacity: 0;
+    display: none;
 } 
 .YMK-info h1{
     color: #75614f;

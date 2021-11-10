@@ -1,16 +1,6 @@
 $(document).ready(function() {
-    $("#go-to-top").hide()
     $(".info").hide()
-    $(".infoCart").hide()
-    $(".infoBill").hide()
-    $("#black-space").hide()
-    $(".selectedItem").hide()
-    $(".infoCart").css({"opacity": 1})
-    $(".infoBill").css({"opacity": 1})
-    $("#go-to-top").css({"opacity": 1})
     $(".info").css({"opacity": 1})
-    $(".addAlert").hide()
-    $(".submitAlert").hide()
     setTimeout (function(){
         $(".website").css( "display","block")
     },3000)
