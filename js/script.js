@@ -52,33 +52,6 @@ $(document).ready(function() {
         $(".exampleImg p").text($(this).children("a").children("p").text())
         $(".YMK-info").fadeIn(500)
         $("#black-space").fadeIn()
-        $(".like").removeClass("animate__fadeOutLeft animate__animated")
-        $(".dislike").removeClass("animate__fadeOutRight animate__animated")
-        if(likeNum[$(this).children("a").attr("rel")] == true)
-        {
-            $(".like").addClass("rateLike")
-            $(".like").show()
-            $(".dislike").hide()
-            $(".like").children("a").text("Cảm ơn đánh giá của bạn!!")
-        }
-        else if(dislikeNum[$(this).children("a").attr("rel")] == true)
-        {
-            $(".dislike").addClass("rateDislike")
-            $(".dislike").show()
-            $(".like").hide()
-            $(".dislike").children("a").text("Cảm ơn đánh giá của bạn!!")
-        }
-        else
-        {
-            $(".dislike").removeClass("rateDislike")
-            $(".like").show()
-            $(".dislike").children("a").text("Không hữu ích ")
-            $(".dislike").children("a").append(`<i class="far fa-thumbs-down"></i>`)
-            $(".like").removeClass("rateLike")
-            $(".dislike").show()
-            $(".like").children("a").text("Hữu ích ")
-            $(".like").children("a").append(`<i class="far fa-thumbs-up"></i>`)
-        }
     })
     $(".exit").click(function() {
         $(this).parent().parent().fadeOut(500)

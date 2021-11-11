@@ -22,6 +22,19 @@ $(document).ready(function() {
             $(".info-img .next").hide()
         else 
             $(".info-img .next").show()
+        if(heartlist[thutu-1] == true)
+        {
+            $(".heart").css({
+                "background-color": "#ff8072",
+                "color": "#ffd8cf"
+            })
+        }
+        else{
+            $(".heart").css({
+                "background-color": "#9e7260",
+                "color": "#e2c8be"
+            })
+        }
     })
     $(".exit").click(function() {
         $(this).parent().parent().fadeOut(500)
@@ -38,6 +51,20 @@ $(document).ready(function() {
             $(".info-img .prev").hide()
         else
             $(".info-img .prev").show()
+        
+        if(heartlist[thutu-1] == true)
+        {
+            $(".heart").css({
+                "background-color": "#ff8072",
+                "color": "#ffd8cf"
+            })
+        }
+        else{
+            $(".heart").css({
+                "background-color": "#9e7260",
+                "color": "#e2c8be"
+            })
+        }
     })
     $(".info-img .next").click(function() {
         var thutu = $(".info-img").children('a').attr('rel')*1
@@ -50,6 +77,45 @@ $(document).ready(function() {
             $(".info-img .next").hide()
         else 
             $(".info-img .next").show()
+
+        if(heartlist[thutu-1] == true)
+        {
+            $(".heart").css({
+                "background-color": "#ff8072",
+                "color": "#ffd8cf"
+            })
+        }
+        else{
+            $(".heart").css({
+                "background-color": "#9e7260",
+                "color": "#e2c8be"
+            })
+        }
+    })
+
+    //----------------tim-----------------//
+    var heartlist = [];
+    for (var i = 0; i < $(".photo").length; i++) {
+        heartlist.push(false)
+    }
+    $(".info-img .heart").click(function() {
+        var stt = $(".info-img").children('a').attr('rel')*1 - 1
+        if(heartlist[stt] == false)
+        {
+            heartlist[stt] = true;
+            $(this).css({
+                "background-color": "#ff8072",
+                "color": "#ffd8cf"
+            })
+        }
+        else
+        {
+            heartlist[stt] = false;
+            $(this).css({
+                "background-color": "#9e7260",
+                "color": "#e2c8be"
+            })
+        }
     })
     $(window).scroll(function() {
         if($(this).scrollTop() > 10) {
