@@ -1,26 +1,25 @@
-$(document).ready(function() {
-    function squazeDiv()
-    {
+$(document).ready(function () {
+    function squazeDiv() {
         $(".photo").height($(".photo").width())
     }
     squazeDiv()
-    $(window).resize(function() {
+    $(window).resize(function () {
         squazeDiv()
     })
-    $(".photo").click(function() {
+    $(".photo").click(function () {
         $("#black-space").show()
         $(".info-img").show();
         $(".info-img").children('a').attr('rel', $(this).children('a').attr('rel'));
         $(".info-img img").attr('src', $(this).children().children('img').attr('src'));
         $(".info-img .download").attr('href', $(this).children().children('img').attr('src'));
-        var thutu = $(".info-img").children('a').attr('rel')*1;
-        if(thutu <= 1)
+        var thutu = $(".info-img").children('a').attr('rel') * 1;
+        if (thutu <= 1)
             $(".info-img .prev").hide()
         else
             $(".info-img .prev").show()
         if (thutu >= $(".photo").length)
             $(".info-img .next").hide()
-        else 
+        else
             $(".info-img .next").show()
         if(heartlist[thutu-1] == true)
         {
@@ -36,18 +35,18 @@ $(document).ready(function() {
             })
         }
     })
-    $(".exit").click(function() {
+    $(".exit").click(function () {
         $(this).parent().parent().fadeOut(500)
         $("#black-space").fadeOut()
     })
-    $(".info-img .prev").click(function() {
-        var thutu = $(".info-img").children('a').attr('rel')*1 
+    $(".info-img .prev").click(function () {
+        var thutu = $(".info-img").children('a').attr('rel') * 1
         thutu--;
         $(".info-img").children('a').attr('rel', thutu);
         $(".info-img img").attr('src', `photo&video/photo${thutu}.jpg`);
         $(".info-img .download").attr('href', `photo&video/photo${thutu}.jpg`);
         $(".info-img .next").show()
-        if(thutu <= 1)
+        if (thutu <= 1)
             $(".info-img .prev").hide()
         else
             $(".info-img .prev").show()
@@ -66,8 +65,8 @@ $(document).ready(function() {
             })
         }
     })
-    $(".info-img .next").click(function() {
-        var thutu = $(".info-img").children('a').attr('rel')*1
+    $(".info-img .next").click(function () {
+        var thutu = $(".info-img").children('a').attr('rel') * 1
         thutu++;
         $(".info-img").children('a').attr('rel', thutu);
         $(".info-img img").attr('src', `photo&video/photo${thutu}.jpg`);
@@ -75,7 +74,7 @@ $(document).ready(function() {
         $(".info-img .prev").show()
         if (thutu >= $(".photo").length)
             $(".info-img .next").hide()
-        else 
+        else
             $(".info-img .next").show()
 
         if(heartlist[thutu-1] == true)
@@ -117,13 +116,13 @@ $(document).ready(function() {
             })
         }
     })
-    $(window).scroll(function() {
-        if($(this).scrollTop() > 10) {
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 10) {
             $(".cover").css({
                 "position": "fixed",
                 "top": 0,
             })
-        } else{
+        } else {
             $(".cover").css({
                 "position": "fixed",
                 "top": 0,
@@ -134,9 +133,9 @@ $(document).ready(function() {
         else
             $("#go-to-top").hide("slow")
     })
-    $("#go-to-top").click(function() {
+    $("#go-to-top").click(function () {
         $("html, body").animate({
-            scrollTop:0
+            scrollTop: 0
         }, 1000);
     })
 })

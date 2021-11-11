@@ -69,39 +69,22 @@ div.cover > nav > ul.menu > li > a{
 div.cover > nav > ul.menu > li > a:hover{
     text-shadow: 2px 2px #7C3618;
 }
-div.searchbox{
+div.lists{
     width: 30%;
-    height: fit-content;
-    padding:0.5%;
+    height: 50px;
     background-color: #ffffff;
     margin: auto;
-    border-radius: 100px;
-    overflow: hidden;
+    border-radius: 15px;
+    border: 5px solid #7C3618;
     display: flex;
-    justify-content: space-between;
 }
-div.searchbox > input{
-    width: 88%;
-    border-style: none;
-    margin-left:2%;
-    font-family: Huhu;
-    align-items: center;
-}
-div.searchbox > button{
-    background-color: #7C3618;
-    color:#FFFFFF;
-    font-size:15px;
-    width:30px;
-    height: 30px;
-    outline: none;
-    border-radius: 100%;
-    border-style: none;
-}
-div.searchbox > button:focus{
-    outline: none;
-}
-div.searchbox > input:focus{
-    outline: none;
+.imglist, .videolist{
+    text-align: center;
+    width: 42%;
+    height: 100%;
+    position: relative;
+    background-color: #937C69;
+
 }
 div.empty{
     width: 100%;
@@ -327,6 +310,7 @@ a.followicon:hover{
 .photo:hover{
     border: 5px solid #937C69;
     overflow: hidden;
+    background-color: #937C69;
 }
 .photo img:hover{
     transform: scale(1.1);
