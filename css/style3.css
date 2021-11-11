@@ -1,4 +1,5 @@
 *{
+    box-sizing: border-box;
     margin:0;
     padding:0;
 }
@@ -30,13 +31,12 @@ div.cover{
 div.cover > a > img{
     width: 100%;
 }
-div.cover a{
+div.cover > a{
     width: 7%;
 }
 
 div.cover > nav{
     width: 50%;
-    margin-left: auto;
     height: fit-content;
     margin-top: auto;
     margin-bottom: auto;
@@ -71,20 +71,41 @@ div.cover > nav > ul.menu > li > a:hover{
 }
 div.lists{
     width: 30%;
-    height: 50px;
-    background-color: #ffffff;
     margin: auto;
-    border-radius: 15px;
-    border: 5px solid #7C3618;
+    border-radius: 17px;
+    border: 2px solid #e2c8be;
+    background-color: #FFFFFF;
     display: flex;
 }
 .imglist, .videolist{
     text-align: center;
-    width: 42%;
+    width: 50%;
     height: 100%;
     position: relative;
-    background-color: #937C69;
-
+    overflow: hidden;
+    background-color: #ffffff;
+}
+.imglist{
+    border-radius: 15px 0px 0px 15px;
+    border-right: 1.5px solid #e2c8be;
+}
+.videolist{
+    border-radius: 0px 15px 15px 0px;
+    border-left: 1.5px solid #e2c8be;
+}
+.imglist > a, .videolist > a{
+    font-size: 25px;
+    font-family: Huhu;
+    font-weight: bolder;
+    display: block;
+    height: 100%;
+    width: 100%;
+    color: #937C69;
+}
+.imglist > a:hover, .videolist > a:hover{
+    text-decoration: none;
+    color: #FFFFFF;
+    background-color: #8a6f59;
 }
 div.empty{
     width: 100%;
@@ -105,7 +126,7 @@ a#go-to-top{
     padding:2px;
 }
 a#go-to-top img{
-    width: 100%;;
+    width: 100%;
 }
 
 footer > div{
@@ -179,13 +200,21 @@ a.followicon:hover{
     margin-left:auto;
     margin-right:auto;
 }
-.photos{
+.photos, .videos{
     background-color: #ffffff;
     padding:10px;
     width: 100%;
     justify-content: space-between;
     display:flex;
     flex-wrap: wrap;
+}
+.video{
+    width: 45%;
+    background-color: #bdb1ac;
+    padding: 10px;
+}
+iframe{
+    width: 100%;
 }
 .photos > .photo{
     width: 28%;
@@ -316,5 +345,13 @@ a.followicon:hover{
     transform: scale(1.1);
 }
 .title {
-
+    color: #FFFFFF;
+    text-shadow: 3px 3px #7C3618;
+    background-color: #937C69;
+    width: 100%;
+    font-size: 35px;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 10px;
 }
