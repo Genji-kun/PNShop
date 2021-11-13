@@ -121,6 +121,7 @@ $(".showComment").click(function () {
     $(".comments").toggle()
 })
 $("#sendComment").click(function () {
+    var stt = $(".YMK-info").children('a').attr('rel')*1
     var newComment = $(".inputComment input").val()
     if (newComment != "") {
         $(".otherComments").prepend(`
@@ -133,8 +134,21 @@ $("#sendComment").click(function () {
                         <p>${newComment}</p>
                     </div>
                 </div>
-            `)
+        `)
+        var ymk = $(".youmayknow")
+        $(ymk[stt]).children('a').children(".hiddenComment").prepend(`
+            <div class="comment">
+                        <div class="avt">
+                            <img src="images/user.png" alt="user"/>
+                            <p>Ẩn danh</p>
+                        </div>
+                        <div class="commentContent">
+                            <p>${newComment}</p>
+                        </div>
+                    </div>
+        `)
     }
+    
     setTimeout(function () {
         $(".comments .comment").removeClass("active")
     }, 1000)
@@ -145,6 +159,17 @@ $(".exit").click(function () {
     $("#black-space").fadeOut()
     $(".like").removeClass("animate__fadeOutLeft animate__animated")
     $(".dislike").removeClass("animate__fadeOutRight animate__animated")
+})
+$(".showMenu").click(function () {
+    $("div.cover > nav").toggle()
+})
+$(window).resize(function () {
+    if (window.innerWidth > 1024) {
+        $("div.cover > nav").show()
+    }
+    else {
+        $("div.cover > nav").hide()
+    }
 })
 $("#go-to-top").click(function () {
     $("html, body").animate({

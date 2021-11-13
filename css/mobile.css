@@ -14,7 +14,6 @@ div.youmayknow img{
 }
 div.document{
     width: 100%;
-    overflow: unset;
     height: fit-content;
     margin-top: 5%;
 }

@@ -25,7 +25,6 @@ div.cover{
     width: 100%;
     background-color: #937C69;
     display:flex;
-    flex-wrap: wrap;
     justify-content: space-between;
     z-index: 50;
 }

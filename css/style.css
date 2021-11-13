@@ -195,9 +195,15 @@ div.document > p{
     color: #000000;
     width: 90%;
     margin-left: 2%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;  
 }
 div.youmayknow img{
     width: 25%;
+    height: fit-content;
 }
 .title > div.imgframe{
     display: flex;

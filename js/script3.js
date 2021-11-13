@@ -101,6 +101,12 @@ $(document).ready(function () {
         var stt = $(".info-img").children('a').attr('rel')*1 - 1
         if(heartlist[stt] == false)
         {
+            $("#addHeart").addClass("animate__animated animate__fadeInDown")
+            $("#addHeart").show()
+            setTimeout(function () {
+                $("#addHeart").removeClass("animate__animated animate__fadeInDown")
+                $("#addHeart").fadeOut(500)
+            }, 2000)
             heartlist[stt] = true;
             $(this).css({
                 "background-color": "#ff8072",
@@ -109,6 +115,12 @@ $(document).ready(function () {
         }
         else
         {
+            $("#removeHeart").addClass("animate__animated animate__fadeInDown")
+            $("#removeHeart").show()
+            setTimeout(function () {
+                $("#removeHeart").removeClass("animate__animated animate__fadeInDown")
+                $("#removeHeart").fadeOut(500)
+            }, 2000)
             heartlist[stt] = false;
             $(this).css({
                 "background-color": "#9e7260",

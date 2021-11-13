@@ -23,9 +23,7 @@ div.youmayknow a{
 .btns{
     flex-direction: column;
 }
-.like{
-    width: 100%;
-}
-.unlike{
-    width: 100%;
+.like, .dislike{
+    width: 90%;
+    margin: 5px auto;
 }
