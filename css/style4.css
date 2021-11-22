@@ -205,7 +205,6 @@ a.followicon:hover{
 .title{
     margin-left: 10%;
     width: 80%;
-    left: 10%;
 }
 .title img{
     width: 100%;
@@ -439,7 +438,7 @@ div.youmayknow img{
 .comments{
     position: absolute;
     display: none;
-    height: 102%;
+    bottom: 0%;
     width: 90%;
     top: 0%;
     right:4%;

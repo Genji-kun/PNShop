@@ -451,11 +451,16 @@ $(document).ready(function () {
         if (kw != "") {
             $(".page > img").hide()
             var items = $("div.item h2")
+            kw = kw.toLowerCase()
             for (var i = 0; i < items.length; i++)
-                if ($(items[i]).text().indexOf(kw) >= 0) {
+            {
+                var lowText = $(items[i]).text()
+                lowText = lowText.toLowerCase()
+                if (lowText.indexOf(kw) >= 0) {
                     $(items[i]).parent().parent().show()
                     dem++
                 }
+            }
         }
         $(".listpage").hide()
         noProduct(dem)
