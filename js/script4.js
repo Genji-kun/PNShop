@@ -119,6 +119,7 @@ $(".dislike").click(function () {
 })
 $(".showComment").click(function () {
     $(".comments").toggle()
+    $(".btns").toggle()
 })
 $("#sendComment").click(function () {
     var stt = $(".YMK-info").children('a').attr('rel')*1
