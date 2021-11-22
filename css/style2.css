@@ -242,6 +242,7 @@ a#go-to-top{
     right: 2.5%;
     text-decoration: none;
     padding:2px;
+    z-index: 999;
 }
 a#go-to-top img{
     width: 100%;;

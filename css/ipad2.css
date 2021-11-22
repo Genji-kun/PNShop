@@ -198,9 +198,7 @@ div.thumb > div{
 .buy{
     font-size: 3vw;
 }
-a#go-to-top img{
-    display:none;
-}
+
 .sort{
     position: absolute;
     top: 72px;

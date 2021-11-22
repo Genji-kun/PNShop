@@ -279,10 +279,15 @@ iframe{
     color: #e2d3be;
     opacity: 1;
 }
-.frame{
-    margin: auto;
-    width: 80%;
+.contain{
+    width: 100%;
     height: 80%;
+    display: flex;
+    justify-content: space-evenly;
+}
+.frame{
+    width:100%;
+    height: 100%;
 }
 .frame img{
     width: 100%;

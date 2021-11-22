@@ -31,6 +31,7 @@ a#go-to-top{
     text-decoration: none;
     padding:2px;
     display: none;
+    z-index: 999;
 }
 a#go-to-top img{
     width: 100%;

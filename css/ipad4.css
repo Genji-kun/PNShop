@@ -120,6 +120,7 @@ div.document{
 }
 .YMK-detail{
     flex-direction: column;
+    height: unset;
 }
 .exampleImg{
     width: 100%;

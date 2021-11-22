@@ -10,7 +10,7 @@ $(document).ready(function () {
         $("#black-space").show()
         $(".info-img").show();
         $(".info-img").children('a').attr('rel', $(this).children('a').attr('rel'));
-        $(".info-img img").attr('src', $(this).children().children('img').attr('src'));
+        $(".info-img .frame img").attr('src', $(this).children().children('img').attr('src'));
         $(".info-img .download").attr('href', $(this).children().children('img').attr('src'));
         var thutu = $(".info-img").children('a').attr('rel') * 1;
         if (thutu <= 1)
@@ -43,7 +43,7 @@ $(document).ready(function () {
         var thutu = $(".info-img").children('a').attr('rel') * 1
         thutu--;
         $(".info-img").children('a').attr('rel', thutu);
-        $(".info-img img").attr('src', `photo&video/photo${thutu}.jpg`);
+        $(".info-img .frame img").attr('src', `photo&video/photo${thutu}.jpg`);
         $(".info-img .download").attr('href', `photo&video/photo${thutu}.jpg`);
         $(".info-img .next").show()
         if (thutu <= 1)
@@ -69,7 +69,7 @@ $(document).ready(function () {
         var thutu = $(".info-img").children('a').attr('rel') * 1
         thutu++;
         $(".info-img").children('a').attr('rel', thutu);
-        $(".info-img img").attr('src', `photo&video/photo${thutu}.jpg`);
+        $(".info-img .frame img").attr('src', `photo&video/photo${thutu}.jpg`);
         $(".info-img .download").attr('href', `photo&video/photo${thutu}.jpg`);
         $(".info-img .prev").show()
         if (thutu >= $(".photo").length)
@@ -106,7 +106,7 @@ $(document).ready(function () {
             setTimeout(function () {
                 $("#addHeart").removeClass("animate__animated animate__fadeInDown")
                 $("#addHeart").fadeOut(500)
-            }, 2000)
+            }, 1200)
             heartlist[stt] = true;
             $(this).css({
                 "background-color": "#ff8072",
@@ -120,7 +120,7 @@ $(document).ready(function () {
             setTimeout(function () {
                 $("#removeHeart").removeClass("animate__animated animate__fadeInDown")
                 $("#removeHeart").fadeOut(500)
-            }, 2000)
+            }, 1200)
             heartlist[stt] = false;
             $(this).css({
                 "background-color": "#9e7260",

@@ -130,9 +130,6 @@ div.item{
 .itemHidden{
     display: block;
 }
-a#go-to-top img{
-    display:none;
-}
 .YMK-info{
     width: 100%;
     left:0%;
