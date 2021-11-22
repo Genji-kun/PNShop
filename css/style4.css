@@ -203,6 +203,11 @@ a.followicon:hover{
     margin-right:auto;
 }
 .title{
+    margin-left: 10%;
+    width: 80%;
+    left: 10%;
+}
+.title img{
     width: 100%;
 }
 .exit{
