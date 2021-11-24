@@ -164,6 +164,30 @@ $(".exit").click(function () {
 $(".showMenu").click(function () {
     $("div.cover > nav").toggle()
 })
+$(".imglist").click(function(){
+    $("html, body").animate({
+        scrollTop: 0
+    }, 1000);
+})
+
+$("#searchBtn").click(function () {
+    var kw = $("#keyword").val()
+    alert(kw)
+    if (kw != "") {
+        $(".YMKs").hide()
+        var items = $("div.document h2")
+        alert(items)
+        kw = kw.toLowerCase()
+        for (var i = 0; i < items.length; i++)
+        {
+            var lowText = $(items[i]).text()
+            lowText = lowText.toLowerCase()
+            if (lowText.indexOf(kw) >= 0) {
+                $(items[i]).parent().parent().show()
+            }
+        }
+    }
+})
 $(window).resize(function () {
     if (window.innerWidth > 1024) {
         $("div.cover > nav").show()

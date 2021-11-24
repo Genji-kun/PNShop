@@ -18,11 +18,6 @@ $(document).ready(function() {
         }
         else
             $(".hiddenMenu").hide()
-
-        if(window.innerWidth <= 770)
-            $(".title ul > li:last-child").hide()
-        else
-            $(".title ul > li:last-child").show()
     })
 
     $(".item").click(function() {

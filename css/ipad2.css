@@ -267,3 +267,6 @@ div.thumb > div{
 .submitAlert > h2{
     font-size: 20px;
 }
+a#go-to-top{
+    width: 8%;
+}

@@ -49,3 +49,6 @@ div.searchbox{
 .selectShip > div{
     font-size: 20px;
 }
+a#go-to-top{
+    width: 12%;
+}
