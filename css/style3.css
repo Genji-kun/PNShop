@@ -203,9 +203,12 @@ a.followicon:hover{
     margin-bottom: 20px;
 }
 iframe{
+    object-fit: cover;
+    object-position: center;
     width: 100%;
 }
 div.video h2{
+    margin: 5px 0 0 0;
     font-family: Huhu;
     font-weight: bold;
     font-size: 25px;
