@@ -69,7 +69,7 @@ $(document).ready(function() {
     })
     $("#contact").click(function(){
         $("html, body").animate({
-            scrollTop: 15000
+            scrollTop: $("#contactframe").offset().top
         }, 500);
     })
 })

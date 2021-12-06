@@ -173,26 +173,9 @@ $(document).ready(function () {
             for (var i = 12 * (pagenumber - 1); i < 12 * (pagenumber - 1) + 12; i++)
                 $(sp[i]).show()
         }
-        if (window.innerWidth > 1024) {
-            $("html, body").animate({
-                scrollTop: 402
-            }, 1000)
-        }
-        else if (window.innerWidth > 770) {
-            $("html, body").animate({
-                scrollTop: 442
-            }, 1000)
-        }
-        else if (window.innerWidth > 590) {
-            $("html, body").animate({
-                scrollTop: 373
-            }, 1000)
-        }
-        else {
-            $("html, body").animate({
-                scrollTop: 330
-            }, 1000)
-        }
+        $("html, body").animate({
+            scrollTop: $("#rightSide").offset().top
+        }, 1000)
     })
 
     // Xử lý sự kiện khi chọn lọc đối tượng (chó,mèo,tất cả)
@@ -295,7 +278,7 @@ $(document).ready(function () {
             //Duyệt các sản phẩm đang được hiển thị, so sánh với các thương hiệu được click, nếu trùng khớp thì được thêm vào mảng
             for (var i = 0; i < sp.length; i++)
                 for (var j = 0; j < arrChecked.length; j++)
-                    if (sp[i].className.slice(5, sp[i].className.slice(5, 1000).search(" ") + 5) == arrChecked[j].id)
+                    if (sp[i].className.indexOf(arrChecked[j].id) >= 0)
                         arrSp.push(sp[i])
             showListPage(arrSp)
             show12Product(arrSp)
@@ -339,7 +322,7 @@ $(document).ready(function () {
             brandName.checked = true
             var spBrand = []
             for (var i = 0; i < sp.length; i++) {
-                if (sp[i].className.slice(5, sp[i].className.slice(5, 1000).search(" ") + 5) == brandName.id)
+                if (sp[i].className.indexOf(brandName.id) >= 0)
                     spBrand.push(sp[i])
             }
             var maxPage = Math.ceil(spBrand.length / 12)
