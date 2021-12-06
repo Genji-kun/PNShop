@@ -531,3 +531,11 @@ div.video h2{
     background-color: #9e7260;
     color: #e8d2ca;
 }
+.unChangePage a{
+    background-color: rgba(172, 172, 172, 0.5);
+    color: #9d9d9d;
+}
+.unChangePage a:hover{
+    background-color: rgba(172, 172, 172, 0.5);
+    color: #9d9d9d;
+}

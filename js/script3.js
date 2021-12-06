@@ -24,15 +24,25 @@ $(document).ready(function () {
     $(".prev-imglist").click(function(){
         if (listnum != 0)
         {
+            $(".next-imglist").removeClass("unChangePage")
             listnum--
             changePage(listnum)
+            if(listnum == 0)
+            {
+                $(".prev-imglist").addClass("unChangePage")
+            }
         }
     })
     $(".next-imglist").click(function(){
         if (listnum != maxlistnum)
         {
+            $(".prev-imglist").removeClass("unChangePage")
             listnum++
             changePage(listnum)
+            if(listnum == maxlistnum)
+            {
+                $(".next-imglist").addClass("unChangePage")
+            }
         }
     })
     $(".photo").click(function () {
