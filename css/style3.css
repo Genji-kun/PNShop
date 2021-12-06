@@ -76,15 +76,15 @@ div.cover > nav > ul.menu > li > a:hover{
     height: 100%;
     position: relative;
     overflow: hidden;
-    background-color: #ffffff;
+    background-color: #c7c7c7;
 }
 .imglist{
     border-radius: 5px 0px 0px 5px;
-    border-right: 1.5px solid #e2c8be;
+    border-right: 1.5px solid #ffffff;
 }
 .vidlist{
     border-radius: 0px 5px 5px 0px;
-    border-left: 1.5px solid #e2c8be;
+    border-left: 1.5px solid #ffffff;
 }
 .imglist > a, .videolist > a{
     font-size: 25px;
@@ -280,6 +280,7 @@ div.video h2{
 .contain{
     width: 100%;
     height: 80%;
+    padding: 10px;
     display: flex;
     justify-content: space-evenly;
 }
@@ -309,7 +310,7 @@ div.video h2{
     height: 40px;
     font-size: 20px;
     background-color: #9e7260;
-    color: #e2c8be;
+    color: #e8d2ca;
     border-radius: 10px;
     margin: auto 5px;
 }
@@ -322,8 +323,8 @@ div.video h2{
     color: #e7eef7;
 }
 .heart:hover{
-    background-color: #ff8072;
-    color: #ffd8cf;
+    background-color: #ff8072 !important;
+    color: #ffd8cf !important;
 }
 .download:hover{
     background-color: #9bb86c;
@@ -368,15 +369,15 @@ div.video h2{
     text-align: center;
     background-color: #9e7260;
     border-radius: 5px;
-    color: #f5e1d9;
+    color: #ccc3c0;
 }
 .list{
     display: flex;
     width: 35%;
-    border: 5px solid #e2c8be;
+    border: 5px solid #ffffff;
     border-radius: 10px;
     margin: auto 0px auto auto;
-    background-color: #FFFFFF;
+    background-color: #c7c7c7;
 }
 .imglist, .vidlist{
     width: 50%;
@@ -386,12 +387,147 @@ div.video h2{
     font-family: Huhu;
     font-weight: bolder;
     text-align: center;
-    color: #937C69;
+    color: #d3aa89;
     margin: 0px;
 }
 .imglist:hover , .vidlist:hover{
-    background-color: #8a6f59;
+    background-color: #d3aa89;
 }
 .imglist:hover h1, .vidlist:hover h1{
     color: #FFFFFF;
+}
+.comments{
+    display: none;
+    height: 102%;
+    width: 40%;
+    background-color: rgba(158, 114, 97, 0.5);
+    border-radius: 10px;
+    padding: 10px;
+    overflow: auto;
+    font-family: Huhu;
+}
+.comment{
+    background-color: #e2d3be;
+    padding: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.comment p{
+    margin:0;
+    padding: 8px;
+    word-wrap: break-word;
+}
+.avt{
+    width: 35px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-size: 15px;
+}
+.avt img{
+    width: 100%;
+}
+.commentContent{
+    width: 85%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.inputComment{
+    background-color: #eee8e1;
+    width: 85%;
+    height: 40px;
+    padding:10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.inputComment input{
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+    border-style: none;
+}
+.inputComment input:focus {
+    outline:none;
+}
+
+.commentContent > button{
+    width: 40px;
+    height: 40px;
+    font-size: 15px;
+    background-color: #9e7260;
+    color: #e8d2ca;
+    border-radius: 10px;
+    outline: none;
+    border-style: none;
+}
+.commentContent > button:focus
+{
+    outline: none;
+    border-style: none;
+}
+.commentContent p{
+    width: 100%;
+}
+.hiddenComment{
+    display: none;
+}
+/*width*/
+.comments::-webkit-scrollbar {
+    width: 7px;
+}
+/*chỉnh cái màu nền*/
+.comments::-webkit-scrollbar-track {
+    background-color: #e0d7d0;
+    border-radius: 10px;
+}
+/*cái cục*/
+.comments::-webkit-scrollbar-thumb {
+    background:#9e7260; 
+    border-radius: 10px;
+}
+/*cái cục khi hover*/
+.comments::-webkit-scrollbar-thumb:hover {
+    background: #976754; 
+}
+.frame-commentShow-clicked{
+    width: 55% !important;
+}
+.commentShow-clicked{
+    background-color: #7dc0b4 !important;
+    color: #e7eef7 !important;
+}
+.active{
+    background-color: #b38776;
+}
+.list-active{
+    background-color: #d3aa89;
+}
+.list-active h1{
+    color: #FFFFFF;
+}
+.prev-imglist, .next-imglist{
+    width: 48%;
+}
+.prev-imglist a, .next-imglist a{
+    display: flex;
+    width: 50px;
+    height: 50px;
+    color: #9e7260;
+    background-color: rgba(158, 114, 96, 0.5);
+    border-radius: 5px;
+    font-size: 30px;
+    justify-content: center;
+    align-items: center;
+}
+.prev-imglist a{
+    margin-left: auto;
+}
+.prev-imglist a:hover, .next-imglist a:hover{
+    text-decoration: none;
+    background-color: #9e7260;
+    color: #e8d2ca;
 }
