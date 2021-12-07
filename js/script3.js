@@ -145,32 +145,48 @@ $(document).ready(function () {
         var stt = $(".info-img").children('a').attr('rel')*1 - 1
         if(heartlist[stt] == false)
         {
-            $("#addHeart").addClass("animate__animated animate__fadeInDown")
-            $("#addHeart").show()
-            setTimeout(function () {
-                $("#addHeart").removeClass("animate__animated animate__fadeInDown")
-                $("#addHeart").fadeOut(500)
-            }, 1200)
             heartlist[stt] = true;
             $(this).css({
                 "background-color": "#ff8072",
                 "color": "#ffd8cf"
             })
+            $(".heartReact").removeClass("animate__fadeOut animate__animated")
+            $(".heartReact").show()
+            $(".heartReact").addClass("animate__heartBeat animate__animated")
+            setTimeout(function () {
+                $(".heartReact").removeClass("animate__heartBeat animate__animated")
+                $(".heartReact").addClass("animate__fadeOut animate__animated")
+                $(".heartReact").hide()
+            }, 1000)
         }
         else
         {
-            $("#removeHeart").addClass("animate__animated animate__fadeInDown")
-            $("#removeHeart").show()
-            setTimeout(function () {
-                $("#removeHeart").removeClass("animate__animated animate__fadeInDown")
-                $("#removeHeart").fadeOut(500)
-            }, 1200)
             heartlist[stt] = false;
             $(this).css({
                 "background-color": "#9e7260",
                 "color": "#e8d2ca"
             })
         }
+    })
+    $(".heartReact").hide()
+    $(".frame img").dblclick(function() {
+        var stt = $(".info-img").children('a').attr('rel')*1 - 1
+        if(heartlist[stt] == false)
+        {
+            heartlist[stt] = true;
+            $(".info-img .heart").css({
+                "background-color": "#ff8072",
+                "color": "#ffd8cf"
+            })
+        }
+        $(".heartReact").removeClass("animate__fadeOut animate__animated")
+        $(".heartReact").show()
+        $(".heartReact").addClass("animate__heartBeat animate__animated")
+        setTimeout(function () {
+            $(".heartReact").removeClass("animate__heartBeat animate__animated")
+            $(".heartReact").addClass("animate__fadeOut animate__animated")
+            $(".heartReact").hide()
+        }, 1000)
     })
     $(".commentShow").click(function(){
         $(".comments").toggle();
