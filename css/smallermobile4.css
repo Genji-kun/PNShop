@@ -27,3 +27,20 @@ div.youmayknow a{
     width: 90%;
     margin: 5px auto;
 }
+div.cover > nav{
+    width: 50%;
+}
+div.cover > a{
+    width: 20%;
+}
+div.empty img{
+    width: 20%;
+}
+div.searchbox{
+    padding: 1%;
+    width: 63%;
+    margin: auto 0% auto 2%;
+}
+.showMenu a{
+    font-size: 40px;
+}

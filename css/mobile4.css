@@ -35,3 +35,9 @@ div#contactframe h3{
 a#go-to-top{
     width: 12%;
 }
+.showMenu{
+    width: 15%;
+}
+.showMenu a{
+    font-size: 50px;
+}
