@@ -6,6 +6,50 @@ $(document).ready(function () {
     setTimeout(function () {
         $(".website").removeClass("animate__fadeIn  animate__animated")
     }, 4000)
+    var listnum = 0;
+    var maxlistnum = Math.ceil($(".youmayknow").length/4) - 1
+    function changePage(listnum)
+    {
+        $(".youmayknow").hide()
+        for (var i = listnum*4; i < listnum*4+4; i++)
+        {
+            $($(".youmayknow")[i]).show()
+        }
+        $("html, body").animate({
+            scrollTop: $(".title").offset().top
+        }, 1000);
+    }
+    // Hiện 4 tin đầu tiên
+    $(".youmayknow").hide()
+    for (var i = 0; i < 4; i++)
+    {
+        $($(".youmayknow")[i]).show()
+    }
+    //
+    $(".prev").click(function(){
+        if (listnum != 0)
+        {
+            $(".next").removeClass("unChangePage")
+            listnum--
+            changePage(listnum)
+            if(listnum == 0)
+            {
+                $(".prev").addClass("unChangePage")
+            }
+        }
+    })
+    $(".next").click(function(){
+        if (listnum != maxlistnum)
+        {
+            $(".prev").removeClass("unChangePage")
+            listnum++
+            changePage(listnum)
+            if(listnum == maxlistnum)
+            {
+                $(".next").addClass("unChangePage")
+            }
+        }
+    })
     $(window).scroll(function () {
         if ($(this).scrollTop() > 10) {
             $(".cover").css({
@@ -92,40 +136,40 @@ $(document).ready(function () {
             $(".dislike a").append(`<i class="far fa-thumbs-down"></i>`)
         }
     })
-$(".dislike").click(function () {
-    var stt = $(".YMK-info").children('a').attr('rel')
-    if (dislikeNum[stt] == false) {
-        dislikeNum[stt] = true
-        $(".like").addClass("animate__fadeOutLeft animate__animated")
-        $(".dislike").addClass("rateDislike animate__slideInRight animate__animated")
-        $(".like").fadeOut(200)
-        $(".dislike a").text("Cảm ơn đánh giá của bạn!!")
-    }
-    else {
-        dislikeNum[stt] = false
-        $(".dislike").removeClass("rateDislike animate__slideInRight animate__animated")
-        $(".like").addClass("animate__fadeInRight animate__animated")
-        $(".like").show()
-        $(".like").removeClass("animate__fadeOutLeft animate__animated")
-        $(".dislike a").text("Không hữu ích")
-        $(".dislike a").append(`<i class="far fa-thumbs-down"></i>`)
-        $(".like").removeClass("rateLike animate__slideInLeft animate__animated")
-        $(".dislike").addClass("animate__fadeInLeft animate__animated")
-        $(".dislike").show()
-        $(".dislike").removeClass("animate__fadeOutRight animate__animated")
-        $(".like a").text("Hữu ích")
-        $(".like a").append(`<i class="far fa-thumbs-up"></i>`)
-    }
-})
-$(".showComment").click(function () {
-    $(".comments").toggle()
-    $(".btns").toggle()
-})
-$("#sendComment").click(function () {
-    var stt = $(".YMK-info").children('a').attr('rel')*1
-    var newComment = $(".inputComment input").val()
-    if (newComment != "") {
-        $(".otherComments").prepend(`
+    $(".dislike").click(function () {
+        var stt = $(".YMK-info").children('a').attr('rel')
+        if (dislikeNum[stt] == false) {
+            dislikeNum[stt] = true
+            $(".like").addClass("animate__fadeOutLeft animate__animated")
+            $(".dislike").addClass("rateDislike animate__slideInRight animate__animated")
+            $(".like").fadeOut(200)
+            $(".dislike a").text("Cảm ơn đánh giá của bạn!!")
+        }
+        else {
+            dislikeNum[stt] = false
+            $(".dislike").removeClass("rateDislike animate__slideInRight animate__animated")
+            $(".like").addClass("animate__fadeInRight animate__animated")
+            $(".like").show()
+            $(".like").removeClass("animate__fadeOutLeft animate__animated")
+            $(".dislike a").text("Không hữu ích")
+            $(".dislike a").append(`<i class="far fa-thumbs-down"></i>`)
+            $(".like").removeClass("rateLike animate__slideInLeft animate__animated")
+            $(".dislike").addClass("animate__fadeInLeft animate__animated")
+            $(".dislike").show()
+            $(".dislike").removeClass("animate__fadeOutRight animate__animated")
+            $(".like a").text("Hữu ích")
+            $(".like a").append(`<i class="far fa-thumbs-up"></i>`)
+        }
+    })
+    $(".showComment").click(function () {
+        $(".comments").toggle()
+        $(".btns").toggle()
+    })
+    $("#sendComment").click(function () {
+        var stt = $(".YMK-info").children('a').attr('rel') * 1
+        var newComment = $(".inputComment input").val()
+        if (newComment != "") {
+            $(".otherComments").prepend(`
                 <div class="comment active">
                     <div class="avt">
                         <img src="images/user.png" alt="user"/>
@@ -136,8 +180,8 @@ $("#sendComment").click(function () {
                     </div>
                 </div>
         `)
-        var ymk = $(".youmayknow")
-        $(ymk[stt]).children('a').children(".hiddenComment").prepend(`
+            var ymk = $(".youmayknow")
+            $(ymk[stt]).children('a').children(".hiddenComment").prepend(`
             <div class="comment">
                         <div class="avt">
                             <img src="images/user.png" alt="user"/>
@@ -148,57 +192,56 @@ $("#sendComment").click(function () {
                         </div>
                     </div>
         `)
-    }
-    
-    setTimeout(function () {
-        $(".comments .comment").removeClass("active")
-    }, 1000)
-    $(".inputComment input").val("")
-})
-$(".exit").click(function () {
-    $(this).parent().parent().fadeOut(500)
-    $("#black-space").fadeOut()
-    $(".like").removeClass("animate__fadeOutLeft animate__animated")
-    $(".dislike").removeClass("animate__fadeOutRight animate__animated")
-})
-$(".showMenu").click(function () {
-    $("div.cover > nav").toggle()
-})
-$(".imglist").click(function(){
-    $("html, body").animate({
-        scrollTop: 0
-    }, 1000);
-})
+        }
 
-$("#searchBtn").click(function () {
-    var kw = $("#keyword").val()
-    alert(kw)
-    if (kw != "") {
-        $(".YMKs").hide()
-        var items = $("div.document h2")
-        alert(items)
-        kw = kw.toLowerCase()
-        for (var i = 0; i < items.length; i++)
-        {
-            var lowText = $(items[i]).text()
-            lowText = lowText.toLowerCase()
-            if (lowText.indexOf(kw) >= 0) {
-                $(items[i]).parent().parent().show()
+        setTimeout(function () {
+            $(".comments .comment").removeClass("active")
+        }, 1000)
+        $(".inputComment input").val("")
+    })
+    $(".exit").click(function () {
+        $(this).parent().parent().fadeOut(500)
+        $("#black-space").fadeOut()
+        $(".like").removeClass("animate__fadeOutLeft animate__animated")
+        $(".dislike").removeClass("animate__fadeOutRight animate__animated")
+    })
+    $(".showMenu").click(function () {
+        $("div.cover > nav").toggle()
+    })
+    $(".imglist").click(function () {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 1000);
+    })
+
+    $("#searchBtn").click(function () {
+        var kw = $("#keyword").val()
+        alert(kw)
+        if (kw != "") {
+            $(".YMKs").hide()
+            var items = $("div.document h2")
+            alert(items)
+            kw = kw.toLowerCase()
+            for (var i = 0; i < items.length; i++) {
+                var lowText = $(items[i]).text()
+                lowText = lowText.toLowerCase()
+                if (lowText.indexOf(kw) >= 0) {
+                    $(items[i]).parent().parent().show()
+                }
             }
         }
-    }
-})
-$(window).resize(function () {
-    if (window.innerWidth > 1024) {
-        $("div.cover > nav").show()
-    }
-    else {
-        $("div.cover > nav").hide()
-    }
-})
-$("#go-to-top").click(function () {
-    $("html, body").animate({
-        scrollTop: 0
-    }, 1000);
-})
+    })
+    $(window).resize(function () {
+        if (window.innerWidth > 1024) {
+            $("div.cover > nav").show()
+        }
+        else {
+            $("div.cover > nav").hide()
+        }
+    })
+    $("#go-to-top").click(function () {
+        $("html, body").animate({
+            scrollTop: 0
+        }, 1000);
+    })
 })

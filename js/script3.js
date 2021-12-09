@@ -19,8 +19,13 @@ $(document).ready(function () {
             scrollTop: $($(".title")[0]).offset().top
         }, 1000);
     }
+    // Hiện 12 ảnh đầu tiên
     $(".photo").hide()
-    changePage(listnum)
+    for (var i = 0; i < 12; i++)
+    {
+        $($(".photo")[i]).show()
+    }
+    //
     $(".prev-imglist").click(function(){
         if (listnum != 0)
         {

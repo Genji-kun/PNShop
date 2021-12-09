@@ -5,11 +5,13 @@
       "name": "C/C++ Runner: Debug Session",
       "type": "cppdbg",
       "request": "launch",
-      "args": [],
+      "args": [
+        ""
+      ],
       "stopAtEntry": false,
-      "cwd": "c:\\Users\\My Laptop\\Documents\\GitHub\\PNShop",
+      "cwd": "c:/Users/My Laptop/Documents/GitHub/PNShop",
       "environment": [],
-      "program": "c:\\Users\\My Laptop\\Documents\\GitHub\\PNShop\\build\\Debug\\outDebug",
+      "program": "c:/Users/My Laptop/Documents/GitHub/PNShop/build/Debug/outDebug",
       "internalConsoleOptions": "openOnSessionStart",
       "MIMode": "gdb",
       "miDebuggerPath": "C:/Program Files (x86)/Dev-Cpp/MinGW64/bin/gdb.exe",
