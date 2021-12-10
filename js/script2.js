@@ -21,6 +21,7 @@ $(document).ready(function () {
     )
     wow.init();
     var flag = false
+    var flag2 = false
     //--------------------- Các function --------------------- //
 
     // Thêm phần tử HTML selectedItem
@@ -167,7 +168,7 @@ $(document).ready(function () {
         $(this).css({
             "border-color": "#7C3618"
         })
-        if (flag == false) {
+        if (flag == false && flag2 == false) {
             $(".item").hide()
             var pagenumber = $(this).children('a').attr('rel')
             for (var i = 12 * (pagenumber - 1); i < 12 * (pagenumber - 1) + 12; i++)
@@ -298,6 +299,7 @@ $(document).ready(function () {
     var numberClick = 0
     var brandTam
     $(".brands img").click(function () {
+        flag2=false
         $("#keyword").val("")
         var sortTH = $(".sortTH input")
         for (var i = 0; i < sortTH.length; i++)
@@ -315,6 +317,7 @@ $(document).ready(function () {
             noProduct(sp)
         }
         else {
+            flag2 = true
             $(".listpage li").hide()
             $(".item").hide()
             checkedFirstPage()
@@ -325,9 +328,16 @@ $(document).ready(function () {
                 if (sp[i].className.indexOf(brandName.id) >= 0)
                     spBrand.push(sp[i])
             }
-            var maxPage = Math.ceil(spBrand.length / 12)
-            var listpageNumber = $(".listpage li")
-            $(spBrand).show()
+            showListPage(spBrand)
+            show12Product(spBrand)
+            $(".listpage li").click(function () {
+                if (flag2 == true) {
+                    $(".item").hide()
+                    var pagenumber = $(this).children('a').attr('rel')
+                    for (var i = 12 * (pagenumber - 1); i < 12 * (pagenumber - 1) + 12; i++)
+                        $(spBrand[i]).show()
+                }
+            })
             noProduct(spBrand.length)
         }
 

@@ -543,16 +543,20 @@ div.youmayknow img{
     justify-content: space-evenly;
     margin-top: 10px;
 }
+.changePageBtns i {
+    padding: 10px;
+}
 .prev, .next{
     width: 45%;
 }
 .prev a, .next a{
     display: flex;
-    width: 50px;
-    height: 50px;
+    width: 50%;
     color: #9e7260;
     background-color: rgba(158, 114, 96, 0.5);
     border-radius: 5px;
+    font-family: Huhu;
+    font-weight: bolder;
     font-size: 30px;
     justify-content: center;
     align-items: center;
