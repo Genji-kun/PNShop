@@ -1,10 +1,23 @@
 $(document).ready(function () {
+    setTimeout(function () {
+        $(".website").css("display", "block")
+    }, 3000)
+    $(".website").addClass("animate__fadeIn  animate__animated")
+    setTimeout(function () {
+        $(".website").removeClass("animate__fadeIn  animate__animated")
+    }, 4000)
     function squareDiv() {
         $(".photo").height($(".photo").width())
     }
     squareDiv()
     $(window).resize(function () {
         squareDiv()
+        if (window.innerWidth > 770) {
+            $("div.cover > nav").show()
+        }
+        else {
+            $("div.cover > nav").hide()
+        }
     })
     var listnum = 0;
     var maxlistnum = Math.ceil($(".photo").length/12) - 1
@@ -258,5 +271,9 @@ $(document).ready(function () {
         $("html, body").animate({
             scrollTop: 0
         }, 1000);
+    })
+    //-------------------------------------------//
+    $(".showMenu").click(function () {
+        $("div.cover > nav").toggle()
     })
 })

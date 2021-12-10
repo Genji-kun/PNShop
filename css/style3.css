@@ -541,3 +541,9 @@ div.video h2{
     top: 40%;
     left: 35%;
 }
+.website{
+    display: none;
+}
+.showMenu{
+    display:none;
+}

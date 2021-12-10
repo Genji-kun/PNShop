@@ -1,0 +1,20 @@
+.bg{
+    width: 100%;
+}
+footer div h2{
+    font-size:25px;
+}
+div#contactframe h3{
+    font-size: 15px;
+}
+a#go-to-top{
+    width: 12%;
+}
+.photos > .photo{
+    width: 45%;
+}
+.video{
+    padding: 5px;
+    width: 90%;
+    margin-left: 5%;
+}

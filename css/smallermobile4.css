@@ -44,3 +44,6 @@ div.searchbox{
 .showMenu a{
     font-size: 40px;
 }
+.prev a, .next a{
+    font-size : 20px;
+}

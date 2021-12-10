@@ -10,11 +10,16 @@
     <meta name="description"
         content="P&N shop là cửa hàng chuyên bán thức ăn cho chó mèo, website đặt hàng và mua hàng trực tuyến">
     <meta http-equiv="REFRESH" content="2000">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="css/animate.css">
     <link href="css/style3.css" rel="stylesheet" />
+    <link href="css/loading.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <link href="css/ipad3.css" rel="stylesheet" media="screen and (max-width: 1024px)" />
+        <link href="css/mobile3.css" rel="stylesheet" media="screen and (max-width: 770px)" />
+        <link href="css/smallermobile3.css" rel="stylesheet" media="screen and (max-width: 590px)" />
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
         crossorigin="anonymous"></script>
@@ -28,10 +33,16 @@
         crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="js/script3.js"></script>
+    <script src="js/loading.js"></script>
 </head>
 
 <body>
-    <header>
+    <div class="main" id="main">
+        <img class="animate__animated animate__bounce" src="images/loader.png" />
+        <div class="line" id="line"></div>
+        <p class="text" id="text">0%</p>
+    </div>
+    <header class="website">
         <div class="cover">
             <a href="index.html"><img src="images/logo.png" /></a>
             <div class = "list">
@@ -41,7 +52,12 @@
                 <div class = "vidlist">
                     <h1>Video</h1>
                 </div>
-            </div>            
+            </div>    
+            <div class="showMenu">
+                <a href="javascript:;">
+                    <i class="fas fa-bars"></i>
+                </a>
+            </div>        
             <nav>
                 <ul class="menu">
                     <li><a href="index.html">Trang chủ</a></li>
@@ -54,12 +70,12 @@
             <a><img src="images/logo.png" /></a>
         </div>
     </header>
-    <div>
+    <div class="website">
         <a href="javascript:;" id="go-to-top" title="Go to top">
             <img src="images/gototop.png" />
         </a>
     </div>
-    <section>
+    <section class="webiste">
         <div class="bg">
             <h1 class="title">Bộ sưu tập hình ảnh thú cưng</h1>
             <div class="sort">
@@ -419,7 +435,7 @@
                 </div>
             </div>
         </div>
-        <section>
+        <section class="website">
             <div class="bg">
                 <h1 class = "title">Những video về các bé chó mèo</h1>
                 <div class="videos">
@@ -474,7 +490,7 @@
                 </div>
             </div>
         </section>
-        <section>
+        <section class="website">
             <div class="info info-img">
                 <a href="javascript:;" title="Thoát" rel="">
                     <div class="exit"><i class="fas fa-times"></i></div>
@@ -527,7 +543,7 @@
             <div id="black-space"></div>
         </section>
     </section>
-    <footer>
+    <footer class="webiste">
         <div>
             <div id="contactframe">
                 <h2>Liên hệ với chúng tôi:</h2>

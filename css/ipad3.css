@@ -1,0 +1,103 @@
+.showMenu{
+    display: block;
+    width: 15%;
+    text-align: center;
+}
+.showMenu:hover a{
+    text-shadow: 3px 3px #7C3618;
+}
+.showMenu a{
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 50px;
+    margin: auto;
+}
+div.cover > nav{
+    position: absolute;
+    display:none;
+    top: 90%;
+    right: 10px;
+    width: 25%;
+    margin-top: 15px;
+}
+div.cover > nav::after{
+    content: "";
+    position: absolute;
+    border-width: 15px 10px;
+    border-style: solid;
+    border-color: transparent transparent #fff9f5 transparent;
+    bottom: 100%;
+    left: 80%;
+}
+div.cover > nav::before{
+    content: "";
+    position: absolute;
+    border-width: 15px 10px;
+    border-style: solid;
+    border-color: transparent transparent #7C3618 transparent;
+    bottom: 98%;
+    z-index: -1;
+    left: 82%;
+}
+div.cover > nav > ul.menu{
+    overflow: hidden;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    box-shadow: 5px 5px #7C3618;
+}
+div.cover > nav > ul.menu li{
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #7C3618;
+}
+div.cover > nav > ul.menu li:last-child{
+    border-bottom: 0px;
+}
+div.cover > nav > ul.menu > li > a{
+    padding: 5px;
+    color: #7C3618;
+} 
+div.cover > nav > ul.menu > li > a:hover{
+    background-color: #937C69;
+    text-shadow: 2px 2px #7C3618;
+    color: #ffffff;
+}
+div.cover > a{
+    width: 10%;
+}
+div.empty{
+    width: 100%;
+    z-index: -1;
+    opacity: 0;
+}
+div.empty img{
+    width: 10%;
+}
+.cover{
+    align-items: center;
+}
+.bg{
+    width: 90%;
+}
+footer > div{
+    flex-direction: column;
+}
+div#contactframe{
+    border-right: none;
+    border-bottom: 2px solid #FFFFFF;
+    width: 100%;
+    padding: 3%;
+}
+div#followus{
+    width: 100%;
+    padding: 3%;
+}
+.list{
+    width: 70%;
+}
+.imglist h1, .vidlist h1{
+    font-size: 25px;
+}

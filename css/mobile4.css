@@ -41,3 +41,6 @@ a#go-to-top{
 .showMenu a{
     font-size: 50px;
 }
+.prev a, .next a{
+    width: 100%;
+}

@@ -543,8 +543,11 @@ div.youmayknow img{
     justify-content: space-evenly;
     margin-top: 10px;
 }
-.changePageBtns i {
-    padding: 10px;
+.prev i{
+    padding-right: 15px;
+}
+.next i{
+    padding-left: 15px;
 }
 .prev, .next{
     width: 45%;
@@ -558,6 +561,7 @@ div.youmayknow img{
     font-family: Huhu;
     font-weight: bolder;
     font-size: 30px;
+    padding : 10px;
     justify-content: center;
     align-items: center;
 }

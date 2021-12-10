@@ -208,12 +208,6 @@ $(document).ready(function () {
     $(".showMenu").click(function () {
         $("div.cover > nav").toggle()
     })
-    $(".imglist").click(function () {
-        $("html, body").animate({
-            scrollTop: 0
-        }, 1000);
-    })
-
     $("#searchBtn").click(function () {
         var kw = $("#keyword").val()
         alert(kw)
