@@ -101,3 +101,19 @@ div#followus{
 .imglist h1, .vidlist h1{
     font-size: 25px;
 }
+.contain{
+    flex-direction: column;
+    max-height: fit-content;
+}
+.comments{
+    width: 80%;
+    height: fit-content;
+    max-height: 50%;
+    margin: 0 auto;
+}
+.frame-commentShow-clicked{
+    width: 80% !important;
+    height: fit-content;
+    max-height: 50%;
+    margin: 20px auto;
+}

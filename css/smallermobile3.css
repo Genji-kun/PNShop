@@ -27,3 +27,12 @@ div.empty img{
 .imglist h1, .vidlist h1{
     font-size: 20px;
 }
+.avt{
+    width: 20px;
+}
+.comments{
+    width: 100%;
+}
+.frame-commentShow-clicked{
+    width: 100% !important;
+}
