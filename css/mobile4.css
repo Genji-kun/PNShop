@@ -23,8 +23,34 @@ div.document > p{
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
+
 .bg{
     width: 100%;
+}
+div.cover > nav{
+    width: 35%;
+    right: 10px;
+}
+div.cover > a{
+    width: 15%;
+}
+div.empty img{
+    width: 15%;
+}
+div.searchbox{
+    padding: 1%;
+    width: 68%;
+    margin: auto 0% auto 2%;
+}
+.showMenu{
+    width: 15%;
+}
+.showMenu a{
+    font-size: 50px;
+}
+.confirm{
+    width: 90%;
+    left: 5%;
 }
 footer div h2{
     font-size:25px;
@@ -34,12 +60,6 @@ div#contactframe h3{
 }
 a#go-to-top{
     width: 12%;
-}
-.showMenu{
-    width: 15%;
-}
-.showMenu a{
-    font-size: 50px;
 }
 .prev a, .next a{
     width: 100%;

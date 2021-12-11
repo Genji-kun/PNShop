@@ -18,3 +18,19 @@ a#go-to-top{
     width: 90%;
     margin-left: 5%;
 }
+.showMenu{
+    width: 15%;
+}
+.showMenu a{
+    font-size: 50px;
+}
+div.cover > nav{
+    width: 35%;
+    right: 10px;
+}
+div.cover > a{
+    width: 15%;
+}
+div.empty img{
+    width: 15%;
+}
