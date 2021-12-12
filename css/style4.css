@@ -3,16 +3,16 @@
     padding:0;
 }
 @font-face{
-    font-family: Hehe;
-    src: url(../fonts/fontHehe.otf);
+    font-family: Title;
+    src: url(../fonts/fontTitle.otf);
 }
 @font-face{
-    font-family: Huhu;
-    src: url(../fonts/fontHuhu.otf);
+    font-family: Normal;
+    src: url(../fonts/fontNormal.otf);
 }
 body{
     background-image:url(../images/background.png);
-    font-family: Hehe !important;
+    font-family: Title !important;
     cursor: url(../cursors/cursor1.cur),pointer;
 }
 a, #searchBtn{
@@ -57,7 +57,7 @@ div.cover > nav ul.menu li:last-child{
 }
 div.cover > nav > ul.menu > li > a{
     align-items: center;
-    font-family: huhu;
+    font-family: Normal;
     text-decoration: none;
     font-size: 20px;
     font-weight: bolder;
@@ -84,7 +84,7 @@ div.searchbox > input{
     width: 88%;
     border-style: none;
     margin-left:2%;
-    font-family: Huhu;
+    font-family: Normal;
     align-items: center;
 }
 div.searchbox > button{
@@ -155,7 +155,7 @@ div#contactframe h2{
 div#contactframe h3{
     color: #000000;
     font-size: 25px;
-    font-family:Huhu;
+    font-family:Normal;
     padding: 1%;
 }
 div#contactframe a{
@@ -261,7 +261,7 @@ div.document > h2{
     color: #000000;
 }
 div.document > p{
-    font-family: Huhu;
+    font-family: Normal;
     font-size: 18px;
     color: #000000;
     width: 90%;
@@ -283,7 +283,7 @@ div.youmayknow img{
     display: none;
 }
 .YMK-info{
-    font-family: Huhu;
+    font-family: Normal;
     background-color: #FFFFFF;
     position:fixed;
     left: 10%;
@@ -308,7 +308,7 @@ div.youmayknow img{
     height: 90%;
 }
 .exampleImg p{  
-    font-family: Huhu;
+    font-family: Normal;
     text-align: center;
     font-size: 15px;
     font-style: italic;
@@ -427,7 +427,7 @@ div.youmayknow img{
     padding: 10px 5px;
     background: linear-gradient(#d8bda6,#a3876e);
     color: #FFFFFF;
-    font-family: Huhu; 
+    font-family: Normal; 
     font-size: 20px;
 }
 .showComment a:hover{
@@ -558,7 +558,7 @@ div.youmayknow img{
     color: #9e7260;
     background-color: rgba(158, 114, 96, 0.5);
     border-radius: 5px;
-    font-family: Huhu;
+    font-family: Normal;
     font-weight: bolder;
     font-size: 2px;
     padding : 10px;

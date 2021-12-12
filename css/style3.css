@@ -4,16 +4,16 @@
     padding:0;
 }
 @font-face{
-    font-family: Hehe;
-    src: url(../fonts/fontHehe.otf);
+    font-family: Title;
+    src: url(../fonts/fontTitle.otf);
 }
 @font-face{
-    font-family: Huhu;
-    src: url(../fonts/fontHuhu.otf);
+    font-family: Normal;
+    src: url(../fonts/fontNormal.otf);
 }
 body{
     background-image:url(../images/background.png);
-    font-family: Hehe !important;
+    font-family: Title !important;
     cursor: url(../cursors/cursor1.cur),pointer;
 }
 a, .imglist, .vidlist{
@@ -58,7 +58,7 @@ div.cover > nav ul.menu li:last-child{
 }
 div.cover > nav > ul.menu > li > a{
     align-items: center;
-    font-family: huhu;
+    font-family: Normal;
     text-decoration: none;
     font-size: 20px;
     font-weight: bolder;
@@ -124,7 +124,7 @@ div#contactframe h2{
 div#contactframe h3{
     color: #000000;
     font-size: 25px;
-    font-family:Huhu;
+    font-family:Normal;
     padding: 1%;
 }
 div#contactframe a{
@@ -192,7 +192,7 @@ iframe{
 }
 div.video h2{
     margin: 5px 0 0 0;
-    font-family: Huhu;
+    font-family: Normal;
     font-weight: bold;
     font-size: 25px;
     text-align: center;
@@ -356,7 +356,7 @@ div.video h2{
     padding: 5px
 }
 .imglist h1, .vidlist h1{
-    font-family: Huhu;
+    font-family: Normal;
     font-weight: bolder;
     font-size: 30px;
     text-align: center;
@@ -377,7 +377,7 @@ div.video h2{
     border-radius: 10px;
     padding: 10px;
     overflow: auto;
-    font-family: Huhu;
+    font-family: Normal;
 }
 .comment{
     background-color: #e2d3be;

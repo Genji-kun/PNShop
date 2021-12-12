@@ -4,16 +4,16 @@
     box-sizing: border-box;
 }
 @font-face{
-    font-family: Hehe;
-    src: url(../fonts/fontHehe.otf);
+    font-family: Title;
+    src: url(../fonts/fontTitle.otf);
 }
 @font-face{
-    font-family: Huhu;
-    src: url(../fonts/fontHuhu.otf);
+    font-family: Normal;
+    src: url(../fonts/fontNormal.otf);
 }
 body{
     background-image:url(../images/background.png);
-    font-family: Hehe !important;
+    font-family: Title !important;
     cursor: url(../cursors/cursor1.cur),pointer;
 }
 a, #searchBtn{
@@ -57,7 +57,7 @@ div.cover > nav ul.menu li:last-child{
     border-right: none;
 }
 div.cover > nav > ul.menu > li > a{
-    font-family: huhu;
+    font-family: Normal;
     text-decoration: none;
     font-size: 20px;
     font-weight: bolder;
@@ -84,7 +84,7 @@ div.searchbox > input{
     width: 88%;
     border-style: none;
     margin-left:2%;
-    font-family: Huhu;
+    font-family: Normal;
     align-items: center;
 }
 div.searchbox > button{
@@ -214,7 +214,7 @@ div.item > a{
     text-decoration: none;
 }
 div.item h2{
-    font-family: Huhu;
+    font-family: Normal;
     font-size: 20px;
     margin-top: 10px;
     overflow: hidden;
@@ -225,7 +225,7 @@ div.item h2{
     color:#000000;
 }
 div.item h3{
-    font-family: Huhu;
+    font-family: Normal;
     font-size: 18px;
     color: #000000;
 }
@@ -271,7 +271,7 @@ div#contactframe h2{
 div#contactframe h3{
     color: #000000;
     font-size: 25px;
-    font-family:Huhu;
+    font-family:Normal;
     padding: 1%;
 }
 div#contactframe a{
@@ -356,7 +356,7 @@ a.followicon:hover{
 }
 .infoCart h1{
     font-size: 35px;
-    font-family: Huhu;
+    font-family: Normal;
     color:#7C3618;
     font-weight: bolder;
     text-align: center;
@@ -387,7 +387,7 @@ a.followicon:hover{
     flex-wrap: wrap;
 }
 .infoCart h2{
-    font-family: Huhu;
+    font-family: Normal;
     font-size: 25px;
     font-weight: bolder;
     color:#937C69;
@@ -401,14 +401,14 @@ a.followicon:hover{
     width: 42%;
 }
 .selectedItem h3{
-    font-family: Huhu;
+    font-family: Normal;
     width: 32%;
     font-size: 20px;
     padding: 1%;
     margin: 0px;
 }
 .selectedItem h4{
-    font-family: Huhu;
+    font-family: Normal;
     width: 16%;
     font-size: 20px;
     text-align:center;
@@ -417,7 +417,7 @@ a.followicon:hover{
     margin: 0px;
 }
 .selectedItem h5{
-    font-family: Huhu;
+    font-family: Normal;
     width: 18%;
     font-size: 20px;
     text-align:center;
@@ -449,7 +449,7 @@ a.followicon:hover{
 .sl a{
     color:#937C69;
     text-decoration: none;
-    font-family: Huhu;
+    font-family: Normal;
     text-align: center;
     font-size: 20px;
     padding: 3%;
@@ -459,7 +459,7 @@ a.followicon:hover{
     color: #7C3618;
 }
 .selectedItem span{
-    font-family: Huhu;
+    font-family: Normal;
     font-weight: bolder;
     color: #000000;
 }
@@ -500,16 +500,16 @@ a.followicon:hover{
 .info h1{
     margin-top: 10%;
     font-size: 2vw;
-    font-family: Huhu;
+    font-family: Normal;
     color:#937C69;
     font-weight: bolder;
 }
 .info h3{
-    font-family: Huhu;
+    font-family: Normal;
     font-size: 1.75vw;
 }
 .info p {
-    font-family: Huhu;
+    font-family: Normal;
     font-size: 1.5vw;
 }
 .left{
@@ -556,7 +556,7 @@ div.thumb > div {
 .button{
     background-color: #937C69;
     color:#FFFFFF;
-    font-family: Huhu;
+    font-family: Normal;
     width: 45%;
     text-align: center;
 }
@@ -594,7 +594,7 @@ div.thumb > div {
     width: 100%;
 }
 .listpage li a{
-    font-family: Huhu;
+    font-family: Normal;
     display:block;
     width: 100%;
     padding: 0px 10px;
@@ -621,7 +621,7 @@ div.thumb > div {
     display: block;
     background-color: #937C69;
     padding: 1%;
-    font-family: Huhu;
+    font-family: Normal;
     font-size: 20px;
     color: #292929
 }
@@ -643,7 +643,7 @@ div.thumb > div {
 .total{
     display:flex;
     align-items: center;
-    font-family: Huhu;
+    font-family: Normal;
     justify-content: space-between;
     padding: 1%;
 }
@@ -683,7 +683,7 @@ div.thumb > div {
     border-width: 5px;
     border-radius: 20px;
     display: none;
-    font-family: Huhu;
+    font-family: Normal;
     text-align: center;
 }
 .infoBill > form{
@@ -721,7 +721,7 @@ div.thumb > div {
 }
 .infoBill h1{
     font-size: 35px;
-    font-family: Huhu;
+    font-family: Normal;
     color:#7C3618;
     font-weight: bolder;
     text-align: center;
@@ -781,7 +781,7 @@ div.thumb > div {
 }
 .addAlert > h2{
     padding : 5px;
-    font-family: Huhu;
+    font-family: Normal;
     text-align: center;
     font-size: 25px;
     color: #937C69;
@@ -802,7 +802,7 @@ div.thumb > div {
 }
 .submitAlert > h2{
     padding : 5px;
-    font-family: Huhu;
+    font-family: Normal;
     text-align: center;
     font-size: 25px;
     color: #937C69;
