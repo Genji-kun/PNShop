@@ -364,12 +364,12 @@ div.youmayknow img{
 .dislike{
     font-size: 20px;
     width: 45%;
-    background: linear-gradient(#f7a18b,#e26959);
+    background: linear-gradient(#ffb897,#c7656a);
 }
 .like{
     font-size: 20px;
     width: 45%;
-    background: linear-gradient(#93d39f,#63a878);
+    background: linear-gradient(#84d598,#529687);
 }
 .btns{
     position: relative;
@@ -391,13 +391,13 @@ div.youmayknow img{
     text-decoration: none;
     color: #FFFFFF;
     font-weight: bolder;
-    background: linear-gradient(#65c474,#30b463);
+    background: linear-gradient(#64bd7a,#3d8f80);
 }
 .dislike > a:hover{
     text-decoration: none;
     color: #FFFFFF;
     font-weight: bolder;
-    background: linear-gradient(#e26f5b,#c74239);
+    background: linear-gradient(#e89c7a,#bb555a);
 }
 .hiddenInformation{
     display: none;
@@ -407,11 +407,11 @@ div.youmayknow img{
 }
 .rateLike{
     width: 70%;
-    background: linear-gradient(#65c474,#30b463);
+    background: linear-gradient(#64bd7a,#3d8f80);
 }
 .rateDislike{
     width: 70%;
-    background: linear-gradient(#e26f5b,#c74239);
+    background: linear-gradient(#e89c7a,#bb555a);
 }
 .website{
     display: none;
@@ -560,7 +560,7 @@ div.youmayknow img{
     border-radius: 5px;
     font-family: Huhu;
     font-weight: bolder;
-    font-size: 30px;
+    font-size: 2px;
     padding : 10px;
     justify-content: center;
     align-items: center;

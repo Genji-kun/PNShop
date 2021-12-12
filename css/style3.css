@@ -70,14 +70,6 @@ div.cover > nav > ul.menu > li > a{
 div.cover > nav > ul.menu > li > a:hover{
     text-shadow: 2px 2px #7C3618;
 }
-.imglist, .videolist{
-    text-align: center;
-    width: 50%;
-    height: 100%;
-    position: relative;
-    overflow: hidden;
-    background-color: #c7c7c7;
-}
 .imglist{
     border-radius: 5px 0px 0px 5px;
     border-right: 1.5px solid #ffffff;
@@ -85,15 +77,6 @@ div.cover > nav > ul.menu > li > a:hover{
 .vidlist{
     border-radius: 0px 5px 5px 0px;
     border-left: 1.5px solid #ffffff;
-}
-.imglist > a, .videolist > a{
-    font-size: 25px;
-    font-family: Huhu;
-    font-weight: bolder;
-    display: block;
-    height: 100%;
-    width: 100%;
-    color: #937C69;
 }
 div.empty{
     width: 100%;
@@ -217,7 +200,6 @@ div.video h2{
 .photos > .photo{
     width: 28%;
     margin: 2%;
-    overflow: hidden;
 }
 .photo img{
     width: 100%;
@@ -376,6 +358,7 @@ div.video h2{
 .imglist h1, .vidlist h1{
     font-family: Huhu;
     font-weight: bolder;
+    font-size: 30px;
     text-align: center;
     color: #d3aa89;
     margin: 0px;

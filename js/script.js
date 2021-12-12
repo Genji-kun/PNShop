@@ -1,8 +1,12 @@
 $(document).ready(function() {
     $(".info").hide()
     $(".info").css({"opacity": 1})
+    function squareDiv() {
+        $("div.image").height($("div.image").width())
+    }
     setTimeout (function(){
         $(".website").css( "display","block")
+        squareDiv()
     },3000)
     $(".website").addClass("animate__fadeIn  animate__animated")
     setTimeout (function(){
@@ -18,6 +22,7 @@ $(document).ready(function() {
         }
         else
             $(".hiddenMenu").hide()
+        squareDiv()
     })
 
     $(".item").click(function() {
