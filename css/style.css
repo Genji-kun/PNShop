@@ -4,16 +4,16 @@
     box-sizing: border-box;
 }
 @font-face{
-    font-family: Hehe;
-    src: url(../fonts/fontHehe.otf);
+    font-family: Title;
+    src: url(../fonts/fontTitle.otf);
 }
 @font-face{
-    font-family: Huhu;
-    src: url(../fonts/fontHuhu.otf);
+    font-family: Normal;
+    src: url(../fonts/fontNormal.otf);
 }
 body{
     background-image:url(../images/background.png);
-    font-family: Hehe !important;
+    font-family: Title !important;
     cursor: url(../cursors/cursor1.cur),pointer;
 }
 .website{
@@ -140,7 +140,7 @@ div.item > a{
     text-decoration: none;
 }
 div.item h2{
-    font-family: Huhu;
+    font-family: Normal;
     font-size: 20px;
     margin-top: 10px;
     overflow: hidden;
@@ -151,7 +151,7 @@ div.item h2{
     color:#000000;
 }
 div.item h3{
-    font-family: Huhu;
+    font-family: Normal;
     font-size: 18px;
     color: #000000;
 }
@@ -191,7 +191,7 @@ div.document > h2{
     color: #000000;
 }
 div.document > p{
-    font-family: Huhu;
+    font-family: Normal;
     font-size: 18px;
     color: #000000;
     width: 90%;
@@ -243,7 +243,7 @@ div#contactframe h2{
 div#contactframe h3{
     color: #000000;
     font-size: 25px;
-    font-family:Huhu;
+    font-family:Normal;
     padding: 1%;
 }
 div#contactframe a{
@@ -324,16 +324,16 @@ a.followicon:hover{
 .info h1{
     margin-top: 10%;
     font-size: 2vw;
-    font-family: Huhu;
+    font-family: Normal;
     color:#937C69;
     font-weight: bolder;
 }
 .info h3{
-    font-family: Huhu;
+    font-family: Normal;
     font-size: 1.75vw;
 }
 .info p {
-    font-family: Huhu;
+    font-family: Normal;
     font-size: 1.5vw;
 }
 .left{
@@ -394,7 +394,7 @@ div.thumb > div {
 .buy{
     background-color: #937C69;
     color:#FFFFFF;
-    font-family: Huhu;
+    font-family: Normal;
     text-align: center;
 }
 .buy a{
@@ -422,7 +422,7 @@ div.thumb > div {
     background: #75614f; 
 }
 .YMK-info{
-    font-family: Huhu;
+    font-family: Normal;
     background-color: #FFFFFF;
     position:fixed;
     left: 10%;
@@ -447,7 +447,7 @@ div.thumb > div {
     height: 90%;
 }
 .exampleImg p{  
-    font-family: Huhu;
+    font-family: Normal;
     text-align: center;
     font-size: 15px;
     font-style: italic;
