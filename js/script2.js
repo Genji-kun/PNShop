@@ -9,17 +9,7 @@ $(document).ready(function () {
         $(".website").removeClass("animate__fadeIn  animate__animated")
     }, 4000)
     $("#black-space").css({ "opacity": 0.6 })
-    $("div.item").addClass("wow animate__fadeIn animate__animated")
-    wow = new WOW(
-        {
-            boxClass: 'wow',      // default
-            animateClass: 'animate_animated', // default
-            offset: 0,          // default
-            mobile: true,       // default
-            live: true        // default
-        }
-    )
-    wow.init();
+    $("div.item").addClass("animate__fadeIn animate__animated")
     var flag = false
     var flag2 = false
     //--------------------- Các function --------------------- //

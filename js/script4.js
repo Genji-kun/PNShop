@@ -210,17 +210,16 @@ $(document).ready(function () {
     })
     $("#searchBtn").click(function () {
         var kw = $("#keyword").val()
-        alert(kw)
+
         if (kw != "") {
-            $(".YMKs").hide()
+            $(".youmayknow").hide()
             var items = $("div.document h2")
-            alert(items)
             kw = kw.toLowerCase()
             for (var i = 0; i < items.length; i++) {
                 var lowText = $(items[i]).text()
                 lowText = lowText.toLowerCase()
                 if (lowText.indexOf(kw) >= 0) {
-                    $(items[i]).parent().parent().show()
+                    $(items[i]).parent().parent().parent().show()
                 }
             }
         }
