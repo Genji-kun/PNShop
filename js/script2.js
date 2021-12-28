@@ -171,6 +171,7 @@ $(document).ready(function () {
 
     // Xử lý sự kiện khi chọn lọc đối tượng (chó,mèo,tất cả)
     $(".sortDT").change(function () {
+        flag2 = false
         checkedFirstPage()
         $("#keyword").val("")
         $(".listpage").show()
